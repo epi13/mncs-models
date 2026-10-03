@@ -1,5 +1,8 @@
 # mncs-models
 
+<!-- MNCS:generated:begin -->
+<!-- MNCS:generated:end -->
+
 Canonical MNCS model construction and composition layer for machine-native ML/AI systems.
 
 > **Core thesis:** a model is an explicit, typed computational structure assembled from composable primitives. Named architectures are useful recipes and research references, not the ontology of the repository.
