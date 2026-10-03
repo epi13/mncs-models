@@ -1,0 +1,10 @@
+{
+  "capabilities": [],
+  "dependencies": [],
+  "entry": [],
+  "purpose": "Canonical MNCS model construction and composition layer for machine-native ML/AI systems: models as explicit typed computational structures assembled from composable primitives.",
+  "repository": "mncs-models",
+  "schema_version": "mncs.project-view/1",
+  "source_identity": "sha256:8bfeab745e8df567d260224eeadafbf21ae72889e88e1fb7c079a8da9b06504f",
+  "structure": {}
+}

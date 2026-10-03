@@ -1,6 +1,14 @@
 # mncs-models
 
 <!-- MNCS:generated:begin -->
+## Project entry
+
+Canonical MNCS model construction and composition layer for machine-native ML/AI systems: models as explicit typed computational structures assembled from composable primitives.
+
+Declared capabilities (declarations do not establish execution health):
+
+
+Semantic sources and ownership: `.mncs/projections.json`.
 <!-- MNCS:generated:end -->
 
 Canonical MNCS model construction and composition layer for machine-native ML/AI systems.
