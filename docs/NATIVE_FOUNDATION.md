@@ -1,5 +1,7 @@
 # Native micro-model foundation
 
+The subsequent [native composition phase](COMPOSITION.md) extends this same implementation with independently revisioned DAG nodes. This document retains the original numerical foundation and eight-case experiment results.
+
 Implemented contract: [RFC 0002](../rfcs/0002-native-micro-models.md).
 The broader graph vocabulary in ARCHITECTURE.md remains a design direction.
 The executable boundary is intentionally a small serial dense composition,

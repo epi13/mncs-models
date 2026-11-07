@@ -1,5 +1,7 @@
 # Architecture
 
+Executable composition now includes the bounded DAG subset in [RFC 0003](../rfcs/0003-native-composition.md) and [COMPOSITION.md](COMPOSITION.md). General recurrence, routing and arbitrary graph capabilities remain future work.
+
 Current executable boundary: [native micro-model foundation](NATIVE_FOUNDATION.md). RFC 0002 records the implemented slice; broader graph and operational interfaces below remain design targets.
 
 This document records the current structural model for `mncs-models`. It is intentionally more precise than a vision statement and less rigid than a finalized schema.

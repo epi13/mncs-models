@@ -19,6 +19,20 @@ Canonical MNCS model construction and composition layer for machine-native ML/AI
 
 The repository is intentionally architecture-open. It must be able to represent compact classifiers, specialist ensembles, transformers, recurrent and looped-depth systems, state-space and recurrent sequence models, mixtures of experts, multimodal systems, graph-based models, generative models, and future architectures that do not yet have a stable name.
 
+## Executable native composition
+
+The canonical foundation now includes a bounded acyclic assembly of independently
+identified micro-models, explicit lane contracts, deterministic sum/concatenation,
+learned glue, component revision and rollback, refusal propagation and source traces.
+The same executor is verified at two, three and ten connected components.
+
+Run `python3 scripts/verify.py` to verify the original fourteen native tests plus
+the composition suite and record native callable measurements. See
+[composition contracts and measured results](docs/COMPOSITION.md). The frozen
+synthetic experiment found that a local glue edit regressed held-out performance;
+the strong deterministic baseline remains best. No operational integration or
+agent-efficiency improvement is claimed.
+
 ## What this repository owns
 
 `mncs-models` owns the **structural definition and construction of models**.

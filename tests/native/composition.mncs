@@ -1,0 +1,179 @@
+mncs 0.18;
+module mncs.models.composition_tests;
+use mncs.test.assertions;
+use mncs.test.suite;
+use mncs.models.micro;
+use mncs.models.compose;
+use mncs.models.composition_cases;
+fn small(id: u64, a: i64, b: i64, bias: i64, relu: bool) -> (result: Model) {
+ let v: [i64; 100] = [0; 100]; let w: [i64; 100] = replace(v, 0, a); let z: [i64; 100] = replace(w, 1, b);
+ return Model { identity: id, topology: Topology { inputs: 2, hidden: 0, outputs: 1, relu: relu }, parameters: Parameters { values: replace(z, 2, bias), revision: 1, parent: 0, provenance: 1000 + id } };
+}
+fn node(m: Model, left: Link, right: Link, contract: u64) -> (result: Node) { return Node { identity: m.identity, operation: Operation.Learned, model: m, inputs: [left, right, blank_link(), blank_link(), blank_link(), blank_link(), blank_link(), blank_link()], ninput: 2, output_contract: contract, margin: -1 }; }
+fn link(source: u64, lane: u64, contract: u64) -> (result: Link) { return Link { source: source, lane: lane, contract: contract }; }
+fn assembly(learned: bool) -> (result: Assembly) {
+ let a: Node = node(small(11, 2, 1, -3, true), link(0, 0, 1), link(0, 1, 1), 2);
+ let b: Node = node(small(12, 2, 1, -3, true), link(0, 2, 1), link(0, 3, 1), 2);
+ let c: Node = node(small(13, 1, 1, -3, false), link(1, 0, 2), link(2, 0, 2), 3);
+ let d: Node = Node { identity: 14, operation: Operation.Sum, model: blank_model(), inputs: c.inputs, ninput: 2, output_contract: 3, margin: -1 };
+ let ns: [Node; 16] = replace(replace(replace(empty_nodes(), 0, a), 1, b), 2, select(learned, c, d));
+ return Assembly { identity: 100, revision: 1, parent: 0, provenance: 200, nodes: ns, count: 3, external_contracts: [1, 1, 1, 1, 0, 0, 0, 0], external_width: 4 };
+}
+fn observation(s: i64, r: i64, p: i64, u: i64) -> (result: Observation) { return Observation { signal: Signal { values: [s, r, p, u, 0, 0, 0, 0], width: 4 }, statuses: [0; 8], evidence: [501, 502, 503, 504, 0, 0, 0, 0], event: 900 }; }
+fn execute(a: Assembly, o: Observation, target: u64) -> (result: Run) { return run(a, o, target, Budget { nodes: 16, multiplies: 1000 }); }
+test learned_composition() -> (result: TestResult) {
+ let r: Run = execute(assembly(true), observation(3, 1, 2, 1), 3);
+ let t: Trace = r.traces[2]; let x: Signal = t.signal;
+ return from_assertion(equals_bool(true, r.status == 0 && x.values[0] == 3 && r.executed == 3 && r.multiplies == 6 && r.parameter_checks == 600 && t.ancestors == 7 && t.evidence_mask == 15 && component_row(assembly(true), 13) == 3 && component_row(assembly(true), 999) == 0, 101));
+}
+test deterministic_composition() -> (result: TestResult) {
+ let r: Run = execute(assembly(false), observation(3, 1, 2, 1), 3); let t: Trace = r.traces[2]; let x: Signal = t.signal;
+ return from_assertion(equals_bool(true, r.status == 0 && x.values[0] == 6 && r.multiplies == 4 && r.additions == 6, 102));
+}
+fn with_nodes(a: Assembly, nodes: [Node; 16], count: u64) -> (result: Assembly) { return Assembly { identity: a.identity, revision: a.revision, parent: a.parent, provenance: a.provenance, nodes: nodes, count: count, external_contracts: a.external_contracts, external_width: a.external_width }; }
+fn with_inputs(n: Node, inputs: [Link; 8]) -> (result: Node) { return Node { identity: n.identity, operation: n.operation, model: n.model, inputs: inputs, ninput: n.ninput, output_contract: n.output_contract, margin: n.margin }; }
+fn with_margin(n: Node, margin: i64) -> (result: Node) { return Node { identity: n.identity, operation: n.operation, model: n.model, inputs: n.inputs, ninput: n.ninput, output_contract: n.output_contract, margin: margin }; }
+fn revised(a: Assembly) -> (result: Assembly) { let n: Node = a.nodes[2]; let e: Edit = edit(n.model, 2, -1, 2, 1013); let s: Swap = rebind(a, 2, e.model, 2, 201); return s.assembly; }
+fn output(r: Run, row: u64) -> (result: i64) { let t: Trace = r.traces[row]; let x: Signal = t.signal; return x.values[0]; }
+test sequential_two_components() -> (result: TestResult) {
+ let a: Assembly = assembly(true); let n: Node = a.nodes[1]; let linked: Node = with_inputs(n, [link(1, 0, 2), link(0, 3, 1), blank_link(), blank_link(), blank_link(), blank_link(), blank_link(), blank_link()]);
+ let b: Assembly = with_nodes(a, replace(a.nodes, 1, linked), 2);
+ let r: Run = execute(b, observation(3, 1, 2, 1), 2);
+ return from_assertion(equals_bool(true, r.status == 0 && output(r, 1) == 6 && r.executed == 2, 103));
+}
+test isolated_revision_regression_and_rollback() -> (result: TestResult) {
+ let a: Assembly = assembly(true); let b: Assembly = revised(a); let c: Node = a.nodes[2];
+ let rollback: Swap = rebind(b, 2, c.model, 3, 202);
+ let n0: Node = b.nodes[0]; let old0: Node = a.nodes[0]; let n1: Node = b.nodes[1]; let old1: Node = a.nodes[1];
+ let r0: Run = execute(a, observation(2, 0, 2, 0), 3); let r1: Run = execute(b, observation(2, 0, 2, 0), 3); let r2: Run = execute(rollback.assembly, observation(2, 0, 2, 0), 3);
+ let local: Run = execute(b, observation(3, 1, 2, 1), 1);
+ return from_assertion(equals_bool(true, rollback.accepted && b.parent == a.revision && changes(n0.model, old0.model) == 0 && changes(n1.model, old1.model) == 0 && output(r0, 2) == -1 && output(r1, 2) == 1 && output(r2, 2) == -1 && output(local, 0) == 4 && local.executed == 1, 104));
+}
+test invalid_connections_and_duplicate_identity() -> (result: TestResult) {
+ let a: Assembly = assembly(true); let n: Node = a.nodes[2];
+ let wrong: Node = with_inputs(n, replace(n.inputs, 0, link(1, 0, 99)));
+ let cycle: Node = with_inputs(n, replace(n.inputs, 0, link(3, 0, 2)));
+ let lane: Node = with_inputs(n, replace(n.inputs, 0, link(1, 1, 2)));
+ let duplicate: Assembly = with_nodes(a, replace(a.nodes, 1, a.nodes[0]), 3);
+ return from_assertion(equals_bool(true, !assembly_valid(with_nodes(a, replace(a.nodes, 2, wrong), 3)) && !assembly_valid(with_nodes(a, replace(a.nodes, 2, cycle), 3)) && !assembly_valid(with_nodes(a, replace(a.nodes, 2, lane), 3)) && !assembly_valid(duplicate), 105));
+}
+test unavailable_and_contradiction_propagate() -> (result: TestResult) {
+ let o: Observation = observation(3, 1, 2, 1);
+ let missing: Observation = Observation { signal: o.signal, statuses: [0, 0, 1, 0, 0, 0, 0, 0], evidence: o.evidence, event: o.event };
+ let conflict: Observation = Observation { signal: o.signal, statuses: [0, 0, 2, 0, 0, 0, 0, 0], evidence: o.evidence, event: o.event };
+ let a: Run = execute(assembly(true), missing, 3); let b: Run = execute(assembly(true), conflict, 3); let t: Trace = a.traces[2]; let x: Signal = t.signal;
+ return from_assertion(equals_bool(true, a.status == 1 && b.status == 2 && x.width == 0 && a.multiplies == 2 && t.ancestors == 7 && t.evidence_mask == 15 && a.evidence[2] == 503, 106));
+}
+test abstention_blocks_downstream() -> (result: TestResult) {
+ let a: Assembly = assembly(true); let n: Node = with_margin(a.nodes[0], 0); let b: Assembly = with_nodes(a, replace(a.nodes, 0, n), 3);
+ let r: Run = execute(b, observation(0, 0, 2, 1), 3); let t: Trace = r.traces[2]; let x: Signal = t.signal;
+ return from_assertion(equals_bool(true, r.status == 4 && x.width == 0 && r.multiplies == 4, 107));
+}
+test bounds_and_budgets() -> (result: TestResult) {
+ let a: Assembly = assembly(true); let o: Observation = observation(3, 1, 2, 1);
+ let n: Run = run(a, o, 3, Budget { nodes: 1, multiplies: 100 });
+ let m: Run = run(a, o, 3, Budget { nodes: 16, multiplies: 3 });
+ let v: Run = execute(a, observation(1001, 0, 0, 0), 3);
+ let bad: Run = execute(a, o, 0);
+ return from_assertion(equals_bool(true, n.status == 5 && n.executed <= 1 && m.status == 5 && m.multiplies <= 3 && v.status == 6 && bad.status == 3, 108));
+}
+test failed_component_replacement_is_atomic() -> (result: TestResult) {
+ let a: Assembly = assembly(true); let n: Node = a.nodes[2];
+ let e: Edit = edit(n.model, 2, 101, 2, 1013);
+ let bad: Swap = rebind(a, 2, small(99, 1, 1, 0, false), 2, 201);
+ return from_assertion(equals_bool(true, !e.accepted && !bad.accepted && bad.assembly.revision == a.revision, 109));
+}
+test parallel_branch_order_independence() -> (result: TestResult) {
+ let a: Assembly = assembly(true); let ns: [Node; 16] = replace(replace(a.nodes, 0, a.nodes[1]), 1, a.nodes[0]);
+ let b: Assembly = with_nodes(a, ns, 3);
+ let x: Run = execute(a, observation(3, 1, 2, 1), 3); let y: Run = execute(b, observation(3, 1, 2, 1), 3);
+ return from_assertion(equals_bool(true, x.status == 0 && y.status == 0 && output(x, 2) == output(y, 2), 110));
+}
+test concat_contract() -> (result: TestResult) {
+ let a: Assembly = assembly(true); let n: Node = a.nodes[2]; let c: Node = Node { identity: 14, operation: Operation.Concat, model: blank_model(), inputs: n.inputs, ninput: 2, output_contract: 3, margin: -1 };
+ let b: Assembly = with_nodes(a, replace(a.nodes, 2, c), 3); let r: Run = execute(b, observation(3, 1, 2, 1), 3); let t: Trace = r.traces[2]; let x: Signal = t.signal;
+ return from_assertion(equals_bool(true, r.status == 0 && x.width == 2 && x.values[0] == 4 && x.values[1] == 2, 111));
+}
+fn sum_model(id: u64, width: u64, bias: i64, relu: bool) -> (result: Model) {
+ let slots: [i64; 100] = [0; 100];
+ iterate i over slots carrying v: [i64; 100] = slots { next v = replace(v, i, select(i < width, 1, 0)); }
+ return Model { identity: id, topology: Topology { inputs: width, hidden: 0, outputs: 1, relu: relu }, parameters: Parameters { values: replace(v, width, bias), revision: 1, parent: 0, provenance: 1000 + id } };
+}
+fn sensor_node(i: u64) -> (result: Node) {
+ let m: Model = sum_model(21 + i, 1, -1, true);
+ return Node { identity: m.identity, operation: Operation.Learned, model: m, inputs: [link(0, i, 1), blank_link(), blank_link(), blank_link(), blank_link(), blank_link(), blank_link(), blank_link()], ninput: 1, output_contract: 2, margin: -1 };
+}
+fn ten_components() -> (result: Assembly) {
+ let seed: [Node; 16] = empty_nodes();
+ iterate i over seed carrying ns: [Node; 16] = seed { next ns = sensor_row(ns, i); }
+ let left: Model = sum_model(29, 4, 0, false); let right: Model = sum_model(30, 5, 0, false);
+ let a: Node = Node { identity: 29, operation: Operation.Learned, model: left, inputs: [link(1, 0, 2), link(2, 0, 2), link(3, 0, 2), link(4, 0, 2), blank_link(), blank_link(), blank_link(), blank_link()], ninput: 4, output_contract: 2, margin: -1 };
+ let b: Node = Node { identity: 30, operation: Operation.Learned, model: right, inputs: [link(9, 0, 2), link(5, 0, 2), link(6, 0, 2), link(7, 0, 2), link(8, 0, 2), blank_link(), blank_link(), blank_link()], ninput: 5, output_contract: 3, margin: -1 };
+ return Assembly { identity: 101, revision: 1, parent: 0, provenance: 210, nodes: replace(replace(ns, 8, a), 9, b), count: 10, external_contracts: [1; 8], external_width: 8 };
+}
+fn sensor_row(ns: [Node; 16], i: u64) -> (result: [Node; 16]) { if i >= 8 { return ns; } return replace(ns, i, sensor_node(i)); }
+fn sensors() -> (result: Observation) { return Observation { signal: Signal { values: [3; 8], width: 8 }, statuses: [0; 8], evidence: [511, 512, 513, 514, 515, 516, 517, 518], event: 901 }; }
+test ten_component_execution_and_subset() -> (result: TestResult) {
+ let a: Assembly = ten_components(); let full: Run = execute(a, sensors(), 10); let part: Run = execute(a, sensors(), 1); let t: Trace = full.traces[9]; let untouched: Trace = part.traces[1]; let res: Resources = resources(a);
+ return from_assertion(equals_bool(true, full.status == 0 && output(full, 9) == 16 && full.executed == 10 && full.multiplies == 17 && t.ancestors == 1023 && t.evidence_mask == 255 && part.executed == 1 && part.multiplies == 1 && untouched.identity == 0 && full.parameter_checks == 2000 && part.parameter_checks == 1100 && res.active_parameters == 27 && res.allocated_parameter_bytes == 12800 && res.live_connections == 17, 112));
+}
+// Benchmark models are frozen before the first held-out execution.
+// Specialists: relu(2*severity + repeat - 3). Initial glue: A+B-3.
+// Tuning event 51 is (2,0,2,0), event 52 is (0,0,0,0): change glue bias to -1.
+// Construction uses events 1..4 in specialist tests, never heldout().
+record Comparison { total: u64, errors: u64, diagnostic: u64, environment: u64, initial: u64, edited: u64, deterministic_glue: u64, deterministic_initial: u64, standalone: u64, standalone_initial: u64, linear: u64, strong: u64 }
+fn standalone_with_bias(bias: i64) -> (result: Model) {
+ // Same hypothesis as the edited composition, represented in one 13-parameter network.
+ let a: [i64; 100] = [0; 100]; let b: [i64; 100] = replace(replace(replace(a, 0, 2), 1, 1), 4, -3);
+ let c: [i64; 100] = replace(replace(replace(b, 7, 2), 8, 1), 9, -3);
+ let d: [i64; 100] = replace(replace(replace(c, 10, 1), 11, 1), 12, bias);
+ return Model { identity: 40, topology: Topology { inputs: 4, hidden: 2, outputs: 1, relu: true }, parameters: Parameters { values: d, revision: 1, parent: 0, provenance: 1040 } };
+}
+fn standalone() -> (result: Model) { return standalone_with_bias(-1); }
+fn linear() -> (result: Model) {
+ let a: [i64; 100] = [0; 100]; let b: [i64; 100] = replace(replace(replace(replace(a, 0, 2), 1, 1), 2, 2), 3, 1);
+ return Model { identity: 41, topology: Topology { inputs: 4, hidden: 0, outputs: 1, relu: false }, parameters: Parameters { values: replace(b, 4, -7), revision: 1, parent: 0, provenance: 1041 } };
+}
+fn correct(score: i64, label: bool) -> (result: u64) { return select((score > 0) == label, 1, 0); }
+fn direct_score(m: Model, o: Observation) -> (result: i64) { let r: Inference = infer(m, o.signal); let x: Signal = r.output; return x.values[0]; }
+fn comparison_cell(c: Scenario, a: Assembly, b: Assembly, d: Assembly, previous: Comparison) -> (result: Comparison) {
+ let source: Observation = observation(c.s, c.r, c.p, c.u);
+ let o: Observation = Observation { signal: source.signal, statuses: source.statuses, evidence: [c.event * 10, c.event * 10 + 1, c.event * 10 + 2, c.event * 10 + 3, 0, 0, 0, 0], event: c.event };
+ let base: Run = execute(a, o, 3); let edited: Run = execute(b, o, 3); let det: Run = execute(d, o, 3);
+ let original: Inference = infer(standalone_with_bias(-3), o.signal); let ox: Signal = original.output;
+ let single: Inference = infer(standalone(), o.signal); let linear_result: Inference = infer(linear(), o.signal); let sx: Signal = single.output; let lx: Signal = linear_result.output;
+ let strong: bool = (c.s >= 2 && c.p >= 2) || (c.r >= 3 && c.u >= 2);
+ return Comparison { total: previous.total + 1, errors: previous.errors + select(base.status != 0 || edited.status != 0 || det.status != 0 || single.status != 0 || linear_result.status != 0 || original.status != 0, 1, 0), diagnostic: previous.diagnostic + correct(output(edited, 0), c.useful), environment: previous.environment + correct(output(edited, 1), c.useful), initial: previous.initial + correct(output(base, 2), c.useful), edited: previous.edited + correct(output(edited, 2), c.useful), deterministic_glue: previous.deterministic_glue + correct(output(det, 2) - 1, c.useful), deterministic_initial: previous.deterministic_initial + correct(output(det, 2) - 3, c.useful), standalone: previous.standalone + correct(sx.values[0], c.useful), standalone_initial: previous.standalone_initial + correct(ox.values[0], c.useful), linear: previous.linear + correct(lx.values[0], c.useful), strong: previous.strong + select(strong == c.useful, 1, 0) };
+}
+fn benchmark() -> (result: Comparison) {
+ let a: Assembly = assembly(true); let b: Assembly = revised(a); let d: Assembly = assembly(false); let cases: [Scenario; 32] = held_out();
+ iterate i over cases carrying metrics: Comparison = Comparison { total: 0, errors: 0, diagnostic: 0, environment: 0, initial: 0, edited: 0, deterministic_glue: 0, deterministic_initial: 0, standalone: 0, standalone_initial: 0, linear: 0, strong: 0 } { next metrics = comparison_cell(cases[i], a, b, d, metrics); }
+ return metrics;
+}
+test specialist_and_tuning_regression() -> (result: TestResult) {
+ let a: Assembly = assembly(true); let b: Assembly = revised(a);
+ let construction: Run = execute(a, observation(3, 1, 0, 0), 1); let negative: Run = execute(a, observation(0, 0, 0, 0), 2);
+ let tuned: Run = execute(b, observation(2, 0, 2, 0), 3); let preserved: Run = execute(b, observation(0, 0, 0, 0), 3);
+ return from_assertion(equals_bool(true, output(construction, 0) == 4 && output(negative, 1) == 0 && output(tuned, 2) == 1 && output(preserved, 2) == -1, 113));
+}
+test standalone_equivalence() -> (result: TestResult) {
+ let b: Assembly = revised(assembly(true)); let o: Observation = observation(3, 1, 2, 1); let r: Run = execute(b, o, 3); let direct: Inference = infer(standalone(), o.signal); let single: Model = standalone();
+ return from_assertion(equals_bool(true, output(r, 2) == direct_score(standalone(), o) && direct.multiplies == 10 && parameter_count(single.topology) == 13, 114));
+}
+
+test frozen_heldout_comparison() -> (result: TestResult) {
+ let m: Comparison = benchmark();
+ return from_assertion(equals_bool(true, m.total == 32 && m.errors == 0 && m.diagnostic == 21 && m.environment == 22 && m.initial == 25 && m.edited == 20 && m.deterministic_glue == 20 && m.deterministic_initial == m.initial && m.standalone == m.edited && m.standalone_initial == m.initial && m.linear == 24 && m.strong == 32, 115));
+}
+test numerical_interface_refusal_and_revision_identity() -> (result: TestResult) {
+ let a: Assembly = assembly(true); let changed: Model = small(11, 100, 100, -3, true);
+ let forbidden: Swap = rebind(a, 0, changed, 2, 220);
+ let e: Edit = edit(changed, 2, -2, 2, 1100); let allowed: Swap = rebind(a, 0, e.model, 2, 220);
+ let r: Run = execute(allowed.assembly, observation(1000, 1000, 0, 0), 3); let t: Trace = r.traces[2]; let x: Signal = t.signal;
+ return from_assertion(equals_bool(true, !forbidden.accepted && allowed.accepted && r.status == 6 && x.width == 0, 116));
+}
+fn composed_cost() -> (result: i64) { return output(execute(assembly(true), observation(3, 1, 2, 1), 3), 2); }
+fn standalone_cost() -> (result: i64) { return direct_score(standalone_with_bias(-3), observation(3, 1, 2, 1)); }
+fn deterministic_cost() -> (result: i64) { let o: Observation = observation(3, 1, 2, 1); let x: Signal = o.signal; return select((x.values[0] >= 2 && x.values[2] >= 2) || (x.values[1] >= 3 && x.values[3] >= 2), 1, 0); }
+fn scale_cost() -> (result: i64) { return output(execute(ten_components(), sensors(), 10), 9); }
+fn subset_cost() -> (result: i64) { return output(execute(ten_components(), sensors(), 1), 0); }

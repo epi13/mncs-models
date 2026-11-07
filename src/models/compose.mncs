@@ -1,0 +1,158 @@
+mncs 0.18;
+module mncs.models.compose;
+use mncs.models.micro;
+
+enum Operation { Learned, Sum, Concat }
+// source 0 addresses external lanes; source 1..16 addresses prior node rows.
+// contract is an opaque semantic interface reference, not permission or a type system.
+record Link { source: u64, lane: u64, contract: u64 }
+record Node { identity: u64, operation: Operation, model: Model, inputs: [Link; 8], ninput: u64, output_contract: u64, margin: i64 }
+record Assembly { identity: u64, revision: u64, parent: u64, provenance: u64, nodes: [Node; 16], count: u64, external_contracts: [u64; 8], external_width: u64 }
+// status: 0 valid, 1 unavailable, 2 contradictory, 3 invalid, 4 abstain,
+// 5 resource budget, 6 numerical interface range. No status is numeric evidence.
+record Observation { signal: Signal, statuses: [u64; 8], evidence: [u64; 8], event: u64 }
+record Trace { identity: u64, revision: u64, provenance: u64, status: u64, signal: Signal, ancestors: u64, evidence_mask: u64 }
+record Budget { nodes: u64, multiplies: u64 }
+record Run { identity: u64, revision: u64, provenance: u64, evidence: [u64; 8], event: u64, status: u64, traces: [Trace; 16], executed: u64, multiplies: u64, additions: u64, parameter_checks: u64, connection_checks: u64 }
+record Gather { signal: Signal, status: u64, ancestors: u64, evidence_mask: u64 }
+record Swap { accepted: bool, assembly: Assembly }
+
+fn op_code(op: Operation) -> (result: u64) { return match op { Operation.Learned => 0, Operation.Sum => 1, Operation.Concat => 2, }; }
+fn blank_model() -> (result: Model) { return Model { identity: 0, topology: Topology { inputs: 1, hidden: 0, outputs: 1, relu: false }, parameters: Parameters { values: [0; 100], revision: 0, parent: 0, provenance: 0 } }; }
+fn blank_link() -> (result: Link) { return Link { source: 0, lane: 0, contract: 0 }; }
+fn blank_node() -> (result: Node) { return Node { identity: 0, operation: Operation.Sum, model: blank_model(), inputs: [blank_link(), blank_link(), blank_link(), blank_link(), blank_link(), blank_link(), blank_link(), blank_link()], ninput: 0, output_contract: 0, margin: -1 }; }
+fn blank_trace() -> (result: Trace) { return Trace { identity: 0, revision: 0, provenance: 0, status: 1, signal: empty_signal(), ancestors: 0, evidence_mask: 0 }; }
+fn empty_nodes() -> (result: [Node; 16]) { return [blank_node(), blank_node(), blank_node(), blank_node(), blank_node(), blank_node(), blank_node(), blank_node(), blank_node(), blank_node(), blank_node(), blank_node(), blank_node(), blank_node(), blank_node(), blank_node()]; }
+fn empty_traces() -> (result: [Trace; 16]) { return [blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace(), blank_trace()]; }
+fn node_width(n: Node) -> (result: u64) { if op_code(n.operation) == 0 { let t: Topology = n.model.topology; return t.outputs; } if op_code(n.operation) == 2 { return n.ninput; } return 1; }
+fn link_valid(a: Assembly, n: Node, row: u64, j: u64) -> (result: bool) {
+    let l: Link = n.inputs[j];
+    if j >= n.ninput { return l.source == 0 && l.lane == 0 && l.contract == 0; }
+    if l.contract == 0 || l.source > row { return false; }
+    if l.source == 0 { if l.lane >= a.external_width { return false; } return a.external_contracts[l.lane] == l.contract; }
+    let src: Node = a.nodes[l.source - 1];
+    return l.lane < node_width(src) && src.output_contract == l.contract;
+}
+fn node_valid(a: Assembly, row: u64) -> (result: bool) {
+    let n: Node = a.nodes[row];
+    if n.identity == 0 || n.ninput == 0 || n.ninput > 8 || n.output_contract == 0 || n.margin < -1 || n.margin > 1000 { return false; }
+    if n.margin >= 0 && node_width(n) != 1 { return false; }
+    if op_code(n.operation) == 0 {
+        if !model_valid(n.model) { return false; }
+        let t: Topology = n.model.topology;
+        if t.inputs != n.ninput || n.model.identity != n.identity { return false; }
+    }
+    iterate j over n.inputs carrying good: bool = true { next good = good && link_valid(a, n, row, j); }
+    iterate k over a.nodes carrying unique: bool = true { next unique = unique && !(k < row && a.nodes[k].identity == n.identity); }
+    return good && unique;
+}
+fn assembly_valid(a: Assembly) -> (result: bool) {
+    if a.count == 0 || a.count > 16 || a.external_width == 0 || a.external_width > 8 || a.identity == 0 || a.revision == 0 || a.parent >= a.revision || a.provenance == 0 { return false; }
+    iterate i over a.nodes carrying good: bool = true { next good = good && row_valid(a, i); }
+    return good;
+}
+fn row_valid(a: Assembly, row: u64) -> (result: bool) { if row >= a.count { return true; } return node_valid(a, row); }
+fn mark_inputs(n: Node, needed: [bool; 16]) -> (result: [bool; 16]) {
+    iterate j over n.inputs carrying out: [bool; 16] = needed { next out = mark_link(n, j, out); }
+    return out;
+}
+fn mark_link(n: Node, j: u64, needed: [bool; 16]) -> (result: [bool; 16]) { let l: Link = n.inputs[j]; if j >= n.ninput || l.source == 0 { return needed; } return replace(needed, l.source - 1, true); }
+fn dependencies(a: Assembly, target: u64) -> (result: [bool; 16]) {
+    let zero: [bool; 16] = [false; 16];
+    let seed: [bool; 16] = replace(zero, target - 1, true);
+    iterate k over a.nodes carrying needed: [bool; 16] = seed { next needed = mark_row(a, 15 - k, needed); }
+    return needed;
+}
+fn mark_row(a: Assembly, row: u64, needed: [bool; 16]) -> (result: [bool; 16]) { if row >= a.count || !needed[row] { return needed; } return mark_inputs(a.nodes[row], needed); }
+fn gather_link(n: Node, j: u64, o: Observation, traces: [Trace; 16], g: Gather) -> (result: Gather) {
+    if j >= n.ninput { return g; }
+    let l: Link = n.inputs[j];
+    if l.source == 0 {
+        let mask: u64 = (1 as u64) << l.lane;
+        if o.statuses[l.lane] != 0 { return gather_refusal(g, select(o.statuses[l.lane] <= 6, o.statuses[l.lane], 3), 0, mask); }
+        if o.evidence[l.lane] == 0 { return gather_refusal(g, 1, 0, mask); }
+        if g.status != 0 { return gather_refusal(g, g.status, 0, mask); }
+        let x: Signal = o.signal;
+        return gathered_value(g, j, x.values[l.lane], 0, mask);
+    }
+    let t: Trace = traces[l.source - 1];
+    if t.status != 0 { return gather_refusal(g, t.status, t.ancestors, t.evidence_mask); }
+    if g.status != 0 { return gather_refusal(g, g.status, t.ancestors, t.evidence_mask); }
+    let x: Signal = t.signal;
+    return gathered_value(g, j, x.values[l.lane], t.ancestors, t.evidence_mask);
+}
+fn gather_refusal(g: Gather, status: u64, ancestors: u64, evidence_mask: u64) -> (result: Gather) { return Gather { signal: empty_signal(), status: select(g.status != 0, g.status, status), ancestors: g.ancestors | ancestors, evidence_mask: g.evidence_mask | evidence_mask }; }
+fn gathered_value(g: Gather, j: u64, value: i64, ancestors: u64, evidence_mask: u64) -> (result: Gather) {
+    if value < -1000 || value > 1000 { return gather_refusal(g, 6, ancestors, evidence_mask); }
+    let x: Signal = g.signal;
+    return Gather { signal: Signal { values: replace(x.values, j, value), width: x.width }, status: 0, ancestors: g.ancestors | ancestors, evidence_mask: g.evidence_mask | evidence_mask };
+}
+fn gather(n: Node, o: Observation, traces: [Trace; 16]) -> (result: Gather) {
+    iterate j over n.inputs carrying g: Gather = Gather { signal: Signal { values: [0; 8], width: n.ninput }, status: 0, ancestors: 0, evidence_mask: 0 } { next g = gather_link(n, j, o, traces, g); }
+    return g;
+}
+fn math_cost(n: Node) -> (result: u64) { if op_code(n.operation) != 0 { return 0; } let t: Topology = n.model.topology; if t.hidden == 0 { return t.inputs * t.outputs; } return t.inputs * t.hidden + t.hidden * t.outputs; }
+fn sum_signal(x: Signal) -> (result: Signal) { iterate i over x.values carrying sum: i64 = 0 { next sum = sum + x.values[i]; } return Signal { values: [sum, 0, 0, 0, 0, 0, 0, 0], width: 1 }; }
+fn execute_node(n: Node, g: Gather) -> (result: Inference) {
+    if op_code(n.operation) == 0 { return infer(n.model, g.signal); }
+    if op_code(n.operation) == 2 { return Inference { status: 0, output: g.signal, multiplies: 0, additions: 0 }; }
+    return Inference { status: 0, output: sum_signal(g.signal), multiplies: 0, additions: n.ninput };
+}
+fn trace_for(n: Node, a: Assembly, row: u64, g: Gather, status: u64, signal: Signal) -> (result: Trace) {
+    let p: Parameters = n.model.parameters;
+    return Trace { identity: n.identity, revision: select(op_code(n.operation) == 0, p.revision, a.revision), provenance: select(op_code(n.operation) == 0, p.provenance, a.provenance), status: status, signal: signal, ancestors: g.ancestors | ((1 as u64) << row), evidence_mask: g.evidence_mask };
+}
+fn run_row(a: Assembly, o: Observation, needed: [bool; 16], budget: Budget, row: u64, run: Run) -> (result: Run) {
+    if row >= a.count || !needed[row] { return run; }
+    let n: Node = a.nodes[row];
+    let g: Gather = gather(n, o, run.traces);
+    let cost: u64 = math_cost(n);
+    if run.executed >= budget.nodes || run.multiplies + cost > budget.multiplies { return Run { identity: run.identity, revision: run.revision, provenance: run.provenance, evidence: run.evidence, event: run.event, status: 5, traces: replace(run.traces, row, trace_for(n, a, row, g, 5, empty_signal())), executed: run.executed, multiplies: run.multiplies, additions: run.additions, parameter_checks: run.parameter_checks, connection_checks: run.connection_checks + n.ninput }; }
+    if g.status != 0 { return store_trace(run, row, trace_for(n, a, row, g, g.status, empty_signal()), 0, 0, 0, n.ninput); }
+    let result: Inference = execute_node(n, g);
+    if result.status != 0 { return store_trace(run, row, trace_for(n, a, row, g, 6, empty_signal()), 0, 0, select(op_code(n.operation) == 0, 100, 0), n.ninput); }
+    let x: Signal = result.output;
+    if n.margin >= 0 && x.values[0] >= 0 - n.margin && x.values[0] <= n.margin { return store_trace(run, row, trace_for(n, a, row, g, 4, empty_signal()), result.multiplies, result.additions, select(op_code(n.operation) == 0, 100, 0), n.ninput); }
+    return store_trace(run, row, trace_for(n, a, row, g, 0, x), result.multiplies, result.additions, select(op_code(n.operation) == 0, 100, 0), n.ninput);
+}
+fn store_trace(r: Run, row: u64, t: Trace, mul: u64, add: u64, checks: u64, links: u64) -> (result: Run) { return Run { identity: r.identity, revision: r.revision, provenance: r.provenance, evidence: r.evidence, event: r.event, status: 0, traces: replace(r.traces, row, t), executed: r.executed + 1, multiplies: r.multiplies + mul, additions: r.additions + add, parameter_checks: r.parameter_checks + checks, connection_checks: r.connection_checks + links }; }
+fn validation_parameters(a: Assembly) -> (result: u64) { iterate i over a.nodes carrying count: u64 = 0 { next count = count + validation_row(a, i); } return count; }
+fn validation_row(a: Assembly, i: u64) -> (result: u64) { if i >= a.count { return 0; } return select(op_code(a.nodes[i].operation) == 0, 100, 0); }
+fn run(a: Assembly, o: Observation, target: u64, budget: Budget) -> (result: Run) {
+    let seed: Run = Run { identity: a.identity, revision: a.revision, provenance: a.provenance, evidence: o.evidence, event: o.event, status: 3, traces: empty_traces(), executed: 0, multiplies: 0, additions: 0, parameter_checks: 0, connection_checks: 0 };
+    if !assembly_valid(a) || target == 0 || target > a.count { return seed; }
+    let x: Signal = o.signal;
+    if o.event == 0 || x.width != a.external_width { return seed; }
+    let needed: [bool; 16] = dependencies(a, target);
+    let initial: Run = Run { identity: a.identity, revision: a.revision, provenance: a.provenance, evidence: o.evidence, event: o.event, status: 0, traces: empty_traces(), executed: 0, multiplies: 0, additions: 0, parameter_checks: validation_parameters(a), connection_checks: 8 * a.count };
+    iterate i over a.nodes carrying out: Run = initial { next out = run_row(a, o, needed, budget, i, out); }
+    let t: Trace = out.traces[target - 1];
+    return Run { identity: out.identity, revision: out.revision, provenance: out.provenance, evidence: out.evidence, event: out.event, status: t.status, traces: out.traces, executed: out.executed, multiplies: out.multiplies, additions: out.additions, parameter_checks: out.parameter_checks, connection_checks: out.connection_checks };
+}
+fn same_topology(a: Topology, b: Topology) -> (result: bool) { return a.inputs == b.inputs && a.hidden == b.hidden && a.outputs == b.outputs && a.relu == b.relu; }
+fn rebind(a: Assembly, row: u64, m: Model, revision: u64, provenance: u64) -> (result: Swap) {
+    if !assembly_valid(a) || row >= a.count || !model_valid(m) || revision <= a.revision || provenance == 0 { return Swap { accepted: false, assembly: a }; }
+    let n: Node = a.nodes[row];
+    if op_code(n.operation) != 0 || n.identity != m.identity || !same_topology(n.model.topology, m.topology) { return Swap { accepted: false, assembly: a }; }
+    let old_parameters: Parameters = n.model.parameters; let new_parameters: Parameters = m.parameters;
+    if changes(n.model, m) > 0 && old_parameters.revision == new_parameters.revision { return Swap { accepted: false, assembly: a }; }
+    let replacement: Node = Node { identity: n.identity, operation: n.operation, model: m, inputs: n.inputs, ninput: n.ninput, output_contract: n.output_contract, margin: n.margin };
+    let candidate: Assembly = Assembly { identity: a.identity, revision: revision, parent: a.revision, provenance: provenance, nodes: replace(a.nodes, row, replacement), count: a.count, external_contracts: a.external_contracts, external_width: a.external_width };
+    if !assembly_valid(candidate) { return Swap { accepted: false, assembly: a }; }
+    return Swap { accepted: true, assembly: candidate };
+}
+
+record Resources { active_parameters: u64, allocated_parameter_bytes: u64, connection_capacity_bytes: u64, trace_lane_bytes: u64, live_connections: u64, node_capacity: u64 }
+fn resources(a: Assembly) -> (result: Resources) {
+    iterate i over a.nodes carrying count: u64 = 0 { next count = count + active_parameters(a, i); }
+    iterate j over a.nodes carrying links: u64 = 0 { next links = links + live_links(a, j); }
+    return Resources { active_parameters: count, allocated_parameter_bytes: 12800, connection_capacity_bytes: 3072, trace_lane_bytes: 1024, live_connections: links, node_capacity: 16 };
+}
+fn active_parameters(a: Assembly, row: u64) -> (result: u64) { if row >= a.count { return 0; } let n: Node = a.nodes[row]; if op_code(n.operation) != 0 { return 0; } return parameter_count(n.model.topology); }
+fn live_links(a: Assembly, row: u64) -> (result: u64) { if row >= a.count { return 0; } return a.nodes[row].ninput; }
+
+// Stable component identity lookup; rows remain explicit connection addresses.
+fn component_row(a: Assembly, identity: u64) -> (result: u64) {
+    iterate i over a.nodes carrying found: u64 = 0 { next found = select(i < a.count && a.nodes[i].identity == identity, i + 1, found); }
+    return found;
+}

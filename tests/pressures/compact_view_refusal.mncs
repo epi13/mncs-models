@@ -1,0 +1,11 @@
+mncs 0.18;
+module models.compact_probe;
+use mncs.test.assertions;
+use mncs.test.suite;
+record P { values: [i64; up_to 100] }
+fn change(p: P) -> (result: P) { return P { values: replace(p.values, 0, 3) }; }
+test compact_replace() -> (result: TestResult) {
+ let p: P = P { values: [1, 2, 3, 4, 5] };
+ let q: P = change(p);
+ return from_assertion(equals_bool(true, q.values.len == 5 && q.values[0] == 3, 1));
+}

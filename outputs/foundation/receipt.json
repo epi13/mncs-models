@@ -1,7 +1,8 @@
 {
-  "schema": "mncs.models.foundation-evidence/1",
-  "boundary": "native bounded dense inference and synthetic multiview experiment; no operational integration or MNCS conformance claim",
-  "result_sha256": "fce81857f3982f3a011b7e34adc7c7ebc5d9e6d62c09d497cb8a930f36663091",
+  "schema": "mncs.models.verification-evidence/1",
+  "suite": "foundation",
+  "boundary": "native bounded micro-models and DAG composition; synthetic evaluation; no operational integration or family conformance claim",
+  "result_sha256": "c109898f26afe442a118827dc6762d917ca4d6369f455f375d17e5809f31c168",
   "native_run_id": "5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6",
   "summary": {
     "authority": "native_suite",
@@ -28,7 +29,7 @@
     "reused_session": true,
     "run_identity": "5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6",
     "runner_version": "0.1.0",
-    "step_budget": 200000,
+    "step_budget": 3000000,
     "test_case_identities": [
       "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c",
       "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa",
@@ -46,18 +47,24 @@
       "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
     ]
   },
-  "suite_wall_seconds": 20.013087302999338,
-  "wall_scope": "compilation plus native suite; not per-inference latency",
+  "suite_wall_seconds": 19.3514241350058,
+  "wall_scope": "compilation and suite, not inference-only latency",
   "source_sha256": {
+    "src/models/compose.mncs": "25b768aa13ee7f5e5e5cf7ace79210447fb72c5a67e8ebd141aa98d4841ecb6f",
     "src/models/micro.mncs": "adad0631bc054e263f273117a17285014f5817f6edc4b35b9034466552a325b5",
     "src/models/views.mncs": "c32ae169c6de3fe37517545a934a9937cc9e3d1f212cce01d61bf419c43aded5",
-    "tests/native/foundation.mncs": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8"
+    "tests/fixtures/composition_cases.mncs": "4a57eef685758e2d2b29c1eb468ef4c5fae593feaccb3ccf878f8b8903a24437",
+    "tests/native/composition.mncs": "131863a3ed76e034fa76780fc409f4fe6888567fcdf38b588d5f53d1ad6b864f",
+    "tests/native/foundation.mncs": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+    "tests/pressures/compact_view_refusal.mncs": "0fc05ebcc384fb3b89dd28a52d76c457966aa80e84cbcad72fbdc34c4134c67d"
   },
   "compiler_binary_sha256": "129ef764bd56f6a3e05ee19631c46c044217590d537d52ee1c62b0fba335d7ae",
   "observed_language_checkout": "f8212ed8b7478196b5293a84152154be5e0bea3f",
   "observed_test_checkout": "d51958bf2cb2dbba583bee255897b4c7544a0468",
-  "checkout_revision_note": "Observed source heads are not a build attestation for the binary; binary digest and native artifact identity bind this execution.",
+  "checkout_revision_note": "Observed heads are not binary build attestations; the binary hash binds execution.",
+  "measurements": {},
   "source_artifact_bytes": {
+    "src/models/compose.mncs": 15156,
     "src/models/micro.mncs": 4885,
     "src/models/views.mncs": 1862
   }

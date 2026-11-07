@@ -1,0 +1,38 @@
+mncs 0.18;
+module mncs.models.composition_cases;
+record Scenario { event: u64, s: i64, r: i64, p: i64, u: i64, useful: bool }
+// Frozen synthetic simulator labels: conjunction of signature/pressure, or repeated unhealthy events.
+fn held_out() -> (result: [Scenario; 32]) { return [
+ Scenario { event: 101, s: 0, r: 0, p: 0, u: 1, useful: false },
+ Scenario { event: 102, s: 1, r: 0, p: 0, u: 2, useful: false },
+ Scenario { event: 103, s: 2, r: 0, p: 0, u: 0, useful: false },
+ Scenario { event: 104, s: 3, r: 0, p: 0, u: 1, useful: false },
+ Scenario { event: 105, s: 0, r: 0, p: 1, u: 2, useful: false },
+ Scenario { event: 106, s: 1, r: 0, p: 1, u: 0, useful: false },
+ Scenario { event: 107, s: 2, r: 0, p: 1, u: 1, useful: false },
+ Scenario { event: 108, s: 3, r: 0, p: 1, u: 2, useful: false },
+ Scenario { event: 109, s: 0, r: 0, p: 2, u: 0, useful: false },
+ Scenario { event: 110, s: 1, r: 0, p: 2, u: 1, useful: false },
+ Scenario { event: 111, s: 2, r: 0, p: 2, u: 2, useful: true },
+ Scenario { event: 112, s: 3, r: 0, p: 2, u: 0, useful: true },
+ Scenario { event: 113, s: 0, r: 0, p: 3, u: 1, useful: false },
+ Scenario { event: 114, s: 1, r: 0, p: 3, u: 2, useful: false },
+ Scenario { event: 115, s: 2, r: 0, p: 3, u: 0, useful: true },
+ Scenario { event: 116, s: 3, r: 0, p: 3, u: 1, useful: true },
+ Scenario { event: 117, s: 0, r: 3, p: 0, u: 2, useful: true },
+ Scenario { event: 118, s: 1, r: 3, p: 0, u: 0, useful: false },
+ Scenario { event: 119, s: 2, r: 3, p: 0, u: 1, useful: false },
+ Scenario { event: 120, s: 3, r: 3, p: 0, u: 2, useful: true },
+ Scenario { event: 121, s: 0, r: 3, p: 1, u: 0, useful: false },
+ Scenario { event: 122, s: 1, r: 3, p: 1, u: 1, useful: false },
+ Scenario { event: 123, s: 2, r: 3, p: 1, u: 2, useful: true },
+ Scenario { event: 124, s: 3, r: 3, p: 1, u: 0, useful: false },
+ Scenario { event: 125, s: 0, r: 3, p: 2, u: 1, useful: false },
+ Scenario { event: 126, s: 1, r: 3, p: 2, u: 2, useful: true },
+ Scenario { event: 127, s: 2, r: 3, p: 2, u: 0, useful: true },
+ Scenario { event: 128, s: 3, r: 3, p: 2, u: 1, useful: true },
+ Scenario { event: 129, s: 0, r: 3, p: 3, u: 2, useful: true },
+ Scenario { event: 130, s: 1, r: 3, p: 3, u: 0, useful: false },
+ Scenario { event: 131, s: 2, r: 3, p: 3, u: 1, useful: true },
+ Scenario { event: 132, s: 3, r: 3, p: 3, u: 2, useful: true }
+]; }

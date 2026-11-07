@@ -1,0 +1,169 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:6f183989c8d45eb63cb71bf89f8ef425ef053e0cd74bd7071090d4493360cdae",
+    "artifact_sha256": "742d7502980955823c1eefffb0c5f603b6c2de6586e90c1355fea90d0ce9ad99",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "record": {
+          "fields": [
+            [
+              "deterministic_glue",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 20
+                }
+              }
+            ],
+            [
+              "deterministic_initial",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 25
+                }
+              }
+            ],
+            [
+              "diagnostic",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 21
+                }
+              }
+            ],
+            [
+              "edited",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 20
+                }
+              }
+            ],
+            [
+              "environment",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 22
+                }
+              }
+            ],
+            [
+              "errors",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ],
+            [
+              "initial",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 25
+                }
+              }
+            ],
+            [
+              "linear",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 24
+                }
+              }
+            ],
+            [
+              "standalone",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 20
+                }
+              }
+            ],
+            [
+              "standalone_initial",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 25
+                }
+              }
+            ],
+            [
+              "strong",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 32
+                }
+              }
+            ],
+            [
+              "total",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 32
+                }
+              }
+            ]
+          ],
+          "name": "Comparison",
+          "type_identity": "mncs:0.2:record-type:mncs.models.composition_tests::Comparison::deterministic_glue%3Au64%3Bdeterministic_initial%3Au64%3Bdiagnostic%3Au64%3Bedited%3Au64%3Benvironment%3Au64%3Berrors%3Au64%3Binitial%3Au64%3Blinear%3Au64%3Bstandalone%3Au64%3Bstandalone_initial%3Au64%3Bstrong%3Au64%3Btotal%3Au64%3B"
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 1744668
+  },
+  "canonical_arguments_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "function": "benchmark",
+  "module": "mncs.models.composition_tests",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

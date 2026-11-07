@@ -1,5 +1,21 @@
 # Roadmap
 
+## Verified composition milestone
+
+- [x] Reuse native Model/infer in a bounded DAG with explicit contracts.
+- [x] Independent local models, deterministic and learned glue, component edit/rebind/rollback.
+- [x] Missing/contradictory/abstaining output propagation and numerical/resource refusal.
+- [x] Two/three-node constructions and a reusable connected ten-node sensor construction.
+- [x] Frozen 32-case synthetic comparison, including a harmful tuning edit and superior deterministic baseline.
+- [x] Active and allocated resource accounting with native execution measurements.
+- [ ] Compact editable parameter storage: bounded-view replacement is refused with MNE198.
+- [ ] Matched LLM intervention-cost experiment and authorized real-trace evaluation.
+- [ ] Larger assemblies, after storage/validation overhead is measured and improved.
+
+Details and limitations: [COMPOSITION.md](docs/COMPOSITION.md), RFC 0003.
+This does not complete the broader graph, sharing, recurrence, routing or operational phases below.
+
+
 Current executable boundary: [native micro-model foundation](docs/NATIVE_FOUNDATION.md). RFC 0002 records the implemented slice; broader graph and operational interfaces below remain design targets.
 
 This roadmap is ordered to make `mncs-models` a native model-construction layer rather than a new host-language ML framework.

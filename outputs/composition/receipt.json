@@ -1,0 +1,103 @@
+{
+  "schema": "mncs.models.verification-evidence/1",
+  "suite": "composition",
+  "boundary": "native bounded micro-models and DAG composition; synthetic evaluation; no operational integration or family conformance claim",
+  "result_sha256": "41922e047040ce13a566df076e89f0b82dcdd1660235964015188e546189b4b6",
+  "native_run_id": "59fc4d672b5501ec4afde564b1d79618db7b78133fc1af7a1dda1472c208c804",
+  "summary": {
+    "authority": "native_suite",
+    "failed": 0,
+    "passed": 16,
+    "skipped": 0,
+    "total": 16,
+    "unsupported": 0,
+    "verdict": "PASS"
+  },
+  "execution": {
+    "artifact_identity": "mncs:compiler:backend-artifact:6f183989c8d45eb63cb71bf89f8ef425ef053e0cd74bd7071090d4493360cdae",
+    "artifact_sha256": "742d7502980955823c1eefffb0c5f603b6c2de6586e90c1355fea90d0ce9ad99",
+    "backend": "mncs-research-bytecode",
+    "batch_size": 16,
+    "canonical_path": true,
+    "compiler_owned_inventory": true,
+    "fallback": false,
+    "host_subprocesses": 0,
+    "inventory_identity": "ac2d307bb6911c8b51955f35a90947c08236813d5ff02c1d9b580ca8f6f35169",
+    "mode": "native-toolchain-embed",
+    "native_batch_calls": 1,
+    "native_session_calls": 50,
+    "reused_session": true,
+    "run_identity": "59fc4d672b5501ec4afde564b1d79618db7b78133fc1af7a1dda1472c208c804",
+    "runner_version": "0.1.0",
+    "step_budget": 3000000,
+    "test_case_identities": [
+      "mncs:0.2:test-case:mncs.models.composition_tests::abstention_blocks_downstream::da03f75164d005b6c431be1f6d7920aa7a78d15161c444e4c843dcc77c1036a0",
+      "mncs:0.2:test-case:mncs.models.composition_tests::bounds_and_budgets::b839e315bb0e431bb6ad14d332269e29fab524365fb1d959df05fc3882839201",
+      "mncs:0.2:test-case:mncs.models.composition_tests::concat_contract::4f67d84f2c9e4e107a52634a86c6f1a75f83c3c965dee897d93e0e88de58c1cb",
+      "mncs:0.2:test-case:mncs.models.composition_tests::deterministic_composition::ed4c4af09dd63c5f8cc36a8d6685dd67f0c7f6085d545df5dde8cb31e5e04b98",
+      "mncs:0.2:test-case:mncs.models.composition_tests::failed_component_replacement_is_atomic::d563f8e4e46506ff836efcfd4e47c4fa89cfc34366366c408644ce5bf3893857",
+      "mncs:0.2:test-case:mncs.models.composition_tests::frozen_heldout_comparison::b27c7bd04471e17064fe716fa88fcc0d6f3309813c1bb7fa46397a35ca04475d",
+      "mncs:0.2:test-case:mncs.models.composition_tests::invalid_connections_and_duplicate_identity::fbcb3b380b69b75a67deaddb17d5994e423b394ce7ce97f257de9775662643ea",
+      "mncs:0.2:test-case:mncs.models.composition_tests::isolated_revision_regression_and_rollback::50d5763a8f53b68676272f5b6bd72ff5719b321fedc19da36fef56fc8fcbc22c",
+      "mncs:0.2:test-case:mncs.models.composition_tests::learned_composition::da3bed1db3d65a02cbdc9433ee6bfd292966ee4faff3032452651cfa70f89014",
+      "mncs:0.2:test-case:mncs.models.composition_tests::numerical_interface_refusal_and_revision_identity::33f69708fda0aace8d4b3ac4dfcd61f146dd27896a07478a86240faf549a36f3",
+      "mncs:0.2:test-case:mncs.models.composition_tests::parallel_branch_order_independence::867603ba064eaa1457ffa4ba6050cb1572bd7dfc7c13488055a688789b8e2422",
+      "mncs:0.2:test-case:mncs.models.composition_tests::sequential_two_components::d0857f1a8e2782f5aa72732b73a5c180d24c4600ca95a4ed9adfed11db561e88",
+      "mncs:0.2:test-case:mncs.models.composition_tests::specialist_and_tuning_regression::5a808267099d38a872c7ab076c1de45c68914fff550a14a043e28df6e9bce412",
+      "mncs:0.2:test-case:mncs.models.composition_tests::standalone_equivalence::d762071554d597dd86218391c1ec3508cfb43d48d28e64f96816c52673564207",
+      "mncs:0.2:test-case:mncs.models.composition_tests::ten_component_execution_and_subset::cc38d809befdd0a812bced8a7e22a41f1f12c34e7e20f1e638aa49e04fd4ba60",
+      "mncs:0.2:test-case:mncs.models.composition_tests::unavailable_and_contradiction_propagate::eb9151dd7273861349e6e8f108f56cb755842b38a48d044256721d620664b60c"
+    ]
+  },
+  "suite_wall_seconds": 44.55162023899902,
+  "wall_scope": "compilation and suite, not inference-only latency",
+  "source_sha256": {
+    "src/models/compose.mncs": "25b768aa13ee7f5e5e5cf7ace79210447fb72c5a67e8ebd141aa98d4841ecb6f",
+    "src/models/micro.mncs": "adad0631bc054e263f273117a17285014f5817f6edc4b35b9034466552a325b5",
+    "src/models/views.mncs": "c32ae169c6de3fe37517545a934a9937cc9e3d1f212cce01d61bf419c43aded5",
+    "tests/fixtures/composition_cases.mncs": "4a57eef685758e2d2b29c1eb468ef4c5fae593feaccb3ccf878f8b8903a24437",
+    "tests/native/composition.mncs": "131863a3ed76e034fa76780fc409f4fe6888567fcdf38b588d5f53d1ad6b864f",
+    "tests/native/foundation.mncs": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+    "tests/pressures/compact_view_refusal.mncs": "0fc05ebcc384fb3b89dd28a52d76c457966aa80e84cbcad72fbdc34c4134c67d"
+  },
+  "compiler_binary_sha256": "129ef764bd56f6a3e05ee19631c46c044217590d537d52ee1c62b0fba335d7ae",
+  "observed_language_checkout": "f8212ed8b7478196b5293a84152154be5e0bea3f",
+  "observed_test_checkout": "d51958bf2cb2dbba583bee255897b4c7544a0468",
+  "checkout_revision_note": "Observed heads are not binary build attestations; the binary hash binds execution.",
+  "measurements": {
+    "benchmark": {
+      "sha256": "8b8203c6188b0a9b4fdf4978ace0e1253dde8a580783f7fa2172bfbd99b8811f",
+      "steps": 1744668
+    },
+    "composed_cost": {
+      "sha256": "91cb5891dd8f924ea4771e9d53858b7240891add2e2b79e65384edc7adc125e0",
+      "steps": 18004
+    },
+    "standalone_cost": {
+      "sha256": "1340b90c2c72bf74b296d3a7828bc92edc2e151beb23d9f1000cf08f46bcc94c",
+      "steps": 2747
+    },
+    "deterministic_cost": {
+      "sha256": "ba858246a7a210fa739e8c5b7260d1f7e54a5a6c8f85744f32b2c4387d8ab47a",
+      "steps": 54
+    },
+    "scale_cost": {
+      "sha256": "1bcea74b7521c978e20141e087eb541cb2103b32893871644666eaebcaa29824",
+      "steps": 65335
+    },
+    "subset_cost": {
+      "sha256": "59cfbc12bae7d0be795da8c38b7f3ded30885c3819278be8f92c7f8a9b3f143f",
+      "steps": 41415
+    },
+    "compact_view_update": {
+      "sha256": "76d3c1fd6fcef074fa8c73ead46ae50cb5cd5c53e47f4f42f3e7cc6a530dbf4f",
+      "status": "expected_refusal",
+      "diagnostic": "MNE198"
+    }
+  },
+  "source_artifact_bytes": {
+    "src/models/compose.mncs": 15156,
+    "src/models/micro.mncs": 4885,
+    "src/models/views.mncs": 1862
+  }
+}

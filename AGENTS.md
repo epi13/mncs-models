@@ -139,7 +139,7 @@ When native MNCS implementation reaches or surpasses a host scaffold, deprecate 
 
 ## Verification
 
-No executable conformance command is declared by this scaffold because no implementation has been selected yet. The first implementation campaign should establish:
+Run `python3 scripts/verify.py` for the native foundation and composition suites and source-bound callable measurements. These verify the bounded contracts in RFCs 0002 and 0003, not the complete charter or family conformance. Further implementation campaigns should establish:
 
 - structural validation tests;
 - deterministic identity/serialization tests where applicable;
