@@ -1,5 +1,7 @@
 # Roadmap
 
+Current executable boundary: [native micro-model foundation](docs/NATIVE_FOUNDATION.md). RFC 0002 records the implemented slice; broader graph and operational interfaces below remain design targets.
+
 This roadmap is ordered to make `mncs-models` a native model-construction layer rather than a new host-language ML framework.
 
 The phases are implementation milestones, **not parallel product versions**. The repository should maintain one canonical implementation and migrate it forward as each milestone is reached.

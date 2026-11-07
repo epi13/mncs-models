@@ -1,0 +1,95 @@
+mncs 0.18;
+module mncs.models.micro;
+
+// Scale-one exact integer dense composition. No effects or host callbacks.
+record Topology { inputs: u64, hidden: u64, outputs: u64, relu: bool }
+record Parameters { values: [i64; 100], revision: u64, parent: u64, provenance: u64 }
+record Model { identity: u64, topology: Topology, parameters: Parameters }
+record Signal { values: [i64; 8], width: u64 }
+// status: 0 valid, 1 invalid model, 2 invalid input. No output on refusal.
+record Inference { status: u64, output: Signal, multiplies: u64, additions: u64 }
+record Edit { accepted: bool, model: Model }
+
+fn parameter_count(t: Topology) -> (result: u64) {
+    if t.hidden == 0 { return (t.inputs + 1) * t.outputs; }
+    return (t.inputs + 1) * t.hidden + (t.hidden + 1) * t.outputs;
+}
+fn topology_valid(t: Topology) -> (result: bool) {
+    if t.inputs < 1 || t.inputs > 8 || t.hidden > 8 || t.outputs < 1 || t.outputs > 8 { return false; }
+    return parameter_count(t) <= 100;
+}
+fn parameter_cell_valid(p: Parameters, count: u64, i: u64) -> (result: bool) {
+    if i >= count { return p.values[i] == 0; }
+    return p.values[i] >= -100 && p.values[i] <= 100;
+}
+fn model_valid(m: Model) -> (result: bool) {
+    if !topology_valid(m.topology) { return false; }
+    let p: Parameters = m.parameters;
+    let count: u64 = parameter_count(m.topology);
+    iterate i over p.values carrying good: bool = true {
+        next good = good && parameter_cell_valid(p, count, i);
+    }
+    return good && m.identity != 0 && p.revision != 0 && p.parent < p.revision && p.provenance != 0;
+}
+fn empty_signal() -> (result: Signal) { return Signal { values: [0; 8], width: 0 }; }
+fn input_cell_valid(x: Signal, i: u64) -> (result: bool) {
+    if i >= x.width { return x.values[i] == 0; }
+    return x.values[i] >= -1000 && x.values[i] <= 1000;
+}
+fn input_valid(x: Signal, width: u64) -> (result: bool) {
+    if x.width != width { return false; }
+    iterate i over x.values carrying good: bool = true {
+        next good = good && input_cell_valid(x, i);
+    }
+    return good;
+}
+// Each output row packs input weights followed by its bias.
+fn dot_cell(p: Parameters, x: Signal, start: u64, i: u64) -> (result: i64) {
+    if i >= x.width { return 0; }
+    return p.values[start + i] * x.values[i];
+}
+fn neuron(p: Parameters, x: Signal, start: u64, relu: bool) -> (result: i64) {
+    iterate i over x.values carrying sum: i64 = p.values[start + x.width] {
+        next sum = sum + dot_cell(p, x, start, i);
+    }
+    if relu && sum < 0 { return 0; }
+    return sum;
+}
+fn layer_cell(p: Parameters, x: Signal, offset: u64, width: u64, relu: bool, i: u64) -> (result: i64) {
+    if i >= width { return 0; }
+    return neuron(p, x, offset + i * (x.width + 1), relu);
+}
+fn layer(p: Parameters, x: Signal, offset: u64, width: u64, relu: bool) -> (result: Signal) {
+    iterate i over x.values carrying values: [i64; 8] = [0; 8] {
+        next values = replace(values, i, layer_cell(p, x, offset, width, relu, i));
+    }
+    return Signal { values: values, width: width };
+}
+fn infer(m: Model, x: Signal) -> (result: Inference) {
+    if !model_valid(m) { return Inference { status: 1, output: empty_signal(), multiplies: 0, additions: 0 }; }
+    let t: Topology = m.topology;
+    if !input_valid(x, t.inputs) { return Inference { status: 2, output: empty_signal(), multiplies: 0, additions: 0 }; }
+    if t.hidden == 0 {
+        return Inference { status: 0, output: layer(m.parameters, x, 0, t.outputs, t.relu), multiplies: t.inputs * t.outputs, additions: t.inputs * t.outputs };
+    }
+    let h: Signal = layer(m.parameters, x, 0, t.hidden, t.relu);
+    let count: u64 = t.inputs * t.hidden + t.hidden * t.outputs;
+    return Inference { status: 0, output: layer(m.parameters, h, (t.inputs + 1) * t.hidden, t.outputs, false), multiplies: count, additions: count };
+}
+// Revision is caller-supplied monotonic identity, never an automatic promotion.
+fn edit(m: Model, index: u64, value: i64, revision: u64, provenance: u64) -> (result: Edit) {
+    if !model_valid(m) { return Edit { accepted: false, model: m }; }
+    let p: Parameters = m.parameters;
+    if index >= parameter_count(m.topology) || revision <= p.revision || provenance == 0 { return Edit { accepted: false, model: m }; }
+    let candidate: Model = Model { identity: m.identity, topology: m.topology, parameters: Parameters { values: replace(p.values, index, value), revision: revision, parent: p.revision, provenance: provenance } };
+    if !model_valid(candidate) { return Edit { accepted: false, model: m }; }
+    return Edit { accepted: true, model: candidate };
+}
+fn changes(a: Model, b: Model) -> (result: u64) {
+    let pa: Parameters = a.parameters;
+    let pb: Parameters = b.parameters;
+    iterate i over pa.values carrying count: u64 = 0 {
+        next count = count + select(pa.values[i] != pb.values[i], 1, 0);
+    }
+    return count;
+}

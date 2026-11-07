@@ -1,5 +1,7 @@
 # Architecture
 
+Current executable boundary: [native micro-model foundation](NATIVE_FOUNDATION.md). RFC 0002 records the implemented slice; broader graph and operational interfaces below remain design targets.
+
 This document records the current structural model for `mncs-models`. It is intentionally more precise than a vision statement and less rigid than a finalized schema.
 
 The implementation should refine this document as real MNCS-language/runtime pressure is discovered.

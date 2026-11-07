@@ -1,0 +1,3213 @@
+{
+  "artifacts": [],
+  "classification": "passed",
+  "execution": {
+    "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+    "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+    "backend": "mncs-research-bytecode",
+    "batch_size": 14,
+    "canonical_path": true,
+    "compiler_owned_inventory": true,
+    "fallback": false,
+    "host_subprocesses": 0,
+    "inventory_identity": "a3ba435e64b0f5c71be3a278db9c169978d7dd279054be814e176670b951b995",
+    "mode": "native-toolchain-embed",
+    "native_batch_calls": 1,
+    "native_session_calls": 44,
+    "reused_session": true,
+    "run_identity": "5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6",
+    "runner_version": "0.1.0",
+    "step_budget": 200000,
+    "test_case_identities": [
+      "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_deterministic_baselines::38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+    ]
+  },
+  "exit_code": 0,
+  "failure_class": "none",
+  "id": "mncs-test",
+  "native_suite_summary": {
+    "assertion_count": 14,
+    "assertion_failures": 0,
+    "compile_failures": 0,
+    "failed": 0,
+    "failure_count": 0,
+    "infrastructure_failures": 0,
+    "passed": 14,
+    "runtime_failures": 0,
+    "setup_failures": 0,
+    "skipped": 0,
+    "timeout_failures": 0,
+    "total": 14,
+    "unsupported": 0,
+    "verdict": "PASS",
+    "verdict_code": 0
+  },
+  "protocol_version": 1,
+  "provenance": {
+    "inventory_identity": "a3ba435e64b0f5c71be3a278db9c169978d7dd279054be814e176670b951b995",
+    "runner": {
+      "host": "mncs-toolchain",
+      "language": "mncs",
+      "name": "mncs.test.runner"
+    },
+    "source": {
+      "path": "tests/native/foundation.mncs",
+      "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8"
+    }
+  },
+  "provider": "mncs-test",
+  "reproduction": {
+    "command": "mncs test tests/native/foundation.mncs",
+    "run_id": "5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6",
+    "step_budget": 200000
+  },
+  "run_id": "5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6",
+  "schema_version": "mncs.test-result/1",
+  "scope": {
+    "discovery": "compiler-inventory",
+    "module": "mncs.models.foundation_tests",
+    "source": "tests/native/foundation.mncs"
+  },
+  "selection": {
+    "available_test_count": 14,
+    "exact": [],
+    "filters": [],
+    "level": "repository_canonical",
+    "selected_test_count": 14,
+    "selected_test_identities": [
+      "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_deterministic_baselines::38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+    ]
+  },
+  "summary": {
+    "authority": "native_suite",
+    "failed": 0,
+    "passed": 14,
+    "skipped": 0,
+    "total": 14,
+    "unsupported": 0,
+    "verdict": "PASS"
+  },
+  "tests": [
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::abstention_is_explicit",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::abstention_is_explicit",
+        "signature_identity": "sha256:88690aad74934db582746ffffc6daee3c942c03f77ffbdbe8d3d0294c4126852",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c"
+      },
+      "entry": "abstention_is_explicit",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::abstention_is_explicit",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::abstention_is_explicit",
+          "signature_identity": "sha256:88690aad74934db582746ffffc6daee3c942c03f77ffbdbe8d3d0294c4126852",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 8
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 4040
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::abstention_is_explicit",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:1ff797dbd8725748322871a8c2d4e63f9a397e452d7fa75f40487efcce8b534c",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::abstention_is_explicit",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:795a224dc54b9e9e027b27d775360b2e659370d85f2edc85ee3ba8d9812c9310",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 4759,
+            "line": 65,
+            "start": 4310
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 8,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::abstention_is_explicit",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::abstention_is_explicit",
+          "signature_identity": "sha256:88690aad74934db582746ffffc6daee3c942c03f77ffbdbe8d3d0294c4126852",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "abstention_is_explicit",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::abstention_is_explicit",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::abstention_is_explicit",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::abstention_is_explicit",
+        "semantic_fingerprint": "5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c",
+        "signature_identity": "sha256:88690aad74934db582746ffffc6daee3c942c03f77ffbdbe8d3d0294c4126852",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 4759,
+        "line": 65,
+        "start": 4310
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::complete_construction_and_edit",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::complete_construction_and_edit",
+        "signature_identity": "sha256:f3b90d121f9bfc417f6f3e50f0ce7874ad78ebed2c6b83fca8fd0ee4e28a633b",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa"
+      },
+      "entry": "complete_construction_and_edit",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::complete_construction_and_edit",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::complete_construction_and_edit",
+          "signature_identity": "sha256:f3b90d121f9bfc417f6f3e50f0ce7874ad78ebed2c6b83fca8fd0ee4e28a633b",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 8604
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::complete_construction_and_edit",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:057d4c401a15b9d058aa56ff7ba609917c9943a04176c1a801d531e8704580b9",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::complete_construction_and_edit",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:7609d526d29ad48085a794cff005bce6958eb9b1dba3261d25ba3deaf70c262a",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 1320,
+            "line": 21,
+            "start": 983
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 1,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::complete_construction_and_edit",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::complete_construction_and_edit",
+          "signature_identity": "sha256:f3b90d121f9bfc417f6f3e50f0ce7874ad78ebed2c6b83fca8fd0ee4e28a633b",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "complete_construction_and_edit",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::complete_construction_and_edit",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::complete_construction_and_edit",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::complete_construction_and_edit",
+        "semantic_fingerprint": "80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa",
+        "signature_identity": "sha256:f3b90d121f9bfc417f6f3e50f0ce7874ad78ebed2c6b83fca8fd0ee4e28a633b",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 1320,
+        "line": 21,
+        "start": 983
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::construction_cases",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::construction_cases",
+        "signature_identity": "sha256:9573e088f2552581707417dc65cc23dfbe90c13b000a01c9408d32e8e9c6cc13",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926"
+      },
+      "entry": "construction_cases",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::construction_cases",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::construction_cases",
+          "signature_identity": "sha256:9573e088f2552581707417dc65cc23dfbe90c13b000a01c9408d32e8e9c6cc13",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 9
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 8954
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::construction_cases",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:92b8b552bde208ae9683635e9d84229c0c7ddc4f65ebcc34fa57173afac41c58",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::construction_cases",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:d7b501facf2cb07a43c77e0fcb9e67a9cf9ba5b355935718cbdc4258acf2a916",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 6768,
+            "line": 103,
+            "start": 6482
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 9,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::construction_cases",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::construction_cases",
+          "signature_identity": "sha256:9573e088f2552581707417dc65cc23dfbe90c13b000a01c9408d32e8e9c6cc13",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "construction_cases",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::construction_cases",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::construction_cases",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::construction_cases",
+        "semantic_fingerprint": "0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926",
+        "signature_identity": "sha256:9573e088f2552581707417dc65cc23dfbe90c13b000a01c9408d32e8e9c6cc13",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 6768,
+        "line": 103,
+        "start": 6482
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::evidence_and_authority_boundary",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::evidence_and_authority_boundary",
+        "signature_identity": "sha256:ceba1234326c7212dfc068d29e795828804aaac13e57a8b3205768d13351b468",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f"
+      },
+      "entry": "evidence_and_authority_boundary",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::evidence_and_authority_boundary",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::evidence_and_authority_boundary",
+          "signature_identity": "sha256:ceba1234326c7212dfc068d29e795828804aaac13e57a8b3205768d13351b468",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 7
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 23304
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::evidence_and_authority_boundary",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:923053ae30070be654231a19fe879b5d162941e4b2db64730eee331b3c850b77",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::evidence_and_authority_boundary",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:b2f1e889381a7eceb3090cfd9427f68ece64dcd41bdad7dccdad93197441a069",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 4308,
+            "line": 57,
+            "start": 3769
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 7,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::evidence_and_authority_boundary",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::evidence_and_authority_boundary",
+          "signature_identity": "sha256:ceba1234326c7212dfc068d29e795828804aaac13e57a8b3205768d13351b468",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "evidence_and_authority_boundary",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::evidence_and_authority_boundary",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::evidence_and_authority_boundary",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::evidence_and_authority_boundary",
+        "semantic_fingerprint": "f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f",
+        "signature_identity": "sha256:ceba1234326c7212dfc068d29e795828804aaac13e57a8b3205768d13351b468",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 4308,
+        "line": 57,
+        "start": 3769
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::exact_inference_and_cost",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::exact_inference_and_cost",
+        "signature_identity": "sha256:e35d37dba680390c6d7c350935a74ab3d4fa0a93e2c63598b4598527958904e4",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700"
+      },
+      "entry": "exact_inference_and_cost",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::exact_inference_and_cost",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::exact_inference_and_cost",
+          "signature_identity": "sha256:e35d37dba680390c6d7c350935a74ab3d4fa0a93e2c63598b4598527958904e4",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 4
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 11417
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::exact_inference_and_cost",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:6f63f18860577d6eef24d85140c04c2cccddc33e37414792a238f7a91a17896f",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::exact_inference_and_cost",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:eb2019a5c35e0a24751a1090f67ad7bf9cb384d26bffa5deca8ddedb8112aa29",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 2538,
+            "line": 37,
+            "start": 2276
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 4,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::exact_inference_and_cost",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::exact_inference_and_cost",
+          "signature_identity": "sha256:e35d37dba680390c6d7c350935a74ab3d4fa0a93e2c63598b4598527958904e4",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "exact_inference_and_cost",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::exact_inference_and_cost",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::exact_inference_and_cost",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::exact_inference_and_cost",
+        "semantic_fingerprint": "515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700",
+        "signature_identity": "sha256:e35d37dba680390c6d7c350935a74ab3d4fa0a93e2c63598b4598527958904e4",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 2538,
+        "line": 37,
+        "start": 2276
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_deterministic_baselines",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_deterministic_baselines",
+        "signature_identity": "sha256:218e91fa85776d329fff7bf8a8869bc1b65355fe277f9ad72ee5274696cd0a8d",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_deterministic_baselines::38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c"
+      },
+      "entry": "heldout_deterministic_baselines",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_deterministic_baselines",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_deterministic_baselines",
+          "signature_identity": "sha256:218e91fa85776d329fff7bf8a8869bc1b65355fe277f9ad72ee5274696cd0a8d",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_deterministic_baselines::38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 12
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 431
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_deterministic_baselines",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:a5da985bdc9f81a0b8991e9dbbafa5bb5d5ebc003e0c3d20cd027d2008194f51",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_deterministic_baselines",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:843c8630a641fa8ac71032afcdef83697ada0314e6113473645735c8118fdc91",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 8240,
+            "line": 125,
+            "start": 7749
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_deterministic_baselines::38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_deterministic_baselines::38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 12,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_deterministic_baselines",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_deterministic_baselines",
+          "signature_identity": "sha256:218e91fa85776d329fff7bf8a8869bc1b65355fe277f9ad72ee5274696cd0a8d",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_deterministic_baselines::38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "heldout_deterministic_baselines",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_deterministic_baselines",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_deterministic_baselines",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::heldout_deterministic_baselines",
+        "semantic_fingerprint": "38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c",
+        "signature_identity": "sha256:218e91fa85776d329fff7bf8a8869bc1b65355fe277f9ad72ee5274696cd0a8d",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_deterministic_baselines::38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 8240,
+        "line": 125,
+        "start": 7749
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_model_comparison",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_model_comparison",
+        "signature_identity": "sha256:52e8104394a05b894bb7c183768c0d874b589c71f5831b2e40334d2a78d8cb7d",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05"
+      },
+      "entry": "heldout_model_comparison",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_model_comparison",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_model_comparison",
+          "signature_identity": "sha256:52e8104394a05b894bb7c183768c0d874b589c71f5831b2e40334d2a78d8cb7d",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 11
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 68305
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_model_comparison",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:b5936d1a6859e973b4a2f6d8f344fcb4d571e2fcb165442655580b440037fef6",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_model_comparison",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:1896276913d94d46e1b0d1c12fa171db2fb7d87233b06a55276676b0812caabc",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 7748,
+            "line": 117,
+            "start": 7183
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 11,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_model_comparison",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_model_comparison",
+          "signature_identity": "sha256:52e8104394a05b894bb7c183768c0d874b589c71f5831b2e40334d2a78d8cb7d",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "heldout_model_comparison",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_model_comparison",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_model_comparison",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::heldout_model_comparison",
+        "semantic_fingerprint": "a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05",
+        "signature_identity": "sha256:52e8104394a05b894bb7c183768c0d874b589c71f5831b2e40334d2a78d8cb7d",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 7748,
+        "line": 117,
+        "start": 7183
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_edits_are_atomic",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_edits_are_atomic",
+        "signature_identity": "sha256:656818d021146ee5f03ddcf02347f7c1c1c50c6fd83dd3aecf67c71e676c3841",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871"
+      },
+      "entry": "invalid_edits_are_atomic",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_edits_are_atomic",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_edits_are_atomic",
+          "signature_identity": "sha256:656818d021146ee5f03ddcf02347f7c1c1c50c6fd83dd3aecf67c71e676c3841",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 2
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 8708
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_edits_are_atomic",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:425d4274b5a41c2cd289332c975dbaa3648514d5bd5bf0232a50d5a42de175ef",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_edits_are_atomic",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:912792917cd0db4e250d3800fd1e4f286aa1f3e4501572e66f882a89d0d9e134",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 1661,
+            "line": 26,
+            "start": 1321
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 2,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_edits_are_atomic",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_edits_are_atomic",
+          "signature_identity": "sha256:656818d021146ee5f03ddcf02347f7c1c1c50c6fd83dd3aecf67c71e676c3841",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "invalid_edits_are_atomic",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_edits_are_atomic",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_edits_are_atomic",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::invalid_edits_are_atomic",
+        "semantic_fingerprint": "c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871",
+        "signature_identity": "sha256:656818d021146ee5f03ddcf02347f7c1c1c50c6fd83dd3aecf67c71e676c3841",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 1661,
+        "line": 26,
+        "start": 1321
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_inputs_refused",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_inputs_refused",
+        "signature_identity": "sha256:c4d30f003ad67dcb163687358bdf2d1edbc4ab37c1f61ca0d409217aca813d8d",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b"
+      },
+      "entry": "invalid_inputs_refused",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_inputs_refused",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_inputs_refused",
+          "signature_identity": "sha256:c4d30f003ad67dcb163687358bdf2d1edbc4ab37c1f61ca0d409217aca813d8d",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 5
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 3746
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_inputs_refused",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:20dfbcff38dab66139d2d0ebdd175615c6c180e6360e13272051d5b00720ea93",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_inputs_refused",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:13981c998f0663abbf8ec0827509ed46da32185e944f8cccdfac12a6da7550fe",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 2800,
+            "line": 41,
+            "start": 2539
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 5,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_inputs_refused",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_inputs_refused",
+          "signature_identity": "sha256:c4d30f003ad67dcb163687358bdf2d1edbc4ab37c1f61ca0d409217aca813d8d",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "invalid_inputs_refused",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_inputs_refused",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_inputs_refused",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::invalid_inputs_refused",
+        "semantic_fingerprint": "3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b",
+        "signature_identity": "sha256:c4d30f003ad67dcb163687358bdf2d1edbc4ab37c1f61ca0d409217aca813d8d",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 2800,
+        "line": 41,
+        "start": 2539
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::maximum_signed_arithmetic",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::maximum_signed_arithmetic",
+        "signature_identity": "sha256:c2b2a36ac5b482b6f428bae17ba49f9ac3ae170c242c30190897c232e627b701",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2"
+      },
+      "entry": "maximum_signed_arithmetic",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::maximum_signed_arithmetic",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::maximum_signed_arithmetic",
+          "signature_identity": "sha256:c2b2a36ac5b482b6f428bae17ba49f9ac3ae170c242c30190897c232e627b701",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 14
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 4814
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::maximum_signed_arithmetic",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:3ad5a8f66ac5a08dba9bed5ceaa75b46f1ed45c1279fa6625272718576cd4bd5",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::maximum_signed_arithmetic",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:ef3c90e19af68887fdaf35a675e900c0ba7d690b5fb0f2344c3f7c5b40ba8a09",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 9751,
+            "line": 146,
+            "start": 9187
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 14,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::maximum_signed_arithmetic",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::maximum_signed_arithmetic",
+          "signature_identity": "sha256:c2b2a36ac5b482b6f428bae17ba49f9ac3ae170c242c30190897c232e627b701",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "maximum_signed_arithmetic",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::maximum_signed_arithmetic",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::maximum_signed_arithmetic",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::maximum_signed_arithmetic",
+        "semantic_fingerprint": "1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2",
+        "signature_identity": "sha256:c2b2a36ac5b482b6f428bae17ba49f9ac3ae170c242c30190897c232e627b701",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 9751,
+        "line": 146,
+        "start": 9187
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
+        "signature_identity": "sha256:c3a5d6905747dc6666f975dded03149f35b4314353986322ebc4e7266829e505",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81"
+      },
+      "entry": "numeric_envelope_and_full_parameter_budget",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
+          "signature_identity": "sha256:c3a5d6905747dc6666f975dded03149f35b4314353986322ebc4e7266829e505",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 13
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 6961
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:caf9cd2f5aaf5de615510cbf87ea77be33c061362a14de0c1c8e0e3f0f6a5be4",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:b1938d36172325f39e92a9982f5121e2ef48fb9b5a912670eaa85e8872529afa",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 9186,
+            "line": 136,
+            "start": 8242
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 13,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
+          "signature_identity": "sha256:c3a5d6905747dc6666f975dded03149f35b4314353986322ebc4e7266829e505",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "numeric_envelope_and_full_parameter_budget",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
+        "semantic_fingerprint": "efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81",
+        "signature_identity": "sha256:c3a5d6905747dc6666f975dded03149f35b4314353986322ebc4e7266829e505",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 9186,
+        "line": 136,
+        "start": 8242
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::topology_and_parameter_validation",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::topology_and_parameter_validation",
+        "signature_identity": "sha256:8fb3b0da3b155015f3e54c6a076abb9dcca43dc98bccdb34254071f3f0e62ecf",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909"
+      },
+      "entry": "topology_and_parameter_validation",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::topology_and_parameter_validation",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::topology_and_parameter_validation",
+          "signature_identity": "sha256:8fb3b0da3b155015f3e54c6a076abb9dcca43dc98bccdb34254071f3f0e62ecf",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 3
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 1907
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::topology_and_parameter_validation",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:ac0261471c3691ff4642ec865642fafcda44784ba266383d7425799842c2f7a3",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::topology_and_parameter_validation",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:5b084d7cc99b3a3a598f12489147f137c491bb35022c27b7bf742293a02872a9",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 2275,
+            "line": 32,
+            "start": 1662
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 3,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::topology_and_parameter_validation",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::topology_and_parameter_validation",
+          "signature_identity": "sha256:8fb3b0da3b155015f3e54c6a076abb9dcca43dc98bccdb34254071f3f0e62ecf",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "topology_and_parameter_validation",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::topology_and_parameter_validation",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::topology_and_parameter_validation",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::topology_and_parameter_validation",
+        "semantic_fingerprint": "577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909",
+        "signature_identity": "sha256:8fb3b0da3b155015f3e54c6a076abb9dcca43dc98bccdb34254071f3f0e62ecf",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 2275,
+        "line": 32,
+        "start": 1662
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::tuning_and_construction_regression",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::tuning_and_construction_regression",
+        "signature_identity": "sha256:5f038de16da45be626f7458afa707441069d1db70641c0ea896e7d50b193f3df",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f"
+      },
+      "entry": "tuning_and_construction_regression",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::tuning_and_construction_regression",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::tuning_and_construction_regression",
+          "signature_identity": "sha256:5f038de16da45be626f7458afa707441069d1db70641c0ea896e7d50b193f3df",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 10
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 36422
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::tuning_and_construction_regression",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:2530a8c6d9bec7b79bf3f65593bc42a4d8fa13f2fe1ff1c9113df36b4c646edb",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::tuning_and_construction_regression",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:dcdb42973ee8fdd83ab76618374e44b7416538f3f398681b381d15a66cb7ccce",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 7182,
+            "line": 110,
+            "start": 6769
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 10,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::tuning_and_construction_regression",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::tuning_and_construction_regression",
+          "signature_identity": "sha256:5f038de16da45be626f7458afa707441069d1db70641c0ea896e7d50b193f3df",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "tuning_and_construction_regression",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::tuning_and_construction_regression",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::tuning_and_construction_regression",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::tuning_and_construction_regression",
+        "semantic_fingerprint": "1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f",
+        "signature_identity": "sha256:5f038de16da45be626f7458afa707441069d1db70641c0ea896e7d50b193f3df",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 7182,
+        "line": 110,
+        "start": 6769
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::two_layer_relu",
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::two_layer_relu",
+        "signature_identity": "sha256:a8d530b2ba6055011b48ae0717ed15f190259fb063085832f483f70a4e132d81",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+      },
+      "entry": "two_layer_relu",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::two_layer_relu",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::two_layer_relu",
+          "signature_identity": "sha256:a8d530b2ba6055011b48ae0717ed15f190259fb063085832f483f70a4e132d81",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 6
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 2491
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::two_layer_relu",
+        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:b936dc41d1f92e243f2a276cbd35c9ad985f3140958e1461fd791530d808e36b",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::two_layer_relu",
+        "module": "mncs.models.foundation_tests",
+        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:44080bba30017b79e7d0b72d4b3c2c39e2089971b2153276f154af166e0e6bd1",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/foundation.mncs",
+          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "span": {
+            "column": 1,
+            "end": 3403,
+            "line": 46,
+            "start": 2801
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 6,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::two_layer_relu",
+          "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::two_layer_relu",
+          "signature_identity": "sha256:a8d530b2ba6055011b48ae0717ed15f190259fb063085832f483f70a4e132d81",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+        },
+        "schema_version": "0.1",
+        "step_budget": 200000,
+        "target": {
+          "function": "two_layer_relu",
+          "module": "mncs.models.foundation_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::two_layer_relu",
+        "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::two_layer_relu",
+        "module": "mncs.models.foundation_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.foundation_tests::two_layer_relu",
+        "semantic_fingerprint": "cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2",
+        "signature_identity": "sha256:a8d530b2ba6055011b48ae0717ed15f190259fb063085832f483f70a4e132d81",
+        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+      },
+      "source": "tests/native/foundation.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 3403,
+        "line": 46,
+        "start": 2801
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    }
+  ],
+  "verdict": "PASS"
+}

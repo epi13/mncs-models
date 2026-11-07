@@ -1,0 +1,26 @@
+mncs 0.18;
+module mncs.models.views;
+use mncs.models.micro;
+
+// Independent authority projections. References are opaque, not authority grants.
+record ForgeView { event: u64, evidence: u64, available: bool, contradicted: bool, signature: i64, repetition: i64 }
+record DoctorView { event: u64, evidence: u64, available: bool, contradicted: bool, pressure: i64, unhealthy: i64 }
+record Prediction { model_identity: u64, event: u64, status: u64, score: i64, decision: i64, forge_evidence: u64, doctor_evidence: u64, revision: u64 }
+// status 0 prediction, 1 unavailable, 2 contradiction/event mismatch, 3 failure,
+// 4 abstention within margin. Scores are NOT calibrated probabilities.
+fn predict(m: Model, f: ForgeView, d: DoctorView) -> (result: Prediction) {
+    if !model_valid(m) { return prediction(m, f, d, 3, 0, 0); }
+    if !f.available || !d.available || f.evidence == 0 || d.evidence == 0 { return prediction(m, f, d, 1, 0, 0); }
+    if f.event == 0 || f.event != d.event || f.contradicted || d.contradicted { return prediction(m, f, d, 2, 0, 0); }
+    let x: Signal = Signal { values: [f.signature, f.repetition, d.pressure, d.unhealthy, 0, 0, 0, 0], width: 4 };
+    let r: Inference = infer(m, x);
+    let out: Signal = r.output;
+    if r.status != 0 || out.width != 1 { return prediction(m, f, d, 3, 0, 0); }
+    let score: i64 = out.values[0];
+    if score >= -1 && score <= 1 { return prediction(m, f, d, 4, score, 0); }
+    return prediction(m, f, d, 0, score, select(score > 1, 1, -1));
+}
+fn prediction(m: Model, f: ForgeView, d: DoctorView, status: u64, score: i64, decision: i64) -> (result: Prediction) {
+    let p: Parameters = m.parameters;
+    return Prediction { model_identity: m.identity, event: f.event, status: status, score: score, decision: decision, forge_evidence: f.evidence, doctor_evidence: d.evidence, revision: p.revision };
+}

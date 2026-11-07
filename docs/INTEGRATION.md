@@ -1,5 +1,7 @@
 # Integration
 
+Current executable boundary: [native micro-model foundation](NATIVE_FOUNDATION.md). RFC 0002 records the implemented slice; broader graph and operational interfaces below remain design targets.
+
 `mncs-models` is intentionally narrow. Its value comes from providing a precise model-construction contract that the rest of the MNCS family can use without duplicating ownership.
 
 This document defines the expected direction of those interfaces.

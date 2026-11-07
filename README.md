@@ -211,7 +211,16 @@ docs/RESEARCH_DIRECTIONS.md
     architecture research intake and evaluation discipline
 ```
 
-There is intentionally no implementation scaffold yet. The first implementation agent should derive the concrete representation from the RFCs, current MNCS-language capabilities, and the contracts already established in the surrounding repositories rather than inheriting an arbitrary host framework from this initial commit.
+The executable foundation is now native MNCS: one or two bounded dense layers,
+explicit numerical parameters, validation, inference, immutable parameter edits,
+and provenance-preserving complementary-view predictions. It supports up to 100
+parameters without an external inference runtime.
+
+Run `python3 scripts/verify.py` with sibling MNCS Language and Test checkouts.
+See [the native foundation](docs/NATIVE_FOUNDATION.md) for authoring instructions,
+numerical contracts, the synthetic proving ground and source-bound execution
+receipts under `outputs/foundation/`. The broader graph architecture described
+below remains a development direction, not an implemented capability claim.
 
 ## Definition of a healthy foundation
 

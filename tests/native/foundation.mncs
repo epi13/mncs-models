@@ -1,0 +1,153 @@
+mncs 0.18;
+module mncs.models.foundation_tests;
+use mncs.test.assertions;
+use mncs.test.suite;
+use mncs.models.micro;
+use mncs.models.views;
+
+fn authored() -> (result: Model) {
+    let a: [i64; 100] = [0; 100];
+    let b: [i64; 100] = replace(a, 0, 3);
+    let c: [i64; 100] = replace(b, 1, 1);
+    let d: [i64; 100] = replace(c, 2, 1);
+    let e: [i64; 100] = replace(d, 3, 1);
+    return Model { identity: 101, topology: Topology { inputs: 4, hidden: 0, outputs: 1, relu: false }, parameters: Parameters { values: replace(e, 4, -6), revision: 1, parent: 0, provenance: 201 } };
+}
+fn revised() -> (result: Model) { let e: Edit = edit(authored(), 2, 3, 2, 202); return e.model; }
+fn sample(s: i64, r: i64, p: i64, u: i64) -> (result: Signal) { return Signal { values: [s, r, p, u, 0, 0, 0, 0], width: 4 }; }
+fn score(m: Model, s: i64, r: i64, p: i64, u: i64) -> (result: i64) {
+    let v: Inference = infer(m, sample(s, r, p, u)); let out: Signal = v.output; return out.values[0];
+}
+test complete_construction_and_edit() -> (result: TestResult) {
+    let a: Model = authored(); let b: Model = revised();
+    let p: Parameters = b.parameters;
+    return from_assertion(equals_bool(true, model_valid(a) && model_valid(b) && changes(a, b) == 1 && p.parent == 1 && p.revision == 2 && parameter_count(b.topology) == 5, 1));
+}
+test invalid_edits_are_atomic() -> (result: TestResult) {
+    let a: Edit = edit(authored(), 5, 1, 2, 202);
+    let b: Edit = edit(authored(), 2, 101, 2, 202);
+    let c: Edit = edit(authored(), 2, 2, 1, 202);
+    return from_assertion(equals_bool(true, !a.accepted && !b.accepted && !c.accepted && changes(authored(), b.model) == 0, 2));
+}
+test topology_and_parameter_validation() -> (result: TestResult) {
+    let a: Model = authored(); let p: Parameters = a.parameters;
+    let bad: Model = Model { identity: a.identity, topology: a.topology, parameters: Parameters { values: replace(p.values, 99, 1), revision: 1, parent: 0, provenance: 201 } };
+    return from_assertion(equals_bool(true, !model_valid(bad) && !topology_valid(Topology { inputs: 0, hidden: 0, outputs: 1, relu: false }) && !topology_valid(Topology { inputs: 8, hidden: 8, outputs: 8, relu: false }) && topology_valid(Topology { inputs: 8, hidden: 8, outputs: 3, relu: true }), 3));
+}
+test exact_inference_and_cost() -> (result: TestResult) {
+    let r: Inference = infer(revised(), sample(2, 1, 2, 0));
+    return from_assertion(equals_bool(true, r.status == 0 && score(revised(), 2, 1, 2, 0) == 7 && r.multiplies == 4 && r.additions == 4, 4));
+}
+test invalid_inputs_refused() -> (result: TestResult) {
+    let a: Inference = infer(authored(), empty_signal());
+    let b: Inference = infer(authored(), sample(1001, 0, 0, 0));
+    return from_assertion(equals_bool(true, a.status == 2 && b.status == 2, 5));
+}
+test two_layer_relu() -> (result: TestResult) {
+    let a: [i64; 100] = [0; 100];
+    let b: [i64; 100] = replace(a, 0, -2);
+    let c: [i64; 100] = replace(b, 2, 3);
+    let m: Model = Model { identity: 102, topology: Topology { inputs: 1, hidden: 1, outputs: 1, relu: true }, parameters: Parameters { values: replace(c, 3, 1), revision: 1, parent: 0, provenance: 203 } };
+    let r: Inference = infer(m, Signal { values: [2, 0, 0, 0, 0, 0, 0, 0], width: 1 });
+    let out: Signal = r.output;
+    return from_assertion(equals_bool(true, r.status == 0 && out.values[0] == 1 && r.multiplies == 2, 6));
+}
+fn fv(event: u64, available: bool, conflict: bool) -> (result: ForgeView) { return ForgeView { event: event, evidence: 301, available: available, contradicted: conflict, signature: 2, repetition: 1 }; }
+fn dv(event: u64) -> (result: DoctorView) { return DoctorView { event: event, evidence: 302, available: true, contradicted: false, pressure: 2, unhealthy: 0 }; }
+test evidence_and_authority_boundary() -> (result: TestResult) {
+    let a: Prediction = predict(revised(), fv(1, true, false), dv(1));
+    let b: Prediction = predict(revised(), fv(1, false, false), dv(1));
+    let c: Prediction = predict(revised(), fv(1, true, false), dv(2));
+    let d: Prediction = predict(revised(), fv(1, true, true), dv(1));
+    return from_assertion(equals_bool(true, a.status == 0 && a.decision == 1 && a.forge_evidence == 301 && a.doctor_evidence == 302 && b.status == 1 && c.status == 2 && d.status == 2, 7));
+}
+
+test abstention_is_explicit() -> (result: TestResult) {
+    let d: DoctorView = DoctorView { event: 1, evidence: 302, available: true, contradicted: false, pressure: 0, unhealthy: 0 };
+    let f: ForgeView = ForgeView { event: 1, evidence: 301, available: true, contradicted: false, signature: 2, repetition: 0 };
+    let p: Prediction = predict(authored(), f, d);
+    return from_assertion(equals_bool(true, p.status == 4 && p.decision == 0, 8));
+}
+record Case { event: u64, s: i64, r: i64, p: i64, u: i64, useful: bool }
+record Metrics { correct: u64, abstained: u64, false_positive: u64, false_negative: u64 }
+fn evaluate(m: Model, cases: [Case; 8]) -> (result: Metrics) {
+    iterate i over cases carrying metrics: Metrics = Metrics { correct: 0, abstained: 0, false_positive: 0, false_negative: 0 } {
+        next metrics = evaluate_cell(m, cases[i], metrics);
+    }
+    return metrics;
+}
+fn evaluate_cell(m: Model, c: Case, previous: Metrics) -> (result: Metrics) {
+    let s: i64 = score(m, c.s, c.r, c.p, c.u);
+    let abstain: bool = s >= -1 && s <= 1;
+    return Metrics {
+        correct: previous.correct + select(!abstain && ((s > 1) == c.useful), 1, 0),
+        abstained: previous.abstained + select(abstain, 1, 0),
+        false_positive: previous.false_positive + select(!abstain && s > 1 && !c.useful, 1, 0),
+        false_negative: previous.false_negative + select(!abstain && s < -1 && c.useful, 1, 0)
+    };
+}
+// SYNTHETIC event groups 101..108 are held out from construction 1..4
+// and tuning 11..12. Labels specified independently of model outputs.
+fn heldout() -> (result: [Case; 8]) {
+    return [
+        Case { event: 101, s: 3, r: 1, p: 0, u: 0, useful: true },
+        Case { event: 102, s: 0, r: 1, p: 3, u: 0, useful: true },
+        Case { event: 103, s: 0, r: 0, p: 0, u: 1, useful: false },
+        Case { event: 104, s: 1, r: 0, p: 0, u: 0, useful: false },
+        Case { event: 105, s: 1, r: 1, p: 2, u: 0, useful: true },
+        Case { event: 106, s: 0, r: 0, p: 2, u: 2, useful: true },
+        Case { event: 107, s: 2, r: 1, p: 0, u: 1, useful: false },
+        Case { event: 108, s: 0, r: 2, p: 0, u: 0, useful: false }
+    ];
+}
+test construction_cases() -> (result: TestResult) {
+    return from_assertion(equals_bool(true,
+        score(authored(), 3, 0, 0, 0) == 3 &&
+        score(authored(), 0, 0, 0, 0) == -6 &&
+        score(authored(), 1, 1, 0, 0) == -2 &&
+        score(authored(), 2, 2, 1, 0) == 3, 9));
+}
+test tuning_and_construction_regression() -> (result: TestResult) {
+    return from_assertion(equals_bool(true,
+        score(authored(), 0, 0, 3, 0) == -3 && score(revised(), 0, 0, 3, 0) == 3 &&
+        score(revised(), 0, 1, 0, 0) == -5 &&
+        score(revised(), 3, 0, 0, 0) == 3 && score(revised(), 0, 0, 0, 0) == -6 &&
+        score(revised(), 1, 1, 0, 0) == -2 && score(revised(), 2, 2, 1, 0) == 5, 10));
+}
+test heldout_model_comparison() -> (result: TestResult) {
+    let a: Metrics = evaluate(authored(), heldout());
+    let b: Metrics = evaluate(revised(), heldout());
+    let e: Edit = edit(revised(), 2, 0, 3, 204);
+    let f: Edit = edit(e.model, 3, 0, 4, 204);
+    let single: Metrics = evaluate(f.model, heldout());
+    return from_assertion(equals_bool(true, a.correct == 4 && a.abstained == 1 && a.false_positive == 1 && a.false_negative == 2 && b.correct == 7 && b.abstained == 0 && b.false_positive == 1 && b.false_negative == 0 && single.correct == 4, 11));
+}
+test heldout_deterministic_baselines() -> (result: TestResult) {
+    let cases: [Case; 8] = heldout();
+    iterate i over cases carrying simple: u64 = 0 {
+        next simple = simple + select((cases[i].s >= 2) == cases[i].useful, 1, 0);
+    }
+    iterate j over cases carrying informed: u64 = 0 {
+        next informed = informed + select((cases[j].s >= 3 || cases[j].p >= 2) == cases[j].useful, 1, 0);
+    }
+    return from_assertion(equals_bool(true, simple == 4 && informed == 8, 12));
+}
+
+test numeric_envelope_and_full_parameter_budget() -> (result: TestResult) {
+    let values: [i64; 100] = [100; 100];
+    let m: Model = Model { identity: 103, topology: Topology { inputs: 3, hidden: 5, outputs: 4, relu: true }, parameters: Parameters { values: replace(values, 99, 0), revision: 1, parent: 0, provenance: 205 } };
+    // 20 + 24 = 44 parameters; canonical padding must be zero.
+    let bad: Inference = infer(m, empty_signal());
+    let params: [i64; 100] = [0; 100];
+    let good: Model = Model { identity: 104, topology: Topology { inputs: 7, hidden: 8, outputs: 4, relu: true }, parameters: Parameters { values: params, revision: 1, parent: 0, provenance: 206 } };
+    let r: Inference = infer(good, Signal { values: [1000, 1000, 1000, 1000, 1000, 1000, 1000, 0], width: 7 });
+    return from_assertion(equals_bool(true, bad.status == 1 && parameter_count(good.topology) == 100 && r.status == 0 && r.multiplies == 88, 13));
+}
+test maximum_signed_arithmetic() -> (result: TestResult) {
+    let all: [i64; 100] = [100; 100];
+    let t: Topology = Topology { inputs: 8, hidden: 8, outputs: 3, relu: false };
+    let m: Model = Model { identity: 105, topology: t, parameters: Parameters { values: replace(all, 99, 0), revision: 1, parent: 0, provenance: 207 } };
+    let r: Inference = infer(m, Signal { values: [1000; 8], width: 8 });
+    let out: Signal = r.output;
+    return from_assertion(equals_bool(true, r.status == 0 && out.values[0] == 640080100 && out.values[2] == 640080100, 14));
+}
