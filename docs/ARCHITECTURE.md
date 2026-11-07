@@ -1,5 +1,12 @@
 # Architecture
 
+The implemented model-facing demand and operation-selection slice is documented in
+[DECISION_GUIDANCE.md](DECISION_GUIDANCE.md) and RFC 0005. It consumes referenced
+observations, preserves reviewed uncertainty, and suggests only members of an
+externally permitted bounded set. Environment owns observation, freshness, delivery
+and orchestration. The current selector is deterministic; no learned guidance or
+agent-burden improvement was established by the [activity audit](AGENT_BURDEN.md).
+
 Current implemented correction: [residual gating, compact parameters and scoped admission](RESIDUAL_INTELLIGENCE.md), RFC 0004. General graph/learning/authority claims below remain architectural directions where not explicitly implemented.
 
 Executable composition now includes the bounded DAG subset in [RFC 0003](../rfcs/0003-native-composition.md) and [COMPOSITION.md](COMPOSITION.md). General recurrence, routing and arbitrary graph capabilities remain future work.

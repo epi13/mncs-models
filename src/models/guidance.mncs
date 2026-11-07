@@ -1,0 +1,82 @@
+mncs 0.18;
+module mncs.models.guidance;
+use mncs.models.demand;
+use mncs.models.residual;
+
+// A bounded experimental consumer contract, never an execution permission.
+// The owner binds permitted_reference to this exact immutable candidate list.
+record GuidanceBoundary { event: u64, question: u64, state: u64, decision_at: u64, established_reference: u64, permitted_reference: u64, operation_contract: u64, resolved_operation: u64 }
+record OperationCandidate { operation: u64, contract: u64, evidence: DemandEvidence, ready: bool, cost_known: bool, cost: u64 }
+record GuidanceProblem { boundary: GuidanceBoundary, candidates: [OperationCandidate; up_to 8], ranking_reference: u64, cost_unit: u64, max_candidates: u64, max_operation_cost: u64 }
+// path: 0 established bypass, 1 deterministic least-cost suggestion, 2 fallback.
+// reason: 0 success; 1 invalid declaration; 2 unavailable; 3 contradictory;
+// 4 stale/future/misaligned evidence; 5 budget; 6 tied least cost.
+record Guidance { event: u64, question: u64, state: u64, decision_at: u64, path: u64, reason: u64, operation: u64, eligible: u64, unavailable: u64, over_budget: u64, candidate_checks: u64, selected_reference: u64, established_reference: u64, permitted_reference: u64, ranking_reference: u64, cost_unit: u64, cost_known: bool, cost: u64 }
+fn guidance_result(p: GuidanceProblem, path: u64, reason: u64, operation: u64, eligible: u64, unavailable: u64, over_budget: u64, checks: u64, reference: u64, cost: u64) -> (result: Guidance) {
+    let b: GuidanceBoundary = p.boundary;
+    return Guidance { event: b.event, question: b.question, state: b.state, decision_at: b.decision_at, path: path, reason: reason, operation: operation, eligible: eligible, unavailable: unavailable, over_budget: over_budget, candidate_checks: checks, selected_reference: reference, established_reference: b.established_reference, permitted_reference: b.permitted_reference, ranking_reference: p.ranking_reference, cost_unit: p.cost_unit, cost_known: path == 1, cost: cost };
+}
+fn candidate_reason(c: OperationCandidate, b: GuidanceBoundary) -> (result: u64) {
+    if evidence_contradictory(c.evidence.status) { return 3; }
+    if !evidence_present(c.evidence.status) || !c.ready { return 2; }
+    if !evidence_joined(c.evidence, b.event, b.state) || c.evidence.available_at > b.decision_at { return 4; }
+    return 0;
+}
+record CandidateRanking { reason: u64, eligible: u64, unavailable: u64, over_budget: u64, best: u64, best_cost: u64, reference: u64, tied: bool }
+fn rank_candidate(r: CandidateRanking, c: OperationCandidate, p: GuidanceProblem) -> (result: CandidateRanking) {
+    let cr: u64 = candidate_reason(c, p.boundary);
+    let absent: bool = cr == 2 || !c.cost_known;
+    let limited: bool = cr == 0 && c.cost_known && c.cost > p.max_operation_cost;
+    let usable: bool = cr == 0 && c.cost_known && !limited;
+    let better: bool = usable && (r.best == 0 || c.cost < r.best_cost);
+    return CandidateRanking { reason: select(r.reason != 0, r.reason, select(cr == 3 || cr == 4, cr, 0)), eligible: r.eligible + select(usable, 1, 0), unavailable: r.unavailable + select(absent, 1, 0), over_budget: r.over_budget + select(limited, 1, 0), best: select(better, c.operation, r.best), best_cost: select(better, c.cost, r.best_cost), reference: select(better, c.evidence.reference, r.reference), tied: select(better, false, r.tied || (usable && c.cost == r.best_cost)) };
+}
+fn guide_operations(p: GuidanceProblem) -> (result: Guidance) {
+    let b: GuidanceBoundary = p.boundary;
+    if b.event == 0 || b.question == 0 || b.state == 0 || b.decision_at == 0 || b.established_reference == 0 || b.permitted_reference == 0 || b.operation_contract == 0 || p.candidates.len == 0 { return guidance_result(p, 2, 1, 0, 0, 0, 0, 0, 0, 0); }
+    if p.max_candidates > 8 || p.candidates.len > p.max_candidates { return guidance_result(p, 2, 5, 0, 0, 0, 0, 0, 0, 0); }
+    // Structural admission includes unique addressability even on bypass paths.
+    iterate i over p.candidates carrying valid: bool = true {
+        let c: OperationCandidate = p.candidates[i];
+        iterate j over p.candidates carrying copies: u64 = 0 { let other: OperationCandidate = p.candidates[j]; next copies = copies + select(c.operation == other.operation, 1, 0); }
+        next valid = valid && c.operation != 0 && c.contract == b.operation_contract && copies == 1;
+    }
+    if !valid { return guidance_result(p, 2, 1, 0, 0, 0, 0, p.candidates.len, 0, 0); }
+    // The known resolution needs no ranker or cost estimate. Unchosen missing
+    // observations cannot turn into numeric evidence, nor block this projection.
+    if b.resolved_operation != 0 {
+        iterate i over p.candidates carrying chosen: Guidance = guidance_result(p, 2, 1, 0, 0, 0, 0, p.candidates.len, 0, 0) {
+            let c: OperationCandidate = p.candidates[i];
+            let reason: u64 = candidate_reason(c, b);
+            let answer: Guidance = guidance_result(p, select(reason == 0, 0, 2), reason, select(reason == 0, c.operation, 0), select(reason == 0, 1, 0), 0, 0, p.candidates.len, select(reason == 0, c.evidence.reference, 0), 0);
+            next chosen = select(c.operation == b.resolved_operation, answer, chosen);
+        }
+        return chosen;
+    }
+    if p.ranking_reference == 0 || p.cost_unit == 0 { return guidance_result(p, 2, 1, 0, 0, 0, 0, p.candidates.len, 0, 0); }
+    // This baseline minimizes declared cost, not predicted usefulness. No learned
+    // guide is fitted or invoked without a legitimate outcome-aligned cohort.
+    iterate i over p.candidates carrying ranked: CandidateRanking = CandidateRanking { reason: 0, eligible: 0, unavailable: 0, over_budget: 0, best: 0, best_cost: 0, reference: 0, tied: false } {
+        next ranked = rank_candidate(ranked, p.candidates[i], p);
+    }
+    if ranked.reason != 0 { return guidance_result(p, 2, ranked.reason, 0, ranked.eligible, ranked.unavailable, ranked.over_budget, p.candidates.len, 0, 0); }
+    if ranked.best == 0 { return guidance_result(p, 2, select(ranked.over_budget != 0, 5, 2), 0, ranked.eligible, ranked.unavailable, ranked.over_budget, p.candidates.len, 0, 0); }
+    if ranked.tied { return guidance_result(p, 2, 6, 0, ranked.eligible, ranked.unavailable, ranked.over_budget, p.candidates.len, 0, 0); }
+    return guidance_result(p, 1, 0, ranked.best, ranked.eligible, ranked.unavailable, ranked.over_budget, p.candidates.len, ranked.reference, ranked.best_cost);
+}
+
+// Observation of the actually executed selection, not a counterfactual saving.
+enum SelectionUse { Useful, NotUseful, Unknown }
+enum WorkVerification { Passed, Failed, Unknown }
+record SelectionOutcome { event: u64, question: u64, state: u64, operation: u64, permitted_reference: u64, decision_reference: u64, reference: u64, authority: u64, observed_at: u64, kind: OutcomeKind, usefulness: SelectionUse, verification: WorkVerification, calls_known: bool, tool_calls: u64 }
+record SelectionEvaluation { accepted: bool, useful: bool, usefulness_known: bool, verified_work: bool, verification_known: bool, calls_known: bool, tool_calls: u64, outcome_reference: u64 }
+fn evaluate_selection(p: GuidanceProblem, decision_reference: u64, o: SelectionOutcome) -> (result: SelectionEvaluation) {
+    // Recompute from the exact problem, not an unchecked caller-made result.
+    let g: Guidance = guide_operations(p); let b: GuidanceBoundary = p.boundary;
+    let valid: bool = g.path != 2 && g.operation != 0 && decision_reference != 0 && o.decision_reference == decision_reference && o.event == b.event && o.question == b.question && o.state == b.state && o.operation == g.operation && o.permitted_reference == b.permitted_reference && o.reference != 0 && o.authority != 0 && o.observed_at >= b.decision_at && outcome_observed(o.kind);
+    let useful: bool = match o.usefulness { SelectionUse.Useful => true, SelectionUse.NotUseful => false, SelectionUse.Unknown => false, };
+    let use_known: bool = match o.usefulness { SelectionUse.Useful => true, SelectionUse.NotUseful => true, SelectionUse.Unknown => false, };
+    let passed: bool = match o.verification { WorkVerification.Passed => true, WorkVerification.Failed => false, WorkVerification.Unknown => false, };
+    let verification_known: bool = match o.verification { WorkVerification.Passed => true, WorkVerification.Failed => true, WorkVerification.Unknown => false, };
+    return SelectionEvaluation { accepted: valid, useful: valid && useful, usefulness_known: valid && use_known, verified_work: valid && passed, verification_known: valid && verification_known, calls_known: valid && o.calls_known, tool_calls: select(valid && o.calls_known, o.tool_calls, 0), outcome_reference: select(valid, o.reference, 0) };
+}

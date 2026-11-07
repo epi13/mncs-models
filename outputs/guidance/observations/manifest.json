@@ -1,0 +1,179 @@
+{
+  "schema": "mncs.models.audit-source-manifest/1",
+  "observed_repository_heads": {
+    "mncs-language": "f8212ed8b7478196b5293a84152154be5e0bea3f",
+    "mncs-compiler": "f372a6e069805d8de6753da4b9de332749184785",
+    "mncs-test": "d51958bf2cb2dbba583bee255897b4c7544a0468",
+    "mncs-stdlib": "7f1d3bae9ab676c45b73811cdb2e5827658c69ff",
+    "MNCS-Commons": "c53ae0b864046b8fef6c899de8fad5f882a68ecb",
+    "mncs-learn": "24f4d25d547613eafbe428c363f3e0ef30c0cadb",
+    "mncs-store": "4358df436be66157b274cf82a3911185b2b1d81b",
+    "mncs-rights-provenance": "9f4a625fa9e951b38d646c1e70933e832990ea4f",
+    "mncs-ingest": "c07cfbcb63907ff0c09e6989875673193d46f5e5",
+    "mncs-memory": "601cbcaa55cb52ffb5c8218b09f8607c2281c864",
+    "mncs-actions": "8517267808ee73983b6dc66d079eb6567dd0e6cc",
+    "mncs-environment": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+    "mncs-forge": "e1d5998a97520665a5f512664c66a583ef7a4f6a",
+    "mncs-doctor": "80afeef861795a79e7d68940d5a5902f5b92257e",
+    "mncs-fabric": "c4648634fdcfde9c29891358017ee3722b5aa789",
+    "RAVEL": "e1cae6d9609d51ead6307769f54453eb3ee49306",
+    "mncs-control-mcp": "f5915e679e9af969770aa23f4947225525422175",
+    "mncs-language-service": "060b7898bbfb823f4e8a8ba32658fc35be2c96ec"
+  },
+  "repository_sources": [
+    {
+      "repository": "mncs-environment",
+      "commit": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "path": "evidence/environmental-capability/compiler-project-context-selection-recurrence-20261024.json",
+      "sha256": "3709ff0953f009db450220ea537eef295c939568a61ee7891d06eb9d75cf019c",
+      "working_bytes_match_commit": true,
+      "archive": "compiler-project-context-selection-recurrence-20261024.json",
+      "identity": "ev_environment_compiler_project_context_selection_recurrence_20261024",
+      "captured_at": "2026-10-24T14:34:00+00:00"
+    },
+    {
+      "repository": "mncs-environment",
+      "commit": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "path": "evidence/environmental-capability/compiler-domain-evidence-projection-pressure-20261024.json",
+      "sha256": "487f2891b7d4b651d34de7aefb0d26c7d97ea6e51d98f8240c52e2c5ff434c25",
+      "working_bytes_match_commit": true,
+      "archive": "compiler-domain-evidence-projection-pressure-20261024.json",
+      "identity": "ev_environment_compiler_domain_evidence_projection_pressure_20261024",
+      "captured_at": "2026-10-24T18:40:48Z"
+    },
+    {
+      "repository": "mncs-environment",
+      "commit": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "path": "evidence/environmental-capability/compiler-language-fact-projection-improvement-20261024.json",
+      "sha256": "5832a449e3a8b1215ec1426cf49559bd21c8fdb51876d0f9f21f0415fdda49f6",
+      "working_bytes_match_commit": true,
+      "archive": "compiler-language-fact-projection-improvement-20261024.json",
+      "identity": "ev_environment_compiler_language_fact_projection_improvement_20261024",
+      "captured_at": "2026-10-24T19:06:48Z"
+    },
+    {
+      "repository": "mncs-environment",
+      "commit": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "path": "evidence/environmental-capability/compiler-language-fact-projection-readback-20261024.json",
+      "sha256": "31c869f3de71f6b1ca6cf2a1d62946d3c8499af6f80efd30db50e39b3a5b0158",
+      "working_bytes_match_commit": true,
+      "archive": "compiler-language-fact-projection-readback-20261024.json",
+      "identity": "ev_environment_compiler_language_fact_projection_readback_20261024",
+      "captured_at": "2026-10-24T19:08:32Z"
+    },
+    {
+      "repository": "mncs-environment",
+      "commit": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "path": "evidence/environmental-capability/ambient-service-decision-trace-gap-20261027.json",
+      "sha256": "99e2561c18873b8e8aed984462f7bd6ff90d8511c76b4e77d4ca835b7d2f6c27",
+      "working_bytes_match_commit": true,
+      "archive": "ambient-service-decision-trace-gap-20261027.json",
+      "identity": "ev_environment_ambient_service_decision_trace_gap_20261027",
+      "captured_at": "2026-10-27T06:30:54+00:00"
+    },
+    {
+      "repository": "mncs-environment",
+      "commit": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "path": "evidence/environmental-capability/ambient-service-activity-context-pressure-20261027.json",
+      "sha256": "ad15626d12bc6147a2b9e37df4fe258e038c247ea6b090200dfb2c6e19c83b0b",
+      "working_bytes_match_commit": true,
+      "archive": "ambient-service-activity-context-pressure-20261027.json",
+      "identity": "ev_environment_ambient_service_activity_context_pressure_20261027",
+      "captured_at": "2026-10-27T14:31:07Z"
+    },
+    {
+      "repository": "mncs-environment",
+      "commit": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "path": "evidence/environmental-capability/ambient-service-accountability-improvement-20261027.json",
+      "sha256": "eb4ae402e58e7c480b293defc8db791da440872e7215d5d8aa09e96167889dd5",
+      "working_bytes_match_commit": true,
+      "archive": "ambient-service-accountability-improvement-20261027.json",
+      "identity": "ev_environment_ambient_service_accountability_scope_improvement_20261027",
+      "captured_at": "2026-10-27T16:33:54Z"
+    },
+    {
+      "repository": "mncs-environment",
+      "commit": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "path": "evidence/workspace-revalidation-diagnostic-forwarding-20261023.json",
+      "sha256": "03282dc2e972abd6c431fe0a69dbbdd22d7a83ed9b30638b281430a2cd2b3a53",
+      "working_bytes_match_commit": true,
+      "archive": "workspace-revalidation-diagnostic-forwarding-20261023.json",
+      "identity": "mncs.environment.workspace-revalidation-diagnostic-forwarding/1",
+      "captured_at": "2026-10-23T18:49:52.990149+00:00"
+    },
+    {
+      "repository": "mncs-environment",
+      "commit": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "path": "docs/CAPABILITY_INTELLIGENCE.md",
+      "sha256": "8adac2c73fe4a02514539f46158db38a2c0f1df9fe74eddd069d0ecb17d9e33d",
+      "working_bytes_match_commit": true
+    },
+    {
+      "repository": "mncs-environment",
+      "commit": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "path": "docs/PROJECTIONS.md",
+      "sha256": "2b1c353f4acaa0179b69656a91f69314ded76e8e4ca78a2914f4a424c50691db",
+      "working_bytes_match_commit": true
+    },
+    {
+      "repository": "mncs-control-mcp",
+      "commit": "f5915e679e9af969770aa23f4947225525422175",
+      "path": "src/mncs_control_mcp/processes.py",
+      "sha256": "d40a65ebd56c58e42874b24c597c5a67292d13d5405c006aca2f2bed02d9e882",
+      "working_bytes_match_commit": true,
+      "scope": "read-only source inspection; not an attestation of deployed service build"
+    },
+    {
+      "repository": "mncs-control-mcp",
+      "commit": "f5915e679e9af969770aa23f4947225525422175",
+      "path": "src/mncs_control_mcp/server.py",
+      "sha256": "c690bbe6cc2aa92bc31107312537a3634d4d2dbb53e32659f721e5fc673c4b27",
+      "working_bytes_match_commit": true,
+      "scope": "read-only source inspection; not an attestation of deployed service build"
+    },
+    {
+      "repository": "mncs-control-mcp",
+      "commit": "f5915e679e9af969770aa23f4947225525422175",
+      "path": "src/mncs_control_mcp/audit.py",
+      "sha256": "0f5e9b4b126109a06ed146dbdda93b4ad168a5df14da1d0af508cf13e436913b",
+      "working_bytes_match_commit": true,
+      "scope": "read-only source inspection; not an attestation of deployed service build"
+    },
+    {
+      "repository": "mncs-language-service",
+      "commit": "060b7898bbfb823f4e8a8ba32658fc35be2c96ec",
+      "path": "README.md",
+      "sha256": "d31eae389ddbc9c9e7e978e1cf960f61be82d886ef94e2cc32368d67ecb793e4",
+      "working_bytes_match_commit": true,
+      "scope": "read-only source inspection; not an attestation of deployed service build"
+    },
+    {
+      "repository": "MNCS-Commons",
+      "commit": "c53ae0b864046b8fef6c899de8fad5f882a68ecb",
+      "path": "src/mncs_commons/mesh/mncs/commons/family/contracts/v1.mncs",
+      "sha256": "7c26a98b62d232007f7b434a4de9bcb9a74022eca93f9c3dab895ad1e8c71ddd",
+      "working_bytes_match_commit": true,
+      "scope": "read-only source inspection; not an attestation of deployed service build"
+    }
+  ],
+  "selected_session": "ses_ff95f7f9e223ce3d",
+  "selected_session_scope": "task-owned new session, not historical agent workload",
+  "archives": {
+    "ambient-service-accountability-improvement-20261027.json": "eb4ae402e58e7c480b293defc8db791da440872e7215d5d8aa09e96167889dd5",
+    "ambient-service-activity-context-pressure-20261027.json": "ad15626d12bc6147a2b9e37df4fe258e038c247ea6b090200dfb2c6e19c83b0b",
+    "ambient-service-decision-trace-gap-20261027.json": "99e2561c18873b8e8aed984462f7bd6ff90d8511c76b4e77d4ca835b7d2f6c27",
+    "compiler-domain-evidence-projection-pressure-20261024.json": "487f2891b7d4b651d34de7aefb0d26c7d97ea6e51d98f8240c52e2c5ff434c25",
+    "compiler-language-fact-projection-improvement-20261024.json": "5832a449e3a8b1215ec1426cf49559bd21c8fdb51876d0f9f21f0415fdda49f6",
+    "compiler-language-fact-projection-readback-20261024.json": "31c869f3de71f6b1ca6cf2a1d62946d3c8499af6f80efd30db50e39b3a5b0158",
+    "compiler-project-context-selection-recurrence-20261024.json": "3709ff0953f009db450220ea537eef295c939568a61ee7891d06eb9d75cf019c",
+    "selected-session-services.json": "5721cc64026f54236b4587b99eff09311d4bc84caec9f2c454e7d26fc2572b5c",
+    "terminal-inventory.json": "e0eef26f02964692f679177515202cd0fa493a21ae7ef1c2a362e8658fdbe22d",
+    "workspace-revalidation-diagnostic-forwarding-20261023.json": "03282dc2e972abd6c431fe0a69dbbdd22d7a83ed9b30638b281430a2cd2b3a53"
+  },
+  "limits": [
+    "Repository evidence is owner-recorded history, not a replay or independent reauthentication of its embedded claims.",
+    "Historical supporting pointers inside the archived records were not recursively reverified.",
+    "Current repository HEADs are observational and do not establish historical availability or operational service versions.",
+    "The generic partial_workflow native probe preserves unknown joins; it is a missing-data analogue, not an authenticated import of a terminal record."
+  ]
+}

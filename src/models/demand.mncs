@@ -1,0 +1,53 @@
+mncs 0.18;
+module mncs.models.demand;
+
+// Model-facing projections only. Nonzero references are not authentication.
+enum ObservationStatus { Present, Absent, Contradictory }
+record DemandEvidence { event: u64, state: u64, reference: u64, authority: u64, available_at: u64, status: ObservationStatus }
+record AgentDemand { event: u64, task: u64, state: u64, decision_at: u64, activity: DemandEvidence }
+enum SupportStatus { Ready, Unavailable, Unknown }
+record EnvironmentalSupport { evidence: DemandEvidence, status: SupportStatus, delivered_reference: u64, delivered_at: u64, permitted_options: u64 }
+// Findings are independently reviewed source claims, not inferred from call counts.
+enum DemandFinding { EquivalentDelivered, RelevantCapability, MultipleOptions, DeliveryGap, NovelReasoning, Unknown }
+enum DemandException { Clear, IndependentVerification, StateChange, RetryAfterFailure, Unknown }
+record DemandReview { evidence: DemandEvidence, finding: DemandFinding, adequacy_reference: u64, exception: DemandException }
+enum DemandClass { ProvenRedundant, PotentiallyAvoidable, ResidualSelection, MissingDelivery, LegitimateReasoning, Insufficient }
+// reason: 0 supported classification, 1 invalid/missing join, 2 contradiction,
+// 3 timing, 4 exclusion, 5 insufficient support. No savings are credited.
+record DemandClassification { event: u64, category: DemandClass, reason: u64, activity_reference: u64, support_reference: u64, review_reference: u64, adequacy_reference: u64 }
+fn evidence_present(s: ObservationStatus) -> (result: bool) { return match s { ObservationStatus.Present => true, ObservationStatus.Absent => false, ObservationStatus.Contradictory => false, }; }
+fn evidence_contradictory(s: ObservationStatus) -> (result: bool) { return match s { ObservationStatus.Present => false, ObservationStatus.Absent => false, ObservationStatus.Contradictory => true, }; }
+fn evidence_joined(e: DemandEvidence, event: u64, state: u64) -> (result: bool) { return evidence_present(e.status) && event != 0 && state != 0 && e.event == event && e.state == state && e.reference != 0 && e.authority != 0 && e.available_at != 0; }
+fn support_ready(s: SupportStatus) -> (result: bool) { return match s { SupportStatus.Ready => true, SupportStatus.Unavailable => false, SupportStatus.Unknown => false, }; }
+fn review_clear(e: DemandException) -> (result: bool) { return match e { DemandException.Clear => true, DemandException.IndependentVerification => false, DemandException.StateChange => false, DemandException.RetryAfterFailure => false, DemandException.Unknown => false, }; }
+fn demand_result(d: AgentDemand, s: EnvironmentalSupport, r: DemandReview, category: DemandClass, reason: u64) -> (result: DemandClassification) { return DemandClassification { event: d.event, category: category, reason: reason, activity_reference: d.activity.reference, support_reference: s.evidence.reference, review_reference: r.evidence.reference, adequacy_reference: r.adequacy_reference }; }
+fn demand_class_code(c: DemandClass) -> (result: u64) { return match c { DemandClass.ProvenRedundant => 0, DemandClass.PotentiallyAvoidable => 1, DemandClass.ResidualSelection => 2, DemandClass.MissingDelivery => 3, DemandClass.LegitimateReasoning => 4, DemandClass.Insufficient => 5, }; }
+fn classify_demand(d: AgentDemand, s: EnvironmentalSupport, r: DemandReview) -> (result: DemandClassification) {
+    if evidence_contradictory(d.activity.status) || evidence_contradictory(r.evidence.status) { return demand_result(d, s, r, DemandClass.Insufficient, 2); }
+    if d.task == 0 || d.decision_at == 0 || !evidence_joined(d.activity, d.event, d.state) || !evidence_joined(r.evidence, d.event, d.state) || r.adequacy_reference == 0 { return demand_result(d, s, r, DemandClass.Insufficient, 1); }
+    // Review is retrospective. It must not become pre-decision model evidence.
+    if r.evidence.available_at < d.decision_at || r.evidence.available_at < d.activity.available_at { return demand_result(d, s, r, DemandClass.Insufficient, 3); }
+    if !review_clear(r.exception) { return demand_result(d, s, r, DemandClass.Insufficient, 4); }
+    return match r.finding {
+        DemandFinding.NovelReasoning => demand_result(d, s, r, DemandClass.LegitimateReasoning, 0),
+        DemandFinding.Unknown => demand_result(d, s, r, DemandClass.Insufficient, 5),
+        DemandFinding.EquivalentDelivered => classify_supported(d, s, r, 0),
+        DemandFinding.RelevantCapability => classify_supported(d, s, r, 1),
+        DemandFinding.MultipleOptions => classify_supported(d, s, r, 2),
+        DemandFinding.DeliveryGap => classify_supported(d, s, r, 3),
+    };
+}
+fn classify_supported(d: AgentDemand, s: EnvironmentalSupport, r: DemandReview, kind: u64) -> (result: DemandClassification) {
+    if evidence_contradictory(s.evidence.status) { return demand_result(d, s, r, DemandClass.Insufficient, 2); }
+    if !evidence_joined(s.evidence, d.event, d.state) { return demand_result(d, s, r, DemandClass.Insufficient, 1); }
+    if s.evidence.available_at > d.decision_at { return demand_result(d, s, r, DemandClass.Insufficient, 3); }
+    if kind == 3 { return demand_result(d, s, r, DemandClass.MissingDelivery, 0); }
+    if !support_ready(s.status) { return demand_result(d, s, r, DemandClass.Insufficient, 5); }
+    if kind == 0 {
+        if s.delivered_reference == 0 || s.delivered_at == 0 || s.delivered_at > d.decision_at { return demand_result(d, s, r, DemandClass.Insufficient, 5); }
+        return demand_result(d, s, r, DemandClass.ProvenRedundant, 0);
+    }
+    if kind == 1 { return demand_result(d, s, r, DemandClass.PotentiallyAvoidable, 0); }
+    if s.permitted_options < 2 || s.permitted_options > 8 { return demand_result(d, s, r, DemandClass.Insufficient, 5); }
+    return demand_result(d, s, r, DemandClass.ResidualSelection, 0);
+}

@@ -1,7 +1,7 @@
 {
   "schema": "mncs.models.verification-evidence/1",
   "suite": "residual",
-  "boundary": "native bounded micro-models and DAG composition; synthetic evaluation; no operational integration or family conformance claim",
+  "boundary": "native bounded models, DAGs, residual and operation-guidance contracts; mechanical verification only; activity audit is observational, not predictive utility; no operational integration or family conformance claim",
   "result_sha256": "b9d24d2bd1a2bfe3c750aa4da0a68b38bb1532b485354a8988618cc797525708",
   "native_run_id": "e9d8bc1fc8538e819e317037a2f3f5ea2d3c134f34c3876961706e06c38a33cd",
   "summary": {
@@ -48,10 +48,12 @@
       "mncs:0.2:test-case:mncs.models.residual_tests::usefulness_keeps_units_and_evidence_origins_distinct::59a96277557c512003fea7308d56e7164b25a91acbe48f2833f7424f2fd8ea21"
     ]
   },
-  "suite_wall_seconds": 54.72159380400262,
+  "suite_wall_seconds": 54.42021694499999,
   "wall_scope": "compilation and suite, not inference-only latency",
   "source_sha256": {
     "src/models/compose.mncs": "bfcdf5aa799a44f5a8c9be9e7f4addefd467b3d9347eab7d3fce24aece20cbd3",
+    "src/models/demand.mncs": "0854fc82eebbc55c1625f485bd96d4ef877c6f7d1b73bc4bf47899155b0820b1",
+    "src/models/guidance.mncs": "a7aa72f8142b1a23207875f2320e35693a40145fed4b1df91879cebe54df5f7d",
     "src/models/micro.mncs": "1f96bed08994c701e1c1103ae369f3f95cb061cf8bc637dd9cdfba30150328b0",
     "src/models/residual.mncs": "3d25730e4fb5176660fe66e417dc3bda7eb8e8d28641ae9021946399286944a0",
     "src/models/trial.mncs": "1c07681c2744147b80c3ac3ce68db743ae2d0b279b6f52ebae8f770eeefc6046",
@@ -60,6 +62,7 @@
     "tests/fixtures/construction.mncs": "149f24b01fa587a14a64c2407d627c13b673b50e34449c94744861c636af0f57",
     "tests/native/composition.mncs": "9afba4b86d127c31c69dfb3f7c2ce8cc8f570b2b46508ef6de37c8ce5ec7c172",
     "tests/native/foundation.mncs": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
+    "tests/native/guidance.mncs": "9754324be92779357ffd32c660e3ad5d7cde96f1b2f4e4158e804c6a15c84170",
     "tests/native/residual.mncs": "e3c55cef372e71f5df15f3ce0bed04881eda872a48eadefeaafed37927e7df7d",
     "tests/pressures/compact_view_refusal.mncs": "0fc05ebcc384fb3b89dd28a52d76c457966aa80e84cbcad72fbdc34c4134c67d"
   },
@@ -70,6 +73,8 @@
   "measurements": {},
   "source_artifact_bytes": {
     "src/models/compose.mncs": 19688,
+    "src/models/demand.mncs": 5826,
+    "src/models/guidance.mncs": 8738,
     "src/models/micro.mncs": 7767,
     "src/models/residual.mncs": 9617,
     "src/models/trial.mncs": 3277,

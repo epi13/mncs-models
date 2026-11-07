@@ -26,7 +26,7 @@ def revision(path):
     return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=path, text=True).strip()
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--suite", choices=["all", "foundation", "composition", "residual"], default="all")
+parser.add_argument("--suite", choices=["all", "foundation", "composition", "residual", "guidance"], default="all")
 args = parser.parse_args()
 libraries = ["--library", "src", "--library", "tests/fixtures", "--library", str(TEST / "native"), "--library", str(LANG / "library")]
 # Match the native Test tool's shared, toolchain-scoped cache convention.
@@ -34,7 +34,7 @@ cache_scope = hashlib.sha256(str(BIN.resolve()).encode()).hexdigest()[:16]
 os.environ.setdefault("MNCS_NATIVE_APPLICATION_CACHE_DIR", str(COMMON / "mncs-native-application-cache" / cache_scope))
 source_hashes = sources()
 binary_hash = digest(BIN)
-for suite, minimum in [("foundation", 14), ("composition", 16), ("residual", 15)]:
+for suite, minimum in [("foundation", 14), ("composition", 16), ("residual", 15), ("guidance", 26)]:
     if args.suite not in ("all", suite):
         continue
     out = ROOT / "outputs" / suite
@@ -67,6 +67,20 @@ for suite, minimum in [("foundation", 14), ("composition", 16), ("residual", 15)
             if observation.get("status") != "returned" or observation.get("call", {}).get("status") != "returned":
                 raise SystemExit(f"Native measurement failed: {function}")
             measurements[function] = {"sha256": digest(path), "steps": observation["call"]["steps"]}
+    if suite == "guidance":
+        for function in ["demand_cost", "one_cost", "pair_cost", "eight_cost", "bypass_cost", "partial_workflow"]:
+            path = out / f"{function}.json"
+            path.unlink(missing_ok=True)
+            call = [str(BIN), "call", "tests/native/guidance.mncs", "--module", "mncs.models.guidance_tests", "--function", function, "--args-json", "[]", *libraries, "--step-budget", "3000000", "--result", str(path)]
+            start_call = time.monotonic()
+            called = subprocess.run(call, cwd=ROOT, capture_output=True, text=True, timeout=180)
+            wall_call = time.monotonic() - start_call
+            if called.returncode or not path.is_file():
+                raise SystemExit(called.stderr + called.stdout)
+            observation = json.loads(path.read_text())
+            if observation.get("status") != "returned" or observation.get("call", {}).get("status") != "returned":
+                raise SystemExit(f"Native measurement failed: {function}")
+            measurements[function] = {"sha256": digest(path), "steps": observation["call"]["steps"], "wall_seconds": wall_call, "scope": "complete native invocation including fixture construction; wall includes CLI compilation/cache/transport"}
     if suite == "composition":
         pressure = out / "compact-view-refusal.json"
         refusal = subprocess.run([str(BIN), "test", "tests/pressures/compact_view_refusal.mncs", *libraries, "--format", "json"], cwd=ROOT, capture_output=True, text=True, timeout=60)
@@ -79,7 +93,7 @@ for suite, minimum in [("foundation", 14), ("composition", 16), ("residual", 15)
         raise SystemExit("Source or compiler changed during verification")
     receipt = {
         "schema": "mncs.models.verification-evidence/1", "suite": suite,
-        "boundary": "native bounded micro-models and DAG composition; synthetic evaluation; no operational integration or family conformance claim",
+        "boundary": "native bounded models, DAGs, residual and operation-guidance contracts; mechanical verification only; activity audit is observational, not predictive utility; no operational integration or family conformance claim",
         "result_sha256": digest(result), "native_run_id": data["run_id"],
         "summary": data["summary"], "execution": data["execution"],
         "suite_wall_seconds": elapsed, "wall_scope": "compilation and suite, not inference-only latency",

@@ -1,0 +1,151 @@
+mncs 0.18;
+module mncs.models.guidance_tests;
+use mncs.test.assertions;
+use mncs.test.suite;
+use mncs.models.demand;
+use mncs.models.guidance;
+use mncs.models.residual;
+
+// Mechanical fixtures. IDs/times here are local test handles, not real receipts.
+fn ev(reference: u64, at: u64, code: u64) -> (result: DemandEvidence) {
+ return DemandEvidence { event: 101, state: select(code == 4, 999, 201), reference: reference, authority: select(code == 8, 0, 301), available_at: at, status: select(code == 1, ObservationStatus.Absent, select(code == 2, ObservationStatus.Contradictory, ObservationStatus.Present)) };
+}
+fn demand() -> (result: AgentDemand) { return AgentDemand { event: 101, task: 401, state: 201, decision_at: 100, activity: ev(501, 100, 0) }; }
+fn support(code: u64) -> (result: EnvironmentalSupport) { return EnvironmentalSupport { evidence: ev(502, select(code == 3, 101, 90), code), status: select(code == 5, SupportStatus.Unknown, SupportStatus.Ready), delivered_reference: select(code == 6, 0, 503), delivered_at: select(code == 7, 110, 95), permitted_options: select(code == 9, 1, 2) }; }
+fn review(finding: DemandFinding, exception: DemandException) -> (result: DemandReview) { return DemandReview { evidence: ev(504, 120, 0), finding: finding, adequacy_reference: 505, exception: exception }; }
+fn category(f: DemandFinding, code: u64, exception: DemandException) -> (result: u64) { let r: DemandClassification = classify_demand(demand(), support(code), review(f, exception)); return demand_class_code(r.category); }
+
+test equivalent_delivery_requires_sufficiency_and_receipt() -> (result: TestResult) {
+ return from_assertion(equals_bool(true, category(DemandFinding.EquivalentDelivered, 0, DemandException.Clear) == 0 && category(DemandFinding.EquivalentDelivered, 6, DemandException.Clear) == 5 && category(DemandFinding.EquivalentDelivered, 7, DemandException.Clear) == 5, 301));
+}
+test relevant_capability_is_only_potential() -> (result: TestResult) { return from_assertion(equals_bool(true, category(DemandFinding.RelevantCapability, 0, DemandException.Clear) == 1, 302)); }
+test selection_requires_multiple_available_options() -> (result: TestResult) { return from_assertion(equals_bool(true, category(DemandFinding.MultipleOptions, 0, DemandException.Clear) == 2 && category(DemandFinding.MultipleOptions, 9, DemandException.Clear) == 5 && category(DemandFinding.MultipleOptions, 5, DemandException.Clear) == 5, 303)); }
+test delivery_gap_and_novel_reasoning_remain_distinct() -> (result: TestResult) { return from_assertion(equals_bool(true, category(DemandFinding.DeliveryGap, 0, DemandException.Clear) == 3 && category(DemandFinding.NovelReasoning, 1, DemandException.Clear) == 4 && category(DemandFinding.Unknown, 0, DemandException.Clear) == 5, 304)); }
+test missing_contradictory_and_stale_support_are_not_redundancy() -> (result: TestResult) { return from_assertion(equals_bool(true, category(DemandFinding.EquivalentDelivered, 1, DemandException.Clear) == 5 && category(DemandFinding.EquivalentDelivered, 2, DemandException.Clear) == 5 && category(DemandFinding.EquivalentDelivered, 3, DemandException.Clear) == 5 && category(DemandFinding.EquivalentDelivered, 4, DemandException.Clear) == 5, 305)); }
+test independent_verification_and_retries_are_excluded() -> (result: TestResult) { return from_assertion(equals_bool(true, category(DemandFinding.EquivalentDelivered, 0, DemandException.IndependentVerification) == 5 && category(DemandFinding.EquivalentDelivered, 0, DemandException.RetryAfterFailure) == 5 && category(DemandFinding.EquivalentDelivered, 0, DemandException.StateChange) == 5 && category(DemandFinding.EquivalentDelivered, 0, DemandException.Unknown) == 5, 306)); }
+test review_and_authority_references_are_required() -> (result: TestResult) {
+ let r: DemandReview = review(DemandFinding.EquivalentDelivered, DemandException.Clear);
+ let missing: DemandReview = DemandReview { evidence: r.evidence, finding: r.finding, adequacy_reference: 0, exception: r.exception };
+ let c: DemandClassification = classify_demand(demand(), support(0), missing);
+ return from_assertion(equals_bool(true, demand_class_code(c.category) == 5 && category(DemandFinding.EquivalentDelivered, 8, DemandException.Clear) == 5, 307));
+}
+test review_cannot_precede_the_observed_decision() -> (result: TestResult) {
+ let r: DemandReview = DemandReview { evidence: ev(504, 99, 0), finding: DemandFinding.EquivalentDelivered, adequacy_reference: 505, exception: DemandException.Clear };
+ let c: DemandClassification = classify_demand(demand(), support(0), r);
+ return from_assertion(equals_bool(true, demand_class_code(c.category) == 5 && c.reason == 3, 308));
+}
+test retrospective_activity_availability_is_not_an_earlier_feature() -> (result: TestResult) {
+ let d: AgentDemand = AgentDemand { event: 101, task: 401, state: 201, decision_at: 100, activity: ev(501, 110, 0) };
+ let r: DemandReview = review(DemandFinding.RelevantCapability, DemandException.Clear);
+ let early: DemandReview = DemandReview { evidence: ev(504, 105, 0), finding: r.finding, adequacy_reference: r.adequacy_reference, exception: r.exception };
+ let a: DemandClassification = classify_demand(d, support(0), r); let b: DemandClassification = classify_demand(d, support(0), early);
+ return from_assertion(equals_bool(true, demand_class_code(a.category) == 1 && b.reason == 3 && demand_class_code(b.category) == 5, 326));
+}
+test demand_and_review_must_join_the_same_event_state() -> (result: TestResult) {
+ let d: AgentDemand = AgentDemand { event: 102, task: 401, state: 201, decision_at: 100, activity: ev(501, 100, 0) };
+ let c: DemandClassification = classify_demand(d, support(0), review(DemandFinding.DeliveryGap, DemandException.Clear));
+ return from_assertion(equals_bool(true, demand_class_code(c.category) == 5 && c.reason == 1, 309));
+}
+test classification_retains_source_references() -> (result: TestResult) {
+ let c: DemandClassification = classify_demand(demand(), support(0), review(DemandFinding.RelevantCapability, DemandException.Clear));
+ return from_assertion(equals_bool(true, c.event == 101 && c.activity_reference == 501 && c.support_reference == 502 && c.review_reference == 504 && c.adequacy_reference == 505, 310));
+}
+
+fn gb(resolved: u64) -> (result: GuidanceBoundary) { return GuidanceBoundary { event: 101, question: 601, state: 201, decision_at: 100, established_reference: 602, permitted_reference: 603, operation_contract: 604, resolved_operation: resolved }; }
+fn candidate(operation: u64, cost: u64, code: u64) -> (result: OperationCandidate) { return OperationCandidate { operation: operation, contract: select(code == 7, 999, 604), evidence: ev(700 + operation, select(code == 3, 101, 90), code), ready: code != 5, cost_known: code != 6, cost: cost }; }
+fn pair(a: OperationCandidate, b: OperationCandidate, resolved: u64, rank: u64, unit: u64, limit: u64, count: u64) -> (result: GuidanceProblem) {
+ let exact: [OperationCandidate; 2] = [a, b]; let cs: [OperationCandidate; up_to 8] = exact;
+ return GuidanceProblem { boundary: gb(resolved), candidates: cs, ranking_reference: rank, cost_unit: unit, max_candidates: count, max_operation_cost: limit };
+}
+fn problem() -> (result: GuidanceProblem) { return pair(candidate(11, 4, 0), candidate(12, 2, 0), 0, 605, 606, 10, 8); }
+fn guide_case(code: u64) -> (result: Guidance) { return guide_operations(pair(candidate(11, 4, 0), candidate(12, 2, code), 0, 605, 606, 10, 8)); }
+
+test deterministic_ranking_selects_only_a_declared_operation() -> (result: TestResult) {
+ let g: Guidance = guide_operations(problem()); return from_assertion(equals_bool(true, g.path == 1 && g.operation == 12 && g.cost_known && g.cost == 2 && g.eligible == 2 && g.candidate_checks == 2 && g.selected_reference == 712 && g.permitted_reference == 603 && g.ranking_reference == 605 && g.cost_unit == 606, 311));
+}
+test deterministic_ranking_is_order_independent() -> (result: TestResult) {
+ let g: Guidance = guide_operations(pair(candidate(12, 2, 0), candidate(11, 4, 0), 0, 605, 606, 10, 8)); return from_assertion(equals_bool(true, g.path == 1 && g.operation == 12, 312));
+}
+test ties_abstain_and_a_later_better_candidate_clears_the_tie() -> (result: TestResult) {
+ let tied: Guidance = guide_operations(pair(candidate(11, 2, 0), candidate(12, 2, 0), 0, 605, 606, 10, 8));
+ let exact: [OperationCandidate; 3] = [candidate(11, 3, 0), candidate(12, 3, 0), candidate(13, 1, 0)]; let cs: [OperationCandidate; up_to 8] = exact;
+ let g: Guidance = guide_operations(GuidanceProblem { boundary: gb(0), candidates: cs, ranking_reference: 605, cost_unit: 606, max_candidates: 8, max_operation_cost: 10 });
+ return from_assertion(equals_bool(true, tied.path == 2 && tied.reason == 6 && tied.operation == 0 && g.path == 1 && g.operation == 13, 313));
+}
+test missing_and_unknown_cost_are_not_zero_valued_evidence() -> (result: TestResult) {
+ let a: Guidance = guide_case(1); let b: Guidance = guide_case(6); let c: Guidance = guide_case(5);
+ return from_assertion(equals_bool(true, a.operation == 11 && a.unavailable == 1 && a.eligible == 1 && b.operation == 11 && b.unavailable == 1 && c.operation == 11, 314));
+}
+test contradiction_future_and_state_mismatch_refuse() -> (result: TestResult) {
+ let a: Guidance = guide_case(2); let b: Guidance = guide_case(3); let c: Guidance = guide_case(4);
+ return from_assertion(equals_bool(true, a.path == 2 && a.reason == 3 && a.operation == 0 && b.reason == 4 && b.operation == 0 && c.reason == 4 && c.operation == 0, 315));
+}
+test duplicate_and_incompatible_candidates_refuse() -> (result: TestResult) {
+ let a: Guidance = guide_operations(pair(candidate(11, 4, 0), candidate(11, 2, 0), 0, 605, 606, 10, 8)); let b: Guidance = guide_case(7); let c: Guidance = guide_case(8);
+ return from_assertion(equals_bool(true, a.reason == 1 && a.operation == 0 && b.reason == 1 && b.operation == 0 && c.reason == 4 && c.operation == 0, 316));
+}
+test resource_envelopes_refuse_or_exclude_expensive_operations() -> (result: TestResult) {
+ let a: Guidance = guide_operations(pair(candidate(11, 4, 0), candidate(12, 2, 0), 0, 605, 606, 1, 8));
+ let b: Guidance = guide_operations(pair(candidate(11, 4, 0), candidate(12, 2, 0), 0, 605, 606, 2, 8));
+ let c: Guidance = guide_operations(pair(candidate(11, 4, 0), candidate(12, 2, 0), 0, 605, 606, 10, 1));
+ return from_assertion(equals_bool(true, a.reason == 5 && a.over_budget == 2 && a.operation == 0 && b.operation == 12 && b.over_budget == 1 && c.reason == 5 && c.candidate_checks == 0, 317));
+}
+test established_resolution_bypasses_ranking_and_costs() -> (result: TestResult) {
+ let a: Guidance = guide_operations(pair(candidate(11, 4, 1), candidate(12, 2, 6), 12, 0, 0, 0, 8));
+ return from_assertion(equals_bool(true, a.path == 0 && a.operation == 12 && a.ranking_reference == 0 && a.cost_unit == 0 && !a.cost_known && a.cost == 0, 318));
+}
+test established_resolution_still_requires_a_valid_permitted_candidate() -> (result: TestResult) {
+ let a: Guidance = guide_operations(pair(candidate(11, 4, 0), candidate(12, 2, 0), 99, 0, 0, 0, 8)); let b: Guidance = guide_operations(pair(candidate(11, 4, 0), candidate(12, 2, 1), 12, 0, 0, 0, 8));
+ return from_assertion(equals_bool(true, a.path == 2 && a.operation == 0 && b.path == 2 && b.reason == 2 && b.operation == 0, 319));
+}
+test missing_ranking_provenance_and_cost_units_refuse() -> (result: TestResult) {
+ let a: Guidance = guide_operations(pair(candidate(11, 4, 0), candidate(12, 2, 0), 0, 0, 606, 10, 8)); let b: Guidance = guide_operations(pair(candidate(11, 4, 0), candidate(12, 2, 0), 0, 605, 0, 10, 8));
+ return from_assertion(equals_bool(true, a.reason == 1 && b.reason == 1 && a.operation == 0 && b.operation == 0, 320));
+}
+fn followup(kind: OutcomeKind, at: u64, operation: u64, state: u64) -> (result: SelectionOutcome) { return SelectionOutcome { event: 101, question: 601, state: state, operation: operation, permitted_reference: 603, decision_reference: 801, reference: 802, authority: 803, observed_at: at, kind: kind, usefulness: SelectionUse.Useful, verification: WorkVerification.Passed, calls_known: true, tool_calls: 4 }; }
+test observed_selection_and_verified_work_remain_separate_from_savings() -> (result: TestResult) {
+ let e: SelectionEvaluation = evaluate_selection(problem(), 801, followup(OutcomeKind.Observed, 110, 12, 201));
+ return from_assertion(equals_bool(true, e.accepted && e.useful && e.usefulness_known && e.verified_work && e.verification_known && e.calls_known && e.tool_calls == 4 && e.outcome_reference == 802, 321));
+}
+test predictions_and_leaked_or_mismatched_outcomes_are_rejected() -> (result: TestResult) {
+ let a: SelectionEvaluation = evaluate_selection(problem(), 801, followup(OutcomeKind.Prediction, 110, 12, 201)); let b: SelectionEvaluation = evaluate_selection(problem(), 801, followup(OutcomeKind.Observed, 99, 12, 201)); let c: SelectionEvaluation = evaluate_selection(problem(), 801, followup(OutcomeKind.Observed, 110, 11, 201)); let d: SelectionEvaluation = evaluate_selection(problem(), 801, followup(OutcomeKind.Observed, 110, 12, 999)); let e: SelectionEvaluation = evaluate_selection(problem(), 899, followup(OutcomeKind.Observed, 110, 12, 201));
+ return from_assertion(equals_bool(true, !a.accepted && !b.accepted && !c.accepted && !d.accepted && !e.accepted && a.tool_calls == 0, 322));
+}
+test unknown_usefulness_verification_and_calls_remain_unknown() -> (result: TestResult) {
+ let o: SelectionOutcome = SelectionOutcome { event: 101, question: 601, state: 201, operation: 12, permitted_reference: 603, decision_reference: 801, reference: 802, authority: 803, observed_at: 110, kind: OutcomeKind.Observed, usefulness: SelectionUse.Unknown, verification: WorkVerification.Unknown, calls_known: false, tool_calls: 999 };
+ let e: SelectionEvaluation = evaluate_selection(problem(), 801, o);
+ return from_assertion(equals_bool(true, e.accepted && !e.useful && !e.usefulness_known && !e.verified_work && !e.verification_known && !e.calls_known && e.tool_calls == 0, 323));
+}
+test no_candidate_and_fallback_produce_no_ordinary_selection() -> (result: TestResult) {
+ let empty: [OperationCandidate; 0] = []; let cs: [OperationCandidate; up_to 8] = empty;
+ let g: Guidance = guide_operations(GuidanceProblem { boundary: gb(0), candidates: cs, ranking_reference: 605, cost_unit: 606, max_candidates: 8, max_operation_cost: 10 });
+ let p: GuidanceProblem = pair(candidate(11, 2, 0), candidate(12, 2, 0), 0, 605, 606, 10, 8);
+ let e: SelectionEvaluation = evaluate_selection(p, 801, followup(OutcomeKind.Observed, 110, 12, 201));
+ return from_assertion(equals_bool(true, g.path == 2 && g.reason == 1 && g.operation == 0 && !e.accepted, 324));
+}
+
+// Authentic terminal inventory row projected conservatively. See the audit map:
+// terminal job IDs exist, but no source state identity or pre-decision capability
+// snapshot was retained. Local handle 1 is an audit row, not an owner event ID.
+fn partial_workflow() -> (result: DemandClassification) {
+ let absent: DemandEvidence = DemandEvidence { event: 1, state: 0, reference: 0, authority: 0, available_at: 0, status: ObservationStatus.Absent };
+ let d: AgentDemand = AgentDemand { event: 1, task: 0, state: 0, decision_at: 0, activity: absent };
+ let s: EnvironmentalSupport = EnvironmentalSupport { evidence: absent, status: SupportStatus.Unknown, delivered_reference: 0, delivered_at: 0, permitted_options: 0 };
+ let r: DemandReview = DemandReview { evidence: absent, finding: DemandFinding.Unknown, adequacy_reference: 0, exception: DemandException.Unknown };
+ return classify_demand(d, s, r);
+}
+test authentic_partial_history_cannot_establish_redundancy() -> (result: TestResult) { let c: DemandClassification = partial_workflow(); return from_assertion(equals_bool(true, demand_class_code(c.category) == 5 && c.reason == 1, 325)); }
+
+// Complete native invocation probes include fixture construction. Pure arguments
+// can also be passed through the existing mncs call typed interchange.
+fn pair_cost() -> (result: Guidance) { return guide_operations(problem()); }
+fn bypass_cost() -> (result: Guidance) { return guide_operations(pair(candidate(11, 4, 1), candidate(12, 2, 6), 12, 0, 0, 0, 8)); }
+fn one_cost() -> (result: Guidance) {
+ let exact: [OperationCandidate; 1] = [candidate(11, 4, 0)]; let cs: [OperationCandidate; up_to 8] = exact;
+ return guide_operations(GuidanceProblem { boundary: gb(0), candidates: cs, ranking_reference: 605, cost_unit: 606, max_candidates: 8, max_operation_cost: 10 });
+}
+fn eight_cost() -> (result: Guidance) {
+ let exact: [OperationCandidate; 8] = [candidate(11, 8, 0), candidate(12, 7, 0), candidate(13, 6, 0), candidate(14, 5, 0), candidate(15, 4, 0), candidate(16, 3, 0), candidate(17, 2, 0), candidate(18, 1, 0)]; let cs: [OperationCandidate; up_to 8] = exact;
+ return guide_operations(GuidanceProblem { boundary: gb(0), candidates: cs, ranking_reference: 605, cost_unit: 606, max_candidates: 8, max_operation_cost: 10 });
+}
+fn demand_cost() -> (result: DemandClassification) { return classify_demand(demand(), support(0), review(DemandFinding.EquivalentDelivered, DemandException.Clear)); }

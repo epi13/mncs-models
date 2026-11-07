@@ -1,5 +1,21 @@
 # Roadmap
 
+## Ambient demand and operation-guidance milestone
+
+- [x] Bounded read-only audit of retained Control jobs and Environment evidence/projections.
+- [x] Reconstruct source-recorded context-selection and compiler-evidence delivery workflows, preserving timing/correlation limits.
+- [x] Native six-category demand projection with reviewed sufficiency, joins, timing and exclusions.
+- [x] Native 1–8 candidate deterministic-operation selection, exact permitted-set references, cost units/budgets, bypass and abstention.
+- [x] Separate actually selected operation/usefulness/work-verification/call-count outcomes.
+- [x] Preserve 45 tests and historical results; add 26 native tests and complete-call probes.
+- [x] Owner-specific deterministic improvements and precise missing opportunity/outcome observations documented.
+- [ ] Naturally occurring, independently verified demand/decision cohort with decision-time state and capability delivery.
+- [ ] Measured outcome-preserving reduction in agent work from deterministic service improvements.
+- [ ] Learned operation guide, only after a remaining uncertainty and same-information deterministic baseline justify it.
+
+No live guidance, telemetry service, LLM weight trial or operational benefit is claimed.
+See [AGENT_BURDEN.md](docs/AGENT_BURDEN.md), [DECISION_GUIDANCE.md](docs/DECISION_GUIDANCE.md) and RFC 0005.
+
 ## Residual/proportional execution milestone
 
 - [x] Native model-free residual gate; established answers bypass inference.

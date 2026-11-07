@@ -109,3 +109,10 @@ separate-unit usefulness accounting. Native callable probes separate constructio
 validation, cold execution, batch reuse, revision and revalidation. Host scripts
 transport typed values and hash artifacts; they perform no inference or fitting.
 Historical execution receipts are retained under outputs/history/a5c0b44.
+
+## Subsequent extension
+
+RFC 0005 adds referenced demand review and bounded permitted-operation selection
+without changing this binary residual gate or the canonical numerical runtime.
+Its audit preserves the negative utility findings and does not promote a learned
+guide or operational integration.

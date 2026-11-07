@@ -1,0 +1,165 @@
+{
+  "activity_section": "services",
+  "content_digest": "bdff684fd73988eb4d5f1e535c5c983c",
+  "detail_status": "section-focused",
+  "measurement_limits": [
+    "Session evidence is limited to the selected bounded event page and recorded provider artifacts.",
+    "Host resource samples describe host state at capture time; they are not agent-attributed consumption and do not establish pressure or causation.",
+    "Unavailable historical context remains unavailable; current session context is not retroactive attribution."
+  ],
+  "schema_version": "mncs.environment.session-activity-projection/1",
+  "session_activity": {
+    "context": {
+      "campaign_id": "cmp_81014ec3ec7d936f",
+      "definition_id": "env_e43267a3f9e9b91c",
+      "environment_id": "renv_7ffae8d6d305b1b5",
+      "session_id": "ses_ff95f7f9e223ce3d",
+      "work_intent_goal": "Read-only burden discovery and native guidance contracts; no operational integration",
+      "work_intent_id": "int_8cdc11e63e181adb"
+    },
+    "detail_status": "section-focused",
+    "measurement_limits": [
+      "Capability interactions cover Environment-bound invocations; direct external tools are outside this session event view.",
+      "Control read-operation events contain bounded operation and outcome fields, never raw arguments or responses.",
+      "Control read-operation repository branch/head fields come from the authenticated session-selected checkout; this projection does not re-probe Git at each operation.",
+      "Model identity, token usage, execution duration, and resource consumption are not inferred when the runtime does not expose them.",
+      "The Store page reader verifies only selected event payloads; finding their bindings still scans the generation's metadata index.",
+      "Resource samples are bounded aggregate host snapshots linked to Environment invocations; they do not measure agent-attributed consumption or establish pressure by themselves.",
+      "Repository ref transitions are Environment observations. An exact preflight match establishes a later observation of the same checkout preimage, not that the eligible operation caused the change or that a remote publication succeeded.",
+      "Claim-coordination activity records bounded claim-state transitions, not exclusive work authority, accepted modifications, or development outcomes. Historical events without objective references remain unlinked.",
+      "Repository ref transition correlation uses only exact checkout identity and head preimages in the selected session event window; an absent match may be outside the bounded window."
+    ],
+    "service_accountability": {
+      "response_budget_summary_only": true,
+      "schema_version": "mncs.environment.service-accountability/1",
+      "scope": "selected-session-declared-readiness-services",
+      "services": [],
+      "services_omitted_count": 0,
+      "services_truncated": false,
+      "source": {
+        "campaign_id": "cmp_81014ec3ec7d936f",
+        "environment_id": "renv_7ffae8d6d305b1b5",
+        "service_declaration_status": "explicit-empty",
+        "service_session_id": "ses_ff95f7f9e223ce3d",
+        "snapshot_sequence": 13,
+        "work_intent_id": "int_8cdc11e63e181adb"
+      },
+      "status": "empty-declared-scope",
+      "summary": {
+        "agent_intervention_burden_status": "not-measured",
+        "agent_receipt_status": "not-established",
+        "ambient_fulfillment_status": "not-measured",
+        "declared_service_count": 0,
+        "eligible_service_opportunity_count": null,
+        "outcome_quality_status": "not-established",
+        "projected_service_count": 0,
+        "readiness_probe_configuration_missing_count": 0,
+        "readiness_probe_coverage_status": "no-declared-probe-opportunities",
+        "readiness_probe_observation_ambiguous_count": 0,
+        "readiness_probe_observation_missing_count": 0,
+        "readiness_probe_observation_record_count": 0,
+        "readiness_probe_observation_unmatched_count": 0,
+        "readiness_probe_opportunity_count": 0
+      }
+    },
+    "service_readiness": {
+      "candidates": [],
+      "measurement_limits": [
+        "Readiness and reconciliation results are co-observed in this current snapshot; causality is not established. Probe-record coverage counts valid declarations and unique matching rows, not agent need or service fulfillment.",
+        "Provider prose, raw responses, and workspace paths are omitted.",
+        "A non-ready service or unsuccessful operation is an investigation candidate, not proof of an environmental defect.",
+        "Earlier readiness history is not reconstructed by this view."
+      ],
+      "readiness_status": "degraded",
+      "services": [],
+      "source": {
+        "declared_service_count": 0,
+        "declared_services_truncated": false,
+        "environment_id": "renv_7ffae8d6d305b1b5",
+        "kind": "current-session-snapshot",
+        "last_reconciled_at": "2026-11-07T06:46:52+00:00",
+        "observations_truncated": false,
+        "operations_truncated": false,
+        "provenance_status": "identified",
+        "service_declaration_status": "explicit-empty",
+        "service_observation_count": 0,
+        "service_operation_count": 0,
+        "service_scan_limit": 16,
+        "session_id": "ses_ff95f7f9e223ce3d",
+        "snapshot_sequence": 13
+      },
+      "status": "not-captured-in-session",
+      "summary": {
+        "ambiguous_observation_count": 0,
+        "ambiguous_operation_count": 0,
+        "declared_service_count": 0,
+        "invalid_observation_count": 0,
+        "invalid_operation_count": 0,
+        "investigation_candidate_count": 0,
+        "investigation_candidates_omitted": 0,
+        "probe_configuration_missing_count": 0,
+        "probe_observation_ambiguous_count": 0,
+        "probe_observation_coverage_status": "no-declared-probe-opportunities",
+        "probe_observation_missing_count": 0,
+        "probe_observation_record_count": 0,
+        "probe_observation_unmatched_count": 0,
+        "probe_opportunity_count": 0,
+        "projected_service_count": 0,
+        "status_counts": {
+          "degraded": 0,
+          "not-observed": 0,
+          "ready": 0,
+          "unavailable": 0,
+          "unknown": 0
+        }
+      }
+    },
+    "source": {
+      "event_count": 5,
+      "event_page_before_sequence": null,
+      "event_page_has_older_records": true,
+      "event_page_scoped": false,
+      "event_window_limit": 4,
+      "event_window_sequence_end": 5,
+      "event_window_sequence_start": 2,
+      "event_window_truncated": true,
+      "next_event_before_sequence": 2,
+      "resource_sample_identity_digest": "4f53cda18c2baa0c",
+      "verification_activity_digest": "539d9f78f70714c3"
+    },
+    "status": "partial-no-invocations-in-selected-window"
+  },
+  "session_activity_pressure_candidate_count": 0,
+  "session_activity_pressure_candidate_summary": {
+    "agent_intervention_burden_status": "not-measured",
+    "candidate_occurrence_count": 0,
+    "candidate_occurrence_counts_by_source": {
+      "authority-denial-candidates": 0,
+      "coordination-deferral-candidates": 0,
+      "rpc-failure-candidates": 0,
+      "service-readiness-investigation-candidates": 0,
+      "verified-unmeasurable-verification-obligations": 0
+    },
+    "cross_source_overlap_status": "not-assessed",
+    "environmental_defect_status": "not-established",
+    "measurement_limits": [
+      "Counts are bounded source-category occurrences and may overlap; they are not a count of unique causes or defects.",
+      "The nested verification candidate summary retains exact Store evidence references and its own coverage limits.",
+      "The selected session event and verification windows do not establish cross-session recurrence or agent intervention burden."
+    ],
+    "recurrence_status": "not-established",
+    "schema_version": "mncs.environment.session-activity-candidate-summary/1",
+    "scope": "selected-session-bounded-candidate-occurrences",
+    "status": "observed",
+    "unique_pressure_count_status": "not-established"
+  },
+  "status": "partial-no-invocations-in-selected-window",
+  "subject": {
+    "campaign_id": "cmp_81014ec3ec7d936f",
+    "definition_id": "env_e43267a3f9e9b91c",
+    "environment_id": "renv_7ffae8d6d305b1b5",
+    "session_id": "ses_ff95f7f9e223ce3d",
+    "work_intent_goal": "Read-only burden discovery and native guidance contracts; no operational integration",
+    "work_intent_id": "int_8cdc11e63e181adb"
+  }
+}

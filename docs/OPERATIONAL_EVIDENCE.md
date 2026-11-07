@@ -98,3 +98,11 @@ plus the full established/residual workload and actual resource/burden quantitie
 Historical observational comparisons are predictive evidence, not causal savings.
 A later read-only shadow evaluation needs separate authorization/custody; it still
 must not grant an experimental model recovery or scheduling authority.
+
+## Subsequent ambient-demand audit
+
+The [agent-burden audit](AGENT_BURDEN.md) broadens the read-only investigation to
+retained Control job metadata, selected output readbacks and Environment-owned
+capability/service evidence. It identifies historical deterministic delivery gaps
+and their limited successful readbacks. It does not supply the missing labeled
+residual utility cohort or invalidate the earlier Forge findings.

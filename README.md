@@ -19,6 +19,19 @@ Canonical MNCS model construction and composition layer for machine-native ML/AI
 
 The repository is intentionally architecture-open. It must be able to represent compact classifiers, specialist ensembles, transformers, recurrent and looped-depth systems, state-space and recurrent sequence models, mixtures of experts, multimodal systems, graph-based models, generative models, and future architectures that do not yet have a stable name.
 
+## Agent demand and bounded decision guidance
+
+Native demand classification now checks reviewed activity/support/evidence joins,
+exclusions and unknowns. A bounded operation-selection contract preserves an
+owner-supplied permitted set, deterministic bypass, least-cost baseline, abstention
+and separate observed outcomes. It executes no tooling and fits no learned guide.
+
+Run `python3 scripts/verify.py` (71 native tests). See the
+[activity and ambience audit](docs/AGENT_BURDEN.md),
+[native guidance contracts](docs/DECISION_GUIDANCE.md) and RFC 0005.
+Historical context/projection deficiencies support deterministic improvements;
+no defensible burden-saving or learned-guidance utility cohort was established.
+
 ## Residual intelligence and proportional execution
 
 Deterministic resolutions now have a model-free native gate. Learned inference
@@ -27,7 +40,7 @@ The same Model supports compact 5/20/100-slot backing, immutable edits, projecte
 admission and lexical validation reuse. No caller-supplied validation certificate
 is trusted.
 
-Run `python3 scripts/verify.py` (45 native tests), then
+Run `python3 scripts/verify.py` (including the preserved 45 native tests), then
 `python3 scripts/measure_residual.py` for source-bound stage measurements and numeric
 JSON interchange. See [residual contracts and measured costs](docs/RESIDUAL_INTELLIGENCE.md),
 [the real-evidence audit](docs/OPERATIONAL_EVIDENCE.md), and

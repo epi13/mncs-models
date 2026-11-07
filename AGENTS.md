@@ -139,7 +139,7 @@ When native MNCS implementation reaches or surpasses a host scaffold, deprecate 
 
 ## Verification
 
-Run `python3 scripts/verify.py` for the native foundation, composition and residual suites and source-bound callable measurements. These verify the bounded contracts in RFCs 0002, 0003 and 0004, not the complete charter or family conformance. Run `python3 scripts/measure_residual.py` for typed stage probes. Distinguish mechanical tests, logical payload/VM cost, operational utility and controlled authoring evidence; do not infer one from another. Further implementation campaigns should establish:
+Run `python3 scripts/verify.py` for the native foundation, composition, residual and guidance suites and source-bound callable measurements. These verify the bounded contracts in RFCs 0002, 0003, 0004 and 0005, not the complete charter or family conformance. Run `python3 scripts/measure_residual.py` for typed stage probes. Distinguish mechanical tests, logical payload/VM cost, operational utility and controlled authoring evidence; do not infer one from another. Further implementation campaigns should establish:
 
 - structural validation tests;
 - deterministic identity/serialization tests where applicable;

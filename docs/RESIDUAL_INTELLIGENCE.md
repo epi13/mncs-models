@@ -239,3 +239,12 @@ No new predictive-utility benchmark or controlled LLM authoring trial was conduc
 The new fixtures are explicitly mechanical contract tests. The original informed
 rules still outperform their models. Read [the operational audit](OPERATIONAL_EVIDENCE.md)
 and [the direct-weight trial boundary](DIRECT_WEIGHT_TRIAL.md) for what remains missing.
+
+## Operation-selection extension
+
+RFC 0005 and [DECISION_GUIDANCE.md](DECISION_GUIDANCE.md) add a separate bounded
+operation-selection problem rather than interpreting binary answers as operation
+permissions. The established binary residual gate, Model, composition, edits and
+refusal semantics remain unchanged. A deterministic least-cost baseline and
+referenced demand/outcome contracts now support offline mechanics; a useful
+learned selector still requires the evidence described in [AGENT_BURDEN.md](AGENT_BURDEN.md).
