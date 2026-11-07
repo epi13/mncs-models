@@ -1,5 +1,25 @@
 # Roadmap
 
+## Residual/proportional execution milestone
+
+- [x] Native model-free residual gate; established answers bypass inference.
+- [x] Specific question/model/feature bindings, pre-decision timing and explicit fallback.
+- [x] Separate observed outcome accounting and separate-unit utility comparisons.
+- [x] One Model with compact immutable parameter updates and fresh bucket backing.
+- [x] Active-lane numerical execution; remove duplicate same-call model validation.
+- [x] Qualified projected DAG admission and four-item lexical admission reuse.
+- [x] Preserve thirty tests and negative historical findings; add fifteen native tests.
+- [x] Source-bound construction/admission/inference/revision stage measurements.
+- [x] Native direct-weight interchange and disjoint/frozen trial bookkeeping.
+- [x] Bounded read-only operational evidence audit: no suitable labeled cohort found in the inspected context.
+- [ ] Real residual utility and controlled LLM weight-engineering trial: cohort/custody missing.
+- [ ] Unforgeable admission reuse across arbitrary calls; no unchecked certificate substituted.
+- [ ] Peak native memory and graph-rebind maintenance measurements.
+
+Do not raise node capacity or deploy models before these costs and utility are justified.
+See [RESIDUAL_INTELLIGENCE.md](docs/RESIDUAL_INTELLIGENCE.md) and RFC 0004.
+
+
 ## Verified composition milestone
 
 - [x] Reuse native Model/infer in a bounded DAG with explicit contracts.
@@ -8,7 +28,7 @@
 - [x] Two/three-node constructions and a reusable connected ten-node sensor construction.
 - [x] Frozen 32-case synthetic comparison, including a harmful tuning edit and superior deterministic baseline.
 - [x] Active and allocated resource accounting with native execution measurements.
-- [ ] Compact editable parameter storage: bounded-view replacement is refused with MNE198.
+- [x] Compact editable parameters via exact 5/20/100-slot materialization; direct view replace remains refused with MNE198.
 - [ ] Matched LLM intervention-cost experiment and authorized real-trace evaluation.
 - [ ] Larger assemblies, after storage/validation overhead is measured and improved.
 

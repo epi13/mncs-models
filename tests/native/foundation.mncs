@@ -11,7 +11,7 @@ fn authored() -> (result: Model) {
     let c: [i64; 100] = replace(b, 1, 1);
     let d: [i64; 100] = replace(c, 2, 1);
     let e: [i64; 100] = replace(d, 3, 1);
-    return Model { identity: 101, topology: Topology { inputs: 4, hidden: 0, outputs: 1, relu: false }, parameters: Parameters { values: replace(e, 4, -6), revision: 1, parent: 0, provenance: 201 } };
+    return Model { identity: 101, topology: Topology { inputs: 4, hidden: 0, outputs: 1, relu: false }, parameters: Parameters { values: parameter_values(replace(e, 4, -6)), revision: 1, parent: 0, provenance: 201 } };
 }
 fn revised() -> (result: Model) { let e: Edit = edit(authored(), 2, 3, 2, 202); return e.model; }
 fn sample(s: i64, r: i64, p: i64, u: i64) -> (result: Signal) { return Signal { values: [s, r, p, u, 0, 0, 0, 0], width: 4 }; }
@@ -31,7 +31,7 @@ test invalid_edits_are_atomic() -> (result: TestResult) {
 }
 test topology_and_parameter_validation() -> (result: TestResult) {
     let a: Model = authored(); let p: Parameters = a.parameters;
-    let bad: Model = Model { identity: a.identity, topology: a.topology, parameters: Parameters { values: replace(p.values, 99, 1), revision: 1, parent: 0, provenance: 201 } };
+    let bad: Model = Model { identity: a.identity, topology: a.topology, parameters: Parameters { values: parameter_values(replace(exact_parameters(p), 99, 1)), revision: 1, parent: 0, provenance: 201 } };
     return from_assertion(equals_bool(true, !model_valid(bad) && !topology_valid(Topology { inputs: 0, hidden: 0, outputs: 1, relu: false }) && !topology_valid(Topology { inputs: 8, hidden: 8, outputs: 8, relu: false }) && topology_valid(Topology { inputs: 8, hidden: 8, outputs: 3, relu: true }), 3));
 }
 test exact_inference_and_cost() -> (result: TestResult) {
@@ -47,7 +47,7 @@ test two_layer_relu() -> (result: TestResult) {
     let a: [i64; 100] = [0; 100];
     let b: [i64; 100] = replace(a, 0, -2);
     let c: [i64; 100] = replace(b, 2, 3);
-    let m: Model = Model { identity: 102, topology: Topology { inputs: 1, hidden: 1, outputs: 1, relu: true }, parameters: Parameters { values: replace(c, 3, 1), revision: 1, parent: 0, provenance: 203 } };
+    let m: Model = Model { identity: 102, topology: Topology { inputs: 1, hidden: 1, outputs: 1, relu: true }, parameters: Parameters { values: parameter_values(replace(c, 3, 1)), revision: 1, parent: 0, provenance: 203 } };
     let r: Inference = infer(m, Signal { values: [2, 0, 0, 0, 0, 0, 0, 0], width: 1 });
     let out: Signal = r.output;
     return from_assertion(equals_bool(true, r.status == 0 && out.values[0] == 1 && r.multiplies == 2, 6));
@@ -135,18 +135,18 @@ test heldout_deterministic_baselines() -> (result: TestResult) {
 
 test numeric_envelope_and_full_parameter_budget() -> (result: TestResult) {
     let values: [i64; 100] = [100; 100];
-    let m: Model = Model { identity: 103, topology: Topology { inputs: 3, hidden: 5, outputs: 4, relu: true }, parameters: Parameters { values: replace(values, 99, 0), revision: 1, parent: 0, provenance: 205 } };
+    let m: Model = Model { identity: 103, topology: Topology { inputs: 3, hidden: 5, outputs: 4, relu: true }, parameters: Parameters { values: parameter_values(replace(values, 99, 0)), revision: 1, parent: 0, provenance: 205 } };
     // 20 + 24 = 44 parameters; canonical padding must be zero.
     let bad: Inference = infer(m, empty_signal());
     let params: [i64; 100] = [0; 100];
-    let good: Model = Model { identity: 104, topology: Topology { inputs: 7, hidden: 8, outputs: 4, relu: true }, parameters: Parameters { values: params, revision: 1, parent: 0, provenance: 206 } };
+    let good: Model = Model { identity: 104, topology: Topology { inputs: 7, hidden: 8, outputs: 4, relu: true }, parameters: Parameters { values: parameter_values(params), revision: 1, parent: 0, provenance: 206 } };
     let r: Inference = infer(good, Signal { values: [1000, 1000, 1000, 1000, 1000, 1000, 1000, 0], width: 7 });
     return from_assertion(equals_bool(true, bad.status == 1 && parameter_count(good.topology) == 100 && r.status == 0 && r.multiplies == 88, 13));
 }
 test maximum_signed_arithmetic() -> (result: TestResult) {
     let all: [i64; 100] = [100; 100];
     let t: Topology = Topology { inputs: 8, hidden: 8, outputs: 3, relu: false };
-    let m: Model = Model { identity: 105, topology: t, parameters: Parameters { values: replace(all, 99, 0), revision: 1, parent: 0, provenance: 207 } };
+    let m: Model = Model { identity: 105, topology: t, parameters: Parameters { values: parameter_values(replace(all, 99, 0)), revision: 1, parent: 0, provenance: 207 } };
     let r: Inference = infer(m, Signal { values: [1000; 8], width: 8 });
     let out: Signal = r.output;
     return from_assertion(equals_bool(true, r.status == 0 && out.values[0] == 640080100 && out.values[2] == 640080100, 14));

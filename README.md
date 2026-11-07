@@ -19,6 +19,21 @@ Canonical MNCS model construction and composition layer for machine-native ML/AI
 
 The repository is intentionally architecture-open. It must be able to represent compact classifiers, specialist ensembles, transformers, recurrent and looped-depth systems, state-space and recurrent sequence models, mixtures of experts, multimodal systems, graph-based models, generative models, and future architectures that do not yet have a stable name.
 
+## Residual intelligence and proportional execution
+
+Deterministic resolutions now have a model-free native gate. Learned inference
+requires a named unresolved question, pre-decision evidence and benefit justification.
+The same Model supports compact 5/20/100-slot backing, immutable edits, projected DAG
+admission and lexical validation reuse. No caller-supplied validation certificate
+is trusted.
+
+Run `python3 scripts/verify.py` (45 native tests), then
+`python3 scripts/measure_residual.py` for source-bound stage measurements and numeric
+JSON interchange. See [residual contracts and measured costs](docs/RESIDUAL_INTELLIGENCE.md),
+[the real-evidence audit](docs/OPERATIONAL_EVIDENCE.md), and
+[the direct-weight trial boundary](docs/DIRECT_WEIGHT_TRIAL.md).
+No real predictive utility or controlled LLM authoring advantage was established.
+
 ## Executable native composition
 
 The canonical foundation now includes a bounded acyclic assembly of independently

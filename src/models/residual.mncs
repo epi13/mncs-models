@@ -1,0 +1,78 @@
+mncs 0.18;
+module mncs.models.residual;
+use mncs.models.micro;
+
+// These are experiment contracts, never permission or evidence-authentication policy.
+record Boundary { event: u64, question: u64, established_reference: u64, decision_at: u64, resolved: bool, established_answer: i64 }
+record ResidualSpec { question: u64, feature_contract: u64, model_identity: u64, model_revision: u64, benefit_reference: u64, expected_avoided_agent_ms: u64, max_parameters: u64, max_multiplies: u64, margin: i64 }
+record Features { event: u64, contract: u64, signal: Signal, references: [u64; 8], views: [u64; 8], available_at: [u64; 8], statuses: [u64; 8] }
+// path: 0 established resolution; 1 candidate prediction; 2 fallback.
+// reason: 0 success, 1 no residual justification, 2 unavailable, 3 contradiction,
+// 4 post-decision evidence, 5 invalid contract/model, 6 resource envelope, 7 abstain.
+record ResidualDecision { event: u64, question: u64, path: u64, reason: u64, invoked: bool, answer: i64, score: i64, model_identity: u64, revision: u64, parameter_checks: u64, multiplies: u64, established_reference: u64, feature_references: [u64; 8] }
+fn residual_answer(b: Boundary, f: Features, path: u64, reason: u64, answer: i64) -> (result: ResidualDecision) { return ResidualDecision { event: b.event, question: b.question, path: path, reason: reason, invoked: false, answer: answer, score: 0, model_identity: 0, revision: 0, parameter_checks: 0, multiplies: 0, established_reference: b.established_reference, feature_references: f.references }; }
+fn feature_reason(f: Features, b: Boundary, i: u64) -> (result: u64) {
+    let x: Signal = f.signal;
+    if i >= x.width { return 0; }
+    if f.statuses[i] == 2 { return 3; }
+    if f.statuses[i] != 0 || f.references[i] == 0 || f.views[i] == 0 || f.available_at[i] == 0 { return 2; }
+    if f.available_at[i] > b.decision_at { return 4; }
+    return 0;
+}
+fn inference_multiplies(t: Topology) -> (result: u64) { if t.hidden == 0 { return t.inputs * t.outputs; } return t.inputs * t.hidden + t.hidden * t.outputs; }
+record ResidualGate { eligible: bool, resolved: bool, reason: u64, answer: i64 }
+fn gate_result(eligible: bool, resolved: bool, reason: u64, answer: i64) -> (result: ResidualGate) { return ResidualGate { eligible: eligible, resolved: resolved, reason: reason, answer: answer }; }
+fn gate_residual(s: ResidualSpec, b: Boundary, f: Features) -> (result: ResidualGate) {
+    if b.event == 0 || b.question == 0 || b.established_reference == 0 || b.decision_at == 0 { return gate_result(false, false, 5, 0); }
+    // No model construction, parameter validation or inference on established cases.
+    if b.resolved { if b.established_answer != -1 && b.established_answer != 1 { return gate_result(false, false, 5, 0); } return gate_result(false, true, 0, b.established_answer); }
+    if s.question != b.question || s.benefit_reference == 0 || s.expected_avoided_agent_ms == 0 { return gate_result(false, false, 1, 0); }
+    if f.event != b.event || f.contract == 0 || f.contract != s.feature_contract || s.margin < 0 || s.margin > 1000 { return gate_result(false, false, 5, 0); }
+    let x: Signal = f.signal;
+    if x.width == 0 || x.width > 8 { return gate_result(false, false, 5, 0); }
+    iterate i over x.values carrying reason: u64 = 0 { next reason = select(reason != 0, reason, feature_reason(f, b, i)); }
+    if reason != 0 { return gate_result(false, false, reason, 0); }
+    return gate_result(true, false, 0, 0);
+}
+fn decide_residual(s: ResidualSpec, b: Boundary, f: Features, m: Model) -> (result: ResidualDecision) {
+    let gate: ResidualGate = gate_residual(s, b, f);
+    if gate.resolved { return residual_answer(b, f, 0, 0, gate.answer); }
+    if !gate.eligible { return residual_answer(b, f, 2, gate.reason, 0); }
+    let x: Signal = f.signal;
+    if !model_valid(m) { return residual_answer(b, f, 2, 5, 0); }
+    let p: Parameters = m.parameters; let t: Topology = m.topology;
+    if m.identity != s.model_identity || p.revision != s.model_revision || t.outputs != 1 || t.inputs != x.width { return residual_answer(b, f, 2, 5, 0); }
+    if parameter_count(t) > s.max_parameters || inference_multiplies(t) > s.max_multiplies { return residual_answer(b, f, 2, 6, 0); }
+    let r: Inference = infer_inputs(m, x); let out: Signal = r.output;
+    if r.status != 0 { return residual_answer(b, f, 2, 5, 0); }
+    let score: i64 = out.values[0]; let abstain: bool = score >= 0 - s.margin && score <= s.margin;
+    return ResidualDecision { event: b.event, question: b.question, path: select(abstain, 2, 1), reason: select(abstain, 7, 0), invoked: true, answer: select(abstain, 0, select(score > 0, 1, -1)), score: score, model_identity: m.identity, revision: p.revision, parameter_checks: p.values.len, multiplies: r.multiplies, established_reference: b.established_reference, feature_references: f.references };
+}
+// Observed outcomes are separate from model inputs and require owner references.
+enum OutcomeKind { Observed, Heuristic, Prediction }
+record VerifiedOutcome { event: u64, question: u64, reference: u64, authority: u64, verified_at: u64, kind: OutcomeKind, answer: i64 }
+record ResidualMetrics { total: u64, established: u64, residual: u64, predictions: u64, fallback: u64, correct_residual: u64, correct_total: u64, false_positive: u64, false_negative: u64, rejected_outcomes: u64 }
+fn outcome_observed(k: OutcomeKind) -> (result: bool) { return match k { OutcomeKind.Observed => true, OutcomeKind.Heuristic => false, OutcomeKind.Prediction => false, }; }
+fn metrics_empty() -> (result: ResidualMetrics) { return ResidualMetrics { total: 0, established: 0, residual: 0, predictions: 0, fallback: 0, correct_residual: 0, correct_total: 0, false_positive: 0, false_negative: 0, rejected_outcomes: 0 }; }
+fn record_decision(previous: ResidualMetrics, b: Boundary, d: ResidualDecision, outcome: VerifiedOutcome) -> (result: ResidualMetrics) {
+    let valid: bool = outcome_observed(outcome.kind) && outcome.event == b.event && outcome.question == b.question && outcome.reference != 0 && outcome.authority != 0 && outcome.verified_at >= b.decision_at && (outcome.answer == 1 || outcome.answer == -1) && d.event == b.event && d.question == b.question && ((b.resolved && d.path == 0 && !d.invoked && d.answer == b.established_answer) || (!b.resolved && d.path == 1 && d.invoked && (d.answer == 1 || d.answer == -1)) || (!b.resolved && d.path == 2 && d.answer == 0));
+    if !valid { return ResidualMetrics { total: previous.total, established: previous.established, residual: previous.residual, predictions: previous.predictions, fallback: previous.fallback, correct_residual: previous.correct_residual, correct_total: previous.correct_total, false_positive: previous.false_positive, false_negative: previous.false_negative, rejected_outcomes: previous.rejected_outcomes + 1 }; }
+    let predicted: bool = !b.resolved && d.path == 1; let correct: bool = d.path != 2 && d.answer == outcome.answer;
+    return ResidualMetrics { total: previous.total + 1, established: previous.established + select(b.resolved, 1, 0), residual: previous.residual + select(!b.resolved, 1, 0), predictions: previous.predictions + select(predicted, 1, 0), fallback: previous.fallback + select(!b.resolved && !predicted, 1, 0), correct_residual: previous.correct_residual + select(predicted && correct, 1, 0), correct_total: previous.correct_total + select(correct, 1, 0), false_positive: previous.false_positive + select(predicted && d.answer == 1 && outcome.answer == -1, 1, 0), false_negative: previous.false_negative + select(predicted && d.answer == -1 && outcome.answer == 1, 1, 0), rejected_outcomes: previous.rejected_outcomes };
+}
+
+// Same-window, separate-unit comparisons. No deployment or learning authority.
+enum EvidenceOrigin { Operational, Mechanical }
+record Burden { cohort: u64, outcome_reference: u64, measurement_reference: u64, origin: EvidenceOrigin, agent_ms: u64, diagnostics: u64, critical_misses: u64, construction_agent_ms: u64, maintenance_agent_ms: u64, feature_vm_steps: u64, validation_vm_steps: u64, inference_vm_steps: u64 }
+record UtilityComparison { comparable: bool, agent_ms_reduced: bool, diagnostics_reduced: bool, critical_misses_not_increased: bool, maintenance_ms_not_increased: bool, vm_budget_met: bool }
+fn operational(k: EvidenceOrigin) -> (result: bool) { return match k { EvidenceOrigin.Operational => true, EvidenceOrigin.Mechanical => false, }; }
+fn vm_cost_within(b: Burden, budget: u64) -> (result: bool) {
+    if b.inference_vm_steps > budget { return false; }
+    let remaining: u64 = budget - b.inference_vm_steps;
+    if b.feature_vm_steps > remaining { return false; }
+    return b.validation_vm_steps <= remaining - b.feature_vm_steps;
+}
+fn compare_burden(baseline: Burden, candidate: Burden, vm_budget: u64) -> (result: UtilityComparison) {
+    let same: bool = baseline.cohort != 0 && baseline.cohort == candidate.cohort && baseline.outcome_reference != 0 && baseline.outcome_reference == candidate.outcome_reference && baseline.measurement_reference != 0 && candidate.measurement_reference != 0 && operational(baseline.origin) && operational(candidate.origin);
+    return UtilityComparison { comparable: same, agent_ms_reduced: same && candidate.agent_ms < baseline.agent_ms, diagnostics_reduced: same && candidate.diagnostics < baseline.diagnostics, critical_misses_not_increased: same && candidate.critical_misses <= baseline.critical_misses, maintenance_ms_not_increased: same && candidate.maintenance_agent_ms <= baseline.maintenance_agent_ms, vm_budget_met: same && vm_cost_within(candidate, vm_budget) };
+}

@@ -1,0 +1,123 @@
+mncs 0.18;
+module mncs.models.residual_tests;
+use mncs.test.assertions;
+use mncs.test.suite;
+use mncs.models.micro;
+use mncs.models.compose;
+use mncs.models.residual;
+use mncs.models.trial;
+use mncs.models.construction as example;
+
+fn five() -> (result: Model) { let w: [i64; 5] = [3, 1, 1, 1, -6]; return author_five(w, 1, 0, 701); }
+fn signal_fixture() -> (result: Signal) { return Signal { values: [2, 1, 2, 0, 0, 0, 0, 0], width: 4 }; }
+fn inputs_fixture() -> (result: [Signal; 4]) { return [signal_fixture(), signal_fixture(), signal_fixture(), signal_fixture()]; }
+fn packed_graph() -> (result: Assembly) { let p: Swap = compact_assembly(example.assembly(true)); return p.assembly; }
+fn packed_sensors() -> (result: Assembly) { let p: Swap = compact_assembly(example.ten_components()); return p.assembly; }
+fn boundary(resolved: bool) -> (result: Boundary) { return Boundary { event: 901, question: 301, established_reference: 401, decision_at: 100, resolved: resolved, established_answer: 1 }; }
+fn spec() -> (result: ResidualSpec) { return ResidualSpec { question: 301, feature_contract: 302, model_identity: 700, model_revision: 1, benefit_reference: 303, expected_avoided_agent_ms: 500, max_parameters: 5, max_multiplies: 4, margin: 0 }; }
+fn features() -> (result: Features) { return Features { event: 901, contract: 302, signal: signal_fixture(), references: [501, 502, 503, 504, 0, 0, 0, 0], views: [11, 11, 12, 12, 0, 0, 0, 0], available_at: [90, 90, 95, 95, 0, 0, 0, 0], statuses: [0; 8] }; }
+fn bad_features(reason: u64) -> (result: Features) { let f: Features = features(); return Features { event: f.event, contract: f.contract, signal: f.signal, references: f.references, views: f.views, available_at: replace(f.available_at, 0, select(reason == 4, 101, 90)), statuses: replace(f.statuses, 0, select(reason == 4, 0, reason)) }; }
+fn outcome(answer: i64) -> (result: VerifiedOutcome) { return VerifiedOutcome { event: 901, question: 301, reference: 601, authority: 602, verified_at: 110, kind: OutcomeKind.Observed, answer: answer }; }
+
+test compact_parameter_construction_and_edit() -> (result: TestResult) {
+ let m: Model = five(); let p: Parameters = m.parameters; let r: Inference = infer(m, signal_fixture()); let x: Signal = r.output;
+ let e: Edit = edit(m, 2, 3, 2, 702); let ep: Parameters = e.model.parameters;
+ return from_assertion(equals_bool(true, model_valid(m) && p.values.len == 5 && r.status == 0 && x.values[0] == 3 && e.accepted && ep.values.len == 5 && changes(m, e.model) == 1 && ep.parent == 1, 201));
+}
+test buckets_preserve_semantics_and_lineage() -> (result: TestResult) {
+ let raw: Model = example.standalone(); let c: Edit = compact(raw); let p: Parameters = c.model.parameters;
+ let all: [i64; 100] = [0; 100]; let large: Model = Model { identity: 703, topology: Topology { inputs: 7, hidden: 8, outputs: 4, relu: true }, parameters: Parameters { values: parameter_values(all), revision: 1, parent: 0, provenance: 704 } };
+ let big: Edit = compact(large); let bp: Parameters = big.model.parameters;
+ return from_assertion(equals_bool(true, c.accepted && p.values.len == 20 && changes(raw, c.model) == 0 && big.accepted && bp.values.len == 100 && p.revision == 1, 202));
+}
+test truncated_parameters_and_invalid_updates_refuse() -> (result: TestResult) {
+ let short: [i64; 3] = [1, 2, 3]; let view: [i64; up_to 100] = short; let m: Model = five();
+ let bad: Model = Model { identity: m.identity, topology: m.topology, parameters: Parameters { values: view, revision: 1, parent: 0, provenance: 701 } };
+ let a: Edit = edit(m, 2, 101, 2, 702); let b: Edit = edit(m, 5, 1, 2, 702);
+ return from_assertion(equals_bool(true, !model_valid(bad) && !a.accepted && !b.accepted && changes(m, a.model) == 0, 203));
+}
+test lexical_model_batch_admission() -> (result: TestResult) {
+ let xs: [Signal; 4] = inputs_fixture(); let b: InferenceBatch = infer_batch(five(), xs); let first: Inference = b.outputs[0]; let x: Signal = first.output;
+ let bad: Signal = Signal { values: [1001, 1, 2, 0, 0, 0, 0, 0], width: 4 }; let mixed: InferenceBatch = infer_batch(five(), replace(xs, 1, bad)); let failed: Inference = mixed.outputs[1]; let good: Inference = mixed.outputs[2];
+ return from_assertion(equals_bool(true, b.parameter_checks == 5 && x.values[0] == 3 && failed.status == 2 && good.status == 0, 204));
+}
+test compact_composition_storage_and_numerics() -> (result: TestResult) {
+ let a: Assembly = packed_graph(); let r: Run = example.execute(a, example.observation(3, 1, 2, 1), 3); let res: Resources = resources(a);
+ let s: Resources = resources(packed_sensors()); let raw: Resources = resources(example.assembly(true));
+ return from_assertion(equals_bool(true, r.status == 0 && example.output(r, 2) == 3 && r.parameter_checks == 15 && res.allocated_parameter_bytes == 120 && res.active_parameters == 9 && s.allocated_parameter_bytes == 520 && s.active_parameters == 27 && raw.allocated_parameter_bytes == 2400, 205));
+}
+test projected_scope_skips_unrelated_parameter_validation() -> (result: TestResult) {
+ let a: Assembly = packed_sensors(); let budget: Budget = Budget { nodes: 16, multiplies: 100 };
+ let r: Run = run_projected(a, example.sensors(), 1, budget); let full: Run = run(a, example.sensors(), 1, budget);
+ return from_assertion(equals_bool(true, r.status == 0 && r.admission_scope == 1 && r.parameter_checks == 5 && full.admission_scope == 0 && full.parameter_checks == 65 && r.executed == 1 && example.output(r, 0) == example.output(full, 0), 206));
+}
+test projection_does_not_claim_global_admission() -> (result: TestResult) {
+ let a: Assembly = packed_graph(); let n: Node = a.nodes[1]; let bad: Node = Node { identity: n.identity, operation: n.operation, model: blank_model(), inputs: n.inputs, ninput: n.ninput, output_contract: n.output_contract, margin: n.margin };
+ let b: Assembly = example.with_nodes(a, replace(a.nodes, 1, bad), 3); let o: Observation = example.observation(3, 1, 2, 1); let budget: Budget = Budget { nodes: 16, multiplies: 100 };
+ let full: Run = run(b, o, 1, budget); let leaf: Run = run_projected(b, o, 1, budget); let needed: Run = run_projected(b, o, 3, budget);
+ return from_assertion(equals_bool(true, full.status == 3 && leaf.status == 0 && leaf.admission_scope == 1 && needed.status == 3, 207));
+}
+test immutable_graph_batch_and_revision_revalidation() -> (result: TestResult) {
+ let a: Assembly = packed_sensors(); let o: Observation = example.sensors(); let observations: [Observation; 4] = [o, o, o, o]; let budget: Budget = Budget { nodes: 16, multiplies: 100 };
+ let b: RunBatch = run_batch(a, observations, 1, budget); let first: Run = b.runs[0]; let last: Run = b.runs[3];
+ let n: Node = a.nodes[0]; let e: Edit = edit(n.model, 1, 0, 2, 721); let changed: Swap = rebind(a, 0, e.model, 2, 722); let new_batch: RunBatch = run_batch(changed.assembly, observations, 1, budget); let updated: Run = new_batch.runs[0]; let t: Trace = updated.traces[0];
+ return from_assertion(equals_bool(true, b.admitted && b.parameter_checks == 5 && first.parameter_checks == 5 && last.parameter_checks == 0 && changed.accepted && example.output(first, 0) == 2 && example.output(updated, 0) == 3 && t.revision == 2 && new_batch.parameter_checks == 5, 208));
+}
+test established_resolution_bypasses_invalid_model() -> (result: TestResult) {
+ let d: ResidualDecision = decide_residual(spec(), boundary(true), bad_features(2), blank_model());
+ return from_assertion(equals_bool(true, d.path == 0 && d.answer == 1 && !d.invoked && d.parameter_checks == 0 && d.model_identity == 0, 209));
+}
+test residual_question_and_benefit_required() -> (result: TestResult) {
+ let s: ResidualSpec = spec(); let missing: ResidualSpec = ResidualSpec { question: 999, feature_contract: s.feature_contract, model_identity: s.model_identity, model_revision: s.model_revision, benefit_reference: s.benefit_reference, expected_avoided_agent_ms: s.expected_avoided_agent_ms, max_parameters: s.max_parameters, max_multiplies: s.max_multiplies, margin: s.margin };
+ let d: ResidualDecision = decide_residual(missing, boundary(false), features(), five());
+ return from_assertion(equals_bool(true, d.path == 2 && d.reason == 1 && !d.invoked, 210));
+}
+test unavailable_conflicting_and_future_views_refuse() -> (result: TestResult) {
+ let a: ResidualDecision = decide_residual(spec(), boundary(false), bad_features(1), five()); let b: ResidualDecision = decide_residual(spec(), boundary(false), bad_features(2), five()); let c: ResidualDecision = decide_residual(spec(), boundary(false), bad_features(4), five());
+ return from_assertion(equals_bool(true, a.reason == 2 && b.reason == 3 && c.reason == 4 && !a.invoked && !b.invoked && !c.invoked, 211));
+}
+test prediction_margin_and_resource_limit() -> (result: TestResult) {
+ let d: ResidualDecision = decide_residual(spec(), boundary(false), features(), five()); let s: ResidualSpec = spec();
+ let limited: ResidualSpec = ResidualSpec { question: s.question, feature_contract: s.feature_contract, model_identity: s.model_identity, model_revision: s.model_revision, benefit_reference: s.benefit_reference, expected_avoided_agent_ms: s.expected_avoided_agent_ms, max_parameters: 4, max_multiplies: 3, margin: s.margin };
+ let denied: ResidualDecision = decide_residual(limited, boundary(false), features(), five());
+ let zero: [i64; 5] = [0; 5]; let abstain: ResidualDecision = decide_residual(spec(), boundary(false), features(), author_five(zero, 1, 0, 701));
+ return from_assertion(equals_bool(true, d.path == 1 && d.invoked && d.score == 3 && d.parameter_checks == 5 && d.feature_references[2] == 503 && denied.reason == 6 && !denied.invoked && abstain.reason == 7 && abstain.invoked && abstain.answer == 0, 212));
+}
+test conditional_and_end_to_end_metrics() -> (result: TestResult) {
+ let resolved: Boundary = boundary(true); let unresolved: Boundary = boundary(false);
+ let a: ResidualDecision = decide_residual(spec(), resolved, features(), five()); let b: ResidualDecision = decide_residual(spec(), unresolved, features(), five()); let c: ResidualDecision = decide_residual(spec(), unresolved, bad_features(1), five());
+ let m1: ResidualMetrics = record_decision(metrics_empty(), resolved, a, outcome(1)); let m2: ResidualMetrics = record_decision(m1, unresolved, b, outcome(-1)); let m3: ResidualMetrics = record_decision(m2, unresolved, c, outcome(1));
+ let o: VerifiedOutcome = outcome(1); let fabricated: VerifiedOutcome = VerifiedOutcome { event: o.event, question: o.question, reference: o.reference, authority: o.authority, verified_at: o.verified_at, kind: OutcomeKind.Prediction, answer: o.answer }; let refused: ResidualMetrics = record_decision(m3, unresolved, b, fabricated);
+ return from_assertion(equals_bool(true, m3.total == 3 && m3.established == 1 && m3.residual == 2 && m3.predictions == 1 && m3.fallback == 1 && m3.false_positive == 1 && m3.correct_total == 1 && refused.total == 3 && refused.rejected_outcomes == 1, 213));
+}
+fn partition(reference: u64, first: u64, second: u64) -> (result: Partition) { return Partition { reference: reference, groups: [first, second, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], count: 2 }; }
+fn plan() -> (result: TrialPlan) { return TrialPlan { identity: 801, question: 301, construction: partition(811, 1, 2), tuning: partition(812, 3, 4), heldout: partition(813, 5, 6), commitment: 814, parameter_budget: 5, max_edits: 1 }; }
+test disjoint_authoring_trial_and_chronology() -> (result: TestResult) {
+ let p: TrialPlan = plan(); let submission: Submission = Submission { trial: p.identity, artifact: 821, author: 822, edits: 1, frozen_at: 100 };
+ let overlap: TrialPlan = TrialPlan { identity: p.identity, question: p.question, construction: p.construction, tuning: partition(812, 2, 3), heldout: p.heldout, commitment: p.commitment, parameter_budget: p.parameter_budget, max_edits: p.max_edits };
+ return from_assertion(equals_bool(true, trial_valid(p) && !trial_valid(overlap) && submission_valid(p, submission, five()) && !heldout_review_valid(p, submission, five(), 90, 831) && heldout_review_valid(p, submission, five(), 110, 831), 214));
+}
+// Pure stage probes accept already-constructed immutable values as arguments.
+fn validate_candidate(m: Model) -> (result: bool) { return model_valid(m); }
+fn cold_infer(m: Model, x: Signal) -> (result: Inference) { return infer(m, x); }
+fn four_calls(m: Model, xs: [Signal; 4]) -> (result: [Inference; 4]) { return [infer(m, xs[0]), infer(m, xs[1]), infer(m, xs[2]), infer(m, xs[3])]; }
+fn lexical_four(m: Model, xs: [Signal; 4]) -> (result: InferenceBatch) { return infer_batch(m, xs); }
+fn revision_probe(m: Model) -> (result: Edit) { return edit(m, 2, 3, 2, 702); }
+fn validate_graph(a: Assembly) -> (result: bool) { return assembly_valid(a); }
+fn cold_graph(a: Assembly) -> (result: Run) { return run(a, example.observation(3, 1, 2, 1), 3, Budget { nodes: 16, multiplies: 100 }); }
+fn projected_sensor(a: Assembly) -> (result: Run) { return run_projected(a, example.sensors(), 1, Budget { nodes: 16, multiplies: 100 }); }
+fn full_sensor(a: Assembly) -> (result: Run) { return run(a, example.sensors(), 1, Budget { nodes: 16, multiplies: 100 }); }
+fn batched_sensor(a: Assembly) -> (result: RunBatch) { let o: Observation = example.sensors(); return run_batch(a, [o, o, o, o], 1, Budget { nodes: 16, multiplies: 100 }); }
+
+test usefulness_keeps_units_and_evidence_origins_distinct() -> (result: TestResult) {
+ let b: Burden = Burden { cohort: 1, outcome_reference: 2, measurement_reference: 3, origin: EvidenceOrigin.Mechanical, agent_ms: 100, diagnostics: 3, critical_misses: 0, construction_agent_ms: 0, maintenance_agent_ms: 0, feature_vm_steps: 0, validation_vm_steps: 0, inference_vm_steps: 0 };
+ let c: Burden = Burden { cohort: 1, outcome_reference: 2, measurement_reference: 4, origin: EvidenceOrigin.Mechanical, agent_ms: 50, diagnostics: 2, critical_misses: 0, construction_agent_ms: 500, maintenance_agent_ms: 0, feature_vm_steps: 10, validation_vm_steps: 10, inference_vm_steps: 10 };
+ let r: UtilityComparison = compare_burden(b, c, 30);
+ return from_assertion(equals_bool(true, !r.comparable && !r.agent_ms_reduced && vm_cost_within(c, 30) && !vm_cost_within(c, 29), 215));
+}
+
+fn raw_five() -> (result: Model) { let m: Model = five(); let p: Parameters = m.parameters; let exact: [i64; 100] = exact_parameters(p); return Model { identity: m.identity, topology: m.topology, parameters: Parameters { values: parameter_values(exact), revision: p.revision, parent: p.parent, provenance: p.provenance } }; }
+fn four_projected(a: Assembly) -> (result: [Run; 4]) { let o: Observation = example.sensors(); let b: Budget = Budget { nodes: 16, multiplies: 100 }; return [run_projected(a, o, 1, b), run_projected(a, o, 1, b), run_projected(a, o, 1, b), run_projected(a, o, 1, b)]; }
+fn resolved_gate_probe() -> (result: ResidualGate) { return gate_residual(spec(), boundary(true), features()); }
+fn candidate_gate_probe() -> (result: ResidualGate) { return gate_residual(spec(), boundary(false), features()); }
+fn candidate_prediction_probe(m: Model) -> (result: ResidualDecision) { return decide_residual(spec(), boundary(false), features(), m); }

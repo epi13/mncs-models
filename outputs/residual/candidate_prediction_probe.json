@@ -1,0 +1,246 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:04e2125f42c5d9e4b87595ecf5474ce1cb25d0fcd13e89a8e6f5b5b1ab288d53",
+    "artifact_sha256": "af71e421f3f105c015f305840ffede679e51c7cb24bc265740b02167ba543572",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "record": {
+          "fields": [
+            [
+              "answer",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": true
+                  },
+                  "value": 1
+                }
+              }
+            ],
+            [
+              "established_reference",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 401
+                }
+              }
+            ],
+            [
+              "event",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 901
+                }
+              }
+            ],
+            [
+              "feature_references",
+              {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": false
+                        },
+                        "value": 501
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": false
+                        },
+                        "value": 502
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": false
+                        },
+                        "value": 503
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": false
+                        },
+                        "value": 504
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": false
+                        },
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": false
+                        },
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": false
+                        },
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": false
+                        },
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            [
+              "invoked",
+              {
+                "boolean": {
+                  "value": true
+                }
+              }
+            ],
+            [
+              "model_identity",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 700
+                }
+              }
+            ],
+            [
+              "multiplies",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 4
+                }
+              }
+            ],
+            [
+              "parameter_checks",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 5
+                }
+              }
+            ],
+            [
+              "path",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1
+                }
+              }
+            ],
+            [
+              "question",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 301
+                }
+              }
+            ],
+            [
+              "reason",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ],
+            [
+              "revision",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1
+                }
+              }
+            ],
+            [
+              "score",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": true
+                  },
+                  "value": 3
+                }
+              }
+            ]
+          ],
+          "name": "ResidualDecision",
+          "type_identity": "mncs:0.2:record-type:mncs.models.residual::ResidualDecision::answer%3Ai64%3Bestablished_reference%3Au64%3Bevent%3Au64%3Bfeature_references%3A%5Bu64%3B%208%5D%3Binvoked%3Abool%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Bparameter_checks%3Au64%3Bpath%3Au64%3Bquestion%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscore%3Ai64%3B"
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 1044
+  },
+  "canonical_arguments_sha256": "f733f45be6133cd596ad0965e1bca50a1c2e78b6ee68aa5155a87efcd4d1f143",
+  "function": "candidate_prediction_probe",
+  "module": "mncs.models.residual_tests",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

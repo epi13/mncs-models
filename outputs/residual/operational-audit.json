@@ -1,0 +1,34 @@
+{
+  "schema": "mncs.models.operational-audit/1",
+  "observed_at": "2026-11-07 03:09:12 UTC",
+  "access": "read-only Forge MCP; no job submitted, state changed, or raw Store opened",
+  "receipt_inventory": {
+    "execution_receipts": [],
+    "count": 0,
+    "dominance": "FAIL > UNKNOWN > PASS",
+    "note": "A complete receipt binding is provenance, not evidence PASS, sandbox isolation, independence, or protected custody."
+  },
+  "forge_snapshot": {
+    "source_identity": "mncs:source:artifact:aa5f8023d853f9d6940f0b7fca2003fe995095e7db56f41072c9ab526cb1fd63",
+    "workspace_generation": 127,
+    "counts": {
+      "FAIL": 0,
+      "PASS": 0,
+      "UNKNOWN": 2
+    },
+    "active_job": null,
+    "blocking_attention_events": [
+      {
+        "cursor": null,
+        "generation": 127,
+        "reason": "Language Service event ingress failed: timed out",
+        "source_identity": null,
+        "tier": "incremental"
+      }
+    ],
+    "resource_exhaustion_events": 0,
+    "execution_records": [],
+    "store_generation": 0
+  },
+  "finding": "No event-aligned labeled execution cohort is exposed by the inspected current Forge context; not a claim that no such data exists elsewhere."
+}

@@ -1,0 +1,56 @@
+{
+  "scope": "bounded read-only candidate audit, not a family-wide data census",
+  "sources": [
+    {
+      "repository": "mncs-environment",
+      "path": "evidence/resource-feedback-live-evaluation-20261013.json",
+      "observed_head": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "sha256": "86b3cf9170995591fb23bce3e8df2cea5eb9b11a01515022095e7a793527c6b4",
+      "matches_head_blob": true
+    },
+    {
+      "repository": "mncs-environment",
+      "path": "evidence/compiler-resource-feedback-frontier-20261013.json",
+      "observed_head": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "sha256": "555e83658a3bbd605c4503897e0e06b5f353286735b76759c194c3adb6b7b610",
+      "matches_head_blob": true
+    },
+    {
+      "repository": "mncs-environment",
+      "path": "evidence/forge-resource-feedback-readiness-20261011.json",
+      "observed_head": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "sha256": "7010949ce3c0f6345247fa8e5c05ec96956e43e00bf6218e00cd8699da0f0454",
+      "matches_head_blob": true
+    },
+    {
+      "repository": "mncs-environment",
+      "path": "evidence/environment-rpc-health-diagnostics-20261011.json",
+      "observed_head": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "sha256": "5f9e9672a376e766f412de62cdd213800253d79add2803bf9be9eb90f04fc827",
+      "matches_head_blob": true
+    },
+    {
+      "repository": "mncs-environment",
+      "path": "evidence/canonical-caller-interruption-reconcile-20261011.json",
+      "observed_head": "159618f8ed04d193b986041a8fca38ad9c3bf1df",
+      "sha256": "1eb2d45325272b8a62e3ab08ac66f22e42367db4e97894b12b1f094c2e12de15",
+      "matches_head_blob": true
+    },
+    {
+      "repository": "mncs-doctor",
+      "path": "evidence/health-encoding-native-20261105.json",
+      "observed_head": "80afeef861795a79e7d68940d5a5902f5b92257e",
+      "sha256": "cd4e57e47d69b305c940f61236a5eef1bb75221dfd21579bc202b7e8e44ffef7",
+      "matches_head_blob": true
+    }
+  ],
+  "candidate": "predict failure to complete a subsequent bounded compiler verification within its declared resource envelope, only after current deterministic readiness/headroom rules leave a residual question",
+  "cohort_available": false,
+  "missing": [
+    "Multiple matching pre-decision feature snapshots and later execution receipts/outcomes",
+    "Independent outcome reasons distinguishing OOM, timeout, test failure, and cancellation",
+    "Exact baseline rule/version/decision for each residual event",
+    "Chronological/event-group split and authorized data-use/custody for authoring"
+  ],
+  "finding": "The inspected live Forge context has zero execution receipts. Historical resource integration records explicitly lack linked measurements or use sentinels. Missing receipts are an evidence-infrastructure prerequisite, not a target to guess with a model."
+}

@@ -1,0 +1,566 @@
+[
+  {
+    "record": {
+      "fields": {
+        "identity": {
+          "integer": {
+            "value": 700
+          }
+        },
+        "parameters": {
+          "record": {
+            "fields": {
+              "parent": {
+                "integer": {
+                  "value": 0
+                }
+              },
+              "provenance": {
+                "integer": {
+                  "value": 701
+                }
+              },
+              "revision": {
+                "integer": {
+                  "value": 1
+                }
+              },
+              "values": {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "value": 3
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": -6
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "topology": {
+          "record": {
+            "fields": {
+              "hidden": {
+                "integer": {
+                  "value": 0
+                }
+              },
+              "inputs": {
+                "integer": {
+                  "value": 4
+                }
+              },
+              "outputs": {
+                "integer": {
+                  "value": 1
+                }
+              },
+              "relu": {
+                "boolean": {
+                  "value": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

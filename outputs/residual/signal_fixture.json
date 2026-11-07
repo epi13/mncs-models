@@ -1,0 +1,118 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:04e2125f42c5d9e4b87595ecf5474ce1cb25d0fcd13e89a8e6f5b5b1ab288d53",
+    "artifact_sha256": "af71e421f3f105c015f305840ffede679e51c7cb24bc265740b02167ba543572",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "record": {
+          "fields": [
+            [
+              "values",
+              {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 2
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 2
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            [
+              "width",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 4
+                }
+              }
+            ]
+          ],
+          "name": "Signal",
+          "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 12
+  },
+  "canonical_arguments_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "function": "signal_fixture",
+  "module": "mncs.models.residual_tests",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

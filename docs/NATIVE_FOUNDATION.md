@@ -1,5 +1,7 @@
 # Native micro-model foundation
 
+Historical phase record: [RFC 0004 and current residual execution](RESIDUAL_INTELLIGENCE.md) extend the parameter representation and admission paths described here. Historical benchmark findings and exact receipts are preserved under `outputs/history/a5c0b44/`.
+
 The subsequent [native composition phase](COMPOSITION.md) extends this same implementation with independently revisioned DAG nodes. This document retains the original numerical foundation and eight-case experiment results.
 
 Implemented contract: [RFC 0002](../rfcs/0002-native-micro-models.md).

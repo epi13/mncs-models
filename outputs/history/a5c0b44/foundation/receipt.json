@@ -1,0 +1,71 @@
+{
+  "schema": "mncs.models.verification-evidence/1",
+  "suite": "foundation",
+  "boundary": "native bounded micro-models and DAG composition; synthetic evaluation; no operational integration or family conformance claim",
+  "result_sha256": "c109898f26afe442a118827dc6762d917ca4d6369f455f375d17e5809f31c168",
+  "native_run_id": "5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6",
+  "summary": {
+    "authority": "native_suite",
+    "failed": 0,
+    "passed": 14,
+    "skipped": 0,
+    "total": 14,
+    "unsupported": 0,
+    "verdict": "PASS"
+  },
+  "execution": {
+    "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+    "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+    "backend": "mncs-research-bytecode",
+    "batch_size": 14,
+    "canonical_path": true,
+    "compiler_owned_inventory": true,
+    "fallback": false,
+    "host_subprocesses": 0,
+    "inventory_identity": "a3ba435e64b0f5c71be3a278db9c169978d7dd279054be814e176670b951b995",
+    "mode": "native-toolchain-embed",
+    "native_batch_calls": 1,
+    "native_session_calls": 44,
+    "reused_session": true,
+    "run_identity": "5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6",
+    "runner_version": "0.1.0",
+    "step_budget": 3000000,
+    "test_case_identities": [
+      "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_deterministic_baselines::38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+    ]
+  },
+  "suite_wall_seconds": 19.3514241350058,
+  "wall_scope": "compilation and suite, not inference-only latency",
+  "source_sha256": {
+    "src/models/compose.mncs": "25b768aa13ee7f5e5e5cf7ace79210447fb72c5a67e8ebd141aa98d4841ecb6f",
+    "src/models/micro.mncs": "adad0631bc054e263f273117a17285014f5817f6edc4b35b9034466552a325b5",
+    "src/models/views.mncs": "c32ae169c6de3fe37517545a934a9937cc9e3d1f212cce01d61bf419c43aded5",
+    "tests/fixtures/composition_cases.mncs": "4a57eef685758e2d2b29c1eb468ef4c5fae593feaccb3ccf878f8b8903a24437",
+    "tests/native/composition.mncs": "131863a3ed76e034fa76780fc409f4fe6888567fcdf38b588d5f53d1ad6b864f",
+    "tests/native/foundation.mncs": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+    "tests/pressures/compact_view_refusal.mncs": "0fc05ebcc384fb3b89dd28a52d76c457966aa80e84cbcad72fbdc34c4134c67d"
+  },
+  "compiler_binary_sha256": "129ef764bd56f6a3e05ee19631c46c044217590d537d52ee1c62b0fba335d7ae",
+  "observed_language_checkout": "f8212ed8b7478196b5293a84152154be5e0bea3f",
+  "observed_test_checkout": "d51958bf2cb2dbba583bee255897b4c7544a0468",
+  "checkout_revision_note": "Observed heads are not binary build attestations; the binary hash binds execution.",
+  "measurements": {},
+  "source_artifact_bytes": {
+    "src/models/compose.mncs": 15156,
+    "src/models/micro.mncs": 4885,
+    "src/models/views.mncs": 1862
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "schema": "mncs.models.stage-measurements/1",
+  "source_sha256": {
+    "src/models/compose.mncs": "bfcdf5aa799a44f5a8c9be9e7f4addefd467b3d9347eab7d3fce24aece20cbd3",
+    "src/models/micro.mncs": "1f96bed08994c701e1c1103ae369f3f95cb061cf8bc637dd9cdfba30150328b0",
+    "src/models/residual.mncs": "3d25730e4fb5176660fe66e417dc3bda7eb8e8d28641ae9021946399286944a0",
+    "src/models/trial.mncs": "1c07681c2744147b80c3ac3ce68db743ae2d0b279b6f52ebae8f770eeefc6046",
+    "src/models/views.mncs": "c32ae169c6de3fe37517545a934a9937cc9e3d1f212cce01d61bf419c43aded5",
+    "tests/fixtures/composition_cases.mncs": "4a57eef685758e2d2b29c1eb468ef4c5fae593feaccb3ccf878f8b8903a24437",
+    "tests/fixtures/construction.mncs": "149f24b01fa587a14a64c2407d627c13b673b50e34449c94744861c636af0f57",
+    "tests/native/composition.mncs": "9afba4b86d127c31c69dfb3f7c2ce8cc8f570b2b46508ef6de37c8ce5ec7c172",
+    "tests/native/foundation.mncs": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
+    "tests/native/residual.mncs": "e3c55cef372e71f5df15f3ce0bed04881eda872a48eadefeaafed37927e7df7d",
+    "tests/pressures/compact_view_refusal.mncs": "0fc05ebcc384fb3b89dd28a52d76c457966aa80e84cbcad72fbdc34c4134c67d"
+  },
+  "compiler_binary_sha256": "129ef764bd56f6a3e05ee19631c46c044217590d537d52ee1c62b0fba335d7ae",
+  "measurements": {
+    "five": {
+      "function": "five",
+      "vm_steps": 23,
+      "wall_seconds": 57.689470772995264,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "result_sha256": "c7039113141eccefb3a02a0e696ee6d8363a153892ccce2cfe81e26d1199d47c"
+    },
+    "raw_five": {
+      "function": "raw_five",
+      "vm_steps": 1761,
+      "wall_seconds": 11.693211408011848,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "result_sha256": "efc04bc933596b50e5faef1a1d5883700470d0633ed4c9d7b573f261e8921c8f"
+    },
+    "signal_fixture": {
+      "function": "signal_fixture",
+      "vm_steps": 12,
+      "wall_seconds": 11.686343403998762,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "result_sha256": "5e74d619f11bfa6a3a1e14a568ad49f1ea7003a80e61ea849f65a5ec0b9b41a8"
+    },
+    "inputs_fixture": {
+      "function": "inputs_fixture",
+      "vm_steps": 54,
+      "wall_seconds": 11.722621893990436,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "result_sha256": "cf85444c0755c19de958f224458ecd5f00c352b939980a8dd5c85315275301d2"
+    },
+    "validate_100": {
+      "function": "validate_candidate",
+      "vm_steps": 1714,
+      "wall_seconds": 11.707619921013247,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "06323b5ff3e1c8c87008c3e208fdc8b773c70d35eee1a69a22931c36058af828",
+      "result_sha256": "4081d09589b2c6866d667b60d5031925c72aa5c0dad2067af57723ad36c51336"
+    },
+    "validate_5": {
+      "function": "validate_candidate",
+      "vm_steps": 194,
+      "wall_seconds": 11.699540503992466,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "2a39926f04d723c97efe560175fc270c8197e2fadd7fc2987dc289d31f054713",
+      "result_sha256": "1aac2a84a66a03a81b2249a7ae72f117e43dc6fd05b38d446b8ba64337c2c271"
+    },
+    "infer_100": {
+      "function": "cold_infer",
+      "vm_steps": 2046,
+      "wall_seconds": 13.49400493199937,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "80fc41fc9cdc43f856dd2331daf7461c72f34f37a578a95c37ba072ff9840ff7",
+      "result_sha256": "8a50f2d64bc6f58c3b26d692f0fae8b28a29e92617f61dd05abda240b02cda43"
+    },
+    "infer_5": {
+      "function": "cold_infer",
+      "vm_steps": 526,
+      "wall_seconds": 11.710694843000965,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "c1a092d1f0e7879778b46bce6109d498efe7605aef74cc86dc3593b370fb7aa7",
+      "result_sha256": "0aee782401c01275421d9ade90e5a9893b8ad0b48808898a1a5374bceeb4b0f5"
+    },
+    "four_calls": {
+      "function": "four_calls",
+      "vm_steps": 2110,
+      "wall_seconds": 11.747358314998564,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "ea8b811d3ac4220eb1377c3e75291def2aba9d80800c8b7cbbe20a3431af5d27",
+      "result_sha256": "f24e2323cf45f22ed55d4310c0f187169b92bc6cfdddfd774ac1f36fb67aa1c1"
+    },
+    "lexical_four": {
+      "function": "lexical_four",
+      "vm_steps": 1601,
+      "wall_seconds": 11.806846621999284,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "ea8b811d3ac4220eb1377c3e75291def2aba9d80800c8b7cbbe20a3431af5d27",
+      "result_sha256": "8982658598ff0ac0b88f43fb6ac96b6e37564ee800f7218488f53c7b35fe4e81"
+    },
+    "revision_probe": {
+      "function": "revision_probe",
+      "vm_steps": 552,
+      "wall_seconds": 11.697456576002878,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "2a39926f04d723c97efe560175fc270c8197e2fadd7fc2987dc289d31f054713",
+      "result_sha256": "5257eb7120c00012c82a16a1be1aa772b58afb3aa3b28e51d7d0ce82f2f2cd2f"
+    },
+    "revalidate_edit": {
+      "function": "validate_candidate",
+      "vm_steps": 194,
+      "wall_seconds": 11.721010900990223,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "0d6f4ad602019e5de52b8791f4b9285cebfe624c80e479bba88be04e1a4f6461",
+      "result_sha256": "7aea0e4207016d26944ee2d309542c264e5b01dd51f9ca43ade1a75100f9324a"
+    },
+    "packed_graph": {
+      "function": "packed_graph",
+      "vm_steps": 15009,
+      "wall_seconds": 11.765651791996788,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "result_sha256": "94c6731b14d40b1035bb33e2c094f18f54b6937501cdbe94560acf978639b8df"
+    },
+    "validate_graph": {
+      "function": "validate_graph",
+      "vm_steps": 2590,
+      "wall_seconds": 11.711158783000428,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "c835af0abddd2ac87e3320069b324c6b29650e297512ddf774edcab60cd40cbd",
+      "result_sha256": "fc1803a9d002f64f203f2b7a7367615d6de8d3371de213fc6977f5fe1325b478"
+    },
+    "cold_graph": {
+      "function": "cold_graph",
+      "vm_steps": 6119,
+      "wall_seconds": 11.719670910999412,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "c835af0abddd2ac87e3320069b324c6b29650e297512ddf774edcab60cd40cbd",
+      "result_sha256": "d5705eeb9e08750692dc8a098e45d1d37a949e551e7211c87be9134dbdf35429"
+    },
+    "packed_sensors": {
+      "function": "packed_sensors",
+      "vm_steps": 56855,
+      "wall_seconds": 11.829209638002794,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "result_sha256": "8cb4c19040fe07b074ca41d5d7fd08276a92908d8d496476c73ac05257022f36"
+    },
+    "full_sensor": {
+      "function": "full_sensor",
+      "vm_steps": 10206,
+      "wall_seconds": 11.63238196799648,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "22c959350919aca572dd19fbc6be7a1d918dd570573af4d5f203936bcfde5c0d",
+      "result_sha256": "cc02fc10089bab0995fdda33c59485166b9dc03f5a49d9c9dfb1fa5e6d69b7a3"
+    },
+    "projected_sensor": {
+      "function": "projected_sensor",
+      "vm_steps": 2721,
+      "wall_seconds": 11.629646995992516,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "22c959350919aca572dd19fbc6be7a1d918dd570573af4d5f203936bcfde5c0d",
+      "result_sha256": "ef0a334ed6c7067f715b66d6d92eb17ed77c90f6fb736ddf248726ad7644f7c8"
+    },
+    "four_projected": {
+      "function": "four_projected",
+      "vm_steps": 10816,
+      "wall_seconds": 11.635698102996685,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "22c959350919aca572dd19fbc6be7a1d918dd570573af4d5f203936bcfde5c0d",
+      "result_sha256": "ac5c92311da73be5a08738a82e4880944e49629f6aa21483db2eb5e163c57e8a"
+    },
+    "batched_sensor": {
+      "function": "batched_sensor",
+      "vm_steps": 7115,
+      "wall_seconds": 11.634512558986899,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "22c959350919aca572dd19fbc6be7a1d918dd570573af4d5f203936bcfde5c0d",
+      "result_sha256": "02bbca142aceebbe7d1c4a85b8c167ba290cadb0b0ae991afc90548752fb383a"
+    },
+    "resolved_gate_probe": {
+      "function": "resolved_gate_probe",
+      "vm_steps": 106,
+      "wall_seconds": 11.649293820009916,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "result_sha256": "5eaa4deb9f0033bcd6760533cf78af256b765c35453f31a051fc741ab64b6203"
+    },
+    "candidate_gate_probe": {
+      "function": "candidate_gate_probe",
+      "vm_steps": 425,
+      "wall_seconds": 11.634148334007477,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "result_sha256": "b16bc3ed79e07ac14c6c546e30c30c88d928b815d0e328e0c6d2c8ccb2e90780"
+    },
+    "candidate_prediction_probe": {
+      "function": "candidate_prediction_probe",
+      "vm_steps": 1044,
+      "wall_seconds": 11.622903203999158,
+      "wall_scope": "CLI admission/compile-cache access, typed transport and execution; not inference-only latency",
+      "arguments_sha256": "2a39926f04d723c97efe560175fc270c8197e2fadd7fc2987dc289d31f054713",
+      "result_sha256": "1a94ef66ab640ad0e3f37dd202b8abc9101a81d8c056206c974af7655c0a2985"
+    },
+    "authored_initial": {
+      "arguments_sha256": "f78e3f831f86e169e048a13f38170e0a91a6470ebf55b5fe6a051b1100b94d3d",
+      "result_sha256": "eff8127298061b5cef96eddef2469f95d5ae1ed726100a309225166eb182929a",
+      "scope": "mechanical parameter interchange only, not a controlled LLM trial"
+    },
+    "authored_revision": {
+      "arguments_sha256": "48e21c29a70b3f41173e41d711f5b5b4308cfbf37ae81cb93730811e54253867",
+      "result_sha256": "7aed0e42bae25dbedddb46cfa657c0b2de34be53cea0e48f7d0d05cacd01767a",
+      "scope": "mechanical parameter interchange only, not a controlled LLM trial"
+    }
+  },
+  "limitations": [
+    "VM steps exclude CLI transport/compilation; wall time includes them",
+    "Returned value data are preserved through tuple-to-map ABI conversion; each standalone call revalidates admission",
+    "Reuse without revalidation occurs only inside the native lexical batch",
+    "No operational savings or controlled LLM authoring efficiency measured"
+  ]
+}

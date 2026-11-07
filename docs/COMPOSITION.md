@@ -1,5 +1,7 @@
 # Native compositional micro-models
 
+Historical phase record: [RFC 0004 and current residual execution](RESIDUAL_INTELLIGENCE.md) extend the parameter representation and admission paths described here. Historical benchmark findings and exact receipts are preserved under `outputs/history/a5c0b44/`.
+
 The executable contract is [RFC 0003](../rfcs/0003-native-composition.md).
 `src/models/compose.mncs` extends the canonical `Model`/`infer` implementation;
 it is not another model runtime. The broader graph charter still exceeds what

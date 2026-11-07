@@ -1,0 +1,4713 @@
+[
+  {
+    "record": {
+      "fields": {
+        "count": {
+          "integer": {
+            "value": 10
+          }
+        },
+        "external_contracts": {
+          "sequence": {
+            "values": [
+              {
+                "integer": {
+                  "value": 1
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              }
+            ]
+          }
+        },
+        "external_width": {
+          "integer": {
+            "value": 8
+          }
+        },
+        "identity": {
+          "integer": {
+            "value": 101
+          }
+        },
+        "nodes": {
+          "sequence": {
+            "values": [
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 21
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 21
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 1021
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": [
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": -1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": true
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Learned"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 2
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 22
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 22
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 1022
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": [
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": -1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": true
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Learned"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 2
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 23
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 2
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 23
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 1023
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": [
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": -1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": true
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Learned"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 2
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 24
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 3
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 24
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 1024
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": [
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": -1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": true
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Learned"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 2
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 25
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 4
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 25
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 1025
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": [
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": -1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": true
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Learned"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 2
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 26
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 5
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 26
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 1026
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": [
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": -1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": true
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Learned"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 2
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 27
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 6
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 27
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 1027
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": [
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": -1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": true
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Learned"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 2
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 28
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 7
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 28
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 1028
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": [
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": -1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": true
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Learned"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 2
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 29
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 2
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 2
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 2
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 2
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 3
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 2
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 4
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 29
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 1029
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": [
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 4
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 4
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Learned"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 2
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 30
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 2
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 9
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 2
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 5
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 2
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 6
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 2
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 7
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 2
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 8
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 30
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 1030
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": [
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 1
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      },
+                                      {
+                                        "integer": {
+                                          "value": 0
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 5
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 5
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Learned"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 3
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": []
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Sum"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": []
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Sum"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": []
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Sum"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": []
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Sum"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": []
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Sum"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "identity": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "inputs": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": {
+                                "contract": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "lane": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "source": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "margin": {
+                      "integer": {
+                        "value": -1
+                      }
+                    },
+                    "model": {
+                      "record": {
+                        "fields": {
+                          "identity": {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          "parameters": {
+                            "record": {
+                              "fields": {
+                                "parent": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "provenance": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "revision": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "values": {
+                                  "sequence": {
+                                    "values": []
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "topology": {
+                            "record": {
+                              "fields": {
+                                "hidden": {
+                                  "integer": {
+                                    "value": 0
+                                  }
+                                },
+                                "inputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "outputs": {
+                                  "integer": {
+                                    "value": 1
+                                  }
+                                },
+                                "relu": {
+                                  "boolean": {
+                                    "value": false
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ninput": {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    "operation": {
+                      "finite": {
+                        "variant": "Sum"
+                      }
+                    },
+                    "output_contract": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "parent": {
+          "integer": {
+            "value": 0
+          }
+        },
+        "provenance": {
+          "integer": {
+            "value": 210
+          }
+        },
+        "revision": {
+          "integer": {
+            "value": 1
+          }
+        }
+      }
+    }
+  }
+]

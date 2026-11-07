@@ -1,5 +1,7 @@
 # Architecture
 
+Current implemented correction: [residual gating, compact parameters and scoped admission](RESIDUAL_INTELLIGENCE.md), RFC 0004. General graph/learning/authority claims below remain architectural directions where not explicitly implemented.
+
 Executable composition now includes the bounded DAG subset in [RFC 0003](../rfcs/0003-native-composition.md) and [COMPOSITION.md](COMPOSITION.md). General recurrence, routing and arbitrary graph capabilities remain future work.
 
 Current executable boundary: [native micro-model foundation](NATIVE_FOUNDATION.md). RFC 0002 records the implemented slice; broader graph and operational interfaces below remain design targets.

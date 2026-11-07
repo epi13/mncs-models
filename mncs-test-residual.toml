@@ -1,0 +1,8 @@
+schema_version = "mncs.test-manifest/1"
+name = "mncs-models-residual"
+source = "tests/native/residual.mncs"
+module = "mncs.models.residual_tests"
+profile = "0.18"
+step_budget = 3000000
+timeout_seconds = 180
+libraries = ["src", "tests/fixtures"]

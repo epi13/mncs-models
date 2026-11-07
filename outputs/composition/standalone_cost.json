@@ -1,7 +1,7 @@
 {
   "call": {
-    "artifact_identity": "mncs:compiler:backend-artifact:6f183989c8d45eb63cb71bf89f8ef425ef053e0cd74bd7071090d4493360cdae",
-    "artifact_sha256": "742d7502980955823c1eefffb0c5f603b6c2de6586e90c1355fea90d0ce9ad99",
+    "artifact_identity": "mncs:compiler:backend-artifact:ac53f082c829e209fd897455a3127e75c7b05964fae88a1b3c313680fe9f0e0c",
+    "artifact_sha256": "2206f30688d88bb7f2c2c33b6d288ea252923f5220cba98b0dddbe3e9c9f0b58",
     "backend": "mncs-research-bytecode",
     "returned": [
       {
@@ -16,7 +16,7 @@
     ],
     "reused_session": true,
     "status": "returned",
-    "steps": 2747
+    "steps": 2407
   },
   "canonical_arguments_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
   "function": "standalone_cost",

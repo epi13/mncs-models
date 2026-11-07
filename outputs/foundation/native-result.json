@@ -2,25 +2,25 @@
   "artifacts": [],
   "classification": "passed",
   "execution": {
-    "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-    "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+    "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+    "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
     "backend": "mncs-research-bytecode",
     "batch_size": 14,
     "canonical_path": true,
     "compiler_owned_inventory": true,
     "fallback": false,
     "host_subprocesses": 0,
-    "inventory_identity": "a3ba435e64b0f5c71be3a278db9c169978d7dd279054be814e176670b951b995",
+    "inventory_identity": "bf74ac063c0aa3d985e9d30eeff8c9364d7ea3790cca639ceb766edc60aa575d",
     "mode": "native-toolchain-embed",
     "native_batch_calls": 1,
     "native_session_calls": 44,
     "reused_session": true,
-    "run_identity": "5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6",
+    "run_identity": "16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf",
     "runner_version": "0.1.0",
     "step_budget": 3000000,
     "test_case_identities": [
       "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c",
-      "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::7fb7de52c3f2fbce171c2585e24ab1b88fd6eb5e8d4c161135f799d7600381ec",
       "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926",
       "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f",
       "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700",
@@ -28,11 +28,11 @@
       "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05",
       "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871",
       "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b",
-      "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2",
-      "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81",
-      "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::f0c12b14a1d9054ec30626f9d2940f9c100e99bf8467630454248969b5718515",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::b47d21100cf432e2606f20e514b06b79ec6657cfac184ff21c495347096d54a4",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::05111443b2808739325a2838a6fa2eab673a846782b3f0ef6956ece512ac91c5",
       "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f",
-      "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+      "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::aa28c0066e93df3ae603eb96095448bdf6f93eb4a9bca183c862584520d8cb1e"
     ]
   },
   "exit_code": 0,
@@ -57,7 +57,7 @@
   },
   "protocol_version": 1,
   "provenance": {
-    "inventory_identity": "a3ba435e64b0f5c71be3a278db9c169978d7dd279054be814e176670b951b995",
+    "inventory_identity": "bf74ac063c0aa3d985e9d30eeff8c9364d7ea3790cca639ceb766edc60aa575d",
     "runner": {
       "host": "mncs-toolchain",
       "language": "mncs",
@@ -65,16 +65,16 @@
     },
     "source": {
       "path": "tests/native/foundation.mncs",
-      "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8"
+      "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a"
     }
   },
   "provider": "mncs-test",
   "reproduction": {
     "command": "mncs test tests/native/foundation.mncs",
-    "run_id": "5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6",
+    "run_id": "16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf",
     "step_budget": 3000000
   },
-  "run_id": "5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6",
+  "run_id": "16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf",
   "schema_version": "mncs.test-result/1",
   "scope": {
     "discovery": "compiler-inventory",
@@ -89,7 +89,7 @@
     "selected_test_count": 14,
     "selected_test_identities": [
       "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c",
-      "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::7fb7de52c3f2fbce171c2585e24ab1b88fd6eb5e8d4c161135f799d7600381ec",
       "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926",
       "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f",
       "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700",
@@ -97,11 +97,11 @@
       "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05",
       "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871",
       "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b",
-      "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2",
-      "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81",
-      "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::f0c12b14a1d9054ec30626f9d2940f9c100e99bf8467630454248969b5718515",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::b47d21100cf432e2606f20e514b06b79ec6657cfac184ff21c495347096d54a4",
+      "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::05111443b2808739325a2838a6fa2eab673a846782b3f0ef6956ece512ac91c5",
       "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f",
-      "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+      "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::aa28c0066e93df3ae603eb96095448bdf6f93eb4a9bca183c862584520d8cb1e"
     ]
   },
   "summary": {
@@ -116,7 +116,7 @@
   "tests": [
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::abstention_is_explicit",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::abstention_is_explicit",
         "signature_identity": "sha256:88690aad74934db582746ffffc6daee3c942c03f77ffbdbe8d3d0294c4126852",
@@ -124,11 +124,11 @@
       },
       "entry": "abstention_is_explicit",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::abstention_is_explicit",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::abstention_is_explicit",
           "signature_identity": "sha256:88690aad74934db582746ffffc6daee3c942c03f77ffbdbe8d3d0294c4126852",
@@ -250,14 +250,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 4040
+        "steps": 3915
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::abstention_is_explicit",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:1ff797dbd8725748322871a8c2d4e63f9a397e452d7fa75f40487efcce8b534c",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:bddb770d48bca65fe81a93fd8aaeb685d823456d077aa690237fd253bc9a853a",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::abstention_is_explicit",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:795a224dc54b9e9e027b27d775360b2e659370d85f2edc85ee3ba8d9812c9310",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:e700e3397d68fc634b2d10d71b934ed34cf6da75dd501f34250f4ea1af4b52b6",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -265,12 +265,12 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 4759,
+            "end": 4824,
             "line": 65,
-            "start": 4310
+            "start": 4375
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
@@ -300,7 +300,7 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::abstention_is_explicit",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::abstention_is_explicit",
           "signature_identity": "sha256:88690aad74934db582746ffffc6daee3c942c03f77ffbdbe8d3d0294c4126852",
@@ -321,39 +321,39 @@
         "qualified_name": "mncs.models.foundation_tests::abstention_is_explicit",
         "semantic_fingerprint": "5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c",
         "signature_identity": "sha256:88690aad74934db582746ffffc6daee3c942c03f77ffbdbe8d3d0294c4126852",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
         "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::abstention_is_explicit::5d30862032eb32f0074ed1a44062f8898390f4ed1ee7f9c9405731a9ec57501c"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 4759,
+        "end": 4824,
         "line": 65,
-        "start": 4310
+        "start": 4375
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::complete_construction_and_edit",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::complete_construction_and_edit",
         "signature_identity": "sha256:f3b90d121f9bfc417f6f3e50f0ce7874ad78ebed2c6b83fca8fd0ee4e28a633b",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::7fb7de52c3f2fbce171c2585e24ab1b88fd6eb5e8d4c161135f799d7600381ec"
       },
       "entry": "complete_construction_and_edit",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::complete_construction_and_edit",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::complete_construction_and_edit",
           "signature_identity": "sha256:f3b90d121f9bfc417f6f3e50f0ce7874ad78ebed2c6b83fca8fd0ee4e28a633b",
-          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa"
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::7fb7de52c3f2fbce171c2585e24ab1b88fd6eb5e8d4c161135f799d7600381ec"
         },
         "returned": [
           {
@@ -471,14 +471,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 8604
+        "steps": 6927
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::complete_construction_and_edit",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:057d4c401a15b9d058aa56ff7ba609917c9943a04176c1a801d531e8704580b9",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:3acd4afd2b2122b12287ae6e9515a37957e6f585c7cfb92c541f7ad9beb518a2",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::complete_construction_and_edit",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:7609d526d29ad48085a794cff005bce6958eb9b1dba3261d25ba3deaf70c262a",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:b5f67230435705980db4420ba071f18ea5d4c2c0152434a345457959015fd0a1",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -486,18 +486,18 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 1320,
+            "end": 1338,
             "line": 21,
-            "start": 983
+            "start": 1001
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::7fb7de52c3f2fbce171c2585e24ab1b88fd6eb5e8d4c161135f799d7600381ec"
       },
-      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa",
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::7fb7de52c3f2fbce171c2585e24ab1b88fd6eb5e8d4c161135f799d7600381ec",
       "kind": "unit",
       "native_result": {
         "actual": 1,
@@ -521,11 +521,11 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::complete_construction_and_edit",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::complete_construction_and_edit",
           "signature_identity": "sha256:f3b90d121f9bfc417f6f3e50f0ce7874ad78ebed2c6b83fca8fd0ee4e28a633b",
-          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa"
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::7fb7de52c3f2fbce171c2585e24ab1b88fd6eb5e8d4c161135f799d7600381ec"
         },
         "schema_version": "0.1",
         "step_budget": 3000000,
@@ -540,25 +540,25 @@
         "module": "mncs.models.foundation_tests",
         "profile": "0.18",
         "qualified_name": "mncs.models.foundation_tests::complete_construction_and_edit",
-        "semantic_fingerprint": "80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa",
+        "semantic_fingerprint": "7fb7de52c3f2fbce171c2585e24ab1b88fd6eb5e8d4c161135f799d7600381ec",
         "signature_identity": "sha256:f3b90d121f9bfc417f6f3e50f0ce7874ad78ebed2c6b83fca8fd0ee4e28a633b",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::80abb40cd609f9358a34087bc21ce59b98c8c45f497a082850b1c445af693eaa"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::complete_construction_and_edit::7fb7de52c3f2fbce171c2585e24ab1b88fd6eb5e8d4c161135f799d7600381ec"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 1320,
+        "end": 1338,
         "line": 21,
-        "start": 983
+        "start": 1001
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::construction_cases",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::construction_cases",
         "signature_identity": "sha256:9573e088f2552581707417dc65cc23dfbe90c13b000a01c9408d32e8e9c6cc13",
@@ -566,11 +566,11 @@
       },
       "entry": "construction_cases",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::construction_cases",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::construction_cases",
           "signature_identity": "sha256:9573e088f2552581707417dc65cc23dfbe90c13b000a01c9408d32e8e9c6cc13",
@@ -692,14 +692,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 8954
+        "steps": 8434
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::construction_cases",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:92b8b552bde208ae9683635e9d84229c0c7ddc4f65ebcc34fa57173afac41c58",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:7fc6bcbfc018e42fcea5316f0a663462175a808aa2cfc182edb89dd4ac8defd1",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::construction_cases",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:d7b501facf2cb07a43c77e0fcb9e67a9cf9ba5b355935718cbdc4258acf2a916",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:cd3c4a944998ffcae460dbb0a0dcd17562af36535cb54f3d4ea3868986111f75",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -707,12 +707,12 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 6768,
+            "end": 6833,
             "line": 103,
-            "start": 6482
+            "start": 6547
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
@@ -742,7 +742,7 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::construction_cases",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::construction_cases",
           "signature_identity": "sha256:9573e088f2552581707417dc65cc23dfbe90c13b000a01c9408d32e8e9c6cc13",
@@ -763,23 +763,23 @@
         "qualified_name": "mncs.models.foundation_tests::construction_cases",
         "semantic_fingerprint": "0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926",
         "signature_identity": "sha256:9573e088f2552581707417dc65cc23dfbe90c13b000a01c9408d32e8e9c6cc13",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
         "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::construction_cases::0a74ee5af71abb564ba1fcd4cbe8d76d066b58ed95ef9ae500cad131f40ba926"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 6768,
+        "end": 6833,
         "line": 103,
-        "start": 6482
+        "start": 6547
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::evidence_and_authority_boundary",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::evidence_and_authority_boundary",
         "signature_identity": "sha256:ceba1234326c7212dfc068d29e795828804aaac13e57a8b3205768d13351b468",
@@ -787,11 +787,11 @@
       },
       "entry": "evidence_and_authority_boundary",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::evidence_and_authority_boundary",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::evidence_and_authority_boundary",
           "signature_identity": "sha256:ceba1234326c7212dfc068d29e795828804aaac13e57a8b3205768d13351b468",
@@ -913,14 +913,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 23304
+        "steps": 10057
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::evidence_and_authority_boundary",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:923053ae30070be654231a19fe879b5d162941e4b2db64730eee331b3c850b77",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:d9e5be07428046bfd3fe35b1bcf5004bde1d540ee04e09639e697f0fec2d28f2",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::evidence_and_authority_boundary",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:b2f1e889381a7eceb3090cfd9427f68ece64dcd41bdad7dccdad93197441a069",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:7d8669da73c50f739a6f7945d76afa419c547db9dba5baa58e2f5cc4d544c117",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -928,12 +928,12 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 4308,
+            "end": 4373,
             "line": 57,
-            "start": 3769
+            "start": 3834
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
@@ -963,7 +963,7 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::evidence_and_authority_boundary",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::evidence_and_authority_boundary",
           "signature_identity": "sha256:ceba1234326c7212dfc068d29e795828804aaac13e57a8b3205768d13351b468",
@@ -984,23 +984,23 @@
         "qualified_name": "mncs.models.foundation_tests::evidence_and_authority_boundary",
         "semantic_fingerprint": "f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f",
         "signature_identity": "sha256:ceba1234326c7212dfc068d29e795828804aaac13e57a8b3205768d13351b468",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
         "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::evidence_and_authority_boundary::f38fcf2cec757fb40b29f8848815fd783b286c3078339ba8c1db88cb5df6470f"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 4308,
+        "end": 4373,
         "line": 57,
-        "start": 3769
+        "start": 3834
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::exact_inference_and_cost",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::exact_inference_and_cost",
         "signature_identity": "sha256:e35d37dba680390c6d7c350935a74ab3d4fa0a93e2c63598b4598527958904e4",
@@ -1008,11 +1008,11 @@
       },
       "entry": "exact_inference_and_cost",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::exact_inference_and_cost",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::exact_inference_and_cost",
           "signature_identity": "sha256:e35d37dba680390c6d7c350935a74ab3d4fa0a93e2c63598b4598527958904e4",
@@ -1134,14 +1134,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 11417
+        "steps": 5341
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::exact_inference_and_cost",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:6f63f18860577d6eef24d85140c04c2cccddc33e37414792a238f7a91a17896f",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:15912d3e2e3c3a198d083a6dad38acd49dc4ad3e8187c02aa232bb8d72e83bfc",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::exact_inference_and_cost",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:eb2019a5c35e0a24751a1090f67ad7bf9cb384d26bffa5deca8ddedb8112aa29",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:a6d202b7d89e9ab7985f5b39bfbf288f77dc66e87c37781e67e371abb95fcc9e",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -1149,12 +1149,12 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 2538,
+            "end": 2585,
             "line": 37,
-            "start": 2276
+            "start": 2323
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
@@ -1184,7 +1184,7 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::exact_inference_and_cost",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::exact_inference_and_cost",
           "signature_identity": "sha256:e35d37dba680390c6d7c350935a74ab3d4fa0a93e2c63598b4598527958904e4",
@@ -1205,23 +1205,23 @@
         "qualified_name": "mncs.models.foundation_tests::exact_inference_and_cost",
         "semantic_fingerprint": "515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700",
         "signature_identity": "sha256:e35d37dba680390c6d7c350935a74ab3d4fa0a93e2c63598b4598527958904e4",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
         "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::exact_inference_and_cost::515db2a6279586e799a5b2c000ae85d5a65e2b433232f34f2c5de080acf66700"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 2538,
+        "end": 2585,
         "line": 37,
-        "start": 2276
+        "start": 2323
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_deterministic_baselines",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_deterministic_baselines",
         "signature_identity": "sha256:218e91fa85776d329fff7bf8a8869bc1b65355fe277f9ad72ee5274696cd0a8d",
@@ -1229,11 +1229,11 @@
       },
       "entry": "heldout_deterministic_baselines",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_deterministic_baselines",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_deterministic_baselines",
           "signature_identity": "sha256:218e91fa85776d329fff7bf8a8869bc1b65355fe277f9ad72ee5274696cd0a8d",
@@ -1359,10 +1359,10 @@
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_deterministic_baselines",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:a5da985bdc9f81a0b8991e9dbbafa5bb5d5ebc003e0c3d20cd027d2008194f51",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:892a8cdb27568ea664e257adf8f31a30b712ae710af2c90e42a2beb2377a2ed7",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_deterministic_baselines",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:843c8630a641fa8ac71032afcdef83697ada0314e6113473645735c8118fdc91",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:b64ef95b5e4d50bc13913aa6bb7b523e9d676867ca5649b4a62840d4df37bfe8",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -1370,12 +1370,12 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 8240,
+            "end": 8305,
             "line": 125,
-            "start": 7749
+            "start": 7814
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
@@ -1405,7 +1405,7 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_deterministic_baselines",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_deterministic_baselines",
           "signature_identity": "sha256:218e91fa85776d329fff7bf8a8869bc1b65355fe277f9ad72ee5274696cd0a8d",
@@ -1426,23 +1426,23 @@
         "qualified_name": "mncs.models.foundation_tests::heldout_deterministic_baselines",
         "semantic_fingerprint": "38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c",
         "signature_identity": "sha256:218e91fa85776d329fff7bf8a8869bc1b65355fe277f9ad72ee5274696cd0a8d",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
         "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_deterministic_baselines::38e2703f2a85877a05bae99478bd5b32aad67239c85a9ee585607fa243fab82c"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 8240,
+        "end": 8305,
         "line": 125,
-        "start": 7749
+        "start": 7814
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_model_comparison",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_model_comparison",
         "signature_identity": "sha256:52e8104394a05b894bb7c183768c0d874b589c71f5831b2e40334d2a78d8cb7d",
@@ -1450,11 +1450,11 @@
       },
       "entry": "heldout_model_comparison",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_model_comparison",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_model_comparison",
           "signature_identity": "sha256:52e8104394a05b894bb7c183768c0d874b589c71f5831b2e40334d2a78d8cb7d",
@@ -1576,14 +1576,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 68305
+        "steps": 32168
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_model_comparison",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:b5936d1a6859e973b4a2f6d8f344fcb4d571e2fcb165442655580b440037fef6",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:57c14f43329a3583bc93926dc37339c4b6c2753c3982437af28f0de97377b752",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_model_comparison",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:1896276913d94d46e1b0d1c12fa171db2fb7d87233b06a55276676b0812caabc",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:c8ee534b743b3da7ec5d89019a9ea439a61e57db07984fc4d69972eb839eb2b0",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -1591,12 +1591,12 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 7748,
+            "end": 7813,
             "line": 117,
-            "start": 7183
+            "start": 7248
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
@@ -1626,7 +1626,7 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::heldout_model_comparison",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::heldout_model_comparison",
           "signature_identity": "sha256:52e8104394a05b894bb7c183768c0d874b589c71f5831b2e40334d2a78d8cb7d",
@@ -1647,23 +1647,23 @@
         "qualified_name": "mncs.models.foundation_tests::heldout_model_comparison",
         "semantic_fingerprint": "a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05",
         "signature_identity": "sha256:52e8104394a05b894bb7c183768c0d874b589c71f5831b2e40334d2a78d8cb7d",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
         "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::heldout_model_comparison::a70dc77c39f74426df02e1b908f33d279394a1f4c53ca5e4c6b9dfd9e8979e05"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 7748,
+        "end": 7813,
         "line": 117,
-        "start": 7183
+        "start": 7248
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_edits_are_atomic",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_edits_are_atomic",
         "signature_identity": "sha256:656818d021146ee5f03ddcf02347f7c1c1c50c6fd83dd3aecf67c71e676c3841",
@@ -1671,11 +1671,11 @@
       },
       "entry": "invalid_edits_are_atomic",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_edits_are_atomic",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_edits_are_atomic",
           "signature_identity": "sha256:656818d021146ee5f03ddcf02347f7c1c1c50c6fd83dd3aecf67c71e676c3841",
@@ -1797,14 +1797,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 8708
+        "steps": 8751
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_edits_are_atomic",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:425d4274b5a41c2cd289332c975dbaa3648514d5bd5bf0232a50d5a42de175ef",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:e060d00b40ae82b9b3f04d31e08b9af19c8c695cff3179d38ac8fe10ce3d2aed",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_edits_are_atomic",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:912792917cd0db4e250d3800fd1e4f286aa1f3e4501572e66f882a89d0d9e134",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:9d4554dd0057387d14f4cf9e5ce9cf0f7d638e1dcfce76688c2d125eb3107521",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -1812,12 +1812,12 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 1661,
+            "end": 1679,
             "line": 26,
-            "start": 1321
+            "start": 1339
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
@@ -1847,7 +1847,7 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_edits_are_atomic",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_edits_are_atomic",
           "signature_identity": "sha256:656818d021146ee5f03ddcf02347f7c1c1c50c6fd83dd3aecf67c71e676c3841",
@@ -1868,23 +1868,23 @@
         "qualified_name": "mncs.models.foundation_tests::invalid_edits_are_atomic",
         "semantic_fingerprint": "c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871",
         "signature_identity": "sha256:656818d021146ee5f03ddcf02347f7c1c1c50c6fd83dd3aecf67c71e676c3841",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
         "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_edits_are_atomic::c5515be53a9d21640751f82b082e535bd2364fbb6aa5fe63067672a9a8e5c871"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 1661,
+        "end": 1679,
         "line": 26,
-        "start": 1321
+        "start": 1339
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_inputs_refused",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_inputs_refused",
         "signature_identity": "sha256:c4d30f003ad67dcb163687358bdf2d1edbc4ab37c1f61ca0d409217aca813d8d",
@@ -1892,11 +1892,11 @@
       },
       "entry": "invalid_inputs_refused",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_inputs_refused",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_inputs_refused",
           "signature_identity": "sha256:c4d30f003ad67dcb163687358bdf2d1edbc4ab37c1f61ca0d409217aca813d8d",
@@ -2018,14 +2018,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 3746
+        "steps": 3770
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_inputs_refused",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:20dfbcff38dab66139d2d0ebdd175615c6c180e6360e13272051d5b00720ea93",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:8af75aad4d17c09e7a0e593465fce3b4fd75ae272d25cb6193f1d6f6835d1a09",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_inputs_refused",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:13981c998f0663abbf8ec0827509ed46da32185e944f8cccdfac12a6da7550fe",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:50c1a10f4547bfde13e3daf9b0ce0284025c0eae2b61c6c83e8b9f4d88f24987",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -2033,12 +2033,12 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 2800,
+            "end": 2847,
             "line": 41,
-            "start": 2539
+            "start": 2586
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
@@ -2068,7 +2068,7 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::invalid_inputs_refused",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::invalid_inputs_refused",
           "signature_identity": "sha256:c4d30f003ad67dcb163687358bdf2d1edbc4ab37c1f61ca0d409217aca813d8d",
@@ -2089,39 +2089,39 @@
         "qualified_name": "mncs.models.foundation_tests::invalid_inputs_refused",
         "semantic_fingerprint": "3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b",
         "signature_identity": "sha256:c4d30f003ad67dcb163687358bdf2d1edbc4ab37c1f61ca0d409217aca813d8d",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
         "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::invalid_inputs_refused::3987bbd2f73919cb049c06459bff389948ab4cae91742b10d7aa2fa47bd0d31b"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 2800,
+        "end": 2847,
         "line": 41,
-        "start": 2539
+        "start": 2586
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::maximum_signed_arithmetic",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::maximum_signed_arithmetic",
         "signature_identity": "sha256:c2b2a36ac5b482b6f428bae17ba49f9ac3ae170c242c30190897c232e627b701",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::f0c12b14a1d9054ec30626f9d2940f9c100e99bf8467630454248969b5718515"
       },
       "entry": "maximum_signed_arithmetic",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::maximum_signed_arithmetic",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::maximum_signed_arithmetic",
           "signature_identity": "sha256:c2b2a36ac5b482b6f428bae17ba49f9ac3ae170c242c30190897c232e627b701",
-          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2"
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::f0c12b14a1d9054ec30626f9d2940f9c100e99bf8467630454248969b5718515"
         },
         "returned": [
           {
@@ -2239,14 +2239,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 4814
+        "steps": 4798
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::maximum_signed_arithmetic",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:3ad5a8f66ac5a08dba9bed5ceaa75b46f1ed45c1279fa6625272718576cd4bd5",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:92cb25ce8c5382fabab6d39a31300c2c58a95e9084d7af92f2ed009d16fc7eb2",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::maximum_signed_arithmetic",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:ef3c90e19af68887fdaf35a675e900c0ba7d690b5fb0f2344c3f7c5b40ba8a09",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:4b248a8f5636659a2bf0e49bc9d8b55c9e150c13a7035e75c6837b9cdbafa5ca",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -2254,18 +2254,18 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 9751,
+            "end": 9870,
             "line": 146,
-            "start": 9187
+            "start": 9288
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::f0c12b14a1d9054ec30626f9d2940f9c100e99bf8467630454248969b5718515"
       },
-      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2",
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::f0c12b14a1d9054ec30626f9d2940f9c100e99bf8467630454248969b5718515",
       "kind": "unit",
       "native_result": {
         "actual": 1,
@@ -2289,11 +2289,11 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::maximum_signed_arithmetic",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::maximum_signed_arithmetic",
           "signature_identity": "sha256:c2b2a36ac5b482b6f428bae17ba49f9ac3ae170c242c30190897c232e627b701",
-          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2"
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::f0c12b14a1d9054ec30626f9d2940f9c100e99bf8467630454248969b5718515"
         },
         "schema_version": "0.1",
         "step_budget": 3000000,
@@ -2308,41 +2308,41 @@
         "module": "mncs.models.foundation_tests",
         "profile": "0.18",
         "qualified_name": "mncs.models.foundation_tests::maximum_signed_arithmetic",
-        "semantic_fingerprint": "1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2",
+        "semantic_fingerprint": "f0c12b14a1d9054ec30626f9d2940f9c100e99bf8467630454248969b5718515",
         "signature_identity": "sha256:c2b2a36ac5b482b6f428bae17ba49f9ac3ae170c242c30190897c232e627b701",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::1cf13aa968fb238fde0e77b059a55e1b2bd5aea47a54122cbfe38abb24818ce2"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::maximum_signed_arithmetic::f0c12b14a1d9054ec30626f9d2940f9c100e99bf8467630454248969b5718515"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 9751,
+        "end": 9870,
         "line": 146,
-        "start": 9187
+        "start": 9288
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
         "signature_identity": "sha256:c3a5d6905747dc6666f975dded03149f35b4314353986322ebc4e7266829e505",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::b47d21100cf432e2606f20e514b06b79ec6657cfac184ff21c495347096d54a4"
       },
       "entry": "numeric_envelope_and_full_parameter_budget",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
           "signature_identity": "sha256:c3a5d6905747dc6666f975dded03149f35b4314353986322ebc4e7266829e505",
-          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81"
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::b47d21100cf432e2606f20e514b06b79ec6657cfac184ff21c495347096d54a4"
         },
         "returned": [
           {
@@ -2460,14 +2460,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 6961
+        "steps": 6859
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:caf9cd2f5aaf5de615510cbf87ea77be33c061362a14de0c1c8e0e3f0f6a5be4",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:66a4f832da76420a82b1937253704b37e7e2d4cf84038b46a7748e341aafc13d",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:b1938d36172325f39e92a9982f5121e2ef48fb9b5a912670eaa85e8872529afa",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:e4768d2860e68aaee5ef8fc1855cdc57c909dc3b3606fe3b5150940456e4f1d8",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -2475,18 +2475,18 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 9186,
+            "end": 9287,
             "line": 136,
-            "start": 8242
+            "start": 8307
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::b47d21100cf432e2606f20e514b06b79ec6657cfac184ff21c495347096d54a4"
       },
-      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81",
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::b47d21100cf432e2606f20e514b06b79ec6657cfac184ff21c495347096d54a4",
       "kind": "unit",
       "native_result": {
         "actual": 1,
@@ -2510,11 +2510,11 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
           "signature_identity": "sha256:c3a5d6905747dc6666f975dded03149f35b4314353986322ebc4e7266829e505",
-          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81"
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::b47d21100cf432e2606f20e514b06b79ec6657cfac184ff21c495347096d54a4"
         },
         "schema_version": "0.1",
         "step_budget": 3000000,
@@ -2529,41 +2529,41 @@
         "module": "mncs.models.foundation_tests",
         "profile": "0.18",
         "qualified_name": "mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget",
-        "semantic_fingerprint": "efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81",
+        "semantic_fingerprint": "b47d21100cf432e2606f20e514b06b79ec6657cfac184ff21c495347096d54a4",
         "signature_identity": "sha256:c3a5d6905747dc6666f975dded03149f35b4314353986322ebc4e7266829e505",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::efca936ffcd026e6de3d1441d1e6cde18e015c7c16457139d6815df52203fa81"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::numeric_envelope_and_full_parameter_budget::b47d21100cf432e2606f20e514b06b79ec6657cfac184ff21c495347096d54a4"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 9186,
+        "end": 9287,
         "line": 136,
-        "start": 8242
+        "start": 8307
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::topology_and_parameter_validation",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::topology_and_parameter_validation",
         "signature_identity": "sha256:8fb3b0da3b155015f3e54c6a076abb9dcca43dc98bccdb34254071f3f0e62ecf",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::05111443b2808739325a2838a6fa2eab673a846782b3f0ef6956ece512ac91c5"
       },
       "entry": "topology_and_parameter_validation",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::topology_and_parameter_validation",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::topology_and_parameter_validation",
           "signature_identity": "sha256:8fb3b0da3b155015f3e54c6a076abb9dcca43dc98bccdb34254071f3f0e62ecf",
-          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909"
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::05111443b2808739325a2838a6fa2eab673a846782b3f0ef6956ece512ac91c5"
         },
         "returned": [
           {
@@ -2681,14 +2681,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 1907
+        "steps": 3834
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::topology_and_parameter_validation",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:ac0261471c3691ff4642ec865642fafcda44784ba266383d7425799842c2f7a3",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:dba5e9519909da3d2b8858c45fea40ba70022451c9cb864e901ac8f41403c1cf",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::topology_and_parameter_validation",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:5b084d7cc99b3a3a598f12489147f137c491bb35022c27b7bf742293a02872a9",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:4a42b682b69929d9e4bc1acfff77427f80a8580ff8a6e7546db7227a1da96a22",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -2696,18 +2696,18 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 2275,
+            "end": 2322,
             "line": 32,
-            "start": 1662
+            "start": 1680
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::05111443b2808739325a2838a6fa2eab673a846782b3f0ef6956ece512ac91c5"
       },
-      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909",
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::05111443b2808739325a2838a6fa2eab673a846782b3f0ef6956ece512ac91c5",
       "kind": "unit",
       "native_result": {
         "actual": 1,
@@ -2731,11 +2731,11 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::topology_and_parameter_validation",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::topology_and_parameter_validation",
           "signature_identity": "sha256:8fb3b0da3b155015f3e54c6a076abb9dcca43dc98bccdb34254071f3f0e62ecf",
-          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909"
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::05111443b2808739325a2838a6fa2eab673a846782b3f0ef6956ece512ac91c5"
         },
         "schema_version": "0.1",
         "step_budget": 3000000,
@@ -2750,25 +2750,25 @@
         "module": "mncs.models.foundation_tests",
         "profile": "0.18",
         "qualified_name": "mncs.models.foundation_tests::topology_and_parameter_validation",
-        "semantic_fingerprint": "577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909",
+        "semantic_fingerprint": "05111443b2808739325a2838a6fa2eab673a846782b3f0ef6956ece512ac91c5",
         "signature_identity": "sha256:8fb3b0da3b155015f3e54c6a076abb9dcca43dc98bccdb34254071f3f0e62ecf",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::577a8cc014ac6bd972e090abd37de8ce928cbb02a4633868e0c4aa4cce676909"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::topology_and_parameter_validation::05111443b2808739325a2838a6fa2eab673a846782b3f0ef6956ece512ac91c5"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 2275,
+        "end": 2322,
         "line": 32,
-        "start": 1662
+        "start": 1680
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::tuning_and_construction_regression",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::tuning_and_construction_regression",
         "signature_identity": "sha256:5f038de16da45be626f7458afa707441069d1db70641c0ea896e7d50b193f3df",
@@ -2776,11 +2776,11 @@
       },
       "entry": "tuning_and_construction_regression",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::tuning_and_construction_regression",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::tuning_and_construction_regression",
           "signature_identity": "sha256:5f038de16da45be626f7458afa707441069d1db70641c0ea896e7d50b193f3df",
@@ -2902,14 +2902,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 36422
+        "steps": 18064
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::tuning_and_construction_regression",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:2530a8c6d9bec7b79bf3f65593bc42a4d8fa13f2fe1ff1c9113df36b4c646edb",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:6464d7934ca583c6780e6720b92fc226d2efdfed96234a8e5ac89a376f74e4ca",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::tuning_and_construction_regression",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:dcdb42973ee8fdd83ab76618374e44b7416538f3f398681b381d15a66cb7ccce",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:957304c71e348f0cb1892606e93e6a4d9d7106dbf9bfc368ff2494cab33f3c2c",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -2917,12 +2917,12 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 7182,
+            "end": 7247,
             "line": 110,
-            "start": 6769
+            "start": 6834
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
@@ -2952,7 +2952,7 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::tuning_and_construction_regression",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::tuning_and_construction_regression",
           "signature_identity": "sha256:5f038de16da45be626f7458afa707441069d1db70641c0ea896e7d50b193f3df",
@@ -2973,39 +2973,39 @@
         "qualified_name": "mncs.models.foundation_tests::tuning_and_construction_regression",
         "semantic_fingerprint": "1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f",
         "signature_identity": "sha256:5f038de16da45be626f7458afa707441069d1db70641c0ea896e7d50b193f3df",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
         "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::tuning_and_construction_regression::1086e074cdf48b8b7bbedb04dac265e5001b12657a40443e200aba668da1845f"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 7182,
+        "end": 7247,
         "line": 110,
-        "start": 6769
+        "start": 6834
       },
       "status": "passed",
       "verdict": "PASS"
     },
     {
       "callable_invocation": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
         "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::two_layer_relu",
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::two_layer_relu",
         "signature_identity": "sha256:a8d530b2ba6055011b48ae0717ed15f190259fb063085832f483f70a4e132d81",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::aa28c0066e93df3ae603eb96095448bdf6f93eb4a9bca183c862584520d8cb1e"
       },
       "entry": "two_layer_relu",
       "execution": {
-        "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
-        "artifact_sha256": "2729186f6390f64b100d106572622792f3bce089cbf362ca96f56a0e8cb8579f",
+        "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
+        "artifact_sha256": "f920dd7fbe3f754ed8419e4e0439f3ba2896e89efea0f695500a1755ad209308",
         "backend": "mncs-research-bytecode",
         "invoked_callable": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::two_layer_relu",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::two_layer_relu",
           "signature_identity": "sha256:a8d530b2ba6055011b48ae0717ed15f190259fb063085832f483f70a4e132d81",
-          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::aa28c0066e93df3ae603eb96095448bdf6f93eb4a9bca183c862584520d8cb1e"
         },
         "returned": [
           {
@@ -3123,14 +3123,14 @@
         ],
         "reused_session": true,
         "status": "returned",
-        "steps": 2491
+        "steps": 2135
       },
       "execution_lineage": {
         "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::two_layer_relu",
-        "execution_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:execution:b936dc41d1f92e243f2a276cbd35c9ad985f3140958e1461fd791530d808e36b",
+        "execution_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:execution:27cf63c7c171d3fa263fa82b29c37bce6cf17cfea38eed30840892e2bc80dc83",
         "function_identity": "mncs:0.2:function:mncs.models.foundation_tests::two_layer_relu",
         "module": "mncs.models.foundation_tests",
-        "observation_identity": "mncs:language:experiment-run:5135e5e7a89371a8c6006c15ebdb2031e3f5e8f75f6e9a3cbf37c10d384c03f6:observation:44080bba30017b79e7d0b72d4b3c2c39e2089971b2153276f154af166e0e6bd1",
+        "observation_identity": "mncs:language:experiment-run:16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf:observation:e194d708acd9b404e6926c89d844bf1ab261a838e51fad08aca88dbb087f6e44",
         "request": {
           "artifact": null,
           "schema_version": "0.1",
@@ -3138,18 +3138,18 @@
         },
         "source": {
           "path": "tests/native/foundation.mncs",
-          "sha256": "7013ebd3ef555f82e8de019ab4a350f6e04412b7d263c809effa9221f7078ae8",
+          "sha256": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
           "span": {
             "column": 1,
-            "end": 3403,
+            "end": 3468,
             "line": 46,
-            "start": 2801
+            "start": 2848
           }
         },
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::aa28c0066e93df3ae603eb96095448bdf6f93eb4a9bca183c862584520d8cb1e"
       },
-      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2",
+      "id": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::aa28c0066e93df3ae603eb96095448bdf6f93eb4a9bca183c862584520d8cb1e",
       "kind": "unit",
       "native_result": {
         "actual": 1,
@@ -3173,11 +3173,11 @@
       "request": {
         "arguments": [],
         "callable_reference": {
-          "artifact_identity": "mncs:compiler:backend-artifact:54d7f22ccaea17eba37515e4092804a731cf9004909505949268e77239950dce",
+          "artifact_identity": "mncs:compiler:backend-artifact:44b3bf30abaf2f7727f4d0a3d11d487627b270ab7f5b2e902e3f41fa7073787c",
           "callable_identity": "mncs:0.2:function:mncs.models.foundation_tests::two_layer_relu",
           "declaration_identity": "mncs:0.2:test:mncs.models.foundation_tests::two_layer_relu",
           "signature_identity": "sha256:a8d530b2ba6055011b48ae0717ed15f190259fb063085832f483f70a4e132d81",
-          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::aa28c0066e93df3ae603eb96095448bdf6f93eb4a9bca183c862584520d8cb1e"
         },
         "schema_version": "0.1",
         "step_budget": 3000000,
@@ -3192,18 +3192,18 @@
         "module": "mncs.models.foundation_tests",
         "profile": "0.18",
         "qualified_name": "mncs.models.foundation_tests::two_layer_relu",
-        "semantic_fingerprint": "cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2",
+        "semantic_fingerprint": "aa28c0066e93df3ae603eb96095448bdf6f93eb4a9bca183c862584520d8cb1e",
         "signature_identity": "sha256:a8d530b2ba6055011b48ae0717ed15f190259fb063085832f483f70a4e132d81",
-        "subject_fingerprint": "6e082b0ffa769a436f1afa061278f00a1fb545da036827ab7e52349b9a53c278",
+        "subject_fingerprint": "962c061d974f8aedd8b96a464ecce1b7329aa09e3eb05176db8b604b26fd1595",
         "subject_identity": "mncs:0.2:program:mncs.models.foundation_tests",
-        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::cdfe32e40d87f7acd7bffaa58709a0ca2e7f2347d1d6bf26ce44bd37c57eb5c2"
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.foundation_tests::two_layer_relu::aa28c0066e93df3ae603eb96095448bdf6f93eb4a9bca183c862584520d8cb1e"
       },
       "source": "tests/native/foundation.mncs",
       "source_span": {
         "column": 1,
-        "end": 3403,
+        "end": 3468,
         "line": 46,
-        "start": 2801
+        "start": 2848
       },
       "status": "passed",
       "verdict": "PASS"

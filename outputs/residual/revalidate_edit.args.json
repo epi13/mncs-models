@@ -1,0 +1,91 @@
+[
+  {
+    "record": {
+      "fields": {
+        "identity": {
+          "integer": {
+            "value": 700
+          }
+        },
+        "parameters": {
+          "record": {
+            "fields": {
+              "parent": {
+                "integer": {
+                  "value": 1
+                }
+              },
+              "provenance": {
+                "integer": {
+                  "value": 702
+                }
+              },
+              "revision": {
+                "integer": {
+                  "value": 2
+                }
+              },
+              "values": {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "value": 3
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 3
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": -6
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "topology": {
+          "record": {
+            "fields": {
+              "hidden": {
+                "integer": {
+                  "value": 0
+                }
+              },
+              "inputs": {
+                "integer": {
+                  "value": 4
+                }
+              },
+              "outputs": {
+                "integer": {
+                  "value": 1
+                }
+              },
+              "relu": {
+                "boolean": {
+                  "value": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,38 @@
+mncs 0.18;
+module mncs.models.trial;
+use mncs.models.micro;
+// Dataset/custody references are supplied by existing evidence owners.
+// This validates reproducibility bookkeeping, not confidentiality or promotion.
+record Partition { reference: u64, groups: [u64; 16], count: u64 }
+record TrialPlan { identity: u64, question: u64, construction: Partition, tuning: Partition, heldout: Partition, commitment: u64, parameter_budget: u64, max_edits: u64 }
+record Submission { trial: u64, artifact: u64, author: u64, edits: u64, frozen_at: u64 }
+record AuthorCost { tokens_known: bool, tokens: u64, milliseconds_known: bool, milliseconds: u64 }
+fn partition_valid(p: Partition) -> (result: bool) {
+    if p.reference == 0 || p.count == 0 || p.count > 16 { return false; }
+    iterate i over p.groups carrying valid: bool = true { next valid = valid && group_valid(p, i); }
+    return valid;
+}
+fn group_valid(p: Partition, i: u64) -> (result: bool) {
+    if i >= p.count { return p.groups[i] == 0; }
+    if p.groups[i] == 0 { return false; }
+    iterate j over p.groups carrying unique: bool = true { next unique = unique && !(j < i && p.groups[j] == p.groups[i]); }
+    return unique;
+}
+fn member(p: Partition, value: u64) -> (result: bool) { iterate i over p.groups carrying found: bool = false { next found = found || (i < p.count && p.groups[i] == value); } return found; }
+fn disjoint(a: Partition, b: Partition) -> (result: bool) { if a.reference == b.reference { return false; } iterate i over a.groups carrying good: bool = true { next good = good && !(i < a.count && member(b, a.groups[i])); } return good; }
+fn trial_valid(p: TrialPlan) -> (result: bool) { return p.identity != 0 && p.question != 0 && p.commitment != 0 && p.parameter_budget > 0 && p.parameter_budget <= 100 && partition_valid(p.construction) && partition_valid(p.tuning) && partition_valid(p.heldout) && disjoint(p.construction, p.tuning) && disjoint(p.construction, p.heldout) && disjoint(p.tuning, p.heldout); }
+fn submission_valid(p: TrialPlan, s: Submission, m: Model) -> (result: bool) {
+    if !trial_valid(p) || !model_valid(m) { return false; }
+    return s.trial == p.identity && s.artifact != 0 && s.author != 0 && s.frozen_at != 0 && s.edits <= p.max_edits && parameter_count(m.topology) <= p.parameter_budget;
+}
+fn heldout_review_valid(p: TrialPlan, s: Submission, m: Model, opened_at: u64, outcome_reference: u64) -> (result: bool) { return submission_valid(p, s, m) && opened_at > s.frozen_at && outcome_reference != 0; }
+// Numeric candidate interchange for an agent: JSON/ABI parameters are invocation
+// data. This uses the same Model and infer kernel; no separate runtime/training.
+fn author_five(weights: [i64; 5], revision: u64, parent: u64, provenance: u64) -> (result: Model) {
+    let values: [i64; up_to 100] = weights;
+    return Model { identity: 700, topology: Topology { inputs: 4, hidden: 0, outputs: 1, relu: false }, parameters: Parameters { values: values, revision: revision, parent: parent, provenance: provenance } };
+}
+fn score_authored(weights: [i64; 5], features: [i64; 4]) -> (result: Inference) {
+    let m: Model = author_five(weights, 1, 0, 701);
+    return infer(m, Signal { values: [features[0], features[1], features[2], features[3], 0, 0, 0, 0], width: 4 });
+}

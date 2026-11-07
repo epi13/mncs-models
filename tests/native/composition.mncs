@@ -4,37 +4,28 @@ use mncs.test.assertions;
 use mncs.test.suite;
 use mncs.models.micro;
 use mncs.models.compose;
+use mncs.models.construction;
 use mncs.models.composition_cases;
-fn small(id: u64, a: i64, b: i64, bias: i64, relu: bool) -> (result: Model) {
- let v: [i64; 100] = [0; 100]; let w: [i64; 100] = replace(v, 0, a); let z: [i64; 100] = replace(w, 1, b);
- return Model { identity: id, topology: Topology { inputs: 2, hidden: 0, outputs: 1, relu: relu }, parameters: Parameters { values: replace(z, 2, bias), revision: 1, parent: 0, provenance: 1000 + id } };
-}
-fn node(m: Model, left: Link, right: Link, contract: u64) -> (result: Node) { return Node { identity: m.identity, operation: Operation.Learned, model: m, inputs: [left, right, blank_link(), blank_link(), blank_link(), blank_link(), blank_link(), blank_link()], ninput: 2, output_contract: contract, margin: -1 }; }
-fn link(source: u64, lane: u64, contract: u64) -> (result: Link) { return Link { source: source, lane: lane, contract: contract }; }
-fn assembly(learned: bool) -> (result: Assembly) {
- let a: Node = node(small(11, 2, 1, -3, true), link(0, 0, 1), link(0, 1, 1), 2);
- let b: Node = node(small(12, 2, 1, -3, true), link(0, 2, 1), link(0, 3, 1), 2);
- let c: Node = node(small(13, 1, 1, -3, false), link(1, 0, 2), link(2, 0, 2), 3);
- let d: Node = Node { identity: 14, operation: Operation.Sum, model: blank_model(), inputs: c.inputs, ninput: 2, output_contract: 3, margin: -1 };
- let ns: [Node; 16] = replace(replace(replace(empty_nodes(), 0, a), 1, b), 2, select(learned, c, d));
- return Assembly { identity: 100, revision: 1, parent: 0, provenance: 200, nodes: ns, count: 3, external_contracts: [1, 1, 1, 1, 0, 0, 0, 0], external_width: 4 };
-}
-fn observation(s: i64, r: i64, p: i64, u: i64) -> (result: Observation) { return Observation { signal: Signal { values: [s, r, p, u, 0, 0, 0, 0], width: 4 }, statuses: [0; 8], evidence: [501, 502, 503, 504, 0, 0, 0, 0], event: 900 }; }
-fn execute(a: Assembly, o: Observation, target: u64) -> (result: Run) { return run(a, o, target, Budget { nodes: 16, multiplies: 1000 }); }
+
+
+
+
+
+
 test learned_composition() -> (result: TestResult) {
  let r: Run = execute(assembly(true), observation(3, 1, 2, 1), 3);
  let t: Trace = r.traces[2]; let x: Signal = t.signal;
- return from_assertion(equals_bool(true, r.status == 0 && x.values[0] == 3 && r.executed == 3 && r.multiplies == 6 && r.parameter_checks == 600 && t.ancestors == 7 && t.evidence_mask == 15 && component_row(assembly(true), 13) == 3 && component_row(assembly(true), 999) == 0, 101));
+ return from_assertion(equals_bool(true, r.status == 0 && x.values[0] == 3 && r.executed == 3 && r.multiplies == 6 && r.parameter_checks == 300 && t.ancestors == 7 && t.evidence_mask == 15 && component_row(assembly(true), 13) == 3 && component_row(assembly(true), 999) == 0, 101));
 }
 test deterministic_composition() -> (result: TestResult) {
  let r: Run = execute(assembly(false), observation(3, 1, 2, 1), 3); let t: Trace = r.traces[2]; let x: Signal = t.signal;
  return from_assertion(equals_bool(true, r.status == 0 && x.values[0] == 6 && r.multiplies == 4 && r.additions == 6, 102));
 }
-fn with_nodes(a: Assembly, nodes: [Node; 16], count: u64) -> (result: Assembly) { return Assembly { identity: a.identity, revision: a.revision, parent: a.parent, provenance: a.provenance, nodes: nodes, count: count, external_contracts: a.external_contracts, external_width: a.external_width }; }
-fn with_inputs(n: Node, inputs: [Link; 8]) -> (result: Node) { return Node { identity: n.identity, operation: n.operation, model: n.model, inputs: inputs, ninput: n.ninput, output_contract: n.output_contract, margin: n.margin }; }
-fn with_margin(n: Node, margin: i64) -> (result: Node) { return Node { identity: n.identity, operation: n.operation, model: n.model, inputs: n.inputs, ninput: n.ninput, output_contract: n.output_contract, margin: margin }; }
-fn revised(a: Assembly) -> (result: Assembly) { let n: Node = a.nodes[2]; let e: Edit = edit(n.model, 2, -1, 2, 1013); let s: Swap = rebind(a, 2, e.model, 2, 201); return s.assembly; }
-fn output(r: Run, row: u64) -> (result: i64) { let t: Trace = r.traces[row]; let x: Signal = t.signal; return x.values[0]; }
+
+
+
+
+
 test sequential_two_components() -> (result: TestResult) {
  let a: Assembly = assembly(true); let n: Node = a.nodes[1]; let linked: Node = with_inputs(n, [link(1, 0, 2), link(0, 3, 1), blank_link(), blank_link(), blank_link(), blank_link(), blank_link(), blank_link()]);
  let b: Assembly = with_nodes(a, replace(a.nodes, 1, linked), 2);
@@ -94,48 +85,25 @@ test concat_contract() -> (result: TestResult) {
  let b: Assembly = with_nodes(a, replace(a.nodes, 2, c), 3); let r: Run = execute(b, observation(3, 1, 2, 1), 3); let t: Trace = r.traces[2]; let x: Signal = t.signal;
  return from_assertion(equals_bool(true, r.status == 0 && x.width == 2 && x.values[0] == 4 && x.values[1] == 2, 111));
 }
-fn sum_model(id: u64, width: u64, bias: i64, relu: bool) -> (result: Model) {
- let slots: [i64; 100] = [0; 100];
- iterate i over slots carrying v: [i64; 100] = slots { next v = replace(v, i, select(i < width, 1, 0)); }
- return Model { identity: id, topology: Topology { inputs: width, hidden: 0, outputs: 1, relu: relu }, parameters: Parameters { values: replace(v, width, bias), revision: 1, parent: 0, provenance: 1000 + id } };
-}
-fn sensor_node(i: u64) -> (result: Node) {
- let m: Model = sum_model(21 + i, 1, -1, true);
- return Node { identity: m.identity, operation: Operation.Learned, model: m, inputs: [link(0, i, 1), blank_link(), blank_link(), blank_link(), blank_link(), blank_link(), blank_link(), blank_link()], ninput: 1, output_contract: 2, margin: -1 };
-}
-fn ten_components() -> (result: Assembly) {
- let seed: [Node; 16] = empty_nodes();
- iterate i over seed carrying ns: [Node; 16] = seed { next ns = sensor_row(ns, i); }
- let left: Model = sum_model(29, 4, 0, false); let right: Model = sum_model(30, 5, 0, false);
- let a: Node = Node { identity: 29, operation: Operation.Learned, model: left, inputs: [link(1, 0, 2), link(2, 0, 2), link(3, 0, 2), link(4, 0, 2), blank_link(), blank_link(), blank_link(), blank_link()], ninput: 4, output_contract: 2, margin: -1 };
- let b: Node = Node { identity: 30, operation: Operation.Learned, model: right, inputs: [link(9, 0, 2), link(5, 0, 2), link(6, 0, 2), link(7, 0, 2), link(8, 0, 2), blank_link(), blank_link(), blank_link()], ninput: 5, output_contract: 3, margin: -1 };
- return Assembly { identity: 101, revision: 1, parent: 0, provenance: 210, nodes: replace(replace(ns, 8, a), 9, b), count: 10, external_contracts: [1; 8], external_width: 8 };
-}
-fn sensor_row(ns: [Node; 16], i: u64) -> (result: [Node; 16]) { if i >= 8 { return ns; } return replace(ns, i, sensor_node(i)); }
-fn sensors() -> (result: Observation) { return Observation { signal: Signal { values: [3; 8], width: 8 }, statuses: [0; 8], evidence: [511, 512, 513, 514, 515, 516, 517, 518], event: 901 }; }
+
+
+
+
+
 test ten_component_execution_and_subset() -> (result: TestResult) {
  let a: Assembly = ten_components(); let full: Run = execute(a, sensors(), 10); let part: Run = execute(a, sensors(), 1); let t: Trace = full.traces[9]; let untouched: Trace = part.traces[1]; let res: Resources = resources(a);
- return from_assertion(equals_bool(true, full.status == 0 && output(full, 9) == 16 && full.executed == 10 && full.multiplies == 17 && t.ancestors == 1023 && t.evidence_mask == 255 && part.executed == 1 && part.multiplies == 1 && untouched.identity == 0 && full.parameter_checks == 2000 && part.parameter_checks == 1100 && res.active_parameters == 27 && res.allocated_parameter_bytes == 12800 && res.live_connections == 17, 112));
+ return from_assertion(equals_bool(true, full.status == 0 && output(full, 9) == 16 && full.executed == 10 && full.multiplies == 17 && t.ancestors == 1023 && t.evidence_mask == 255 && part.executed == 1 && part.multiplies == 1 && untouched.identity == 0 && full.parameter_checks == 1000 && part.parameter_checks == 1000 && res.active_parameters == 27 && res.allocated_parameter_bytes == 8000 && res.live_connections == 17, 112));
 }
 // Benchmark models are frozen before the first held-out execution.
 // Specialists: relu(2*severity + repeat - 3). Initial glue: A+B-3.
 // Tuning event 51 is (2,0,2,0), event 52 is (0,0,0,0): change glue bias to -1.
 // Construction uses events 1..4 in specialist tests, never heldout().
 record Comparison { total: u64, errors: u64, diagnostic: u64, environment: u64, initial: u64, edited: u64, deterministic_glue: u64, deterministic_initial: u64, standalone: u64, standalone_initial: u64, linear: u64, strong: u64 }
-fn standalone_with_bias(bias: i64) -> (result: Model) {
- // Same hypothesis as the edited composition, represented in one 13-parameter network.
- let a: [i64; 100] = [0; 100]; let b: [i64; 100] = replace(replace(replace(a, 0, 2), 1, 1), 4, -3);
- let c: [i64; 100] = replace(replace(replace(b, 7, 2), 8, 1), 9, -3);
- let d: [i64; 100] = replace(replace(replace(c, 10, 1), 11, 1), 12, bias);
- return Model { identity: 40, topology: Topology { inputs: 4, hidden: 2, outputs: 1, relu: true }, parameters: Parameters { values: d, revision: 1, parent: 0, provenance: 1040 } };
-}
-fn standalone() -> (result: Model) { return standalone_with_bias(-1); }
-fn linear() -> (result: Model) {
- let a: [i64; 100] = [0; 100]; let b: [i64; 100] = replace(replace(replace(replace(a, 0, 2), 1, 1), 2, 2), 3, 1);
- return Model { identity: 41, topology: Topology { inputs: 4, hidden: 0, outputs: 1, relu: false }, parameters: Parameters { values: replace(b, 4, -7), revision: 1, parent: 0, provenance: 1041 } };
-}
+
+
+
 fn correct(score: i64, label: bool) -> (result: u64) { return select((score > 0) == label, 1, 0); }
-fn direct_score(m: Model, o: Observation) -> (result: i64) { let r: Inference = infer(m, o.signal); let x: Signal = r.output; return x.values[0]; }
+
 fn comparison_cell(c: Scenario, a: Assembly, b: Assembly, d: Assembly, previous: Comparison) -> (result: Comparison) {
  let source: Observation = observation(c.s, c.r, c.p, c.u);
  let o: Observation = Observation { signal: source.signal, statuses: source.statuses, evidence: [c.event * 10, c.event * 10 + 1, c.event * 10 + 2, c.event * 10 + 3, 0, 0, 0, 0], event: c.event };

@@ -1,0 +1,95 @@
+[
+  {
+    "sequence": {
+      "values": [
+        {
+          "integer": {
+            "type": {
+              "bits": 64,
+              "signed": true
+            },
+            "value": 3
+          }
+        },
+        {
+          "integer": {
+            "type": {
+              "bits": 64,
+              "signed": true
+            },
+            "value": 1
+          }
+        },
+        {
+          "integer": {
+            "type": {
+              "bits": 64,
+              "signed": true
+            },
+            "value": 1
+          }
+        },
+        {
+          "integer": {
+            "type": {
+              "bits": 64,
+              "signed": true
+            },
+            "value": 1
+          }
+        },
+        {
+          "integer": {
+            "type": {
+              "bits": 64,
+              "signed": true
+            },
+            "value": -6
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sequence": {
+      "values": [
+        {
+          "integer": {
+            "type": {
+              "bits": 64,
+              "signed": true
+            },
+            "value": 2
+          }
+        },
+        {
+          "integer": {
+            "type": {
+              "bits": 64,
+              "signed": true
+            },
+            "value": 1
+          }
+        },
+        {
+          "integer": {
+            "type": {
+              "bits": 64,
+              "signed": true
+            },
+            "value": 2
+          }
+        },
+        {
+          "integer": {
+            "type": {
+              "bits": 64,
+              "signed": true
+            },
+            "value": 0
+          }
+        }
+      ]
+    }
+  }
+]

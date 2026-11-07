@@ -1,0 +1,19 @@
+{
+  "controlled_llm_trial_conducted": false,
+  "operational_utility_evaluated": false,
+  "parameter_interchange_verified": true,
+  "versioned_edit_verified": true,
+  "tokens_measured": false,
+  "author_time_measured": false,
+  "native_protocol": [
+    "trial_valid",
+    "submission_valid",
+    "heldout_review_valid"
+  ],
+  "missing": [
+    "Eligible real labeled residual task and authorized event-aligned cohort",
+    "Independent author/reviewer custody enforced by existing authorities",
+    "Legitimate conventional dense-weight optimization baseline from mncs-learn"
+  ],
+  "manual_examples_are_mechanical": true
+}

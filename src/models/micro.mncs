@@ -3,7 +3,7 @@ module mncs.models.micro;
 
 // Scale-one exact integer dense composition. No effects or host callbacks.
 record Topology { inputs: u64, hidden: u64, outputs: u64, relu: bool }
-record Parameters { values: [i64; 100], revision: u64, parent: u64, provenance: u64 }
+record Parameters { values: [i64; up_to 100], revision: u64, parent: u64, provenance: u64 }
 record Model { identity: u64, topology: Topology, parameters: Parameters }
 record Signal { values: [i64; 8], width: u64 }
 // status: 0 valid, 1 invalid model, 2 invalid input. No output on refusal.
@@ -26,6 +26,7 @@ fn model_valid(m: Model) -> (result: bool) {
     if !topology_valid(m.topology) { return false; }
     let p: Parameters = m.parameters;
     let count: u64 = parameter_count(m.topology);
+    if p.values.len < count { return false; }
     iterate i over p.values carrying good: bool = true {
         next good = good && parameter_cell_valid(p, count, i);
     }
@@ -49,7 +50,8 @@ fn dot_cell(p: Parameters, x: Signal, start: u64, i: u64) -> (result: i64) {
     return p.values[start + i] * x.values[i];
 }
 fn neuron(p: Parameters, x: Signal, start: u64, relu: bool) -> (result: i64) {
-    iterate i over x.values carrying sum: i64 = p.values[start + x.width] {
+    let active: [i64; up_to 8] = x.values[0..x.width];
+    iterate i over active carrying sum: i64 = p.values[start + x.width] {
         next sum = sum + dot_cell(p, x, start, i);
     }
     if relu && sum < 0 { return 0; }
@@ -60,13 +62,19 @@ fn layer_cell(p: Parameters, x: Signal, offset: u64, width: u64, relu: bool, i: 
     return neuron(p, x, offset + i * (x.width + 1), relu);
 }
 fn layer(p: Parameters, x: Signal, offset: u64, width: u64, relu: bool) -> (result: Signal) {
-    iterate i over x.values carrying values: [i64; 8] = [0; 8] {
+    let active: [i64; up_to 8] = x.values[0..width];
+    iterate i over active carrying values: [i64; 8] = [0; 8] {
         next values = replace(values, i, layer_cell(p, x, offset, width, relu, i));
     }
     return Signal { values: values, width: width };
 }
 fn infer(m: Model, x: Signal) -> (result: Inference) {
     if !model_valid(m) { return Inference { status: 1, output: empty_signal(), multiplies: 0, additions: 0 }; }
+    return infer_inputs(m, x);
+}
+// Numerical kernel precondition: caller has just validated this exact immutable m.
+// Public safe entrypoints are infer/infer_batch and composition run wrappers.
+fn infer_inputs(m: Model, x: Signal) -> (result: Inference) {
     let t: Topology = m.topology;
     if !input_valid(x, t.inputs) { return Inference { status: 2, output: empty_signal(), multiplies: 0, additions: 0 }; }
     if t.hidden == 0 {
@@ -81,15 +89,51 @@ fn edit(m: Model, index: u64, value: i64, revision: u64, provenance: u64) -> (re
     if !model_valid(m) { return Edit { accepted: false, model: m }; }
     let p: Parameters = m.parameters;
     if index >= parameter_count(m.topology) || revision <= p.revision || provenance == 0 { return Edit { accepted: false, model: m }; }
-    let candidate: Model = Model { identity: m.identity, topology: m.topology, parameters: Parameters { values: replace(p.values, index, value), revision: revision, parent: p.revision, provenance: provenance } };
+    let candidate: Model = Model { identity: m.identity, topology: m.topology, parameters: Parameters { values: rebuild_parameters(p, parameter_count(m.topology), index, value), revision: revision, parent: p.revision, provenance: provenance } };
     if !model_valid(candidate) { return Edit { accepted: false, model: m }; }
     return Edit { accepted: true, model: candidate };
 }
 fn changes(a: Model, b: Model) -> (result: u64) {
-    let pa: Parameters = a.parameters;
-    let pb: Parameters = b.parameters;
-    iterate i over pa.values carrying count: u64 = 0 {
-        next count = count + select(pa.values[i] != pb.values[i], 1, 0);
+    let pa: Parameters = a.parameters; let pb: Parameters = b.parameters;
+    let domain: [i64; 100] = [0; 100];
+    iterate i over domain carrying count: u64 = 0 {
+        next count = count + select(parameter_at(pa, i) != parameter_at(pb, i), 1, 0);
     }
     return count;
 }
+fn parameter_at(p: Parameters, index: u64) -> (result: i64) {
+    if index >= p.values.len { return 0; }
+    return p.values[index];
+}
+fn rebuild_exact<N: Nat>(domain: [i64; N], p: Parameters, index: u64, value: i64) -> (result: [i64; N]) {
+    iterate i over domain carrying slots: [i64; N] = domain {
+        next slots = replace(slots, i, select(i == index, value, parameter_at(p, i)));
+    }
+    return slots;
+}
+fn rebuild_parameters(p: Parameters, count: u64, index: u64, value: i64) -> (result: [i64; up_to 100]) {
+    if count <= 5 { let zero: [i64; 5] = [0; 5]; let exact: [i64; 5] = rebuild_exact(zero, p, index, value); let view: [i64; up_to 100] = exact; return view; }
+    if count <= 20 { let zero: [i64; 20] = [0; 20]; let exact: [i64; 20] = rebuild_exact(zero, p, index, value); let view: [i64; up_to 100] = exact; return view; }
+    let zero: [i64; 100] = [0; 100]; return rebuild_exact(zero, p, index, value);
+}
+fn exact_parameters(p: Parameters) -> (result: [i64; 100]) {
+    let zero: [i64; 100] = [0; 100]; return rebuild_exact(zero, p, 100, 0);
+}
+// Materializes fresh bounded backing; no slicing of the caller's large backing.
+fn compact(m: Model) -> (result: Edit) {
+    if !model_valid(m) { return Edit { accepted: false, model: m }; }
+    let p: Parameters = m.parameters;
+    let packed: Parameters = Parameters { values: rebuild_parameters(p, parameter_count(m.topology), 100, 0), revision: p.revision, parent: p.parent, provenance: p.provenance };
+    return Edit { accepted: true, model: Model { identity: m.identity, topology: m.topology, parameters: packed } };
+}
+record InferenceBatch { outputs: [Inference; 4], parameter_checks: u64 }
+fn refusal(status: u64) -> (result: Inference) { return Inference { status: status, output: empty_signal(), multiplies: 0, additions: 0 }; }
+fn infer_batch(m: Model, xs: [Signal; 4]) -> (result: InferenceBatch) {
+    let empty: [Inference; 4] = [refusal(1), refusal(1), refusal(1), refusal(1)];
+    if !model_valid(m) { return InferenceBatch { outputs: empty, parameter_checks: 0 }; }
+    iterate i over xs carrying out: [Inference; 4] = empty { next out = replace(out, i, infer_inputs(m, xs[i])); }
+    let p: Parameters = m.parameters;
+    return InferenceBatch { outputs: out, parameter_checks: p.values.len };
+}
+
+fn parameter_values(values: [i64; 100]) -> (result: [i64; up_to 100]) { return values[0..values.len]; }

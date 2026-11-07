@@ -26,7 +26,7 @@ def revision(path):
     return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=path, text=True).strip()
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--suite", choices=["all", "foundation", "composition"], default="all")
+parser.add_argument("--suite", choices=["all", "foundation", "composition", "residual"], default="all")
 args = parser.parse_args()
 libraries = ["--library", "src", "--library", "tests/fixtures", "--library", str(TEST / "native"), "--library", str(LANG / "library")]
 # Match the native Test tool's shared, toolchain-scoped cache convention.
@@ -34,7 +34,7 @@ cache_scope = hashlib.sha256(str(BIN.resolve()).encode()).hexdigest()[:16]
 os.environ.setdefault("MNCS_NATIVE_APPLICATION_CACHE_DIR", str(COMMON / "mncs-native-application-cache" / cache_scope))
 source_hashes = sources()
 binary_hash = digest(BIN)
-for suite, minimum in [("foundation", 14), ("composition", 16)]:
+for suite, minimum in [("foundation", 14), ("composition", 16), ("residual", 15)]:
     if args.suite not in ("all", suite):
         continue
     out = ROOT / "outputs" / suite
