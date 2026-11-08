@@ -1,0 +1,88 @@
+{
+  "source_references": [
+    {
+      "repository": "mncs-models",
+      "commit": "5b28ea38fc451cd151d3432b8d86e26a0fcfcbb8",
+      "path": "src/models/micro.mncs",
+      "sha256": "1f96bed08994c701e1c1103ae369f3f95cb061cf8bc637dd9cdfba30150328b0"
+    },
+    {
+      "repository": "mncs-models",
+      "commit": "5b28ea38fc451cd151d3432b8d86e26a0fcfcbb8",
+      "path": "src/models/compose.mncs",
+      "sha256": "bfcdf5aa799a44f5a8c9be9e7f4addefd467b3d9347eab7d3fce24aece20cbd3"
+    },
+    {
+      "repository": "mncs-models",
+      "commit": "5b28ea38fc451cd151d3432b8d86e26a0fcfcbb8",
+      "path": "src/models/trial.mncs",
+      "sha256": "f4ab15422ee0b021c80cc66f2819c2bae96a86b70fa4afe6fd5c32099cd53660"
+    },
+    {
+      "repository": "mncs-models",
+      "commit": "5b28ea38fc451cd151d3432b8d86e26a0fcfcbb8",
+      "path": "src/models/guidance.mncs",
+      "sha256": "a7aa72f8142b1a23207875f2320e35693a40145fed4b1df91879cebe54df5f7d"
+    },
+    {
+      "repository": "RAVEL",
+      "commit": "e1cae6d9609d51ead6307769f54453eb3ee49306",
+      "path": ".mncs/project.json",
+      "sha256": "33f30454103b0a38e0e279dc5bb7b8aa49bf0f5ed054012af587bdd8b81006fa"
+    },
+    {
+      "repository": "RAVEL",
+      "commit": "e1cae6d9609d51ead6307769f54453eb3ee49306",
+      "path": "mncs/workspace/ravel/task.mncs",
+      "sha256": "5e73145c5abc2999a061d4b1677cec60903704139c634458273b11fe7d2346f1"
+    },
+    {
+      "repository": "RAVEL",
+      "commit": "e1cae6d9609d51ead6307769f54453eb3ee49306",
+      "path": "mncs/workspace/ravel/obligation_planning.mncs",
+      "sha256": "41eb5308e6154f4b7d8350394d8cd371ab92d48d5432ecf42dd564b782c21b4e"
+    },
+    {
+      "repository": "RAVEL",
+      "commit": "e1cae6d9609d51ead6307769f54453eb3ee49306",
+      "path": "src/ravel/impact.py",
+      "sha256": "137e6dac1870646c3b71c8d0c158300c91ed52512ecaf3244c073addeb7a4ef4"
+    },
+    {
+      "repository": "mncs-learn",
+      "commit": "24f4d25d547613eafbe428c363f3e0ef30c0cadb",
+      "path": "native/mncs/learn/centroid.mncs",
+      "sha256": "d09dbf89c4d1bc851dce3305d3f4e218e0aea591f40792bc59b11a70534f994c"
+    },
+    {
+      "repository": "mncs-learn",
+      "commit": "24f4d25d547613eafbe428c363f3e0ef30c0cadb",
+      "path": "native/mncs/learn/contract.mncs",
+      "sha256": "a772907640819e2ff99ffb709602a1f50c4bb5de8dac2d4aeebe71251f7f2811"
+    },
+    {
+      "repository": "mncs-learn",
+      "commit": "24f4d25d547613eafbe428c363f3e0ef30c0cadb",
+      "path": "README.md",
+      "sha256": "6661ec3f4cc164e3001c1b42b5ef6ed65e75e528b1db36a3658559650fc8f323"
+    },
+    {
+      "repository": "mncs-environment",
+      "commit": "fdd24f7013b7140f595f064b47b73ba237b38716",
+      "path": "docs/ENTRY.md",
+      "sha256": "3ebf618c71610a0e724f05a4ab27fccb52c3152a62367fd759a49ddaf53d54f1"
+    }
+  ],
+  "heads": {
+    "mncs-environment": "fdd24f7013b7140f595f064b47b73ba237b38716",
+    "mncs-store": "af502328fedfc7297735727f6c189b3b8bcbd0c0",
+    "mncs-control-mcp": "9d8f65a685b2974d95c899c6dae4c9059aad10a4",
+    "mncs-language": "f8212ed8b7478196b5293a84152154be5e0bea3f",
+    "mncs-test": "d51958bf2cb2dbba583bee255897b4c7544a0468",
+    "mncs-learn": "24f4d25d547613eafbe428c363f3e0ef30c0cadb",
+    "RAVEL": "e1cae6d9609d51ead6307769f54453eb3ee49306"
+  },
+  "compiler_binary_sha256": "129ef764bd56f6a3e05ee19631c46c044217590d537d52ee1c62b0fba335d7ae",
+  "platform": "Linux-7.2.15-200.fc44.x86_64-x86_64-with-glibc2.43",
+  "note": "Checkout heads are read observations, not binary build attestations; final freeze binds actual binary and model sources. Other repositories were read-only."
+}

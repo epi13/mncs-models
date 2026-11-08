@@ -1,0 +1,1206 @@
+{
+  "artifacts": [],
+  "classification": "passed",
+  "execution": {
+    "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+    "artifact_sha256": "7a5b6c2e2514ecc2e26f3aef5321cbbaadb99d83685b3eaba058e78b840d237e",
+    "backend": "mncs-research-bytecode",
+    "batch_size": 5,
+    "canonical_path": true,
+    "compiler_owned_inventory": true,
+    "fallback": false,
+    "host_subprocesses": 0,
+    "inventory_identity": "5fdd6bc76635149b613b07346ea6ab510a5c7db0f071ced96f4d98d4f8fc3cbc",
+    "mode": "native-toolchain-embed",
+    "native_batch_calls": 1,
+    "native_session_calls": 17,
+    "reused_session": true,
+    "run_identity": "9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154",
+    "runner_version": "0.1.0",
+    "step_budget": 3000000,
+    "test_case_identities": [
+      "mncs:0.2:test-case:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak::18ff794d683452140b863535262cda1abf4cd51727a085abb9e48783b32bcc27",
+      "mncs:0.2:test-case:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features::2bbf6a3655c208bcbfc8410c070f2d8654a1587d74d850e5311033d5be58a382",
+      "mncs:0.2:test-case:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance::074a4807fce685cc289c6302d0fafd66c082f213f00d8e0b3334c4ee86393c50",
+      "mncs:0.2:test-case:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation::60b79589bc1e373229225c5ef2b0be7f74f4d1e9b8f3b0d6700a1723d36ea505",
+      "mncs:0.2:test-case:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference::6d16f4dea70a2f017105a3aac51d5b84f502ccf697791977e9fe7d56f125d403"
+    ]
+  },
+  "exit_code": 0,
+  "failure_class": "none",
+  "id": "mncs-test",
+  "native_suite_summary": {
+    "assertion_count": 5,
+    "assertion_failures": 0,
+    "compile_failures": 0,
+    "failed": 0,
+    "failure_count": 0,
+    "infrastructure_failures": 0,
+    "passed": 5,
+    "runtime_failures": 0,
+    "setup_failures": 0,
+    "skipped": 0,
+    "timeout_failures": 0,
+    "total": 5,
+    "unsupported": 0,
+    "verdict": "PASS",
+    "verdict_code": 0
+  },
+  "protocol_version": 1,
+  "provenance": {
+    "inventory_identity": "5fdd6bc76635149b613b07346ea6ab510a5c7db0f071ced96f4d98d4f8fc3cbc",
+    "runner": {
+      "host": "mncs-toolchain",
+      "language": "mncs",
+      "name": "mncs.test.runner"
+    },
+    "source": {
+      "path": "tests/native/feasibility.mncs",
+      "sha256": "65f67b8317df2d723ce52bd492debedb8d3a27d24aa0c2f44f8ad5fa805a96c2"
+    }
+  },
+  "provider": "mncs-test",
+  "reproduction": {
+    "command": "mncs test tests/native/feasibility.mncs",
+    "run_id": "9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154",
+    "step_budget": 3000000
+  },
+  "run_id": "9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154",
+  "schema_version": "mncs.test-result/1",
+  "scope": {
+    "discovery": "compiler-inventory",
+    "module": "mncs.models.feasibility_tests",
+    "source": "tests/native/feasibility.mncs"
+  },
+  "selection": {
+    "available_test_count": 5,
+    "exact": [],
+    "filters": [],
+    "level": "repository_canonical",
+    "selected_test_count": 5,
+    "selected_test_identities": [
+      "mncs:0.2:test-case:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak::18ff794d683452140b863535262cda1abf4cd51727a085abb9e48783b32bcc27",
+      "mncs:0.2:test-case:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features::2bbf6a3655c208bcbfc8410c070f2d8654a1587d74d850e5311033d5be58a382",
+      "mncs:0.2:test-case:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance::074a4807fce685cc289c6302d0fafd66c082f213f00d8e0b3334c4ee86393c50",
+      "mncs:0.2:test-case:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation::60b79589bc1e373229225c5ef2b0be7f74f4d1e9b8f3b0d6700a1723d36ea505",
+      "mncs:0.2:test-case:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference::6d16f4dea70a2f017105a3aac51d5b84f502ccf697791977e9fe7d56f125d403"
+    ]
+  },
+  "summary": {
+    "authority": "native_suite",
+    "failed": 0,
+    "passed": 5,
+    "skipped": 0,
+    "total": 5,
+    "unsupported": 0,
+    "verdict": "PASS"
+  },
+  "tests": [
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+        "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak",
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak",
+        "signature_identity": "sha256:65a31a8267704b010934abc785e00c4f0d27b3c5cba41c959ab00552fef61be4",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak::18ff794d683452140b863535262cda1abf4cd51727a085abb9e48783b32bcc27"
+      },
+      "entry": "equal_scores_abstain_without_implicit_id_tiebreak",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+        "artifact_sha256": "7a5b6c2e2514ecc2e26f3aef5321cbbaadb99d83685b3eaba058e78b840d237e",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+          "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak",
+          "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak",
+          "signature_identity": "sha256:65a31a8267704b010934abc785e00c4f0d27b3c5cba41c959ab00552fef61be4",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak::18ff794d683452140b863535262cda1abf4cd51727a085abb9e48783b32bcc27"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 504
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 4698
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak",
+        "execution_identity": "mncs:language:experiment-run:9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154:execution:a555bc5b4d3ec616ccafb9a1c70bcc7d1377004ace377a2d6fda58252feed299",
+        "function_identity": "mncs:0.2:function:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak",
+        "module": "mncs.models.feasibility_tests",
+        "observation_identity": "mncs:language:experiment-run:9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154:observation:ee1391509ce9232647d379661ab8e6492ad5b6b1bc682b3a63f50cfcf9f731ee",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/feasibility.mncs",
+          "sha256": "65f67b8317df2d723ce52bd492debedb8d3a27d24aa0c2f44f8ad5fa805a96c2",
+          "span": {
+            "column": 1,
+            "end": 3177,
+            "line": 35,
+            "start": 2754
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.feasibility_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak::18ff794d683452140b863535262cda1abf4cd51727a085abb9e48783b32bcc27"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak::18ff794d683452140b863535262cda1abf4cd51727a085abb9e48783b32bcc27",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 504,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+          "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak",
+          "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak",
+          "signature_identity": "sha256:65a31a8267704b010934abc785e00c4f0d27b3c5cba41c959ab00552fef61be4",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak::18ff794d683452140b863535262cda1abf4cd51727a085abb9e48783b32bcc27"
+        },
+        "schema_version": "0.1",
+        "step_budget": 3000000,
+        "target": {
+          "function": "equal_scores_abstain_without_implicit_id_tiebreak",
+          "module": "mncs.models.feasibility_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak",
+        "function_identity": "mncs:0.2:function:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak",
+        "module": "mncs.models.feasibility_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak",
+        "semantic_fingerprint": "18ff794d683452140b863535262cda1abf4cd51727a085abb9e48783b32bcc27",
+        "signature_identity": "sha256:65a31a8267704b010934abc785e00c4f0d27b3c5cba41c959ab00552fef61be4",
+        "subject_fingerprint": "e936391e3c873d94122abd9d45159c8ac848deea0d850f1b0aef4f56f1a30fe2",
+        "subject_identity": "mncs:0.2:program:mncs.models.feasibility_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::equal_scores_abstain_without_implicit_id_tiebreak::18ff794d683452140b863535262cda1abf4cd51727a085abb9e48783b32bcc27"
+      },
+      "source": "tests/native/feasibility.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 3177,
+        "line": 35,
+        "start": 2754
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+        "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features",
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features",
+        "signature_identity": "sha256:a3333e625ebe3e4886bd3c027153af85489413262c9032ee62ea817988ed52b9",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features::2bbf6a3655c208bcbfc8410c070f2d8654a1587d74d850e5311033d5be58a382"
+      },
+      "entry": "established_choice_bypasses_invalid_model_and_unused_features",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+        "artifact_sha256": "7a5b6c2e2514ecc2e26f3aef5321cbbaadb99d83685b3eaba058e78b840d237e",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+          "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features",
+          "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features",
+          "signature_identity": "sha256:a3333e625ebe3e4886bd3c027153af85489413262c9032ee62ea817988ed52b9",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features::2bbf6a3655c208bcbfc8410c070f2d8654a1587d74d850e5311033d5be58a382"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 501
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 858
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features",
+        "execution_identity": "mncs:language:experiment-run:9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154:execution:83e799ebe59b51b21710de04f67950db485d81e323b0a6519a60a6f5bd46c4ea",
+        "function_identity": "mncs:0.2:function:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features",
+        "module": "mncs.models.feasibility_tests",
+        "observation_identity": "mncs:language:experiment-run:9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154:observation:817cb9a7803628213823ed95f33f5b05ab0b8541b0afbdeb5223686bd68babdd",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/feasibility.mncs",
+          "sha256": "65f67b8317df2d723ce52bd492debedb8d3a27d24aa0c2f44f8ad5fa805a96c2",
+          "span": {
+            "column": 1,
+            "end": 1986,
+            "line": 20,
+            "start": 1557
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.feasibility_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features::2bbf6a3655c208bcbfc8410c070f2d8654a1587d74d850e5311033d5be58a382"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features::2bbf6a3655c208bcbfc8410c070f2d8654a1587d74d850e5311033d5be58a382",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 501,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+          "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features",
+          "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features",
+          "signature_identity": "sha256:a3333e625ebe3e4886bd3c027153af85489413262c9032ee62ea817988ed52b9",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features::2bbf6a3655c208bcbfc8410c070f2d8654a1587d74d850e5311033d5be58a382"
+        },
+        "schema_version": "0.1",
+        "step_budget": 3000000,
+        "target": {
+          "function": "established_choice_bypasses_invalid_model_and_unused_features",
+          "module": "mncs.models.feasibility_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features",
+        "function_identity": "mncs:0.2:function:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features",
+        "module": "mncs.models.feasibility_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features",
+        "semantic_fingerprint": "2bbf6a3655c208bcbfc8410c070f2d8654a1587d74d850e5311033d5be58a382",
+        "signature_identity": "sha256:a3333e625ebe3e4886bd3c027153af85489413262c9032ee62ea817988ed52b9",
+        "subject_fingerprint": "e936391e3c873d94122abd9d45159c8ac848deea0d850f1b0aef4f56f1a30fe2",
+        "subject_identity": "mncs:0.2:program:mncs.models.feasibility_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::established_choice_bypasses_invalid_model_and_unused_features::2bbf6a3655c208bcbfc8410c070f2d8654a1587d74d850e5311033d5be58a382"
+      },
+      "source": "tests/native/feasibility.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 1986,
+        "line": 20,
+        "start": 1557
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+        "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance",
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance",
+        "signature_identity": "sha256:3845b6be331c4e50fbd9ef62323fcb2d067a58911fa103de8b8e13e4c1335f8e",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance::074a4807fce685cc289c6302d0fafd66c082f213f00d8e0b3334c4ee86393c50"
+      },
+      "entry": "future_source_evidence_refuses_guidance",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+        "artifact_sha256": "7a5b6c2e2514ecc2e26f3aef5321cbbaadb99d83685b3eaba058e78b840d237e",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+          "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance",
+          "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance",
+          "signature_identity": "sha256:3845b6be331c4e50fbd9ef62323fcb2d067a58911fa103de8b8e13e4c1335f8e",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance::074a4807fce685cc289c6302d0fafd66c082f213f00d8e0b3334c4ee86393c50"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 503
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 1834
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance",
+        "execution_identity": "mncs:language:experiment-run:9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154:execution:7ed6e57287866a53ff39dc7bd4f9fe702ffea856cbe084cfa0cda74429dae145",
+        "function_identity": "mncs:0.2:function:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance",
+        "module": "mncs.models.feasibility_tests",
+        "observation_identity": "mncs:language:experiment-run:9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154:observation:17cb9721382290c785acd2623cc25b6eaf352b06d30c2aa0dfa915f0dfd8d89b",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/feasibility.mncs",
+          "sha256": "65f67b8317df2d723ce52bd492debedb8d3a27d24aa0c2f44f8ad5fa805a96c2",
+          "span": {
+            "column": 1,
+            "end": 2753,
+            "line": 30,
+            "start": 2380
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.feasibility_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance::074a4807fce685cc289c6302d0fafd66c082f213f00d8e0b3334c4ee86393c50"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance::074a4807fce685cc289c6302d0fafd66c082f213f00d8e0b3334c4ee86393c50",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 503,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+          "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance",
+          "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance",
+          "signature_identity": "sha256:3845b6be331c4e50fbd9ef62323fcb2d067a58911fa103de8b8e13e4c1335f8e",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance::074a4807fce685cc289c6302d0fafd66c082f213f00d8e0b3334c4ee86393c50"
+        },
+        "schema_version": "0.1",
+        "step_budget": 3000000,
+        "target": {
+          "function": "future_source_evidence_refuses_guidance",
+          "module": "mncs.models.feasibility_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance",
+        "function_identity": "mncs:0.2:function:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance",
+        "module": "mncs.models.feasibility_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.feasibility_tests::future_source_evidence_refuses_guidance",
+        "semantic_fingerprint": "074a4807fce685cc289c6302d0fafd66c082f213f00d8e0b3334c4ee86393c50",
+        "signature_identity": "sha256:3845b6be331c4e50fbd9ef62323fcb2d067a58911fa103de8b8e13e4c1335f8e",
+        "subject_fingerprint": "e936391e3c873d94122abd9d45159c8ac848deea0d850f1b0aef4f56f1a30fe2",
+        "subject_identity": "mncs:0.2:program:mncs.models.feasibility_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::future_source_evidence_refuses_guidance::074a4807fce685cc289c6302d0fafd66c082f213f00d8e0b3334c4ee86393c50"
+      },
+      "source": "tests/native/feasibility.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 2753,
+        "line": 30,
+        "start": 2380
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+        "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation",
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation",
+        "signature_identity": "sha256:3d839f2719a79cb2dde5cb4cc1c818f7d90811e94aea26117309b64f38e80109",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation::60b79589bc1e373229225c5ef2b0be7f74f4d1e9b8f3b0d6700a1723d36ea505"
+      },
+      "entry": "uniquely_affected_probe_bypasses_neural_validation",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+        "artifact_sha256": "7a5b6c2e2514ecc2e26f3aef5321cbbaadb99d83685b3eaba058e78b840d237e",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+          "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation",
+          "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation",
+          "signature_identity": "sha256:3d839f2719a79cb2dde5cb4cc1c818f7d90811e94aea26117309b64f38e80109",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation::60b79589bc1e373229225c5ef2b0be7f74f4d1e9b8f3b0d6700a1723d36ea505"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 505
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 2930
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation",
+        "execution_identity": "mncs:language:experiment-run:9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154:execution:f0e95c92740636f552d52547a43e2776b8e6b539d0b10ff1ca18ecd565da2a35",
+        "function_identity": "mncs:0.2:function:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation",
+        "module": "mncs.models.feasibility_tests",
+        "observation_identity": "mncs:language:experiment-run:9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154:observation:94298810cf793c81108fb82c199e64dfec498c59a713b8f5ae2a96578953bd1b",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/feasibility.mncs",
+          "sha256": "65f67b8317df2d723ce52bd492debedb8d3a27d24aa0c2f44f8ad5fa805a96c2",
+          "span": {
+            "column": 1,
+            "end": 3579,
+            "line": 40,
+            "start": 3178
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.feasibility_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation::60b79589bc1e373229225c5ef2b0be7f74f4d1e9b8f3b0d6700a1723d36ea505"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation::60b79589bc1e373229225c5ef2b0be7f74f4d1e9b8f3b0d6700a1723d36ea505",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 505,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+          "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation",
+          "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation",
+          "signature_identity": "sha256:3d839f2719a79cb2dde5cb4cc1c818f7d90811e94aea26117309b64f38e80109",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation::60b79589bc1e373229225c5ef2b0be7f74f4d1e9b8f3b0d6700a1723d36ea505"
+        },
+        "schema_version": "0.1",
+        "step_budget": 3000000,
+        "target": {
+          "function": "uniquely_affected_probe_bypasses_neural_validation",
+          "module": "mncs.models.feasibility_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation",
+        "function_identity": "mncs:0.2:function:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation",
+        "module": "mncs.models.feasibility_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation",
+        "semantic_fingerprint": "60b79589bc1e373229225c5ef2b0be7f74f4d1e9b8f3b0d6700a1723d36ea505",
+        "signature_identity": "sha256:3d839f2719a79cb2dde5cb4cc1c818f7d90811e94aea26117309b64f38e80109",
+        "subject_fingerprint": "e936391e3c873d94122abd9d45159c8ac848deea0d850f1b0aef4f56f1a30fe2",
+        "subject_identity": "mncs:0.2:program:mncs.models.feasibility_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::uniquely_affected_probe_bypasses_neural_validation::60b79589bc1e373229225c5ef2b0be7f74f4d1e9b8f3b0d6700a1723d36ea505"
+      },
+      "source": "tests/native/feasibility.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 3579,
+        "line": 40,
+        "start": 3178
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    },
+    {
+      "callable_invocation": {
+        "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+        "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference",
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference",
+        "signature_identity": "sha256:0705d47b38013e289fd2cd0c327e6842c77658ca9ad1113e37cd32b5a8d9ad36",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference::6d16f4dea70a2f017105a3aac51d5b84f502ccf697791977e9fe7d56f125d403"
+      },
+      "entry": "unsupported_new_control_flow_abstains_before_inference",
+      "execution": {
+        "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+        "artifact_sha256": "7a5b6c2e2514ecc2e26f3aef5321cbbaadb99d83685b3eaba058e78b840d237e",
+        "backend": "mncs-research-bytecode",
+        "invoked_callable": {
+          "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+          "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference",
+          "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference",
+          "signature_identity": "sha256:0705d47b38013e289fd2cd0c327e6842c77658ca9ad1113e37cd32b5a8d9ad36",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference::6d16f4dea70a2f017105a3aac51d5b84f502ccf697791977e9fe7d56f125d403"
+        },
+        "returned": [
+          {
+            "record": {
+              "fields": [
+                [
+                  "actual",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "assertion_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 502
+                    }
+                  }
+                ],
+                [
+                  "assertions",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "expected",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": true
+                      },
+                      "value": 1
+                    }
+                  }
+                ],
+                [
+                  "failure_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "failure_kind",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::FailureKind",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::FailureKind::NoFailure"
+                    }
+                  }
+                ],
+                [
+                  "failures",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ],
+                [
+                  "verdict",
+                  {
+                    "finite": {
+                      "discriminant": 0,
+                      "type_identity": "mncs:0.2:finite-type:mncs.test.assertions::Verdict",
+                      "variant_identity": "mncs:0.2:finite-variant:mncs.test.assertions::Verdict::PASS"
+                    }
+                  }
+                ],
+                [
+                  "verdict_code",
+                  {
+                    "integer": {
+                      "type": {
+                        "bits": 64,
+                        "signed": false
+                      },
+                      "value": 0
+                    }
+                  }
+                ]
+              ],
+              "name": "TestResult",
+              "type_identity": "mncs:0.2:record-type:mncs.test.assertions::TestResult::actual%3Ai64%3Bassertion_code%3Au64%3Bassertions%3Au64%3Bexpected%3Ai64%3Bfailure_code%3Au64%3Bfailure_kind%3AFailureKind%3Bfailures%3Au64%3Bverdict%3AVerdict%3Bverdict_code%3Au64%3B"
+            }
+          }
+        ],
+        "reused_session": true,
+        "status": "returned",
+        "steps": 1017
+      },
+      "execution_lineage": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference",
+        "execution_identity": "mncs:language:experiment-run:9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154:execution:bf18b7e8fbae964dd4a38c15876d4032682751ec927688e7e174c943c61fb7ea",
+        "function_identity": "mncs:0.2:function:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference",
+        "module": "mncs.models.feasibility_tests",
+        "observation_identity": "mncs:language:experiment-run:9da8530dd49c0dbe4c148292e9e4fc662bb1924e1177a65b4b6b11366b565154:observation:00f74415aa200fac250e6a067faf6a26ad972770b73db15ae15ce2e2f8b7bf3f",
+        "request": {
+          "artifact": null,
+          "schema_version": "0.1",
+          "sha256": null
+        },
+        "source": {
+          "path": "tests/native/feasibility.mncs",
+          "sha256": "65f67b8317df2d723ce52bd492debedb8d3a27d24aa0c2f44f8ad5fa805a96c2",
+          "span": {
+            "column": 1,
+            "end": 2379,
+            "line": 25,
+            "start": 1987
+          }
+        },
+        "subject_identity": "mncs:0.2:program:mncs.models.feasibility_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference::6d16f4dea70a2f017105a3aac51d5b84f502ccf697791977e9fe7d56f125d403"
+      },
+      "id": "mncs:0.2:test-case:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference::6d16f4dea70a2f017105a3aac51d5b84f502ccf697791977e9fe7d56f125d403",
+      "kind": "unit",
+      "native_result": {
+        "actual": 1,
+        "assertion_code": 502,
+        "assertions": 1,
+        "authority": "native_suite",
+        "expected": 1,
+        "failure_code": 0,
+        "failure_kind": "nofailure",
+        "failure_kind_code": 0,
+        "failures": 0,
+        "verdict": "PASS",
+        "verdict_code": 0
+      },
+      "projection": {
+        "classification": "passed",
+        "failure_kind": "nofailure",
+        "status": "passed",
+        "verdict": "PASS"
+      },
+      "request": {
+        "arguments": [],
+        "callable_reference": {
+          "artifact_identity": "mncs:compiler:backend-artifact:339d974fd30a6fcb7436bb2caf318318a26b541c5f2808c975dd43be8a931dd4",
+          "callable_identity": "mncs:0.2:function:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference",
+          "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference",
+          "signature_identity": "sha256:0705d47b38013e289fd2cd0c327e6842c77658ca9ad1113e37cd32b5a8d9ad36",
+          "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference::6d16f4dea70a2f017105a3aac51d5b84f502ccf697791977e9fe7d56f125d403"
+        },
+        "schema_version": "0.1",
+        "step_budget": 3000000,
+        "target": {
+          "function": "unsupported_new_control_flow_abstains_before_inference",
+          "module": "mncs.models.feasibility_tests"
+        }
+      },
+      "semantic": {
+        "declaration_identity": "mncs:0.2:test:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference",
+        "function_identity": "mncs:0.2:function:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference",
+        "module": "mncs.models.feasibility_tests",
+        "profile": "0.18",
+        "qualified_name": "mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference",
+        "semantic_fingerprint": "6d16f4dea70a2f017105a3aac51d5b84f502ccf697791977e9fe7d56f125d403",
+        "signature_identity": "sha256:0705d47b38013e289fd2cd0c327e6842c77658ca9ad1113e37cd32b5a8d9ad36",
+        "subject_fingerprint": "e936391e3c873d94122abd9d45159c8ac848deea0d850f1b0aef4f56f1a30fe2",
+        "subject_identity": "mncs:0.2:program:mncs.models.feasibility_tests",
+        "test_case_identity": "mncs:0.2:test-case:mncs.models.feasibility_tests::unsupported_new_control_flow_abstains_before_inference::6d16f4dea70a2f017105a3aac51d5b84f502ccf697791977e9fe7d56f125d403"
+      },
+      "source": "tests/native/feasibility.mncs",
+      "source_span": {
+        "column": 1,
+        "end": 2379,
+        "line": 25,
+        "start": 1987
+      },
+      "status": "passed",
+      "verdict": "PASS"
+    }
+  ],
+  "verdict": "PASS"
+}

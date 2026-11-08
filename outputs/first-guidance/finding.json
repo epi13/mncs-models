@@ -1,0 +1,856 @@
+{
+  "schema": "mncs.models.first-guidance-feasibility/1",
+  "classification": "executed controlled-source feasibility; exploratory, not sealed or natural operational utility",
+  "model": {
+    "identity": 9301,
+    "topology": {
+      "inputs": 4,
+      "hidden": 0,
+      "outputs": 1,
+      "relu": false
+    },
+    "parameter_count": 5,
+    "initial": [
+      3,
+      0,
+      0,
+      1,
+      0
+    ],
+    "revised": [
+      3,
+      2,
+      -3,
+      1,
+      0
+    ],
+    "revisions": [
+      {
+        "revision": 1,
+        "parent": 0,
+        "provenance": 9401
+      },
+      {
+        "revision": 2,
+        "parent": 1,
+        "provenance": 9402,
+        "edit": {
+          "index": 1,
+          "value": 2
+        }
+      },
+      {
+        "revision": 3,
+        "parent": 2,
+        "provenance": 9403,
+        "edit": {
+          "index": 2,
+          "value": -3
+        }
+      }
+    ],
+    "edits_after_final_outcomes": 0,
+    "scores_are_probabilities": false,
+    "minimality": "Five declared parameters, not a proven minimum; activation is also a deterministic gate and the shared bias is rank-invariant."
+  },
+  "groups": [
+    {
+      "id": "s07",
+      "verdicts": [
+        "FAIL",
+        "PASS",
+        "PASS"
+      ],
+      "test_identities": [
+        "mncs:0.2:test-case:study.evaluation_tests::s07_t0::22601dbb9f1902256b30484279473ef1b0a06e7cfe7855012444bce169ac02e8",
+        "mncs:0.2:test-case:study.evaluation_tests::s07_t1::7a020e757786ea5d0a9cfe667f465b149286eb2341d31d0d97cbdf8b04b95147",
+        "mncs:0.2:test-case:study.evaluation_tests::s07_t2::cdac37ae3de5b2779fade5c0d8e40fec0001a136dc3865c6cfb5c8643a5a934d"
+      ],
+      "native_execution_identities": [
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:541341d01358d23f15a328bfecb688ad6d2a20577c60c4359cc4a9c18051ecff",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:001c19495f04c3ad16ad2b077ca974e3bc21393a528988422990d2280cd9672d",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:bd6c34077b7bbbee7f5b10044133edec1a7d73730fac646d4ca761311b204239"
+      ],
+      "costs": [
+        42,
+        41,
+        41
+      ],
+      "prediction": {
+        "cost": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 0,
+          "path": 2,
+          "reason": 7,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "history": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "informed": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 1,
+          "path": 1,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "initial": {
+          "invocations": 3,
+          "model_identity": 9301,
+          "multiplies": 12,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 1,
+          "scored": [
+            true,
+            true,
+            true
+          ],
+          "scores": [
+            5,
+            6,
+            4
+          ]
+        },
+        "revised": {
+          "invocations": 3,
+          "model_identity": 9301,
+          "multiplies": 12,
+          "operation": 1,
+          "path": 1,
+          "reason": 0,
+          "revision": 3,
+          "scored": [
+            true,
+            true,
+            true
+          ],
+          "scores": [
+            7,
+            5,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "id": "s08",
+      "verdicts": [
+        "PASS",
+        "FAIL",
+        "PASS"
+      ],
+      "test_identities": [
+        "mncs:0.2:test-case:study.evaluation_tests::s08_t0::80ddd6839d80f9268b9a2f90e9e4786239f9a64ea0d749a6f8cd5b3fc501faa0",
+        "mncs:0.2:test-case:study.evaluation_tests::s08_t1::95c9b3b75c9479a464004a2a21ef71802d0358926c94a7bdeb831c9c1fe746d2",
+        "mncs:0.2:test-case:study.evaluation_tests::s08_t2::5ae9a128aab36494852e2ac4e7dbfbbf49582748f041b5e39ff09aa4a6074982"
+      ],
+      "native_execution_identities": [
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:4b9f69f741432e94b7af61231346d41b17dbc96e4614cb2e49b13e30bbc2465f",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:ebc0754b14ccd8d5039dae1e210462fd2225d28adf823aa869a6161da965bb75",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:6f70da1d944f121a161cce46b2c7cd5cd8d3c711c5e73b32e119f020c9fc696b"
+      ],
+      "costs": [
+        39,
+        40,
+        39
+      ],
+      "prediction": {
+        "cost": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 0,
+          "path": 2,
+          "reason": 7,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "history": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "informed": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "initial": {
+          "invocations": 2,
+          "model_identity": 9301,
+          "multiplies": 8,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 1,
+          "scored": [
+            false,
+            true,
+            true
+          ],
+          "scores": [
+            0,
+            6,
+            4
+          ]
+        },
+        "revised": {
+          "invocations": 2,
+          "model_identity": 9301,
+          "multiplies": 8,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 3,
+          "scored": [
+            false,
+            true,
+            true
+          ],
+          "scores": [
+            0,
+            8,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "id": "s09",
+      "verdicts": [
+        "PASS",
+        "PASS",
+        "FAIL"
+      ],
+      "test_identities": [
+        "mncs:0.2:test-case:study.evaluation_tests::s09_t0::cde21aabfdc94154985744931089f755922ae9a604edbd626cf3b249bf6ae789",
+        "mncs:0.2:test-case:study.evaluation_tests::s09_t1::67719443d93218e9486adadf750c3a0a9d425122b1cfc4cc1a0758b5cd400bd8",
+        "mncs:0.2:test-case:study.evaluation_tests::s09_t2::72d8f0e858a50d0d8c53ac804dfd8ad4134a825aa85c332b3a69e2c1fe78f2f0"
+      ],
+      "native_execution_identities": [
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:6ca6f09ba8c36c5727271a32c61b24336e1af76f15c4e83410446a94c8baf79a",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:c5a909f52c3282a2db575fd62657d8fc7e5e22426cebdd32c65ce4f850fbb854",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:fddb31d0f01f9ec1c6ced3ee4e18aa56c9ea5402f33bbbf50fb6740d1b991ac5"
+      ],
+      "costs": [
+        39,
+        39,
+        40
+      ],
+      "prediction": {
+        "cost": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 3,
+          "path": 0,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "history": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 3,
+          "path": 0,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "informed": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 3,
+          "path": 0,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "initial": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 3,
+          "path": 0,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "revised": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 3,
+          "path": 0,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "s10",
+      "verdicts": [
+        "FAIL",
+        "PASS",
+        "PASS"
+      ],
+      "test_identities": [
+        "mncs:0.2:test-case:study.evaluation_tests::s10_t0::0b2b7730ef74ac3212648088b80015b802695e59db4e72d275fa86ebb70850e0",
+        "mncs:0.2:test-case:study.evaluation_tests::s10_t1::8e9b4153818d4d1075037e48134196591b4d54dee85e932dbbe7f1bad668668f",
+        "mncs:0.2:test-case:study.evaluation_tests::s10_t2::84b57d11fba3775fe043dd853fbf7c71a4e9cd9b903aef7e85af6aacb60908c4"
+      ],
+      "native_execution_identities": [
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:660b102422f465471f5ef2945855f8d3b8ddaabaf4c33a09263e5eda33997735",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:c0a549841f18d9d1805c5a8ad6463cbce2193e3713b0f11c103a5182ba9d6af1",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:1f68a7856c0bacc7a116bf6e1aef0144ed6af78f8e1287120531491b3bc64aa7"
+      ],
+      "costs": [
+        40,
+        39,
+        39
+      ],
+      "prediction": {
+        "cost": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 0,
+          "path": 2,
+          "reason": 7,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "history": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "informed": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "initial": {
+          "invocations": 3,
+          "model_identity": 9301,
+          "multiplies": 12,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 1,
+          "scored": [
+            true,
+            true,
+            true
+          ],
+          "scores": [
+            5,
+            6,
+            4
+          ]
+        },
+        "revised": {
+          "invocations": 3,
+          "model_identity": 9301,
+          "multiplies": 12,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 3,
+          "scored": [
+            true,
+            true,
+            true
+          ],
+          "scores": [
+            5,
+            8,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "s11",
+      "verdicts": [
+        "PASS",
+        "PASS",
+        "FAIL"
+      ],
+      "test_identities": [
+        "mncs:0.2:test-case:study.evaluation_tests::s11_t0::9a5bb48da0495f295969896421759f9282c96a20d4f3b9fcd692d58ba4295d00",
+        "mncs:0.2:test-case:study.evaluation_tests::s11_t1::5e84eaaa31379b2f64d842a778cb7daaef8726fc002fb2cf100c9600b763bd36",
+        "mncs:0.2:test-case:study.evaluation_tests::s11_t2::8cccde0afcee4e1b4d17caa996dc00a963812cfcdf71b57b55caaafc4f0ce1c2"
+      ],
+      "native_execution_identities": [
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:7d3457748464ae0b4c63592a17ad0947f38df640e491d80efa45a6686d313ed7",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:6ebaa3069f9a8a5a418a65d4107a334ff395b0c599e7e55ceb45d65ba96d74cb",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:185eb125a175a81ff6042e480adceeca217cc2c633e9e7ba8baac5b225ea5bb0"
+      ],
+      "costs": [
+        45,
+        45,
+        46
+      ],
+      "prediction": {
+        "cost": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 0,
+          "path": 2,
+          "reason": 7,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "history": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "informed": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 0,
+          "path": 2,
+          "reason": 2,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "initial": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 0,
+          "path": 2,
+          "reason": 2,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "revised": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 0,
+          "path": 2,
+          "reason": 2,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "s12",
+      "verdicts": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ],
+      "test_identities": [
+        "mncs:0.2:test-case:study.evaluation_tests::s12_t0::73611f96e2077fd3b9ea52f0eae9536d839ce0b7f34b66981e9048acca5107d0",
+        "mncs:0.2:test-case:study.evaluation_tests::s12_t1::9ed10ee5fef77783db346c23a5597fb33e4b5ebc5cf984a95d6df93ebdb6f14f",
+        "mncs:0.2:test-case:study.evaluation_tests::s12_t2::5564525eca0ec052176b06534f379ee4c7551dc331b83fc6d518d19afa7396d7"
+      ],
+      "native_execution_identities": [
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:31a2b44eaf567382669777896f9a30fb8121794e146752617dbd2cb22c9460b1",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:712bfe0b400dd9128cf15bb1bf70baedb52fe22d3eced5d8e5ba9b3a3479622f",
+        "mncs:language:experiment-run:85f8bde25831e521e6e4ed1a799e00f6d0192092b1212e44f4587c9a5992baa1:execution:671584858818cff3895739de97ef1c0268db6d64428d0a7a59706285cd956892"
+      ],
+      "costs": [
+        39,
+        39,
+        39
+      ],
+      "prediction": {
+        "cost": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 0,
+          "path": 2,
+          "reason": 7,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "history": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "informed": {
+          "invocations": 0,
+          "model_identity": 0,
+          "multiplies": 0,
+          "operation": 3,
+          "path": 1,
+          "reason": 0,
+          "revision": 0,
+          "scored": [
+            false,
+            false,
+            false
+          ],
+          "scores": [
+            0,
+            0,
+            0
+          ]
+        },
+        "initial": {
+          "invocations": 3,
+          "model_identity": 9301,
+          "multiplies": 12,
+          "operation": 2,
+          "path": 1,
+          "reason": 0,
+          "revision": 1,
+          "scored": [
+            true,
+            true,
+            true
+          ],
+          "scores": [
+            5,
+            6,
+            4
+          ]
+        },
+        "revised": {
+          "invocations": 3,
+          "model_identity": 9301,
+          "multiplies": 12,
+          "operation": 0,
+          "path": 2,
+          "reason": 7,
+          "revision": 3,
+          "scored": [
+            true,
+            true,
+            true
+          ],
+          "scores": [
+            5,
+            6,
+            6
+          ]
+        }
+      }
+    }
+  ],
+  "native_metric_aggregation": {
+    "cost": {
+      "total_groups": 6,
+      "failure_bearing_groups": 5,
+      "first_failure_hits": 1,
+      "suggestions": 0,
+      "deterministic_bypasses": 1,
+      "abstentions": 5,
+      "native_inferences": 0,
+      "multiplies": 0
+    },
+    "history": {
+      "total_groups": 6,
+      "failure_bearing_groups": 5,
+      "first_failure_hits": 2,
+      "suggestions": 5,
+      "deterministic_bypasses": 1,
+      "abstentions": 0,
+      "native_inferences": 0,
+      "multiplies": 0
+    },
+    "informed": {
+      "total_groups": 6,
+      "failure_bearing_groups": 5,
+      "first_failure_hits": 3,
+      "suggestions": 4,
+      "deterministic_bypasses": 1,
+      "abstentions": 1,
+      "native_inferences": 0,
+      "multiplies": 0
+    },
+    "initial": {
+      "total_groups": 6,
+      "failure_bearing_groups": 5,
+      "first_failure_hits": 2,
+      "suggestions": 4,
+      "deterministic_bypasses": 1,
+      "abstentions": 1,
+      "native_inferences": 11,
+      "multiplies": 44
+    },
+    "revised": {
+      "total_groups": 6,
+      "failure_bearing_groups": 5,
+      "first_failure_hits": 3,
+      "suggestions": 3,
+      "deterministic_bypasses": 1,
+      "abstentions": 2,
+      "native_inferences": 11,
+      "multiplies": 44
+    }
+  },
+  "source_groups": {
+    "development": 6,
+    "evaluation": 6,
+    "probes_per_group": 3,
+    "implementation": "Separate pure native modules compiled together; not independent operational commits or agent sessions"
+  },
+  "claim_boundary": {
+    "native_execution": true,
+    "bounded_controlled_feasibility": true,
+    "beats_informed_deterministic_rule": false,
+    "natural_operational_usefulness": null,
+    "causal_agent_burden_reduction": null,
+    "mandatory_executions_saved": 0,
+    "governed_model_promotion": false
+  },
+  "cost_conclusion": "Single safe inference costs 524 VM steps; each complete three-test state costs 117..136 body VM steps. VM counts are not CLI wall time. Both guarded selectors exceed probe body cost.",
+  "authoring_cost": {
+    "tokens": null,
+    "isolated_reasoning_ms": null,
+    "reason": "No isolated authoring counter; cumulative campaign accounting is separate"
+  },
+  "verification": {
+    "preserved": 86,
+    "new_guards": 5,
+    "total_passed": 91
+  }
+}

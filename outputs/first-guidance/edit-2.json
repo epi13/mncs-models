@@ -1,0 +1,212 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:1552fcccc8728e562641d9a53a616d5fa5e7403afc2d86445e3e385df456ae7c",
+    "artifact_sha256": "10f3e39d5009dacc7d1ca700a02755cc5a7ac1b0be94a8afa9553da8735f35e9",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "record": {
+          "fields": [
+            [
+              "accepted",
+              {
+                "boolean": {
+                  "value": true
+                }
+              }
+            ],
+            [
+              "model",
+              {
+                "record": {
+                  "fields": [
+                    [
+                      "identity",
+                      {
+                        "integer": {
+                          "type": {
+                            "bits": 64,
+                            "signed": false
+                          },
+                          "value": 9301
+                        }
+                      }
+                    ],
+                    [
+                      "parameters",
+                      {
+                        "record": {
+                          "fields": [
+                            [
+                              "parent",
+                              {
+                                "integer": {
+                                  "type": {
+                                    "bits": 64,
+                                    "signed": false
+                                  },
+                                  "value": 1
+                                }
+                              }
+                            ],
+                            [
+                              "provenance",
+                              {
+                                "integer": {
+                                  "type": {
+                                    "bits": 64,
+                                    "signed": false
+                                  },
+                                  "value": 9402
+                                }
+                              }
+                            ],
+                            [
+                              "revision",
+                              {
+                                "integer": {
+                                  "type": {
+                                    "bits": 64,
+                                    "signed": false
+                                  },
+                                  "value": 2
+                                }
+                              }
+                            ],
+                            [
+                              "values",
+                              {
+                                "sequence": {
+                                  "values": [
+                                    {
+                                      "integer": {
+                                        "type": {
+                                          "bits": 64,
+                                          "signed": true
+                                        },
+                                        "value": 3
+                                      }
+                                    },
+                                    {
+                                      "integer": {
+                                        "type": {
+                                          "bits": 64,
+                                          "signed": true
+                                        },
+                                        "value": 2
+                                      }
+                                    },
+                                    {
+                                      "integer": {
+                                        "type": {
+                                          "bits": 64,
+                                          "signed": true
+                                        },
+                                        "value": 0
+                                      }
+                                    },
+                                    {
+                                      "integer": {
+                                        "type": {
+                                          "bits": 64,
+                                          "signed": true
+                                        },
+                                        "value": 1
+                                      }
+                                    },
+                                    {
+                                      "integer": {
+                                        "type": {
+                                          "bits": 64,
+                                          "signed": true
+                                        },
+                                        "value": 0
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          ],
+                          "name": "Parameters",
+                          "type_identity": "mncs:0.2:record-type:mncs.models.micro::Parameters::parent%3Au64%3Bprovenance%3Au64%3Brevision%3Au64%3Bvalues%3A%5Bi64%3B%20up_to%20100%5D%3B"
+                        }
+                      }
+                    ],
+                    [
+                      "topology",
+                      {
+                        "record": {
+                          "fields": [
+                            [
+                              "hidden",
+                              {
+                                "integer": {
+                                  "type": {
+                                    "bits": 64,
+                                    "signed": false
+                                  },
+                                  "value": 0
+                                }
+                              }
+                            ],
+                            [
+                              "inputs",
+                              {
+                                "integer": {
+                                  "type": {
+                                    "bits": 64,
+                                    "signed": false
+                                  },
+                                  "value": 4
+                                }
+                              }
+                            ],
+                            [
+                              "outputs",
+                              {
+                                "integer": {
+                                  "type": {
+                                    "bits": 64,
+                                    "signed": false
+                                  },
+                                  "value": 1
+                                }
+                              }
+                            ],
+                            [
+                              "relu",
+                              {
+                                "boolean": {
+                                  "value": false
+                                }
+                              }
+                            ]
+                          ],
+                          "name": "Topology",
+                          "type_identity": "mncs:0.2:record-type:mncs.models.micro::Topology::hidden%3Au64%3Binputs%3Au64%3Boutputs%3Au64%3Brelu%3Abool%3B"
+                        }
+                      }
+                    ]
+                  ],
+                  "name": "Model",
+                  "type_identity": "mncs:0.2:record-type:mncs.models.micro::Model::identity%3Au64%3Bparameters%3AParameters%3Btopology%3ATopology%3B"
+                }
+              }
+            ]
+          ],
+          "name": "Edit",
+          "type_identity": "mncs:0.2:record-type:mncs.models.micro::Edit::accepted%3Abool%3Bmodel%3AModel%3B"
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 546
+  },
+  "canonical_arguments_sha256": "ab318bbe63494455492602d836211c5122069d3836ce544185e4df678fc4d598",
+  "function": "edit",
+  "module": "mncs.models.micro",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

@@ -145,3 +145,9 @@ can now evaluate an initial choice or abstention against actually observed
 alternatives. Its [eligibility study](TEST_PRIORITY_EVIDENCE.md) preserves the
 absence of a defensible learned trial. The original deterministic selection and
 actual-operation outcome contracts remain unchanged.
+
+The [executed first-guidance feasibility study](FIRST_GUIDANCE_FEASIBILITY.md)
+uses the canonical Model as a five-parameter candidate scorer beside deterministic
+source/context projections and complete native Test outcomes. It matches the
+informed rule on this controlled sample and loses on native VM cost. The fixed
+experimental adapter is not a general operational selection API or a live consumer.

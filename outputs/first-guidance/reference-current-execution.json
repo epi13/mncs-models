@@ -1,0 +1,25 @@
+{
+  "started_at": 1794104103029,
+  "finished_at": 1794104117714,
+  "wall_seconds": 14.68451467299019,
+  "exit_code": 0,
+  "command": [
+    "/home/epi13/Documents/Projects/mncs-language/target/debug/mncs",
+    "test",
+    "/home/epi13/Documents/Projects/mncs-models/.worktrees/learned-feasibility-20261108/experiments/first_guidance/reference_tests.mncs",
+    "--library",
+    "src",
+    "--library",
+    "experiments/first_guidance",
+    "--library",
+    "/home/epi13/Documents/Projects/mncs-test/native",
+    "--library",
+    "/home/epi13/Documents/Projects/mncs-language/library",
+    "--step-budget",
+    "3000000",
+    "--format",
+    "text",
+    "--result",
+    "/home/epi13/Documents/Projects/mncs-models/.worktrees/learned-feasibility-20261108/outputs/first-guidance/reference-current.json"
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:8cab980197def1d91d45459118acf9cfbad47353a279d563dafa3721900e6ebd",
+    "artifact_sha256": "cb643b371d13743e2e5b3567f5a8f8c8a94264ced136bbefb9047f6ceb1b8d55",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "record": {
+          "fields": [
+            [
+              "invocations",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 3
+                }
+              }
+            ],
+            [
+              "model_identity",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 9301
+                }
+              }
+            ],
+            [
+              "multiplies",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 12
+                }
+              }
+            ],
+            [
+              "operation",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1
+                }
+              }
+            ],
+            [
+              "path",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1
+                }
+              }
+            ],
+            [
+              "reason",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ],
+            [
+              "revision",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 3
+                }
+              }
+            ],
+            [
+              "scored",
+              {
+                "sequence": {
+                  "values": [
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    },
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    },
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            [
+              "scores",
+              {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 7
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 5
+                      }
+                    },
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 3
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          ],
+          "name": "Policy",
+          "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 4511
+  },
+  "canonical_arguments_sha256": "d4a4ee28d2cc3854b339f58cfb527e622c8acca1d0a23e92e493ebfdae9954df",
+  "function": "learned",
+  "module": "study.guidance",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

@@ -1,4 +1,10 @@
-# Direct-weight engineering: executable boundary, trial not yet conducted
+# Direct-weight engineering: native mechanism and executed feasibility
+
+The first [executed five-parameter feasibility study](FIRST_GUIDANCE_FEASIBILITY.md)
+now records actual LLM-authored weights, native edits, variable Test outcomes and a
+negative comparison with an informed rule. It is exploratory, with no sealed
+held-out or operational-savings claim. Historical phase findings below remain
+preserved; their missing-custody finding does not prohibit exploratory execution.
 
 An agent can supply numerical weights, invoke native inference, use native edit,
 inspect outputs and compare revisions without changing inference implementation.
@@ -71,7 +77,7 @@ runtime or the only permitted parameter budget.
    separately. A one-weight edit is not inherently cheaper than an equivalent
    standalone-network edit. Do not derive causal operational savings from replay.
 
-## Current readiness
+## Prior campaign readiness
 
 A real labeled residual cohort and independently controlled held-out custody are
 missing in the inspected sources. This author already knows the old synthetic

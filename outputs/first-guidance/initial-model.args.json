@@ -1,0 +1,91 @@
+[
+  {
+    "record": {
+      "fields": {
+        "identity": {
+          "integer": {
+            "value": 9301
+          }
+        },
+        "topology": {
+          "record": {
+            "fields": {
+              "inputs": {
+                "integer": {
+                  "value": 4
+                }
+              },
+              "hidden": {
+                "integer": {
+                  "value": 0
+                }
+              },
+              "outputs": {
+                "integer": {
+                  "value": 1
+                }
+              },
+              "relu": {
+                "boolean": {
+                  "value": false
+                }
+              }
+            }
+          }
+        },
+        "parameters": {
+          "record": {
+            "fields": {
+              "values": {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "value": 3
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              },
+              "revision": {
+                "integer": {
+                  "value": 1
+                }
+              },
+              "parent": {
+                "integer": {
+                  "value": 0
+                }
+              },
+              "provenance": {
+                "integer": {
+                  "value": 9401
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

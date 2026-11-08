@@ -1,0 +1,170 @@
+[
+  {
+    "sequence": {
+      "values": [
+        {
+          "finite": {
+            "variant": "Net"
+          }
+        },
+        {
+          "finite": {
+            "variant": "Surcharge"
+          }
+        },
+        {
+          "finite": {
+            "variant": "CapBody"
+          }
+        },
+        {
+          "finite": {
+            "variant": "FloorCondition"
+          }
+        },
+        {
+          "finite": {
+            "variant": "NewBranch"
+          }
+        },
+        {
+          "finite": {
+            "variant": "CapCondition"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "sequence": {
+      "values": [
+        {
+          "sequence": {
+            "values": [
+              {
+                "integer": {
+                  "value": 2
+                }
+              },
+              {
+                "integer": {
+                  "value": 3
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sequence": {
+            "values": [
+              {
+                "integer": {
+                  "value": 2
+                }
+              },
+              {
+                "integer": {
+                  "value": 3
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sequence": {
+            "values": [
+              {
+                "integer": {
+                  "value": 2
+                }
+              },
+              {
+                "integer": {
+                  "value": 3
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sequence": {
+            "values": [
+              {
+                "integer": {
+                  "value": 2
+                }
+              },
+              {
+                "integer": {
+                  "value": 3
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sequence": {
+            "values": [
+              {
+                "integer": {
+                  "value": 2
+                }
+              },
+              {
+                "integer": {
+                  "value": 3
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sequence": {
+            "values": [
+              {
+                "integer": {
+                  "value": 2
+                }
+              },
+              {
+                "integer": {
+                  "value": 3
+                }
+              },
+              {
+                "integer": {
+                  "value": 1
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

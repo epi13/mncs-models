@@ -1,5 +1,9 @@
 # Test-prioritization evidence after deterministic remediation
 
+The subsequent [controlled-source feasibility study](FIRST_GUIDANCE_FEASIBILITY.md)
+executes a model with real assertion variation. It does not change this historical
+all-pass cohort or its negative eligibility finding.
+
 This campaign investigates earliest independently verified **test failure** among
 already permitted tests. It does not turn a failing process into a diagnosis,
 assume the historical first action was optimal, or remove required coverage.

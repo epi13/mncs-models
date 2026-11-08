@@ -1,0 +1,107 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:32962de298f78e4efe49e9e7ee6a6715d9add405f37959acc0397a6e52f5bb11",
+    "artifact_sha256": "a5fdff87ce4d965f9d6bc662fdbf4eb7d25a9a2bf318b40d312de7b4d9748b3f",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "record": {
+          "fields": [
+            [
+              "activity_reference",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ],
+            [
+              "adequacy_reference",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ],
+            [
+              "category",
+              {
+                "finite": {
+                  "discriminant": 5,
+                  "type_identity": "mncs:0.2:finite-type:mncs.models.demand::DemandClass",
+                  "variant_identity": "mncs:0.2:finite-variant:mncs.models.demand::DemandClass::Insufficient"
+                }
+              }
+            ],
+            [
+              "event",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1
+                }
+              }
+            ],
+            [
+              "reason",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1
+                }
+              }
+            ],
+            [
+              "review_reference",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ],
+            [
+              "support_reference",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ]
+          ],
+          "name": "DemandClassification",
+          "type_identity": "mncs:0.2:record-type:mncs.models.demand::DemandClassification::activity_reference%3Au64%3Badequacy_reference%3Au64%3Bcategory%3ADemandClass%3Bevent%3Au64%3Breason%3Au64%3Breview_reference%3Au64%3Bsupport_reference%3Au64%3B"
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 152
+  },
+  "canonical_arguments_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "function": "partial_workflow",
+  "module": "mncs.models.guidance_tests",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

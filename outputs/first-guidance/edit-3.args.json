@@ -1,0 +1,111 @@
+[
+  {
+    "record": {
+      "fields": {
+        "identity": {
+          "integer": {
+            "value": 9301
+          }
+        },
+        "parameters": {
+          "record": {
+            "fields": {
+              "parent": {
+                "integer": {
+                  "value": 1
+                }
+              },
+              "provenance": {
+                "integer": {
+                  "value": 9402
+                }
+              },
+              "revision": {
+                "integer": {
+                  "value": 2
+                }
+              },
+              "values": {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "value": 3
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 2
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "topology": {
+          "record": {
+            "fields": {
+              "hidden": {
+                "integer": {
+                  "value": 0
+                }
+              },
+              "inputs": {
+                "integer": {
+                  "value": 4
+                }
+              },
+              "outputs": {
+                "integer": {
+                  "value": 1
+                }
+              },
+              "relu": {
+                "boolean": {
+                  "value": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "integer": {
+      "value": 2
+    }
+  },
+  {
+    "integer": {
+      "value": -3
+    }
+  },
+  {
+    "integer": {
+      "value": 3
+    }
+  },
+  {
+    "integer": {
+      "value": 9403
+    }
+  }
+]

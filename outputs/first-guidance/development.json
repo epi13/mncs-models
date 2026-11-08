@@ -1,0 +1,295 @@
+{
+  "groups": [
+    {
+      "id": "s01",
+      "features": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "history_before": [
+        0,
+        0,
+        0
+      ],
+      "verdicts": [
+        "FAIL",
+        "PASS",
+        "PASS"
+      ],
+      "native_ids": [
+        "mncs:0.2:test-case:study.development_tests::s01_t0::22a744dca5314d7479a04238f63e8be117fe426f145b4dc0ce3499d4052b7a13",
+        "mncs:0.2:test-case:study.development_tests::s01_t1::c1a4cb314517fef243b23ed75b231c33858d3c6d3c762378e532b845a6cf7227",
+        "mncs:0.2:test-case:study.development_tests::s01_t2::c7bd1b9d082b459289b12b9aa75ae4751ed93221c015db9a37e2746bb8a8204d"
+      ],
+      "costs": [
+        42,
+        41,
+        41
+      ],
+      "result_sha256": "11fe4233c1aca83413fe3a19311e5536d07fd0ce668af09def50308f5b11ab24"
+    },
+    {
+      "id": "s02",
+      "features": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "history_before": [
+        1,
+        0,
+        0
+      ],
+      "verdicts": [
+        "PASS",
+        "FAIL",
+        "PASS"
+      ],
+      "native_ids": [
+        "mncs:0.2:test-case:study.development_tests::s02_t0::cf3cbf93fee547fa0f7d2661526af391e716404b9216a2fa785604a5482e7ca1",
+        "mncs:0.2:test-case:study.development_tests::s02_t1::5fa1b68213379621c3c0c3af95e611db5b8cab6199e8a435357e66411fcbe674",
+        "mncs:0.2:test-case:study.development_tests::s02_t2::8fd0bb6d4e950058822e25a8733e02821f2c3c93770127c636f8546c7da025a5"
+      ],
+      "costs": [
+        39,
+        40,
+        39
+      ],
+      "result_sha256": "b87034a641421daa172f7b4a4b4e6fd7e8f535f267efbb402f3cba8feb98c174"
+    },
+    {
+      "id": "s03",
+      "features": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "history_before": [
+        1,
+        1,
+        0
+      ],
+      "verdicts": [
+        "PASS",
+        "PASS",
+        "FAIL"
+      ],
+      "native_ids": [
+        "mncs:0.2:test-case:study.development_tests::s03_t0::c9d9f995c2c483f1a794c3af490da0379beb199c95bda989c27c2674deaf0cbd",
+        "mncs:0.2:test-case:study.development_tests::s03_t1::d68b792187bfa55ada9568c28843d070af3dca0d5592c3f44aacb98831e5b1cc",
+        "mncs:0.2:test-case:study.development_tests::s03_t2::49f746e02a4209ee2f5c717825cdf71cef8a343e3b52fb82e2059b9b855f961f"
+      ],
+      "costs": [
+        39,
+        39,
+        40
+      ],
+      "result_sha256": "e0b3f516745c38b917bcf7dd06e26e1df8360c1f19fa4a5f9ffd69b367435b4d"
+    },
+    {
+      "id": "s04",
+      "features": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "history_before": [
+        1,
+        1,
+        1
+      ],
+      "verdicts": [
+        "FAIL",
+        "FAIL",
+        "PASS"
+      ],
+      "native_ids": [
+        "mncs:0.2:test-case:study.development_tests::s04_t0::34c646679daf78595d7e989cc201468f432eeb33569a88eb82c604dab0769c85",
+        "mncs:0.2:test-case:study.development_tests::s04_t1::fd599e2f1b59f744bb624a3f277377479fee92a413d86d3e50e75b2ac77e5574",
+        "mncs:0.2:test-case:study.development_tests::s04_t2::a4a78ff51840f4ca6b99e9e72bbbd224882406df0a7dce7e31c957fc8902cd7e"
+      ],
+      "costs": [
+        41,
+        41,
+        40
+      ],
+      "result_sha256": "4c74e317f402503ae706dca252c68ae53174e692e08f204d91019378925a64e0"
+    },
+    {
+      "id": "s05",
+      "features": [
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "history_before": [
+        2,
+        2,
+        1
+      ],
+      "verdicts": [
+        "PASS",
+        "FAIL",
+        "PASS"
+      ],
+      "native_ids": [
+        "mncs:0.2:test-case:study.development_tests::s05_t0::ec129db67c8b29073e3dc61da974c4b61c8e4ed77d18f7a783d650488aa2cb09",
+        "mncs:0.2:test-case:study.development_tests::s05_t1::00069e9b9d52770b4ef345f60fa2ac2274db1122e9599f96afeaa6f9b42f2f23",
+        "mncs:0.2:test-case:study.development_tests::s05_t2::baa3eeb5e55b6b2b4fb5ae2c0c0e7d33e14927d905262081cb461cfa8f93bf2f"
+      ],
+      "costs": [
+        39,
+        40,
+        39
+      ],
+      "result_sha256": "fdef916b70ec7943b6df9ad05899a2b62f2803b4e3e49abd4e81a42c09850d93"
+    },
+    {
+      "id": "s06",
+      "features": [
+        [
+          1,
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "history_before": [
+        2,
+        3,
+        1
+      ],
+      "verdicts": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ],
+      "native_ids": [
+        "mncs:0.2:test-case:study.development_tests::s06_t0::f282ae8bce77222af35ce5b1f314a4ae596ce912e15dfaa00decc6f910c8e86b",
+        "mncs:0.2:test-case:study.development_tests::s06_t1::f750319bded6b7876d6ba42d3e79918c219db36e04ebc563cdbc2f57bb5d1c8a",
+        "mncs:0.2:test-case:study.development_tests::s06_t2::45e8ec178494a7ca47f106d52cb6923b5053591946eb43c1b9c98fc64a4189e4"
+      ],
+      "costs": [
+        41,
+        41,
+        41
+      ],
+      "result_sha256": "756fe24fede791b9313a9086683daf053851930708c9d8829deab2218cfb67f2"
+    }
+  ],
+  "history_after": [
+    2,
+    3,
+    1
+  ],
+  "reference_traces": [
+    {
+      "cap_taken": false,
+      "floor_taken": false,
+      "net": 6,
+      "urgent_taken": false
+    },
+    {
+      "cap_taken": false,
+      "floor_taken": true,
+      "net": -3,
+      "urgent_taken": true
+    },
+    {
+      "cap_taken": true,
+      "floor_taken": false,
+      "net": 13,
+      "urgent_taken": true
+    }
+  ],
+  "chronology_limit": "First two pilot features are retrospective development reconstruction from the immutable clean reference; they are not historical decision-time captures. Subsequent/final feature snapshots precede their target executions.",
+  "observed_at": 1794103256149
+}

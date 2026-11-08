@@ -1,0 +1,4721 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:810136f3c77e6034f46d222a79c113bd0f5e23c1882ede074aec85c2dc679a02",
+    "artifact_sha256": "236b9713e54427fb9dca95dc6c88b79d4d3b85e1e91851754d9b218aa87136fa",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "sequence": {
+          "values": [
+            {
+              "record": {
+                "fields": [
+                  [
+                    "cost",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "history",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "informed",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "initial",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 9301
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 12
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 3
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 3
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 3
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "revised",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 9301
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 12
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 5
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 2
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 2
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ]
+                ],
+                "name": "Predictions",
+                "type_identity": "mncs:0.2:record-type:study.guidance::Predictions::cost%3APolicy%3Bhistory%3APolicy%3Binformed%3APolicy%3Binitial%3APolicy%3Brevised%3APolicy%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "cost",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "history",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "informed",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "initial",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 9301
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 8
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 3
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 3
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "revised",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 9301
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 8
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 5
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 2
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ]
+                ],
+                "name": "Predictions",
+                "type_identity": "mncs:0.2:record-type:study.guidance::Predictions::cost%3APolicy%3Bhistory%3APolicy%3Binformed%3APolicy%3Binitial%3APolicy%3Brevised%3APolicy%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "cost",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "history",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "informed",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "initial",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 9301
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 12
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 4
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 4
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 3
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "revised",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 9301
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 12
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 4
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 4
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 5
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ]
+                ],
+                "name": "Predictions",
+                "type_identity": "mncs:0.2:record-type:study.guidance::Predictions::cost%3APolicy%3Bhistory%3APolicy%3Binformed%3APolicy%3Binitial%3APolicy%3Brevised%3APolicy%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "cost",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "history",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "informed",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "initial",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 9301
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 12
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 4
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 4
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "revised",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 9301
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 12
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 4
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 6
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 3
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ]
+                ],
+                "name": "Predictions",
+                "type_identity": "mncs:0.2:record-type:study.guidance::Predictions::cost%3APolicy%3Bhistory%3APolicy%3Binformed%3APolicy%3Binitial%3APolicy%3Brevised%3APolicy%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "cost",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "history",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "informed",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "initial",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "revised",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ]
+                ],
+                "name": "Predictions",
+                "type_identity": "mncs:0.2:record-type:study.guidance::Predictions::cost%3APolicy%3Bhistory%3APolicy%3Binformed%3APolicy%3Binitial%3APolicy%3Brevised%3APolicy%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "cost",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 7
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "history",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "informed",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": false
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 0
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "initial",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 9301
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 12
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 2
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 5
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 6
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ],
+                  [
+                    "revised",
+                    {
+                      "record": {
+                        "fields": [
+                          [
+                            "invocations",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "model_identity",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 9301
+                              }
+                            }
+                          ],
+                          [
+                            "multiplies",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 12
+                              }
+                            }
+                          ],
+                          [
+                            "operation",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "path",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 1
+                              }
+                            }
+                          ],
+                          [
+                            "reason",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 0
+                              }
+                            }
+                          ],
+                          [
+                            "revision",
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": false
+                                },
+                                "value": 3
+                              }
+                            }
+                          ],
+                          [
+                            "scored",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  },
+                                  {
+                                    "boolean": {
+                                      "value": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          [
+                            "scores",
+                            {
+                              "sequence": {
+                                "values": [
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 7
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 5
+                                    }
+                                  },
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": true
+                                      },
+                                      "value": 3
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        ],
+                        "name": "Policy",
+                        "type_identity": "mncs:0.2:record-type:study.guidance::Policy::invocations%3Au64%3Bmodel_identity%3Au64%3Bmultiplies%3Au64%3Boperation%3Au64%3Bpath%3Au64%3Breason%3Au64%3Brevision%3Au64%3Bscored%3A%5Bbool%3B%203%5D%3Bscores%3A%5Bi64%3B%203%5D%3B"
+                      }
+                    }
+                  ]
+                ],
+                "name": "Predictions",
+                "type_identity": "mncs:0.2:record-type:study.guidance::Predictions::cost%3APolicy%3Bhistory%3APolicy%3Binformed%3APolicy%3Binitial%3APolicy%3Brevised%3APolicy%3B"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 101334
+  },
+  "canonical_arguments_sha256": "15f0bc83a970423fbef377bb0983b3622f7b420719205f925e69e41acc6c50e4",
+  "function": "predict_six",
+  "module": "study.guidance",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

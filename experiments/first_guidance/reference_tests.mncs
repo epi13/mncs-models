@@ -1,0 +1,8 @@
+mncs 0.18;
+module study.reference_tests;
+use mncs.test.assertions;
+use mncs.test.suite;
+use study.reference as reference;
+test reference_t0() -> (result: TestResult) { return from_assertion(equals_i64(6, reference.quote(8, 2, false), 100)); }
+test reference_t1() -> (result: TestResult) { return from_assertion(equals_i64(3, reference.quote(2, 5, true), 101)); }
+test reference_t2() -> (result: TestResult) { return from_assertion(equals_i64(12, reference.quote(14, 1, true), 102)); }

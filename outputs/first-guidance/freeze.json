@@ -1,0 +1,68 @@
+{
+  "frozen_at": 1794103866361,
+  "source_sha256": {
+    "experiments/first_guidance/development_tests.mncs": "5f72280e0e6420a67ebecf68adb6e0b579583504e6e18abd5128edc846427bc0",
+    "experiments/first_guidance/evaluation_tests.mncs": "68144c2fa82c007c5fc2464f8c2ad0fcdb2d73266f487335e9a4c68eceb591c5",
+    "experiments/first_guidance/guidance.mncs": "3605e612603acb1da87ea5a48229de76791df66150fb5af7eae00af3eb26a007",
+    "experiments/first_guidance/reference.mncs": "de9e23c7233652f138ba400e9c50a8229b6fbb09c5c5664a47820d96253f01fb",
+    "experiments/first_guidance/reference_tests.mncs": "c32c5b4c2e5cd3841ed312f6d873cdcc7d8bbeaa7599ba11ebed7762a7d469ce",
+    "experiments/first_guidance/s01.mncs": "a3d8641faa25d4aa10f156c40e10107a26bdac5d862fa482b284ab42b5ea13ca",
+    "experiments/first_guidance/s02.mncs": "c0e6de87ba7b6d7b501fcfe951e58d021e6091c5f0d9afbd0cc7042f518098ad",
+    "experiments/first_guidance/s03.mncs": "f2a5cc898cff38ea7aab42765809665f707b9d51b18a801b86d54c539d1e1a3c",
+    "experiments/first_guidance/s04.mncs": "7bd3b0640d11c6175fabe8b89b946f645852492cb48faa980c52f9523db6ea2a",
+    "experiments/first_guidance/s05.mncs": "269687dc4daee481226bf282bed1fd84211d8025663ae9a724ce9d32edb2e004",
+    "experiments/first_guidance/s06.mncs": "b47764bd4a16774fd049839aa4f894db2cd1cad588cced9e21262417168d869b",
+    "experiments/first_guidance/s07.mncs": "e09daa8bfc259770c001d9538aa7df62cec89a22a000c534feb72abf38162126",
+    "experiments/first_guidance/s08.mncs": "4b5f66e89eafc70a1015bd4281b2b6e9630c27617a172886767347e7973c018d",
+    "experiments/first_guidance/s09.mncs": "8f59b0d421691568f779e0314df092decd3fad458091b15e2377971bca0042f2",
+    "experiments/first_guidance/s10.mncs": "102455a47354a92b24b1bafa005a068b732973aac9e330fb9d7340ca5041d517",
+    "experiments/first_guidance/s11.mncs": "b902339644919fa6ccac64ae268b00f65fd11e4cb170870c67baccc4357a24bf",
+    "experiments/first_guidance/s12.mncs": "1d3497047890fb58a95f2e050180c8f7ee1b40f78829d9fd13f7c3af881f48f1"
+  },
+  "canonical_model_source_sha256": {
+    "src/models/compose.mncs": "bfcdf5aa799a44f5a8c9be9e7f4addefd467b3d9347eab7d3fce24aece20cbd3",
+    "src/models/demand.mncs": "0854fc82eebbc55c1625f485bd96d4ef877c6f7d1b73bc4bf47899155b0820b1",
+    "src/models/guidance.mncs": "a7aa72f8142b1a23207875f2320e35693a40145fed4b1df91879cebe54df5f7d",
+    "src/models/micro.mncs": "1f96bed08994c701e1c1103ae369f3f95cb061cf8bc637dd9cdfba30150328b0",
+    "src/models/residual.mncs": "3d25730e4fb5176660fe66e417dc3bda7eb8e8d28641ae9021946399286944a0",
+    "src/models/trial.mncs": "f4ab15422ee0b021c80cc66f2819c2bae96a86b70fa4afe6fd5c32099cd53660",
+    "src/models/views.mncs": "c32ae169c6de3fe37517545a934a9937cc9e3d1f212cce01d61bf419c43aded5"
+  },
+  "compiler_sha256": "129ef764bd56f6a3e05ee19631c46c044217590d537d52ee1c62b0fba335d7ae",
+  "initial_model_sha256": "2062561453a5e1fa8be55fd9f52592e551e64b5102820f094497cc1675cf7283",
+  "revised_model_sha256": "f920bcca0fd6a76f10dafa10c6ad489fb8e0503aed375736fc53d1c6cec78570",
+  "feature_inputs_sha256": "a2751662146233e09b90cc36458af10f5b61f46c9c545829562d6298c2a51798",
+  "protocol_sha256": "2d5d7f91a52b3a5596c8ee3433d88a91ebabb8506951e454d3b0b13696fe9353",
+  "evaluation_groups": [
+    "s07",
+    "s08",
+    "s09",
+    "s10",
+    "s11",
+    "s12"
+  ],
+  "status": "exploratory frozen-before-execution, not sealed held-out custody",
+  "native_projection_equals_development_encoding": true,
+  "weights_frozen": [
+    [
+      3,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      3,
+      2,
+      -3,
+      1,
+      0
+    ]
+  ],
+  "baselines_frozen": [
+    "coverage then cost",
+    "coverage then prior failures then cost",
+    "selected predicate then fewer downstream clamps then history/cost"
+  ],
+  "edits_after_evaluation_allowed": 0
+}

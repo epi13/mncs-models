@@ -1,0 +1,35 @@
+{
+  "authored_at_unix_ms": 1794103442750,
+  "author": "Sol High agent, this campaign",
+  "initial_weights": [
+    3,
+    0,
+    0,
+    1,
+    0
+  ],
+  "planned_edits": [
+    {
+      "index": 1,
+      "value": 2,
+      "revision": 2,
+      "provenance": 9402
+    },
+    {
+      "index": 2,
+      "value": -3,
+      "revision": 3,
+      "provenance": 9403
+    }
+  ],
+  "reason": "Native development s01 favors unmasked propagation, s02 favors surcharge activation before cap masking, s03 requires predicate context to distinguish the cap probe. History is retained as an imperfect prior. No optimizer was used.",
+  "allowed_evidence": [
+    "development.json",
+    "reference-traces.json",
+    "reference.json"
+  ],
+  "evaluation_limit": "The author constructed and can inspect all controlled sources; no sealed or independent held-out claim. Final execution outcomes have not been observed.",
+  "author_tokens": null,
+  "isolated_reasoning_ms": null,
+  "artifact_construction_ms_is_not_reasoning_time": true
+}

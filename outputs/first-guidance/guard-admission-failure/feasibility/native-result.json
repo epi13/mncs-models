@@ -1,0 +1,78 @@
+{
+  "classification": "compile_failure",
+  "execution": {
+    "fallback": false,
+    "host_subprocesses": 0,
+    "mode": "native-toolchain-embed"
+  },
+  "failure": {
+    "diagnostics": [
+      {
+        "code": "MNE131",
+        "expected": [],
+        "found": null,
+        "message": "call target does not resolve to a function in this module",
+        "severity": "error",
+        "span": {
+          "column": 48,
+          "end": 1852,
+          "line": 21,
+          "start": 1831
+        },
+        "stage": "elaboration"
+      },
+      {
+        "code": "MNE123",
+        "expected": [],
+        "found": null,
+        "message": "finite constructor names an unknown nominal type",
+        "severity": "error",
+        "span": {
+          "column": 41,
+          "end": 1900,
+          "line": 22,
+          "start": 1899
+        },
+        "stage": "elaboration"
+      },
+      {
+        "code": "MNE131",
+        "expected": [],
+        "found": null,
+        "message": "call target does not resolve to a function in this module",
+        "severity": "error",
+        "span": {
+          "column": 48,
+          "end": 3445,
+          "line": 41,
+          "start": 3424
+        },
+        "stage": "elaboration"
+      },
+      {
+        "code": "MNE123",
+        "expected": [],
+        "found": null,
+        "message": "finite constructor names an unknown nominal type",
+        "severity": "error",
+        "span": {
+          "column": 41,
+          "end": 3493,
+          "line": 42,
+          "start": 3492
+        },
+        "stage": "elaboration"
+      }
+    ],
+    "message": "native test source did not pass compiler admission"
+  },
+  "failure_class": "compile",
+  "schema_version": "mncs.test-result/1",
+  "selection": {
+    "available_test_count": 0,
+    "level": "invalid_invocation",
+    "selected_test_count": 0
+  },
+  "tests": [],
+  "verdict": "UNKNOWN"
+}

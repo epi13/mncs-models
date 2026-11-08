@@ -1,0 +1,28 @@
+mncs 0.18;
+module study.evaluation_tests;
+use mncs.test.assertions;
+use mncs.test.suite;
+use study.s07 as s07;
+use study.s08 as s08;
+use study.s09 as s09;
+use study.s10 as s10;
+use study.s11 as s11;
+use study.s12 as s12;
+test s07_t0() -> (result: TestResult) { return from_assertion(equals_i64(6, s07.quote(8, 2, false), 100)); }
+test s07_t1() -> (result: TestResult) { return from_assertion(equals_i64(3, s07.quote(2, 5, true), 101)); }
+test s07_t2() -> (result: TestResult) { return from_assertion(equals_i64(12, s07.quote(14, 1, true), 102)); }
+test s08_t0() -> (result: TestResult) { return from_assertion(equals_i64(6, s08.quote(8, 2, false), 100)); }
+test s08_t1() -> (result: TestResult) { return from_assertion(equals_i64(3, s08.quote(2, 5, true), 101)); }
+test s08_t2() -> (result: TestResult) { return from_assertion(equals_i64(12, s08.quote(14, 1, true), 102)); }
+test s09_t0() -> (result: TestResult) { return from_assertion(equals_i64(6, s09.quote(8, 2, false), 100)); }
+test s09_t1() -> (result: TestResult) { return from_assertion(equals_i64(3, s09.quote(2, 5, true), 101)); }
+test s09_t2() -> (result: TestResult) { return from_assertion(equals_i64(12, s09.quote(14, 1, true), 102)); }
+test s10_t0() -> (result: TestResult) { return from_assertion(equals_i64(6, s10.quote(8, 2, false), 100)); }
+test s10_t1() -> (result: TestResult) { return from_assertion(equals_i64(3, s10.quote(2, 5, true), 101)); }
+test s10_t2() -> (result: TestResult) { return from_assertion(equals_i64(12, s10.quote(14, 1, true), 102)); }
+test s11_t0() -> (result: TestResult) { return from_assertion(equals_i64(6, s11.quote(8, 2, false), 100)); }
+test s11_t1() -> (result: TestResult) { return from_assertion(equals_i64(3, s11.quote(2, 5, true), 101)); }
+test s11_t2() -> (result: TestResult) { return from_assertion(equals_i64(12, s11.quote(14, 1, true), 102)); }
+test s12_t0() -> (result: TestResult) { return from_assertion(equals_i64(6, s12.quote(8, 2, false), 100)); }
+test s12_t1() -> (result: TestResult) { return from_assertion(equals_i64(3, s12.quote(2, 5, true), 101)); }
+test s12_t2() -> (result: TestResult) { return from_assertion(equals_i64(12, s12.quote(14, 1, true), 102)); }

@@ -27,16 +27,16 @@ def revision(path):
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--output-root", default="outputs", help="Separate evidence directory; preserve previous receipts")
-parser.add_argument("--suite", choices=["all", "foundation", "composition", "residual", "guidance", "replay"], default="all")
+parser.add_argument("--suite", choices=["all", "foundation", "composition", "residual", "guidance", "replay", "feasibility"], default="all")
 args = parser.parse_args()
-libraries = ["--library", "src", "--library", "tests/fixtures", "--library", str(TEST / "native"), "--library", str(LANG / "library")]
+libraries = ["--library", "src", "--library", "experiments/first_guidance", "--library", "tests/fixtures", "--library", str(TEST / "native"), "--library", str(LANG / "library")]
 # Match the native Test tool's shared, toolchain-scoped cache convention.
 cache_scope = hashlib.sha256(str(BIN.resolve()).encode()).hexdigest()[:16]
 os.environ.setdefault("MNCS_NATIVE_APPLICATION_CACHE_DIR", str(COMMON / "mncs-native-application-cache" / cache_scope))
 source_hashes = sources()
 binary_hash = digest(BIN)
 verification_started_at_unix_ms = time.time_ns() // 1000000
-for suite, minimum in [("foundation", 14), ("composition", 16), ("residual", 15), ("guidance", 26), ("replay", 15)]:
+for suite, minimum in [("foundation", 14), ("composition", 16), ("residual", 15), ("guidance", 26), ("replay", 15), ("feasibility", 5)]:
     if args.suite not in ("all", suite):
         continue
     out = ROOT / args.output_root / suite

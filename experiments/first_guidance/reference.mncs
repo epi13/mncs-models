@@ -1,0 +1,36 @@
+mncs 0.18;
+module study.reference;
+use mncs.models.micro;
+fn quote(amount: i64, credit: i64, urgent: bool) -> (result: i64) {
+ let net: i64 = amount - credit;
+ let floored: i64 = select(net < 0, 0, net);
+ let total: i64 = floored + select(urgent, 3, 0);
+ return select(total > 12, 12, total);
+}
+record PriorTrace { net: i64, floor_taken: bool, urgent_taken: bool, cap_taken: bool }
+fn trace(amount: i64, credit: i64, urgent: bool) -> (result: PriorTrace) {
+ let net: i64 = amount - credit;
+ let floored: i64 = select(net < 0, 0, net);
+ let total: i64 = floored + select(urgent, 3, 0);
+ return PriorTrace { net: net, floor_taken: net < 0, urgent_taken: urgent, cap_taken: total > 12 };
+}
+fn traces() -> (result: [PriorTrace; 3]) { return [trace(8, 2, false), trace(2, 5, true), trace(14, 1, true)]; }
+
+// Source-owner region tags select observations, never defect labels. The
+// reference conditions execute here; no candidate output enters projection.
+enum Region { Net, Surcharge, CapCondition, UrgentCondition, FloorBody, CapBody, FloorCondition, NewBranch }
+record Projection { signals: [Signal; 3], supported: bool }
+fn region_code(r: Region) -> (result: u64) { return match r { Region.Net => 0, Region.Surcharge => 1, Region.CapCondition => 2, Region.UrgentCondition => 3, Region.FloorBody => 4, Region.CapBody => 5, Region.FloorCondition => 6, Region.NewBranch => 7, }; }
+fn feature(code: u64, t: PriorTrace, failures: i64) -> (result: Signal) {
+ let active: bool = select(code == 1, t.urgent_taken, select(code == 4, t.floor_taken, select(code == 5, t.cap_taken, true)));
+ let taken: bool = select(code == 1 || code == 3, t.urgent_taken, select(code == 2 || code == 5, t.cap_taken, select(code == 4 || code == 6, t.floor_taken, true)));
+ let mask: i64 = select(code == 0, select(t.floor_taken,1,0) + select(t.cap_taken,1,0), select(code == 1 || code == 3 || code == 6, select(t.cap_taken,1,0), 0));
+ return Signal { values: [select(active,1,0),select(taken,1,0),mask,failures,0,0,0,0],width: 4 };
+}
+fn project(r: Region, history: [i64; 3]) -> (result: Projection) {
+ let code: u64 = region_code(r);
+ if code == 7 { return Projection { signals: [Signal { values: [1,0,0,history[0],0,0,0,0],width: 4 },Signal { values: [1,0,0,history[1],0,0,0,0],width: 4 },Signal { values: [1,0,0,history[2],0,0,0,0],width: 4 }],supported: false }; }
+ let t: [PriorTrace; 3] = traces();
+ return Projection { signals: [feature(code,t[0],history[0]),feature(code,t[1],history[1]),feature(code,t[2],history[2])],supported: true };
+}
+fn project_six(r: [Region; 6], h: [[i64; 3]; 6]) -> (result: [Projection; 6]) { return [project(r[0],h[0]),project(r[1],h[1]),project(r[2],h[2]),project(r[3],h[3]),project(r[4],h[4]),project(r[5],h[5])]; }

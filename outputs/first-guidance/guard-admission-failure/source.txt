@@ -1,0 +1,43 @@
+mncs 0.18;
+module mncs.models.feasibility_tests;
+use mncs.test.assertions;
+use mncs.test.suite;
+use mncs.models.micro;
+use mncs.models.guidance;
+use mncs.models.demand;
+use study.guidance as experiment;
+
+// Mechanical adapter guard fixtures, not extra empirical learning groups.
+fn candidate(op: u64, future: bool) -> (result: OperationCandidate) { return OperationCandidate { operation: op, contract: 6, evidence: DemandEvidence { event: 1, state: 2, reference: 20 + op, authority: 3, available_at: select(future, 101, 90), status: ObservationStatus.Present }, ready: true, cost_known: true, cost: op }; }
+fn problem(resolved: u64, future: bool) -> (result: GuidanceProblem) {
+ let exact: [OperationCandidate; 3] = [candidate(1,false),candidate(2,future),candidate(3,false)]; let view: [OperationCandidate; up_to 8] = exact;
+ return GuidanceProblem { boundary: GuidanceBoundary { event: 1, question: 4, state: 2, decision_at: 100, established_reference: 5, permitted_reference: 7, operation_contract: 6, resolved_operation: resolved }, candidates: view, ranking_reference: 8, cost_unit: 9, max_candidates: 3, max_operation_cost: 10 };
+}
+fn signal(active: i64) -> (result: Signal) { return Signal { values: [active,1,0,0,0,0,0,0], width: 4 }; }
+fn model() -> (result: Model) { let exact: [i64; 5] = [3,0,0,1,0]; let values: [i64; up_to 100] = exact; return Model { identity: 9301, topology: Topology { inputs: 4,hidden: 0,outputs: 1,relu: false }, parameters: Parameters { values: values,revision: 1,parent: 0,provenance: 1 } }; }
+
+test established_choice_bypasses_invalid_model_and_unused_features() -> (result: TestResult) {
+ let c: experiment.CaseInput = experiment.CaseInput { problem: problem(1,true), signals: [empty_signal(),empty_signal(),empty_signal()], supported: false };
+ let r: experiment.Policy = experiment.learned(empty_parameter_model(),c);
+ return from_assertion(equals_bool(true,r.operation == 1 && r.path == 0 && r.invocations == 0,501));
+}
+test unsupported_new_control_flow_abstains_before_inference() -> (result: TestResult) {
+ let c: experiment.CaseInput = experiment.CaseInput { problem: problem(0,false),signals: [signal(1),signal(1),signal(1)],supported: false };
+ let r: experiment.Policy = experiment.learned(model(),c);
+ return from_assertion(equals_bool(true,r.operation == 0 && r.reason == 2 && r.invocations == 0,502));
+}
+test future_source_evidence_refuses_guidance() -> (result: TestResult) {
+ let c: experiment.CaseInput = experiment.CaseInput { problem: problem(0,true),signals: [signal(1),signal(1),signal(1)],supported: true };
+ let r: experiment.Policy = experiment.learned(model(),c);
+ return from_assertion(equals_bool(true,r.operation == 0 && r.path == 2 && r.invocations == 0,503));
+}
+test equal_scores_abstain_without_implicit_id_tiebreak() -> (result: TestResult) {
+ let c: experiment.CaseInput = experiment.CaseInput { problem: problem(0,false),signals: [signal(1),signal(1),signal(1)],supported: true };
+ let r: experiment.Policy = experiment.learned(model(),c);
+ return from_assertion(equals_bool(true,r.operation == 0 && r.reason == 7 && r.invocations == 3 && r.multiplies == 12 && r.scored[0],504));
+}
+test uniquely_affected_probe_bypasses_neural_validation() -> (result: TestResult) {
+ let c: experiment.CaseInput = experiment.CaseInput { problem: problem(0,false),signals: [signal(0),signal(1),signal(0)],supported: true };
+ let r: experiment.Policy = experiment.learned(empty_parameter_model(),c);
+ return from_assertion(equals_bool(true,r.operation == 2 && r.path == 0 && r.invocations == 0,505));
+}

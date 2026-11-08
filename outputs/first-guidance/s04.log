@@ -1,0 +1,2 @@
+native mncs-test: FAIL
+selection: {"available_test_count":18,"exact":[],"filters":["s04_"],"level":"changed_item","selected_test_count":3,"selected_test_identities":["mncs:0.2:test-case:study.development_tests::s04_t0::34c646679daf78595d7e989cc201468f432eeb33569a88eb82c604dab0769c85","mncs:0.2:test-case:study.development_tests::s04_t1::fd599e2f1b59f744bb624a3f277377479fee92a413d86d3e50e75b2ac77e5574","mncs:0.2:test-case:study.development_tests::s04_t2::a4a78ff51840f4ca6b99e9e72bbbd224882406df0a7dce7e31c957fc8902cd7e"]}

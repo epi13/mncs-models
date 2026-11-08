@@ -296,7 +296,7 @@ Then inspect the current heads and relevant RFCs/docs of the MNCS repositories t
 
 Apache-2.0.
 
-## Current test-prioritization investigation
+## Prior test-prioritization eligibility investigation
 
 [Source-bound eligibility and complete native outcome replay](docs/TEST_PRIORITY_EVIDENCE.md)
 examines the repaired deterministic baseline. The available replay does not supply
@@ -304,3 +304,14 @@ an eligible changed-source learning cohort; no learned utility or controlled
 direct-weight trial is claimed. Existing negative results remain preserved.
 Run `python3 scripts/verify.py --output-root outputs/my-check` to retain prior
 receipts; `--suite replay` checks the complete-alternative evaluation boundary.
+
+## Executed tiny-model feasibility
+
+The [first direct-weight feasibility study](docs/FIRST_GUIDANCE_FEASIBILITY.md)
+authored and executed a five-parameter native model, made two native edits, and
+evaluated six controlled source groups with varying actual Test outcomes. The
+revised model selected a failure first in 3/5 failure-bearing groups, matching the
+informed deterministic rule; selection cost exceeded the cheap probe executions.
+This is bounded exploratory feasibility, not demonstrated operational usefulness.
+All 86 prior native tests are preserved; five adapter guard tests bring the suite
+to 91. Exact weights, predictions, outcomes and costs are in `outputs/first-guidance`.

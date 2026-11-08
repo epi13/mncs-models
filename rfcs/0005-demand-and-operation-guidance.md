@@ -73,3 +73,9 @@ The later complete-alternative evaluator in `trial.mncs` addresses a distinct
 retrospective question when all candidate native outcomes actually exist. It does
 not weaken `evaluate_selection`'s actual-selection requirement or infer an
 unchosen outcome from one selected execution. See RFC 0004's test-replay section.
+
+The later fixed controlled-source experiment in
+`experiments/first_guidance` executes a canonical five-parameter Model beside
+source/reference projections and these outcome contracts. It adds no production
+selector contract, numerical runtime or operational consumer. Its executed
+negative/limited findings are in `docs/FIRST_GUIDANCE_FEASIBILITY.md`.

@@ -1,0 +1,9 @@
+{
+  "frozen_experiment_and_model_sources_unchanged": true,
+  "frozen_weights_and_features_unchanged": true,
+  "native_predictions_before_final_Test_start": true,
+  "compiler_unchanged_since_freeze": true,
+  "native_repository_tests_passed": 91,
+  "python_syntax_valid": true,
+  "prior_evidence_unchanged": "No paths under existing outputs/decision-trial or older campaigns changed"
+}

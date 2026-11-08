@@ -1,0 +1,16 @@
+{
+  "scope": "Interim cumulative research and implementation counter before publication, not isolated numerical authorship or causal agent-time savings",
+  "goal_service": {
+    "goal": {
+      "threadId": "01a1b891-e42a-73f3-b26b-c5324f8a1705",
+      "objective": "Conduct one bounded native direct-weight micro-model feasibility experiment with varying independently executed outcomes, compare competent deterministic and information baselines, preserve 86 native tests, and publish verified findings to mncs-models main with cleanup.",
+      "status": "active",
+      "tokensUsed": 135224,
+      "timeUsedSeconds": 2609,
+      "createdAt": 1794102493,
+      "updatedAt": 1794105103
+    },
+    "remainingTokens": null,
+    "completionBudgetReport": null
+  }
+}

@@ -1,0 +1,2 @@
+native mncs-test: PASS
+selection: {"available_test_count":18,"exact":[],"filters":["s06_"],"level":"changed_item","selected_test_count":3,"selected_test_identities":["mncs:0.2:test-case:study.development_tests::s06_t0::f282ae8bce77222af35ce5b1f314a4ae596ce912e15dfaa00decc6f910c8e86b","mncs:0.2:test-case:study.development_tests::s06_t1::f750319bded6b7876d6ba42d3e79918c219db36e04ebc563cdbc2f57bb5d1c8a","mncs:0.2:test-case:study.development_tests::s06_t2::45e8ec178494a7ca47f106d52cb6923b5053591946eb43c1b9c98fc64a4189e4"]}

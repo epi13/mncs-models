@@ -1,0 +1,31 @@
+{
+  "command": [
+    "/home/epi13/Documents/Projects/mncs-language/target/debug/mncs",
+    "call",
+    "/home/epi13/Documents/Projects/mncs-models/.worktrees/learned-feasibility-20261108/experiments/first_guidance/guidance.mncs",
+    "--module",
+    "study.guidance",
+    "--function",
+    "predict_six",
+    "--args",
+    "/home/epi13/Documents/Projects/mncs-models/.worktrees/learned-feasibility-20261108/outputs/first-guidance/post-evaluation-context-ablation.args.json",
+    "--library",
+    "src",
+    "--library",
+    "experiments/first_guidance",
+    "--library",
+    "/home/epi13/Documents/Projects/mncs-test/native",
+    "--library",
+    "/home/epi13/Documents/Projects/mncs-language/library",
+    "--step-budget",
+    "3000000",
+    "--result",
+    "/home/epi13/Documents/Projects/mncs-models/.worktrees/learned-feasibility-20261108/outputs/first-guidance/post-evaluation-context-ablation.json"
+  ],
+  "started_at": 1794104442311,
+  "finished_at": 1794104450235,
+  "wall_seconds": 7.923601409012917,
+  "vm_steps": 92095,
+  "argument_sha256": "11189ead336e5e8336792134db2d83f6b2ad6377d80c991460dee9010c25bbcc",
+  "result_sha256": "2e9ae0e825efc516f803ea26c0eba605a32d1b99f9391d98a8bcd938a8c5a4f7"
+}

@@ -1,0 +1,17 @@
+{
+  "started_at": 1794102949719,
+  "finished_at": 1794102956861,
+  "wall_seconds": 7.141753625997808,
+  "exit_code": 0,
+  "command": [
+    "/home/epi13/Documents/Projects/mncs-language/target/debug/mncs",
+    "test",
+    "experiments/first_guidance/reference_tests.mncs",
+    "--library",
+    "experiments/first_guidance",
+    "--library",
+    "/home/epi13/Documents/Projects/mncs-test/native",
+    "--library",
+    "/home/epi13/Documents/Projects/mncs-language/library"
+  ]
+}

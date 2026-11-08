@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "operation": "enter",
+  "exit_code": 0,
+  "result": {
+    "schema_version": "mncs.environment.entry-context/1",
+    "session_id": "ses_8d8f05d8b718479c",
+    "lifecycle": "active",
+    "environment_id": "renv_c4e468afe914329c",
+    "work_intent": {
+      "goal": "Develop and verify native model construction, composition and bounded model research",
+      "identity": "int_ac6c4cb08500d871"
+    },
+    "workspace_root": "/home/epi13/Documents/Projects",
+    "persistence": "store",
+    "toolchain": null,
+    "writable_repositories": [
+      "mncs-models"
+    ],
+    "protected_repositories": [],
+    "authority": {
+      "readable": [
+        "workspace"
+      ],
+      "writable": [
+        "mncs-models"
+      ],
+      "protected_repositories": [],
+      "escalation_required": [
+        "delete"
+      ],
+      "revision": "400228c186a847df279d9ce77cb98cc9325d768c1651835193516a90cbe7211b"
+    },
+    "readiness": {
+      "status": "degraded",
+      "blocking": [],
+      "required_unavailable": [],
+      "required_unknown": [],
+      "unavailable_count": 0,
+      "unknown_count": 0
+    },
+    "doctor": {
+      "readiness": "degraded",
+      "summary": {
+        "blockers": 0,
+        "degraded": 0,
+        "reconciled": 1,
+        "repaired": 0
+      },
+      "remaining": []
+    },
+    "projects": [
+      {
+        "repository": "mncs-models",
+        "path": "/home/epi13/Documents/Projects/mncs-models",
+        "branch": "models-foundation",
+        "dirty": true
+      },
+      {
+        "repository": "mncs-models",
+        "path": "/home/epi13/Documents/Projects/mncs-models/.worktrees/learned-feasibility-20261108",
+        "branch": "models-learned-feasibility-20261108",
+        "dirty": true
+      }
+    ],
+    "capabilities": {
+      "available": [],
+      "count": 0
+    }
+  },
+  "stderr": ""
+}

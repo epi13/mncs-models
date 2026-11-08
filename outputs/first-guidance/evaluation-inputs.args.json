@@ -1,0 +1,2804 @@
+[
+  {
+    "record": {
+      "fields": {
+        "problem": {
+          "record": {
+            "fields": {
+              "boundary": {
+                "record": {
+                  "fields": {
+                    "event": {
+                      "integer": {
+                        "value": 10007
+                      }
+                    },
+                    "question": {
+                      "integer": {
+                        "value": 9700
+                      }
+                    },
+                    "state": {
+                      "integer": {
+                        "value": 20007
+                      }
+                    },
+                    "decision_at": {
+                      "integer": {
+                        "value": 1794103866361
+                      }
+                    },
+                    "established_reference": {
+                      "integer": {
+                        "value": 98107
+                      }
+                    },
+                    "permitted_reference": {
+                      "integer": {
+                        "value": 98207
+                      }
+                    },
+                    "operation_contract": {
+                      "integer": {
+                        "value": 98300
+                      }
+                    },
+                    "resolved_operation": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              },
+              "candidates": {
+                "sequence": {
+                  "values": [
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10007
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20007
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98470
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10007
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20007
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98471
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10007
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20007
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98472
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "ranking_reference": {
+                "integer": {
+                  "value": 98600
+                }
+              },
+              "cost_unit": {
+                "integer": {
+                  "value": 98700
+                }
+              },
+              "max_candidates": {
+                "integer": {
+                  "value": 3
+                }
+              },
+              "max_operation_cost": {
+                "integer": {
+                  "value": 3000000
+                }
+              }
+            }
+          }
+        },
+        "signals": {
+          "sequence": {
+            "values": [
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "supported": {
+          "boolean": {
+            "value": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "record": {
+      "fields": {
+        "problem": {
+          "record": {
+            "fields": {
+              "boundary": {
+                "record": {
+                  "fields": {
+                    "event": {
+                      "integer": {
+                        "value": 10008
+                      }
+                    },
+                    "question": {
+                      "integer": {
+                        "value": 9700
+                      }
+                    },
+                    "state": {
+                      "integer": {
+                        "value": 20008
+                      }
+                    },
+                    "decision_at": {
+                      "integer": {
+                        "value": 1794103866361
+                      }
+                    },
+                    "established_reference": {
+                      "integer": {
+                        "value": 98108
+                      }
+                    },
+                    "permitted_reference": {
+                      "integer": {
+                        "value": 98208
+                      }
+                    },
+                    "operation_contract": {
+                      "integer": {
+                        "value": 98300
+                      }
+                    },
+                    "resolved_operation": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              },
+              "candidates": {
+                "sequence": {
+                  "values": [
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10008
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20008
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98480
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10008
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20008
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98481
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10008
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20008
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98482
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "ranking_reference": {
+                "integer": {
+                  "value": 98600
+                }
+              },
+              "cost_unit": {
+                "integer": {
+                  "value": 98700
+                }
+              },
+              "max_candidates": {
+                "integer": {
+                  "value": 3
+                }
+              },
+              "max_operation_cost": {
+                "integer": {
+                  "value": 3000000
+                }
+              }
+            }
+          }
+        },
+        "signals": {
+          "sequence": {
+            "values": [
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "supported": {
+          "boolean": {
+            "value": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "record": {
+      "fields": {
+        "problem": {
+          "record": {
+            "fields": {
+              "boundary": {
+                "record": {
+                  "fields": {
+                    "event": {
+                      "integer": {
+                        "value": 10009
+                      }
+                    },
+                    "question": {
+                      "integer": {
+                        "value": 9700
+                      }
+                    },
+                    "state": {
+                      "integer": {
+                        "value": 20009
+                      }
+                    },
+                    "decision_at": {
+                      "integer": {
+                        "value": 1794103866361
+                      }
+                    },
+                    "established_reference": {
+                      "integer": {
+                        "value": 98109
+                      }
+                    },
+                    "permitted_reference": {
+                      "integer": {
+                        "value": 98209
+                      }
+                    },
+                    "operation_contract": {
+                      "integer": {
+                        "value": 98300
+                      }
+                    },
+                    "resolved_operation": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              },
+              "candidates": {
+                "sequence": {
+                  "values": [
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10009
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20009
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98490
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10009
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20009
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98491
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10009
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20009
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98492
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "ranking_reference": {
+                "integer": {
+                  "value": 98600
+                }
+              },
+              "cost_unit": {
+                "integer": {
+                  "value": 98700
+                }
+              },
+              "max_candidates": {
+                "integer": {
+                  "value": 3
+                }
+              },
+              "max_operation_cost": {
+                "integer": {
+                  "value": 3000000
+                }
+              }
+            }
+          }
+        },
+        "signals": {
+          "sequence": {
+            "values": [
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "supported": {
+          "boolean": {
+            "value": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "record": {
+      "fields": {
+        "problem": {
+          "record": {
+            "fields": {
+              "boundary": {
+                "record": {
+                  "fields": {
+                    "event": {
+                      "integer": {
+                        "value": 10010
+                      }
+                    },
+                    "question": {
+                      "integer": {
+                        "value": 9700
+                      }
+                    },
+                    "state": {
+                      "integer": {
+                        "value": 20010
+                      }
+                    },
+                    "decision_at": {
+                      "integer": {
+                        "value": 1794103866361
+                      }
+                    },
+                    "established_reference": {
+                      "integer": {
+                        "value": 98110
+                      }
+                    },
+                    "permitted_reference": {
+                      "integer": {
+                        "value": 98210
+                      }
+                    },
+                    "operation_contract": {
+                      "integer": {
+                        "value": 98300
+                      }
+                    },
+                    "resolved_operation": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              },
+              "candidates": {
+                "sequence": {
+                  "values": [
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10010
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20010
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10010
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20010
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98501
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10010
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20010
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98502
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "ranking_reference": {
+                "integer": {
+                  "value": 98600
+                }
+              },
+              "cost_unit": {
+                "integer": {
+                  "value": 98700
+                }
+              },
+              "max_candidates": {
+                "integer": {
+                  "value": 3
+                }
+              },
+              "max_operation_cost": {
+                "integer": {
+                  "value": 3000000
+                }
+              }
+            }
+          }
+        },
+        "signals": {
+          "sequence": {
+            "values": [
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "supported": {
+          "boolean": {
+            "value": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "record": {
+      "fields": {
+        "problem": {
+          "record": {
+            "fields": {
+              "boundary": {
+                "record": {
+                  "fields": {
+                    "event": {
+                      "integer": {
+                        "value": 10011
+                      }
+                    },
+                    "question": {
+                      "integer": {
+                        "value": 9700
+                      }
+                    },
+                    "state": {
+                      "integer": {
+                        "value": 20011
+                      }
+                    },
+                    "decision_at": {
+                      "integer": {
+                        "value": 1794103866361
+                      }
+                    },
+                    "established_reference": {
+                      "integer": {
+                        "value": 98111
+                      }
+                    },
+                    "permitted_reference": {
+                      "integer": {
+                        "value": 98211
+                      }
+                    },
+                    "operation_contract": {
+                      "integer": {
+                        "value": 98300
+                      }
+                    },
+                    "resolved_operation": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              },
+              "candidates": {
+                "sequence": {
+                  "values": [
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10011
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20011
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98510
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10011
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20011
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98511
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10011
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20011
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98512
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "ranking_reference": {
+                "integer": {
+                  "value": 98600
+                }
+              },
+              "cost_unit": {
+                "integer": {
+                  "value": 98700
+                }
+              },
+              "max_candidates": {
+                "integer": {
+                  "value": 3
+                }
+              },
+              "max_operation_cost": {
+                "integer": {
+                  "value": 3000000
+                }
+              }
+            }
+          }
+        },
+        "signals": {
+          "sequence": {
+            "values": [
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "supported": {
+          "boolean": {
+            "value": false
+          }
+        }
+      }
+    }
+  },
+  {
+    "record": {
+      "fields": {
+        "problem": {
+          "record": {
+            "fields": {
+              "boundary": {
+                "record": {
+                  "fields": {
+                    "event": {
+                      "integer": {
+                        "value": 10012
+                      }
+                    },
+                    "question": {
+                      "integer": {
+                        "value": 9700
+                      }
+                    },
+                    "state": {
+                      "integer": {
+                        "value": 20012
+                      }
+                    },
+                    "decision_at": {
+                      "integer": {
+                        "value": 1794103866361
+                      }
+                    },
+                    "established_reference": {
+                      "integer": {
+                        "value": 98112
+                      }
+                    },
+                    "permitted_reference": {
+                      "integer": {
+                        "value": 98212
+                      }
+                    },
+                    "operation_contract": {
+                      "integer": {
+                        "value": 98300
+                      }
+                    },
+                    "resolved_operation": {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  }
+                }
+              },
+              "candidates": {
+                "sequence": {
+                  "values": [
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10012
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20012
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98520
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10012
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20012
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98521
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "record": {
+                        "fields": {
+                          "operation": {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          "contract": {
+                            "integer": {
+                              "value": 98300
+                            }
+                          },
+                          "evidence": {
+                            "record": {
+                              "fields": {
+                                "event": {
+                                  "integer": {
+                                    "value": 10012
+                                  }
+                                },
+                                "state": {
+                                  "integer": {
+                                    "value": 20012
+                                  }
+                                },
+                                "reference": {
+                                  "integer": {
+                                    "value": 98522
+                                  }
+                                },
+                                "authority": {
+                                  "integer": {
+                                    "value": 98500
+                                  }
+                                },
+                                "available_at": {
+                                  "integer": {
+                                    "value": 1794103866361
+                                  }
+                                },
+                                "status": {
+                                  "finite": {
+                                    "variant": "Present"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "ready": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost_known": {
+                            "boolean": {
+                              "value": true
+                            }
+                          },
+                          "cost": {
+                            "integer": {
+                              "value": 39
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "ranking_reference": {
+                "integer": {
+                  "value": 98600
+                }
+              },
+              "cost_unit": {
+                "integer": {
+                  "value": 98700
+                }
+              },
+              "max_candidates": {
+                "integer": {
+                  "value": 3
+                }
+              },
+              "max_operation_cost": {
+                "integer": {
+                  "value": 3000000
+                }
+              }
+            }
+          }
+        },
+        "signals": {
+          "sequence": {
+            "values": [
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 2
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 3
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "values": {
+                      "sequence": {
+                        "values": [
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 1
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          },
+                          {
+                            "integer": {
+                              "value": 0
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "width": {
+                      "integer": {
+                        "value": 4
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "supported": {
+          "boolean": {
+            "value": true
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,8 @@
+native mncs-test: UNKNOWN
+selection: {"available_test_count":0,"level":"invalid_invocation","selected_test_count":0}
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/usr/lib64/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['python3', 'scripts/verify.py', '--suite', 'feasibility', '--output-root', 'outputs/first-guidance/verification']' returned non-zero exit status 4.

@@ -1,0 +1,165 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:1552fcccc8728e562641d9a53a616d5fa5e7403afc2d86445e3e385df456ae7c",
+    "artifact_sha256": "10f3e39d5009dacc7d1ca700a02755cc5a7ac1b0be94a8afa9553da8735f35e9",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "record": {
+          "fields": [
+            [
+              "additions",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 4
+                }
+              }
+            ],
+            [
+              "multiplies",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 4
+                }
+              }
+            ],
+            [
+              "output",
+              {
+                "record": {
+                  "fields": [
+                    [
+                      "values",
+                      {
+                        "sequence": {
+                          "values": [
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": true
+                                },
+                                "value": 7
+                              }
+                            },
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": true
+                                },
+                                "value": 0
+                              }
+                            },
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": true
+                                },
+                                "value": 0
+                              }
+                            },
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": true
+                                },
+                                "value": 0
+                              }
+                            },
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": true
+                                },
+                                "value": 0
+                              }
+                            },
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": true
+                                },
+                                "value": 0
+                              }
+                            },
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": true
+                                },
+                                "value": 0
+                              }
+                            },
+                            {
+                              "integer": {
+                                "type": {
+                                  "bits": 64,
+                                  "signed": true
+                                },
+                                "value": 0
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    [
+                      "width",
+                      {
+                        "integer": {
+                          "type": {
+                            "bits": 64,
+                            "signed": false
+                          },
+                          "value": 1
+                        }
+                      }
+                    ]
+                  ],
+                  "name": "Signal",
+                  "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                }
+              }
+            ],
+            [
+              "status",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ]
+          ],
+          "name": "Inference",
+          "type_identity": "mncs:0.2:record-type:mncs.models.micro::Inference::additions%3Au64%3Bmultiplies%3Au64%3Boutput%3ASignal%3Bstatus%3Au64%3B"
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 524
+  },
+  "canonical_arguments_sha256": "d1dcf1926b991338cb2a7c74da8ad56950bc60e975665ceb14c98ec762c26351",
+  "function": "infer",
+  "module": "mncs.models.micro",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

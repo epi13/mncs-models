@@ -1,0 +1,1991 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:e9bff62d0d4096f7e3904de9ba43a141cfbaf0e78a035895fe54cf0234e45b94",
+    "artifact_sha256": "bd07e8de65624b7dcd89c9a65556191a831b7d145058d261c179fd7187c0fbb5",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "sequence": {
+          "values": [
+            {
+              "record": {
+                "fields": [
+                  [
+                    "signals",
+                    {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 2
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 3
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  [
+                    "supported",
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  ]
+                ],
+                "name": "Projection",
+                "type_identity": "mncs:0.2:record-type:study.reference::Projection::signals%3A%5BSignal%3B%203%5D%3Bsupported%3Abool%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "signals",
+                    {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 2
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 3
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  [
+                    "supported",
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  ]
+                ],
+                "name": "Projection",
+                "type_identity": "mncs:0.2:record-type:study.reference::Projection::signals%3A%5BSignal%3B%203%5D%3Bsupported%3Abool%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "signals",
+                    {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 2
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 3
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  [
+                    "supported",
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  ]
+                ],
+                "name": "Projection",
+                "type_identity": "mncs:0.2:record-type:study.reference::Projection::signals%3A%5BSignal%3B%203%5D%3Bsupported%3Abool%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "signals",
+                    {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 2
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 3
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  [
+                    "supported",
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  ]
+                ],
+                "name": "Projection",
+                "type_identity": "mncs:0.2:record-type:study.reference::Projection::signals%3A%5BSignal%3B%203%5D%3Bsupported%3Abool%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "signals",
+                    {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 2
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 3
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  [
+                    "supported",
+                    {
+                      "boolean": {
+                        "value": false
+                      }
+                    }
+                  ]
+                ],
+                "name": "Projection",
+                "type_identity": "mncs:0.2:record-type:study.reference::Projection::signals%3A%5BSignal%3B%203%5D%3Bsupported%3Abool%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "signals",
+                    {
+                      "sequence": {
+                        "values": [
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 2
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 3
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          },
+                          {
+                            "record": {
+                              "fields": [
+                                [
+                                  "values",
+                                  {
+                                    "sequence": {
+                                      "values": [
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 1
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        },
+                                        {
+                                          "integer": {
+                                            "type": {
+                                              "bits": 64,
+                                              "signed": true
+                                            },
+                                            "value": 0
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                [
+                                  "width",
+                                  {
+                                    "integer": {
+                                      "type": {
+                                        "bits": 64,
+                                        "signed": false
+                                      },
+                                      "value": 4
+                                    }
+                                  }
+                                ]
+                              ],
+                              "name": "Signal",
+                              "type_identity": "mncs:0.2:record-type:mncs.models.micro::Signal::values%3A%5Bi64%3B%208%5D%3Bwidth%3Au64%3B"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  [
+                    "supported",
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  ]
+                ],
+                "name": "Projection",
+                "type_identity": "mncs:0.2:record-type:study.reference::Projection::signals%3A%5BSignal%3B%203%5D%3Bsupported%3Abool%3B"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 1692
+  },
+  "canonical_arguments_sha256": "3f1ec79c56595dcaecbfbd8cfa987c3e2fc868b1224d5e84bdec601c0657c3b8",
+  "function": "project_six",
+  "module": "study.reference",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

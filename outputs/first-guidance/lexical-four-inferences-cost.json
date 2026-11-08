@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/home/epi13/Documents/Projects/mncs-language/target/debug/mncs",
+    "call",
+    "src/models/micro.mncs",
+    "--module",
+    "mncs.models.micro",
+    "--function",
+    "infer_batch",
+    "--args",
+    "/home/epi13/Documents/Projects/mncs-models/.worktrees/learned-feasibility-20261108/outputs/first-guidance/lexical-four-inferences.args.json",
+    "--library",
+    "src",
+    "--library",
+    "experiments/first_guidance",
+    "--library",
+    "/home/epi13/Documents/Projects/mncs-test/native",
+    "--library",
+    "/home/epi13/Documents/Projects/mncs-language/library",
+    "--step-budget",
+    "3000000",
+    "--result",
+    "/home/epi13/Documents/Projects/mncs-models/.worktrees/learned-feasibility-20261108/outputs/first-guidance/lexical-four-inferences.json"
+  ],
+  "wall_seconds": 1.3969910030136816,
+  "vm_steps": 1599,
+  "arguments_sha256": "90dddaf18354ab145283c196a801c747e3269f9ae01fef36577dc62becc501d3",
+  "result_sha256": "62fe2927cfb3dfececd6c73c42eda36b16afeb2f999dfc7466cc974c79e0387b",
+  "scope": "CLI invocation wall includes admission/cache and transport; lexical-four is not a resident service benchmark or four independent decisions"
+}

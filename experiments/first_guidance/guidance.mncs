@@ -1,0 +1,88 @@
+mncs 0.18;
+module study.guidance;
+use mncs.models.micro;
+use mncs.models.guidance;
+use mncs.models.trial;
+
+// Fixed three-probe experimental adapter; not an operational consumer.
+record CaseInput { problem: GuidanceProblem, signals: [Signal; 3], supported: bool }
+record Policy { operation: u64, path: u64, reason: u64, scores: [i64; 3], scored: [bool; 3], invocations: u64, multiplies: u64, model_identity: u64, revision: u64 }
+fn stopped(path: u64, reason: u64, operation: u64) -> (result: Policy) { return Policy { operation: operation, path: path, reason: reason, scores: [0; 3], scored: [false; 3], invocations: 0, multiplies: 0, model_identity: 0, revision: 0 }; }
+fn input_reason(c: CaseInput) -> (result: u64) {
+ let p: GuidanceProblem = c.problem; let g: Guidance = guide_operations(p);
+ if p.candidates.len != 3 || (g.path == 2 && g.reason != 6) { return 1; }
+ iterate i over c.signals carrying good: bool = true {
+  let candidate: OperationCandidate = p.candidates[i]; let x: Signal = c.signals[i];
+  next good = good && candidate.operation == i + 1 && candidate_reason(candidate, p.boundary) == 0 && candidate.cost_known && candidate.cost <= p.max_operation_cost && input_valid(x, 4) && x.values[0] >= 0 && x.values[0] <= 1 && x.values[1] >= 0 && x.values[1] <= 1 && x.values[2] >= 0 && x.values[2] <= 2 && x.values[3] >= 0;
+ }
+ if !good { return 1; }
+ return 0;
+}
+fn unique_active(c: CaseInput) -> (result: u64) {
+ iterate i over c.signals carrying count: u64 = 0 { let x: Signal = c.signals[i]; next count = count + select(x.values[0] == 1, 1, 0); }
+ if count != 1 { return 0; }
+ iterate i over c.signals carrying operation: u64 = 0 { let x: Signal = c.signals[i]; next operation = select(x.values[0] == 1, i + 1, operation); }
+ return operation;
+}
+record Ranking { best: u64, score: i64, tied: bool, bad: bool, scores: [i64; 3], scored: [bool; 3], invocations: u64, multiplies: u64 }
+fn model_cell(m: Model, c: CaseInput, i: u64, r: Ranking) -> (result: Ranking) {
+ let x: Signal = c.signals[i];
+ if x.values[0] == 0 { return r; }
+ let y: Inference = infer(m, x); let output: Signal = y.output;
+ if y.status != 0 || output.width != 1 { return Ranking { best: r.best, score: r.score, tied: r.tied, bad: true, scores: r.scores, scored: r.scored, invocations: r.invocations + 1, multiplies: r.multiplies }; }
+ let score: i64 = output.values[0]; let better: bool = r.best == 0 || score > r.score;
+ return Ranking { best: select(better, i + 1, r.best), score: select(better, score, r.score), tied: select(better, false, r.tied || score == r.score), bad: r.bad, scores: replace(r.scores, i, score), scored: replace(r.scored, i, true), invocations: r.invocations + 1, multiplies: r.multiplies + y.multiplies };
+}
+fn learned(m: Model, c: CaseInput) -> (result: Policy) {
+ let p: GuidanceProblem = c.problem; let g: Guidance = guide_operations(p);
+ if g.path == 0 { return stopped(0, 0, g.operation); }
+ if !c.supported { return stopped(2, 2, 0); }
+ if input_reason(c) != 0 { return stopped(2, 1, 0); }
+ let established: u64 = unique_active(c);
+ if established != 0 { return stopped(0, 0, established); }
+ let topology: Topology = m.topology;
+ if topology.inputs != 4 || topology.hidden != 0 || topology.outputs != 1 { return stopped(2, 5, 0); }
+ iterate i over c.signals carrying r: Ranking = Ranking { best: 0, score: 0, tied: false, bad: false, scores: [0; 3], scored: [false; 3], invocations: 0, multiplies: 0 } { next r = model_cell(m, c, i, r); }
+ let failed: bool = r.bad || r.best == 0 || r.tied;
+ let parameters: Parameters = m.parameters;
+ return Policy { operation: select(failed, 0, r.best), path: select(failed, 2, 1), reason: select(r.bad, 5, select(r.tied, 7, select(r.best == 0, 2, 0))), scores: r.scores, scored: r.scored, invocations: r.invocations, multiplies: r.multiplies, model_identity: m.identity, revision: parameters.revision };
+}
+// Lexicographic deterministic baselines: cost; history/cost; selected predicate,
+// fewer downstream clamps, history/cost. All use the same pre-decision data.
+fn compare(kind: u64, x: Signal, previous: Signal, cost: u64, previous_cost: u64) -> (result: i64) {
+ if kind == 2 {
+  if x.values[1] != previous.values[1] { return select(x.values[1] > previous.values[1], 1, -1); }
+  if x.values[2] != previous.values[2] { return select(x.values[2] < previous.values[2], 1, -1); }
+ }
+ if kind >= 1 && x.values[3] != previous.values[3] { return select(x.values[3] > previous.values[3], 1, -1); }
+ if cost == previous_cost { return 0; }
+ return select(cost < previous_cost, 1, -1);
+}
+record RuleRanking { best: u64, tied: bool }
+fn rule_cell(c: CaseInput, kind: u64, i: u64, r: RuleRanking) -> (result: RuleRanking) {
+ let x: Signal = c.signals[i]; let p: GuidanceProblem = c.problem; let candidate: OperationCandidate = p.candidates[i];
+ if x.values[0] == 0 { return r; }
+ if r.best == 0 { return RuleRanking { best: i + 1, tied: false }; }
+ let prior: OperationCandidate = p.candidates[r.best - 1]; let order: i64 = compare(kind, x, c.signals[r.best - 1], candidate.cost, prior.cost);
+ return RuleRanking { best: select(order > 0, i + 1, r.best), tied: select(order > 0, false, r.tied || order == 0) };
+}
+fn rule(c: CaseInput, kind: u64) -> (result: Policy) {
+ let p: GuidanceProblem = c.problem; let g: Guidance = guide_operations(p);
+ if g.path == 0 { return stopped(0, 0, g.operation); }
+ if !c.supported && kind == 2 { return stopped(2, 2, 0); }
+ if input_reason(c) != 0 { return stopped(2, 1, 0); }
+ let established: u64 = unique_active(c);
+ if established != 0 { return stopped(0, 0, established); }
+ iterate i over c.signals carrying r: RuleRanking = RuleRanking { best: 0, tied: false } { next r = rule_cell(c, kind, i, r); }
+ return stopped(select(r.best == 0 || r.tied, 2, 1), select(r.tied, 7, select(r.best == 0, 2, 0)), select(r.tied, 0, r.best));
+}
+record Predictions { cost: Policy, history: Policy, informed: Policy, initial: Policy, revised: Policy }
+fn predict(a: Model, b: Model, c: CaseInput) -> (result: Predictions) { return Predictions { cost: rule(c, 0), history: rule(c, 1), informed: rule(c, 2), initial: learned(a, c), revised: learned(b, c) }; }
+fn predict_six(a: Model, b: Model, c: [CaseInput; 6]) -> (result: [Predictions; 6]) { return [predict(a,b,c[0]), predict(a,b,c[1]), predict(a,b,c[2]), predict(a,b,c[3]), predict(a,b,c[4]), predict(a,b,c[5])]; }
+record Outcomes { rows: [TestReplayOutcome; 3], source_reference: u64 }
+record Evaluations { prediction: Predictions, cost: TestReplayEvaluation, history: TestReplayEvaluation, informed: TestReplayEvaluation, initial: TestReplayEvaluation, revised: TestReplayEvaluation }
+fn evaluate(a: Model, b: Model, c: CaseInput, o: Outcomes) -> (result: Evaluations) {
+ let r: Predictions = predict(a,b,c); let rows: [TestReplayOutcome; up_to 8] = o.rows;
+ return Evaluations { prediction: r, cost: evaluate_initial_test(c.problem,o.source_reference,rows,r.cost.operation), history: evaluate_initial_test(c.problem,o.source_reference,rows,r.history.operation), informed: evaluate_initial_test(c.problem,o.source_reference,rows,r.informed.operation), initial: evaluate_initial_test(c.problem,o.source_reference,rows,r.initial.operation), revised: evaluate_initial_test(c.problem,o.source_reference,rows,r.revised.operation) };
+}
+fn evaluate_six(a: Model, b: Model, c: [CaseInput; 6], o: [Outcomes; 6]) -> (result: [Evaluations; 6]) { return [evaluate(a,b,c[0],o[0]), evaluate(a,b,c[1],o[1]), evaluate(a,b,c[2],o[2]), evaluate(a,b,c[3],o[3]), evaluate(a,b,c[4],o[4]), evaluate(a,b,c[5],o[5])]; }

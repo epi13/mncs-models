@@ -1,0 +1,8 @@
+mncs 0.18;
+module study.s01;
+fn quote(amount: i64, credit: i64, urgent: bool) -> (result: i64) {
+ let net: i64 = amount - credit * 2;
+ let floored: i64 = select(net < 0, 0, net);
+ let total: i64 = floored + select(urgent, 3, 0);
+ return select(total > 12, 12, total);
+}

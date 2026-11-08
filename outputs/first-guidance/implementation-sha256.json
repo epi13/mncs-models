@@ -1,0 +1,7 @@
+{
+  ".mncs/environment.json": "7aea96b681f9d0d79a154e1bbd070eb930e09d4de590ebf3bd7fe9cd1d5fe656",
+  "scripts/verify.py": "b8edc31e85ec37d024a4d192bb9e028b62c9e80bc66b3e4f36744166a63e0003",
+  "scripts/first_guidance.py": "ee48bad9c936131845334908dfea7d230661b3a8ef10c431a3dae3d46d13360e",
+  "tests/native/feasibility.mncs": "65f67b8317df2d723ce52bd492debedb8d3a27d24aa0c2f44f8ad5fa805a96c2",
+  "docs/FIRST_GUIDANCE_FEASIBILITY.md": "4009e0ecc5064bf780b32cb18724e59b3951805af701f020e70581e0d3fcd126"
+}

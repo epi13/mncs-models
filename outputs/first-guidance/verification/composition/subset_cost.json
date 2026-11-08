@@ -1,0 +1,26 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:ac53f082c829e209fd897455a3127e75c7b05964fae88a1b3c313680fe9f0e0c",
+    "artifact_sha256": "2206f30688d88bb7f2c2c33b6d288ea252923f5220cba98b0dddbe3e9c9f0b58",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "integer": {
+          "type": {
+            "bits": 64,
+            "signed": true
+          },
+          "value": 2
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 39470
+  },
+  "canonical_arguments_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "function": "subset_cost",
+  "module": "mncs.models.composition_tests",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

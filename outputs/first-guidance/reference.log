@@ -1,0 +1,2 @@
+native mncs-test: PASS
+selection: {"available_test_count":3,"exact":[],"filters":[],"level":"repository_canonical","selected_test_count":3,"selected_test_identities":["mncs:0.2:test-case:study.reference_tests::reference_t0::1e102fffc2536936e60972b475315f5c12c67455b30eddb4856c7e480d335851","mncs:0.2:test-case:study.reference_tests::reference_t1::84ce1f86f162d5275351867f3db029c4627bea516f32ac1114b8b5e0a757da9d","mncs:0.2:test-case:study.reference_tests::reference_t2::2194b93b40d1edd1f6e5565e59162eddb0eecf35660ec778d2b9f5e7a998ef67"]}

@@ -1,0 +1,325 @@
+[
+  {
+    "record": {
+      "fields": {
+        "identity": {
+          "integer": {
+            "value": 9301
+          }
+        },
+        "parameters": {
+          "record": {
+            "fields": {
+              "parent": {
+                "integer": {
+                  "value": 2
+                }
+              },
+              "provenance": {
+                "integer": {
+                  "value": 9403
+                }
+              },
+              "revision": {
+                "integer": {
+                  "value": 3
+                }
+              },
+              "values": {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "value": 3
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 2
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": -3
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "topology": {
+          "record": {
+            "fields": {
+              "hidden": {
+                "integer": {
+                  "value": 0
+                }
+              },
+              "inputs": {
+                "integer": {
+                  "value": 4
+                }
+              },
+              "outputs": {
+                "integer": {
+                  "value": 1
+                }
+              },
+              "relu": {
+                "boolean": {
+                  "value": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "sequence": {
+      "values": [
+        {
+          "record": {
+            "fields": {
+              "values": {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 2
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              },
+              "width": {
+                "integer": {
+                  "value": 4
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": {
+            "fields": {
+              "values": {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 2
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              },
+              "width": {
+                "integer": {
+                  "value": 4
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": {
+            "fields": {
+              "values": {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 2
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              },
+              "width": {
+                "integer": {
+                  "value": 4
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": {
+            "fields": {
+              "values": {
+                "sequence": {
+                  "values": [
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 2
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "integer": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              },
+              "width": {
+                "integer": {
+                  "value": 4
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+]

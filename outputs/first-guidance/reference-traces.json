@@ -1,0 +1,155 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:90f2628df9e718b8e2d00fd8c3ed83f77a79fd290d5cf6b01b637deba96b9d07",
+    "artifact_sha256": "69d969ee4d14e3a9b83ec2caead13f999d652fc36941f0cbb2ffb4213b47d46f",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "sequence": {
+          "values": [
+            {
+              "record": {
+                "fields": [
+                  [
+                    "cap_taken",
+                    {
+                      "boolean": {
+                        "value": false
+                      }
+                    }
+                  ],
+                  [
+                    "floor_taken",
+                    {
+                      "boolean": {
+                        "value": false
+                      }
+                    }
+                  ],
+                  [
+                    "net",
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 6
+                      }
+                    }
+                  ],
+                  [
+                    "urgent_taken",
+                    {
+                      "boolean": {
+                        "value": false
+                      }
+                    }
+                  ]
+                ],
+                "name": "PriorTrace",
+                "type_identity": "mncs:0.2:record-type:study.reference::PriorTrace::cap_taken%3Abool%3Bfloor_taken%3Abool%3Bnet%3Ai64%3Burgent_taken%3Abool%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "cap_taken",
+                    {
+                      "boolean": {
+                        "value": false
+                      }
+                    }
+                  ],
+                  [
+                    "floor_taken",
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  ],
+                  [
+                    "net",
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": -3
+                      }
+                    }
+                  ],
+                  [
+                    "urgent_taken",
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  ]
+                ],
+                "name": "PriorTrace",
+                "type_identity": "mncs:0.2:record-type:study.reference::PriorTrace::cap_taken%3Abool%3Bfloor_taken%3Abool%3Bnet%3Ai64%3Burgent_taken%3Abool%3B"
+              }
+            },
+            {
+              "record": {
+                "fields": [
+                  [
+                    "cap_taken",
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  ],
+                  [
+                    "floor_taken",
+                    {
+                      "boolean": {
+                        "value": false
+                      }
+                    }
+                  ],
+                  [
+                    "net",
+                    {
+                      "integer": {
+                        "type": {
+                          "bits": 64,
+                          "signed": true
+                        },
+                        "value": 13
+                      }
+                    }
+                  ],
+                  [
+                    "urgent_taken",
+                    {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  ]
+                ],
+                "name": "PriorTrace",
+                "type_identity": "mncs:0.2:record-type:study.reference::PriorTrace::cap_taken%3Abool%3Bfloor_taken%3Abool%3Bnet%3Ai64%3Burgent_taken%3Abool%3B"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 59
+  },
+  "canonical_arguments_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "function": "traces",
+  "module": "study.reference",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

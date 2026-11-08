@@ -1,0 +1,6 @@
+{
+  "predictions_match_frozen_preexecution_values": true,
+  "all_thirty_complete_outcome_comparisons_accepted": true,
+  "source_and_compiler_unchanged": true,
+  "edits_after_final_outcomes": 0
+}

@@ -1,0 +1,31 @@
+{
+  "command": [
+    "/home/epi13/Documents/Projects/mncs-language/target/debug/mncs",
+    "call",
+    "/home/epi13/Documents/Projects/mncs-models/.worktrees/learned-feasibility-20261108/experiments/first_guidance/guidance.mncs",
+    "--module",
+    "study.guidance",
+    "--function",
+    "predict_six",
+    "--args",
+    "/home/epi13/Documents/Projects/mncs-models/.worktrees/learned-feasibility-20261108/outputs/first-guidance/evaluation-predictions.args.json",
+    "--library",
+    "src",
+    "--library",
+    "experiments/first_guidance",
+    "--library",
+    "/home/epi13/Documents/Projects/mncs-test/native",
+    "--library",
+    "/home/epi13/Documents/Projects/mncs-language/library",
+    "--step-budget",
+    "3000000",
+    "--result",
+    "/home/epi13/Documents/Projects/mncs-models/.worktrees/learned-feasibility-20261108/outputs/first-guidance/evaluation-predictions.json"
+  ],
+  "started_at": 1794103866675,
+  "finished_at": 1794103905681,
+  "wall_seconds": 39.006034296005964,
+  "vm_steps": 91990,
+  "argument_sha256": "39d4f9e669693d8a7bef0b2e84d4dd31c0357f52250bd3955637dae32c300349",
+  "result_sha256": "2e5a0f94096b6b05d2dafcd3a40d90723b087bddd83fcbe7f60ef38d996c8bd7"
+}
