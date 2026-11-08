@@ -116,3 +116,32 @@ RFC 0005 adds referenced demand review and bounded permitted-operation selection
 without changing this binary residual gate or the canonical numerical runtime.
 Its audit preserves the negative utility findings and does not promote a learned
 guide or operational integration.
+
+## Complete-outcome test replay
+
+The trial module now also supports `TestReplayOutcome` and
+`evaluate_initial_test`, using the existing RFC 0005 `GuidanceProblem`. This is a
+retrospective evaluation contract, not a new learned selector. It requires every
+permitted candidate's observed native assertion verdict and measured cost against
+one frozen source/dependency/toolchain/inventory reference. Exact candidate,
+event, question, state, permitted-set and time joins are checked. Predictions,
+Unknown verdicts/costs, duplicates, missing alternatives, unavailable or over-budget
+candidates and mixed units refuse. A per-row cost limit of 10^12 and the eight-row
+bound keep unsigned sums safe. No saturation or inferred alternative is used.
+
+The chosen operation may be zero for abstention; that row stays accepted in the
+evaluation denominator when the outcome matrix is complete. An all-pass source
+has no failure-discovery opportunity: `oracle_cost_known=false`, rather than a
+fabricated zero latency. A discovered assertion failure can have a zero measured
+cost, so the flag is authoritative for numeric interpretation. The retrospective
+cheapest-failing cost is an oracle lower bound, never a pre-decision feature. Full
+mandatory executions and measured total cost remain reported for every choice.
+The existing baseline path/operation is retained, including ties and established
+bypass; the replay neither resolves those ties nor certifies residual eligibility.
+
+These pure records validate joins, not source authenticity, independent custody,
+rights or actual outcome truth. External owners must bind references to exact
+artifacts and preserve source/chronology. VM-cost sums are not additive CLI wall
+latencies or causal work savings. The first source-bound replay and its rejected
+learning cohort are recorded in `docs/TEST_PRIORITY_EVIDENCE.md`. Prior native
+model, composition, direct-weight and negative utility contracts are unchanged.

@@ -1,0 +1,7 @@
+{
+  "arguments_sha256": "9ad1d5683ead992f67437c14e8b48b4b31a8ed14d25a9cd072f314e0a43554ff",
+  "cli_wall_seconds": 21.244296837976435,
+  "result_sha256": "6a96edcf92224c0f1596609369d0b1cce44cba9984cf0300cf62f509f2e845a5",
+  "scope": "CLI admission/cache, typed transport and native evaluation; not inference-only latency",
+  "vm_steps": 1110
+}

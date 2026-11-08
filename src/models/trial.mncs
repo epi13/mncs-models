@@ -1,6 +1,8 @@
 mncs 0.18;
 module mncs.models.trial;
 use mncs.models.micro;
+use mncs.models.guidance;
+use mncs.models.residual;
 // Dataset/custody references are supplied by existing evidence owners.
 // This validates reproducibility bookkeeping, not confidentiality or promotion.
 record Partition { reference: u64, groups: [u64; 16], count: u64 }
@@ -35,4 +37,60 @@ fn author_five(weights: [i64; 5], revision: u64, parent: u64, provenance: u64) -
 fn score_authored(weights: [i64; 5], features: [i64; 4]) -> (result: Inference) {
     let m: Model = author_five(weights, 1, 0, 701);
     return infer(m, Signal { values: [features[0], features[1], features[2], features[3], 0, 0, 0, 0], width: 4 });
+}
+
+// Retrospective, complete same-source test alternatives. Never pre-decision
+// features, an operational selector, or proof of authenticated outcome custody.
+// source_reference binds source closure, toolchain and exact Test inventory.
+record TestReplayOutcome { event: u64, question: u64, state: u64, operation: u64, permitted_reference: u64, source_reference: u64, reference: u64, authority: u64, observed_at: u64, kind: OutcomeKind, verdict: WorkVerification, cost_known: bool, cost_unit: u64, cost: u64 }
+record TestReplayEvaluation { accepted: bool, reason: u64, event: u64, source_reference: u64, operation: u64, selected: bool, supplied_rows: u64, candidates: u64, failing_candidates: u64, selected_failure: bool, oracle_cost_known: bool, oracle_failure_cost: u64, selected_cost_known: bool, selected_cost: u64, total_cost: u64, mandatory_executions: u64, baseline_path: u64, baseline_operation: u64 }
+// reasons: 1 invalid declaration/join, 2 incomplete/unknown outcomes or costs,
+// 3 outcome predates decision, 4 non-observed outcome, 5 cost envelope.
+fn test_replay_refusal(p: GuidanceProblem, source: u64, rows: u64, operation: u64, reason: u64) -> (result: TestReplayEvaluation) {
+ let b: GuidanceBoundary = p.boundary;
+ return TestReplayEvaluation { accepted: false, reason: reason, event: b.event, source_reference: source, operation: operation, selected: false, supplied_rows: rows, candidates: p.candidates.len, failing_candidates: 0, selected_failure: false, oracle_cost_known: false, oracle_failure_cost: 0, selected_cost_known: false, selected_cost: 0, total_cost: 0, mandatory_executions: 0, baseline_path: 2, baseline_operation: 0 };
+}
+fn test_verdict_known(v: WorkVerification) -> (result: bool) { return match v { WorkVerification.Passed => true, WorkVerification.Failed => true, WorkVerification.Unknown => false, }; }
+fn test_failed(v: WorkVerification) -> (result: bool) { return match v { WorkVerification.Passed => false, WorkVerification.Failed => true, WorkVerification.Unknown => false, }; }
+fn test_replay_row_reason(p: GuidanceProblem, source: u64, o: TestReplayOutcome) -> (result: u64) {
+ let b: GuidanceBoundary = p.boundary;
+ if o.event != b.event || o.question != b.question || o.state != b.state || o.permitted_reference != b.permitted_reference || o.source_reference != source || o.reference == 0 || o.authority == 0 { return 1; }
+ if o.observed_at < b.decision_at { return 3; }
+ if !outcome_observed(o.kind) { return 4; }
+ if !test_verdict_known(o.verdict) || !o.cost_known { return 2; }
+ // At most eight rows; this bound makes summation safe without saturation.
+ if o.cost_unit != p.cost_unit || o.cost > 1000000000000 { return 5; }
+ iterate i over p.candidates carrying matches: u64 = 0 { let c: OperationCandidate = p.candidates[i]; next matches = matches + select(c.operation == o.operation, 1, 0); }
+ if matches != 1 { return 1; }
+ return 0;
+}
+record TestReplayTotals { failures: u64, best: u64, total: u64, selected_cost: u64, selected_failure: bool }
+fn test_replay_add(t: TestReplayTotals, o: TestReplayOutcome, operation: u64) -> (result: TestReplayTotals) {
+ let failed: bool = test_failed(o.verdict);
+ return TestReplayTotals { failures: t.failures + select(failed, 1, 0), best: select(failed && (t.failures == 0 || o.cost < t.best), o.cost, t.best), total: t.total + o.cost, selected_cost: select(o.operation == operation, o.cost, t.selected_cost), selected_failure: t.selected_failure || (o.operation == operation && failed) };
+}
+fn evaluate_initial_test(p: GuidanceProblem, source_reference: u64, outcomes: [TestReplayOutcome; up_to 8], operation: u64) -> (result: TestReplayEvaluation) {
+ let baseline: Guidance = guide_operations(p);
+ // Reuse structural admission. Ties or unknown prior costs can legitimately
+ // leave the deterministic baseline without a choice; retain that fallback.
+ if source_reference == 0 || p.cost_unit == 0 || (baseline.path == 2 && baseline.reason != 2 && baseline.reason != 6) { return test_replay_refusal(p, source_reference, outcomes.len, operation, 1); }
+ if outcomes.len != p.candidates.len { return test_replay_refusal(p, source_reference, outcomes.len, operation, 2); }
+ iterate i over p.candidates carrying eligible: bool = true {
+  let c: OperationCandidate = p.candidates[i];
+  next eligible = eligible && candidate_reason(c, p.boundary) == 0 && (!c.cost_known || c.cost <= p.max_operation_cost);
+ }
+ if !eligible { return test_replay_refusal(p, source_reference, outcomes.len, operation, 1); }
+ iterate i over p.candidates carrying selected_count: u64 = 0 { let c: OperationCandidate = p.candidates[i]; next selected_count = selected_count + select(c.operation == operation, 1, 0); }
+ // Zero is explicit abstention, retained in the same evaluation denominator.
+ if operation != 0 && selected_count != 1 { return test_replay_refusal(p, source_reference, outcomes.len, operation, 1); }
+ iterate i over outcomes carrying reason: u64 = 0 {
+  let o: TestReplayOutcome = outcomes[i];
+  iterate j over outcomes carrying copies: u64 = 0 { let other: TestReplayOutcome = outcomes[j]; next copies = copies + select(o.operation == other.operation, 1, 0); }
+  let row_reason: u64 = test_replay_row_reason(p, source_reference, o);
+  next reason = select(reason != 0, reason, select(copies != 1, 1, row_reason));
+ }
+ if reason != 0 { return test_replay_refusal(p, source_reference, outcomes.len, operation, reason); }
+ iterate i over outcomes carrying totals: TestReplayTotals = TestReplayTotals { failures: 0, best: 0, total: 0, selected_cost: 0, selected_failure: false } { next totals = test_replay_add(totals, outcomes[i], operation); }
+ let b: GuidanceBoundary = p.boundary;
+ return TestReplayEvaluation { accepted: true, reason: 0, event: b.event, source_reference: source_reference, operation: operation, selected: operation != 0, supplied_rows: outcomes.len, candidates: p.candidates.len, failing_candidates: totals.failures, selected_failure: totals.selected_failure, oracle_cost_known: totals.failures != 0, oracle_failure_cost: totals.best, selected_cost_known: operation != 0, selected_cost: totals.selected_cost, total_cost: totals.total, mandatory_executions: p.candidates.len, baseline_path: baseline.path, baseline_operation: baseline.operation };
 }

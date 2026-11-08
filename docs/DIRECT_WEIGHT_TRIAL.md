@@ -80,3 +80,9 @@ artificial utility benchmark substitutes for them. Token and author-construction
 costs for a controlled trial remain unmeasured; CLI probe wall times are execution/
 transport measurements, not authoring time. The smallest next work is owner-bound
 data capture and custody for one task, followed by a bounded direct-weight trial.
+
+The subsequent [test-priority evidence campaign](TEST_PRIORITY_EVIDENCE.md)
+performed a source-bound native replay and added complete-alternative trial
+evaluation. The all-pass, already-known source and missing independent changed
+source groups do not establish an eligible training/held-out cohort. No authored
+weight attempt is credited by reusing the old fixture vectors.

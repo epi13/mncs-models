@@ -1,0 +1,93 @@
+{
+  "context": {
+    "claim_fences": [],
+    "claim_holders": {
+      "mncs-models": [
+        {
+          "basis": "explicit-adoption",
+          "claim_id": "claim:mncs-models:worktree:29b82ef7d051",
+          "consumer_id": "local-agent",
+          "scope": {
+            "branch": "models-residual-decision-20261108",
+            "checkout": "/home/epi13/Documents/Projects/mncs-models/.worktrees/residual-decision-20261108",
+            "checkout_identity": "checkout:ac73d979fd8931c1",
+            "exclusive": false,
+            "git_common_directory_identity": "git-common:ac7d45333c2a035a",
+            "kind": "worktree",
+            "manifest_identity": "e76f388a6d455a58",
+            "paths": null,
+            "repository": "mncs-models"
+          },
+          "session_id": "ses_8145f11148894a55"
+        }
+      ]
+    },
+    "claim_required_actions": [
+      "delegate"
+    ],
+    "denied": [],
+    "escalation_required": [
+      "delete"
+    ],
+    "grants": [],
+    "invocable": [
+      "*"
+    ],
+    "protected_repositories": [],
+    "readable": [
+      "workspace"
+    ],
+    "revision": "400228c186a847df279d9ce77cb98cc9325d768c1651835193516a90cbe7211b",
+    "schema_version": "mncs.environment.authority-context/1",
+    "scope_grant_repositories": [],
+    "scope_grants": [],
+    "subject": "local-agent",
+    "writable": [
+      "mncs-models"
+    ]
+  },
+  "evaluation": {
+    "authorization_basis": "session-writable-scope",
+    "coordination_only_claim_count": 0,
+    "coordination_only_claims": [],
+    "coordination_only_claims_truncated": false,
+    "coordination_status": "isolated-proposal-worktree",
+    "decision_domain": "eligibility",
+    "eligibility_basis": "registered-non-main-worktree-no-persistent-claim",
+    "eligibility_evidence": {
+      "action": "execute",
+      "event_reference": {
+        "identity": "evt_37a923a219207e7c",
+        "sequence": 8,
+        "type": "authority.proposal-eligible"
+      },
+      "operation_executed": false,
+      "preflight_state": {
+        "branch": "models-residual-decision-20261108",
+        "branch_status": "attached",
+        "checkout_identity": "checkout:ac73d979fd8931c1",
+        "head": "890262b8a656dacb95439d50bf37b5bd1c6d6bb4",
+        "head_status": "measured",
+        "observation_basis": "fresh-registered-checkout-inspection",
+        "schema_version": "mncs.environment.proposal-preflight-state/1",
+        "working_tree_status": "dirty"
+      },
+      "repository": "mncs-models",
+      "scope": {
+        "branch": "models-residual-decision-20261108",
+        "checkout_identity": "checkout:ac73d979fd8931c1",
+        "exclusive": false,
+        "git_common_directory_identity": "git-common:ac7d45333c2a035a",
+        "kind": "worktree",
+        "manifest_identity": "e76f388a6d455a58",
+        "repository": "mncs-models"
+      }
+    },
+    "operation_executed": false,
+    "persistent_claim_required": false,
+    "reason": "/home/epi13/Documents/Projects/mncs-models/.worktrees/residual-decision-20261108 is eligible in its observed non-main worktree; claim overlaps remain coordination evidence",
+    "repository_writable_scope_present": true,
+    "verdict": "allow",
+    "writable_scope_required_for_integration": true
+  }
+}

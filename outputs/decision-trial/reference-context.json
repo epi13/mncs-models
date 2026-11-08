@@ -1,0 +1,218 @@
+{
+  "schema": "mncs.models.static-experiment-reference-context/1",
+  "note": "Static artifact context for native opaque handles, not a registry, authenticated custody service or historical event reconstruction",
+  "event_1001": {
+    "identity": "source-frozen-four-suite-eligibility-20261108",
+    "plan": "plan.json",
+    "plan_sha256": "242dd38f865a2fee94b6f1b14a9155b4cf0023bc84c1087d6bb54a9126f4c0d5",
+    "state_201": "complete source/dependency/compiler snapshot in plan",
+    "question_601": "which preserved permitted native test suite first reveals a native assertion failure?"
+  },
+  "source_1000": {
+    "source_sha256": {
+      "src/models/compose.mncs": "bfcdf5aa799a44f5a8c9be9e7f4addefd467b3d9347eab7d3fce24aece20cbd3",
+      "src/models/demand.mncs": "0854fc82eebbc55c1625f485bd96d4ef877c6f7d1b73bc4bf47899155b0820b1",
+      "src/models/guidance.mncs": "a7aa72f8142b1a23207875f2320e35693a40145fed4b1df91879cebe54df5f7d",
+      "src/models/micro.mncs": "1f96bed08994c701e1c1103ae369f3f95cb061cf8bc637dd9cdfba30150328b0",
+      "src/models/residual.mncs": "3d25730e4fb5176660fe66e417dc3bda7eb8e8d28641ae9021946399286944a0",
+      "src/models/trial.mncs": "f4ab15422ee0b021c80cc66f2819c2bae96a86b70fa4afe6fd5c32099cd53660",
+      "src/models/views.mncs": "c32ae169c6de3fe37517545a934a9937cc9e3d1f212cce01d61bf419c43aded5",
+      "tests/fixtures/composition_cases.mncs": "4a57eef685758e2d2b29c1eb468ef4c5fae593feaccb3ccf878f8b8903a24437",
+      "tests/fixtures/construction.mncs": "149f24b01fa587a14a64c2407d627c13b673b50e34449c94744861c636af0f57",
+      "tests/native/composition.mncs": "9afba4b86d127c31c69dfb3f7c2ce8cc8f570b2b46508ef6de37c8ce5ec7c172",
+      "tests/native/foundation.mncs": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
+      "tests/native/guidance.mncs": "9754324be92779357ffd32c660e3ad5d7cde96f1b2f4e4158e804c6a15c84170",
+      "tests/native/replay.mncs": "6c7e6745d85a93753e221c2aba0f07e7b2334b67970fb1ab49ee47db52cba58e",
+      "tests/native/residual.mncs": "e3c55cef372e71f5df15f3ce0bed04881eda872a48eadefeaafed37927e7df7d",
+      "tests/pressures/compact_view_refusal.mncs": "0fc05ebcc384fb3b89dd28a52d76c457966aa80e84cbcad72fbdc34c4134c67d"
+    },
+    "dependency_sha256": {
+      "mncs-language/library/core/bounds.mncs": "ed11a325208e0450ad196998c297f33ac2cae3f810ea29089f9cdd07ac6d0f62",
+      "mncs-language/library/core/bytes.mncs": "02a87c9fe7c8c5f8eee9e177c5090bd57614ad6a05b84a339ebab5b90f61f337",
+      "mncs-language/library/core/contracts.mncs": "343902e73e4a6b0bb07e078906da2ed1e5f3c1b1a11971245ab347e0875938cb",
+      "mncs-language/library/core/geometry.mncs": "6ea8f9a6a160a707048fef415b3a4e5d07b7f72b1e01914e84cfbe08fbddb0ca",
+      "mncs-language/library/core/identity.mncs": "0348822874eab9bfa496024809b36983e1a00e8241357a753dc79148faa528d2",
+      "mncs-language/library/core/image.mncs": "cc53b671cfd4eda6275ed5d07610e776a132a00e59e9288e980d65750ae36138",
+      "mncs-language/library/core/lineage.mncs": "b26698131716bdbdc6baf34a4f33d7c0477a43c5641dba2a5c53f6477c6ae061",
+      "mncs-language/library/core/logic.mncs": "3cc836943a01ff32ee3efd690f4b9de0c5757dd9718af33ed48ae924588ac32a",
+      "mncs-language/library/core/mask.mncs": "8a979917d86ca80bf61d65bcf737f22c735ecb648fd9773765d4b5fabbaf70b7",
+      "mncs-language/library/core/numeric.mncs": "567c2ed24d833a597670176b2c7be09cb73788aee6e860429a8eed24a01b863c",
+      "mncs-language/library/core/ordering.mncs": "5773304071aab4adc80ada57aa00f8ea94949b74f9c1b32852d7571e4117f76d",
+      "mncs-language/library/core/partition.mncs": "e942038c0143515c4a7877ba16e025b35a2a52270acdcea99b2fc6b56b6d8e9f",
+      "mncs-language/library/core/proof_admit.mncs": "ccdff8991beeff8144669e3888b19b83a4ee0fa5e53c9c63bf5724160b9c7d58",
+      "mncs-language/library/core/proof_check.mncs": "de683d8680f697a60c4c406c607d0bea501ffe703546e20a8c860bbeb26884c6",
+      "mncs-language/library/core/proof_dep.mncs": "782f74d6354a824891c8c27bc4b855127508d7fded0cd21b567419e28ef3aa61",
+      "mncs-language/library/core/proof_term.mncs": "158550265441cd2189bb40ded0118d9cb228027d41d4d64059d56b9b81be7c33",
+      "mncs-language/library/core/random.mncs": "98c9628fbcb7942d9249e97486f9e42a77a04bc5a04af7882d812cc6311d78a4",
+      "mncs-language/library/core/result.mncs": "37ab3f0187ee27fc334ebe1feae6d11eb38b495e4014da874634e65dbc34b9ad",
+      "mncs-language/library/core/sequences.mncs": "ef8fc2bdb651071fdba8c9d8b3ec520db5dee5b2b27ad310c5ff727f1f23731c",
+      "mncs-language/library/core/status.mncs": "7690a6d6bff4d74cb60fa930a87d078db8d31a0a7e7533a876ed7daa7cd52ff6",
+      "mncs-language/library/core/vector.mncs": "8e4b72d710a6a928186c547cda613b77587ea73d77cbc0dfdcf3d5ff2bfb2259",
+      "mncs-language/library/core/version.mncs": "686a9a08d0739b6e7c6fd43b3dda2fd3c74463deb293fccb634cb547d5272c3b",
+      "mncs-language/library/core/vision.mncs": "41f8b1a80caf3f61b18979bf874b8508388a9c37459e86de2ad7ca20c38d6227",
+      "mncs-language/library/family/coherence.mncs": "7f9230b52c6ae95732006287527991f859534c34e7591fc53a0b13127cd017cf",
+      "mncs-language/library/family/journal.mncs": "a9cfa0e10dfbeccce0b83ebfbcdf6f0dba5faea157bff74f0cb74183fb1c22c9",
+      "mncs-language/library/family/rfc_status.mncs": "bd8afffcd37a1381ebdfc733074924776a959b0fcefce54684498c4fbfca1594",
+      "mncs-language/library/jit/binding.mncs": "9517c094badc3c60bbd7fd0f236b3d5a23d26f5c479b2c317dc45751f121cbd0",
+      "mncs-language/library/jit/depends.mncs": "4a07aaed3e0385fca8d17f6999876cabefcb72cd26d28b4a39f32edfcf0f10ac",
+      "mncs-language/library/jit/lifecycle.mncs": "f4656413e1bc5f19950407749b6cc21f68c1d98d7e753a4317be6aaa9bf0e622",
+      "mncs-language/library/jit/plan.mncs": "6c5e71ce936f72157876c35f7a82f8f3f22258f1c13bc94a17513507b54213ef",
+      "mncs-language/library/jit/profile.mncs": "366038a748de23925abfc39a4d6c0dc89eef9cb5b5c4ac58d145d8d2e39c3415",
+      "mncs-language/library/jit/proof.mncs": "9df360436fc3f1d85ac5506232ab6755295f736b472643736829d965bca3ea19",
+      "mncs-language/library/jit/session.mncs": "731c0e25ee0c66885810aeec9674aab87e2070048a87219eafbbed670f01f5c5",
+      "mncs-language/library/jit/types.mncs": "2017f25e2c0df0a00e651fc330459d56967c4b82e29886a992cda950fdc27fb5",
+      "mncs-language/library/std/ansi.mncs": "634e6acece32a5875e448a8b03c06cecb602a5326950c0f81b60fb928ae37e53",
+      "mncs-language/library/std/application.mncs": "6ba87ee26693e2c59c5098a341d5b57fe8209337e661bf5898557573eee1d243",
+      "mncs-language/library/std/channel.mncs": "b8f76368658b8add78e2c0df7baab89bde173ac2b3b669422c93e5f777165b31",
+      "mncs-language/library/std/chunk.mncs": "70e505eec17a7cc10c8e8fb4cf549a412758527570a85040dac739595b658311",
+      "mncs-language/library/std/clock.mncs": "a825fe196cc3569576e2cadd2106b1b298be562df4582c5d6b9440221e0773b6",
+      "mncs-language/library/std/encoding.mncs": "86c3cab77708b87dc2d01ff484416ebf815ef6c0c3b0776fde99745f3b8eb9c5",
+      "mncs-language/library/std/fixed.mncs": "62bc1be04c3af5f6413362799dab3bb652f6c741a32f3cb46162b9e2eefa9899",
+      "mncs-language/library/std/fnv1a.mncs": "33502607a12639ea8a75def86a4ed7093018b5c0a9ca838a1fa8385516373590",
+      "mncs-language/library/std/json.mncs": "bbf08cfd0b220b5ed50aa3276cdd099efb518820f187841b5a5f2dd51418506c",
+      "mncs-language/library/std/json_cursor.mncs": "3ac6292bbff6f7c531aca51b1c83b5674540397a76cced1a47026da7ad71e36e",
+      "mncs-language/library/std/json_emit.mncs": "509b80aa679dfadffcb526d96aa4da28fb612bc75976dc955b62be9222dd84dd",
+      "mncs-language/library/std/json_projection.mncs": "d6927c358ec88d62c4d0d93ca063d32dc6bbe431c76dac98ca789eb606f6925b",
+      "mncs-language/library/std/json_stream.mncs": "fa5f414698be449b0336949733d901e61bdb3ca99c50bac232c543e6a5cdc707",
+      "mncs-language/library/std/platform.mncs": "bc07d20cc2790928877c618dd046644265d82c84bea50f9ef174508f3627702e",
+      "mncs-language/library/std/process.mncs": "6043a3aa2be1c664fa7004cc68f1d28874df261cc4834c47b89d99dbba35b4f4",
+      "mncs-language/library/std/relation.mncs": "f0fcd04818e5286f7a696927922b0bc16e849dc88a128a1be58454d1fb528971",
+      "mncs-language/library/std/scope.mncs": "cff2b5ce6cc05c2bcaea9779f61bc4d77d79644250532d25aabe6936a6aad873",
+      "mncs-language/library/std/sha256.mncs": "9458344edd856590292e2447b8e2ffb8f1054840615ede7ad11bc8f098a75212",
+      "mncs-language/library/std/simd.mncs": "c50c38f9c5d92c7f63ed5287ef1394df9c498ee14cab22f3a76b499b55b785d1",
+      "mncs-language/library/std/sort.mncs": "9fb698dbd9c40abe2bb963afd157c27ab0bf04dd1fcfb7656549e31069f0f08e",
+      "mncs-language/library/std/store.mncs": "e968d2293dd8af808c063ab790f2af890e19fc1d48e772835220c1d4db9696d7",
+      "mncs-language/library/std/task.mncs": "169d17cb48d9c818f5e11eae79d9c74d8a2f3b5e477469762eb2ea3e0b0c6ce8",
+      "mncs-language/library/std/text_map.mncs": "e30c79a0316b0a7b723241d2a6385ccf5fdb65150e766c25079591d87234276d",
+      "mncs-language/library/std/text_scan.mncs": "9d09428028957c4f1002bc86024e6c2b672ec895241484a3e0a46183f3f865a9",
+      "mncs-language/library/std/text_utf8.mncs": "471d10a104d9a3f8f60ff425965369d44d29fd36ea7b96762da9c82b8b4c9fe0",
+      "mncs-language/library/std/text_view.mncs": "dec9ee39f224b0064a593bbdc536d798d20d5248c3cb8cca37ef33dd7dc3735f",
+      "mncs-language/library/std/token_set.mncs": "c4e12abaff46b259ee7cda9efae1beeed2d0c36d0e89be48189767fc20dc29d3",
+      "mncs-test/native/mncs/test/assertions.mncs": "9456ccc069591b3dc2a53af64d3a196e98162d2f8d640410ae50f5487570919b",
+      "mncs-test/native/mncs/test/check_result_json_native_v1.mncs": "6a51563204a23bc7a3bf5317d5437fc767b6bfe14b7056b136c10b06f032830d",
+      "mncs-test/native/mncs/test/check_result_projection_v1.mncs": "d4032fc1b5db889614438e2782015dd68e77fc418ba070d4bb2b0c973707d857",
+      "mncs-test/native/mncs/test/compile_diagnostic_verdict_v1.mncs": "2f3737ea1dbc22d4965071aca666e9788276eba0e071ea0ad1f50e8551024dae",
+      "mncs-test/native/mncs/test/compile_verdict_v1.mncs": "7c866d36223b1c36fae479454782f46a00f7d955c80dc5c22da3efcfde236c28",
+      "mncs-test/native/mncs/test/digest.mncs": "1e15f27fd7a31ee2e98c9248d76ff009ced914b393b38b356de070e0d5bd14ee",
+      "mncs-test/native/mncs/test/exact_identity_selection_v2.mncs": "ad76bfd8cce37f94d03a3ec51c51b60838364386ae880f053338b4d5666eefec",
+      "mncs-test/native/mncs/test/execution_adjudication_v1.mncs": "613c20a115bb96dc4c33e7f6b5953da3b6eee25dff9bbc4655f17e03052e1027",
+      "mncs-test/native/mncs/test/execution_batch_envelope_adjudication_v1.mncs": "65468db6a3119b81c1eedb92a94a0f5412fb93e7c45b898110289a977f409f6d",
+      "mncs-test/native/mncs/test/execution_envelope_adjudication_v1.mncs": "7c6470d1332f90bee4ec7593eb8689f68a6952820a49cceeebfd4be79c461ef8",
+      "mncs-test/native/mncs/test/execution_result_adjudication_v1.mncs": "2961cc7ad3c4126d04e97440bb2fcaf85d6b004a2477ee85895ac8328f50881d",
+      "mncs-test/native/mncs/test/family_check_manifest_native_v1.mncs": "82536d119609dd5f6e04f9c738384271b2737cefc53502d260a15d0178f9996c",
+      "mncs-test/native/mncs/test/family_check_request_native_v1.mncs": "0f565c88ffb25a227057e368e35d2a20bd3e724440ac4e974ecd9d8f3eca0ea1",
+      "mncs-test/native/mncs/test/generative.mncs": "d2b04baaad227030ab16172f648a88778f70465bb0e3fd1708fe7be5d92d8f39",
+      "mncs-test/native/mncs/test/identity_sort_v1.mncs": "92fddf763102809b20d6a4ec7e841bf05fea88feaef4e9ec76be49951ba6ac2d",
+      "mncs-test/native/mncs/test/inventory_filter_v2.mncs": "6e82013f150958e4c550cb2beea59cf37f39d99cfc4e950b92c799901853b6d5",
+      "mncs-test/native/mncs/test/json_token_cursor_v1.mncs": "c806def651b38154e7ec5337d5480a87ba8e48bb4afb4f84b631f2edd0e890d2",
+      "mncs-test/native/mncs/test/library_tree_identity_v1.mncs": "4edae3a7ddf3f4077a0bbf01d7eca54f059181d83d976516e9fe6e5abd0e08a7",
+      "mncs-test/native/mncs/test/lineage_identity_v1.mncs": "66b1f299d28bea48e59f22e63075062df8887e4236832df35580835aa9792c2d",
+      "mncs-test/native/mncs/test/manifest_test_validation_v1.mncs": "b5dfd8287dda36fb19ff09711d7dbae06fcf6f3fd4928f9c31ad493e6d1bc8b7",
+      "mncs-test/native/mncs/test/native_result_projection_v1.mncs": "a4646826f57441302a00eab25335838d5587057857cefd8194b83e98e3ad39fc",
+      "mncs-test/native/mncs/test/obligation_selection.mncs": "90bbce305e19831be85e5546b2bdedccf80d7ff7ed5557b6931c8ad80430e9f9",
+      "mncs-test/native/mncs/test/process_transport_adjudication_v1.mncs": "2303cc2c244335ac5ca3172dcd75565185fc11c1096ddb103b7a8742be7451b9",
+      "mncs-test/native/mncs/test/provider.mncs": "995525034826f5b0102f31f6d374cbb652201e5b9146ff85543c702fb597edc6",
+      "mncs-test/native/mncs/test/provider_admission_probe.mncs": "8aec59ae2b1e1149c5fb0d264b7b5d9bc5470bc4a52c69af66cfe88ecedb84e7",
+      "mncs-test/native/mncs/test/provider_failure.mncs": "ae2b28eddb20618e43b493cbb9d761497d98dd0544d51cf0d361f467ab652d0d",
+      "mncs-test/native/mncs/test/provider_failure_probe.mncs": "fcba5f51e8b9b288bc63cade010cb96fec101e24237fb19a28bc0de267bf31dc",
+      "mncs-test/native/mncs/test/provider_protocol/v1.mncs": "e0d95a8a9da03a47f7452ed01a75f19a5488ec6822641cd3c1a05c8c57677f52",
+      "mncs-test/native/mncs/test/public_result_json_ascii_v1.mncs": "2c723b8706f6557ad34f18b1ed3c92e977774fcd997d4635a5fed08da1f654e9",
+      "mncs-test/native/mncs/test/public_result_json_key_order_v1.mncs": "4737ebd943dd9a6fe83432b054ab7773dc5e83d2a8b909c60c17c7832ad59f71",
+      "mncs-test/native/mncs/test/public_result_json_token_tape_v1.mncs": "ff2458a3a0e2664dd39e67b2973163722a8775165f46db052aea453b93b5e610",
+      "mncs-test/native/mncs/test/public_result_json_token_v1.mncs": "0985e1fa4954780b43cc72e51b7e2b60a73a2118acbe7fa97ad712885b9ec907",
+      "mncs-test/native/mncs/test/public_result_text_v1.mncs": "786ca46d4049bbe785d42fb282b841b2b0a411f760b59440fd7395ad9d40e5d3",
+      "mncs-test/native/mncs/test/replay_schema_v1.mncs": "7b50f59ca919a2557741d3e4e18a63fec7cfdbdb7db86746f96095a1d894f727",
+      "mncs-test/native/mncs/test/result_identity_v1.mncs": "416ded70e9b7318ea529f39e531c39b1ee242a7544dcb3cc8a4b733250cf9fb9",
+      "mncs-test/native/mncs/test/result_summary_projection_v1.mncs": "a7bcc6518e765b56aa710206208151eaa905ecc4d4af640040d248a414642cca",
+      "mncs-test/native/mncs/test/result_summary_v1.mncs": "ccd58bcf1fcfa8d543afa3e847b9efc24a766d8a09df967ecb22430e94ec5ead",
+      "mncs-test/native/mncs/test/run_identity_v1.mncs": "1ddd83f76879fc92432a553e356a40ddc0aa3b5f645538239ad4a021a63d48f9",
+      "mncs-test/native/mncs/test/runner.mncs": "61da270f2fd08a6fc24442ae22f1689ff9140eb40000c86f15ff8189bd9a522a",
+      "mncs-test/native/mncs/test/snapshot.mncs": "c9b3374511062db85a2ab9f297847d778004c35361ebcc881155fb7da3934704",
+      "mncs-test/native/mncs/test/suite.mncs": "d538b418262610a14242404dc6094bc8daac2746fa3f58c04b8cb807d5f61199",
+      "mncs-test/native/mncs/test/verification_coherence.mncs": "33aab4a7c96e3f13071f75b6a69dfbdde17d3020b6b53ad75fa4300ee8f30c81",
+      "mncs-test/native/mncs/test/verification_coherence_v2.mncs": "e7e336c6d4b211e1d2d0e8477c97bb0b3fae9caf2f208e70e1f2834e16a3813d",
+      "mncs-test/native/mncs/test/verification_recall_v1.mncs": "060857f2056207f82a5be8713921f59cce80c829a9c0d86c2f0ee77e5e600f38",
+      "mncs-test/native/mncs/test/verification_selection_v1.mncs": "5895fa384065c0d5fb07200119cd7002aef3d3072b4061f5733933c04d320b0a"
+    },
+    "compiler_binary_sha256": "129ef764bd56f6a3e05ee19631c46c044217590d537d52ee1c62b0fba335d7ae"
+  },
+  "permitted_603": {
+    "1": "foundation",
+    "2": "composition",
+    "3": "residual",
+    "4": "guidance"
+  },
+  "method_605": {
+    "path": "src/models/guidance.mncs",
+    "sha256": "a7aa72f8142b1a23207875f2320e35693a40145fed4b1df91879cebe54df5f7d",
+    "function": "guide_operations"
+  },
+  "cost_unit_606": "sum of individual native Test execution VM-step observations; no compilation or CLI wall units",
+  "authority_301": {
+    "provider": "mncs-test native_suite",
+    "observed_checkout": "d51958bf2cb2dbba583bee255897b4c7544a0468",
+    "authentication_limit": "Native assertion authority plus source-bound execution; not a separate author/reviewer custody boundary"
+  },
+  "prior_evidence": {
+    "801": {
+      "operation": 1,
+      "suite": "foundation",
+      "native_result": "baseline/foundation/native-result.json",
+      "sha256": "b55f66b91d5c78e10df94ca4e3cc7118e0b9c12b5cff39c21bcd7351df737169",
+      "run_id": "16e48f17df7475c8dd6254ebd927293a30bc8ef4512768c6a750c5abc910c1bf"
+    },
+    "802": {
+      "operation": 2,
+      "suite": "composition",
+      "native_result": "baseline/composition/native-result.json",
+      "sha256": "3a68b31e32272b933a643103e9ee272430c6ca814c3fe560fde3b62f579300ac",
+      "run_id": "6c2158b4ea1f3420ab7ad7be64f26f167923c69472029eb227e094e9e314ca0f"
+    },
+    "803": {
+      "operation": 3,
+      "suite": "residual",
+      "native_result": "baseline/residual/native-result.json",
+      "sha256": "b9d24d2bd1a2bfe3c750aa4da0a68b38bb1532b485354a8988618cc797525708",
+      "run_id": "e9d8bc1fc8538e819e317037a2f3f5ea2d3c134f34c3876961706e06c38a33cd"
+    },
+    "804": {
+      "operation": 4,
+      "suite": "guidance",
+      "native_result": "baseline/guidance/native-result.json",
+      "sha256": "871c883fa27494e53ef335078dc1975d3a42553d1e32b4fb9a5d166410ef248c",
+      "run_id": "61857ff52c8a5a10821cd6d7ef1a6e2f70278c30484942d530ad43d62f0a41f0"
+    }
+  },
+  "outcome_evidence": {
+    "901": {
+      "native_result": "verification/foundation/native-result.json",
+      "operation": 1,
+      "result_sha256": "b55f66b91d5c78e10df94ca4e3cc7118e0b9c12b5cff39c21bcd7351df737169"
+    },
+    "902": {
+      "native_result": "verification/composition/native-result.json",
+      "operation": 2,
+      "result_sha256": "3a68b31e32272b933a643103e9ee272430c6ca814c3fe560fde3b62f579300ac"
+    },
+    "903": {
+      "native_result": "verification/residual/native-result.json",
+      "operation": 3,
+      "result_sha256": "a46065d2bb7fe4769d60fdce1e5b9a30e2ea5cc13db6b221f9952782f9db9c4c"
+    },
+    "904": {
+      "native_result": "verification/guidance/native-result.json",
+      "operation": 4,
+      "result_sha256": "871c883fa27494e53ef335078dc1975d3a42553d1e32b4fb9a5d166410ef248c"
+    }
+  },
+  "dependency_projection_6031": {
+    "operations": {
+      "3": "residual"
+    },
+    "basis": "dependency-baseline-receipt.json; direct consumer among the preserved four suites only"
+  },
+  "established_reference_602": {
+    "status": "unresolved-best-failure-choice",
+    "basis": "source inventory plus cohort eligibility analysis; no optimal operation is asserted"
+  }
+}

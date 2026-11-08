@@ -68,3 +68,8 @@ no autonomous learning, planning, operation scheduling or operational integratio
 See [native semantics](../docs/DECISION_GUIDANCE.md) and the
 [source-bound activity audit](../docs/AGENT_BURDEN.md) for prerequisites, refusal
 conditions, source identities, denominator definitions and owner follow-ups.
+
+The later complete-alternative evaluator in `trial.mncs` addresses a distinct
+retrospective question when all candidate native outcomes actually exist. It does
+not weaken `evaluate_selection`'s actual-selection requirement or infer an
+unchosen outcome from one selected execution. See RFC 0004's test-replay section.

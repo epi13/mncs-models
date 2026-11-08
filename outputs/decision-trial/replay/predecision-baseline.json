@@ -1,0 +1,237 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:41581de24a38cbb5d7e22b428b67744c8d80c5f161ea835a87d992dc585480ce",
+    "artifact_sha256": "a46bffe6a4ec69e15ed34695be7d4ea696533d4c223c7aba83f81876ee84185b",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "record": {
+          "fields": [
+            [
+              "candidate_checks",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 4
+                }
+              }
+            ],
+            [
+              "cost",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 27488
+                }
+              }
+            ],
+            [
+              "cost_known",
+              {
+                "boolean": {
+                  "value": true
+                }
+              }
+            ],
+            [
+              "cost_unit",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 606
+                }
+              }
+            ],
+            [
+              "decision_at",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1794099102159
+                }
+              }
+            ],
+            [
+              "eligible",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 4
+                }
+              }
+            ],
+            [
+              "established_reference",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 602
+                }
+              }
+            ],
+            [
+              "event",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1001
+                }
+              }
+            ],
+            [
+              "operation",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 4
+                }
+              }
+            ],
+            [
+              "over_budget",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ],
+            [
+              "path",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1
+                }
+              }
+            ],
+            [
+              "permitted_reference",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 603
+                }
+              }
+            ],
+            [
+              "question",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 601
+                }
+              }
+            ],
+            [
+              "ranking_reference",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 605
+                }
+              }
+            ],
+            [
+              "reason",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ],
+            [
+              "selected_reference",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 804
+                }
+              }
+            ],
+            [
+              "state",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 201
+                }
+              }
+            ],
+            [
+              "unavailable",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ]
+          ],
+          "name": "Guidance",
+          "type_identity": "mncs:0.2:record-type:mncs.models.guidance::Guidance::candidate_checks%3Au64%3Bcost%3Au64%3Bcost_known%3Abool%3Bcost_unit%3Au64%3Bdecision_at%3Au64%3Beligible%3Au64%3Bestablished_reference%3Au64%3Bevent%3Au64%3Boperation%3Au64%3Bover_budget%3Au64%3Bpath%3Au64%3Bpermitted_reference%3Au64%3Bquestion%3Au64%3Branking_reference%3Au64%3Breason%3Au64%3Bselected_reference%3Au64%3Bstate%3Au64%3Bunavailable%3Au64%3B"
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 1110
+  },
+  "canonical_arguments_sha256": "b5d7c7ab2be15075c124335ab8532e45ed4154a9baad100bd5d09fb0ebcf4270",
+  "function": "guide_operations",
+  "module": "mncs.models.guidance",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

@@ -1,0 +1,114 @@
+{
+  "schema": "mncs.models.verification-evidence/1",
+  "suite": "composition",
+  "boundary": "native bounded models, DAGs, residual and operation-guidance contracts; mechanical verification only; activity audit is observational, not predictive utility; no operational integration or family conformance claim",
+  "result_sha256": "3a68b31e32272b933a643103e9ee272430c6ca814c3fe560fde3b62f579300ac",
+  "native_run_id": "6c2158b4ea1f3420ab7ad7be64f26f167923c69472029eb227e094e9e314ca0f",
+  "summary": {
+    "authority": "native_suite",
+    "failed": 0,
+    "passed": 16,
+    "skipped": 0,
+    "total": 16,
+    "unsupported": 0,
+    "verdict": "PASS"
+  },
+  "execution": {
+    "artifact_identity": "mncs:compiler:backend-artifact:ac53f082c829e209fd897455a3127e75c7b05964fae88a1b3c313680fe9f0e0c",
+    "artifact_sha256": "2206f30688d88bb7f2c2c33b6d288ea252923f5220cba98b0dddbe3e9c9f0b58",
+    "backend": "mncs-research-bytecode",
+    "batch_size": 16,
+    "canonical_path": true,
+    "compiler_owned_inventory": true,
+    "fallback": false,
+    "host_subprocesses": 0,
+    "inventory_identity": "006ea965bba00bc45e2beb4329f712f345fd343dad61139d614a2cdbc7c75446",
+    "mode": "native-toolchain-embed",
+    "native_batch_calls": 1,
+    "native_session_calls": 50,
+    "reused_session": true,
+    "run_identity": "6c2158b4ea1f3420ab7ad7be64f26f167923c69472029eb227e094e9e314ca0f",
+    "runner_version": "0.1.0",
+    "step_budget": 3000000,
+    "test_case_identities": [
+      "mncs:0.2:test-case:mncs.models.composition_tests::abstention_blocks_downstream::f0506b9381f7d778a083d7f209fa7054d7673668491a2e361efaec3d9ab6bdbd",
+      "mncs:0.2:test-case:mncs.models.composition_tests::bounds_and_budgets::df55daf6a49e9aeb31eea7be0b6ba20e65684b2bfdaf38adce37a5b657447822",
+      "mncs:0.2:test-case:mncs.models.composition_tests::concat_contract::b73fb783e3a0e1a700c1e52801d344760cbc11532147709541d245df590029cc",
+      "mncs:0.2:test-case:mncs.models.composition_tests::deterministic_composition::9e7bd68c72864068144983e4862c31e9641a8d972339a2255693b3dcebb62c5c",
+      "mncs:0.2:test-case:mncs.models.composition_tests::failed_component_replacement_is_atomic::ce432710bc5cc328c5d352bbca546b1afb634b800d411d4fa25384832a3ee7b2",
+      "mncs:0.2:test-case:mncs.models.composition_tests::frozen_heldout_comparison::b27c7bd04471e17064fe716fa88fcc0d6f3309813c1bb7fa46397a35ca04475d",
+      "mncs:0.2:test-case:mncs.models.composition_tests::invalid_connections_and_duplicate_identity::ea4bced70125cf3bbf4546e74e9aafb35c8cfe7f8b908a45090cce8047fcf79b",
+      "mncs:0.2:test-case:mncs.models.composition_tests::isolated_revision_regression_and_rollback::0c99304072c74d41f545b122f3661ce8f4f1a3705e8d0f180735e388c58102c3",
+      "mncs:0.2:test-case:mncs.models.composition_tests::learned_composition::a7dca94d3a35b6f42a52e3ce9476d30c642bed3a189f93933e6d69fa7c1b9c2d",
+      "mncs:0.2:test-case:mncs.models.composition_tests::numerical_interface_refusal_and_revision_identity::ffd7e5e4d4cf2963a5089d97d0095775ce52d099a55b89572b8ba0cb3b729a7a",
+      "mncs:0.2:test-case:mncs.models.composition_tests::parallel_branch_order_independence::a2afabc9929d1ee0a7f01b952d4cc51c0400638b04d8085f7924b54e8c5a0abd",
+      "mncs:0.2:test-case:mncs.models.composition_tests::sequential_two_components::5328c824b64f9f529c293887b4c7dc7f104f2510c989bf6419762fef93ef3201",
+      "mncs:0.2:test-case:mncs.models.composition_tests::specialist_and_tuning_regression::b8bd6f5e5699668c8ba5a7607f4f6f0a6f398c39fc2bebd20b622f59d495ca41",
+      "mncs:0.2:test-case:mncs.models.composition_tests::standalone_equivalence::d1e86bc16b2d2b007771dbac76da537a709f81b63b9f6817a84de525b9f3044d",
+      "mncs:0.2:test-case:mncs.models.composition_tests::ten_component_execution_and_subset::cc8c84b03d0fd0480b04a0d4faf9b18b2d02a78ac65675295d4e23fcf3aad4da",
+      "mncs:0.2:test-case:mncs.models.composition_tests::unavailable_and_contradiction_propagate::143cc265d194b595f6c4ccae70cf55f08cd60bc899236127b665625efec2be3f"
+    ]
+  },
+  "suite_wall_seconds": 55.889576815010514,
+  "wall_scope": "compilation and suite, not inference-only latency",
+  "source_sha256": {
+    "src/models/compose.mncs": "bfcdf5aa799a44f5a8c9be9e7f4addefd467b3d9347eab7d3fce24aece20cbd3",
+    "src/models/demand.mncs": "0854fc82eebbc55c1625f485bd96d4ef877c6f7d1b73bc4bf47899155b0820b1",
+    "src/models/guidance.mncs": "a7aa72f8142b1a23207875f2320e35693a40145fed4b1df91879cebe54df5f7d",
+    "src/models/micro.mncs": "1f96bed08994c701e1c1103ae369f3f95cb061cf8bc637dd9cdfba30150328b0",
+    "src/models/residual.mncs": "3d25730e4fb5176660fe66e417dc3bda7eb8e8d28641ae9021946399286944a0",
+    "src/models/trial.mncs": "1c07681c2744147b80c3ac3ce68db743ae2d0b279b6f52ebae8f770eeefc6046",
+    "src/models/views.mncs": "c32ae169c6de3fe37517545a934a9937cc9e3d1f212cce01d61bf419c43aded5",
+    "tests/fixtures/composition_cases.mncs": "4a57eef685758e2d2b29c1eb468ef4c5fae593feaccb3ccf878f8b8903a24437",
+    "tests/fixtures/construction.mncs": "149f24b01fa587a14a64c2407d627c13b673b50e34449c94744861c636af0f57",
+    "tests/native/composition.mncs": "9afba4b86d127c31c69dfb3f7c2ce8cc8f570b2b46508ef6de37c8ce5ec7c172",
+    "tests/native/foundation.mncs": "7c0e1e9b7861b577a7b9acb71204c5f2cf4ac49d65bb99315688eb420083c18a",
+    "tests/native/guidance.mncs": "9754324be92779357ffd32c660e3ad5d7cde96f1b2f4e4158e804c6a15c84170",
+    "tests/native/residual.mncs": "e3c55cef372e71f5df15f3ce0bed04881eda872a48eadefeaafed37927e7df7d",
+    "tests/pressures/compact_view_refusal.mncs": "0fc05ebcc384fb3b89dd28a52d76c457966aa80e84cbcad72fbdc34c4134c67d"
+  },
+  "compiler_binary_sha256": "129ef764bd56f6a3e05ee19631c46c044217590d537d52ee1c62b0fba335d7ae",
+  "observed_language_checkout": "f8212ed8b7478196b5293a84152154be5e0bea3f",
+  "observed_test_checkout": "d51958bf2cb2dbba583bee255897b4c7544a0468",
+  "checkout_revision_note": "Observed heads are not binary build attestations; the binary hash binds execution.",
+  "measurements": {
+    "benchmark": {
+      "sha256": "d81b0d20cb3662061cb024155e3e3e316ca984d78c1ddbac6f1fe4dcc9909de8",
+      "steps": 1163508
+    },
+    "composed_cost": {
+      "sha256": "fe2a7e908625f7e4baa0077ca45d17b685fed14c253b1662c66c70b7d2f7140d",
+      "steps": 12222
+    },
+    "standalone_cost": {
+      "sha256": "1cc3e4d0749f306deccd6a3cc89a7cc1d1d96d94135700d67f9a6db0c660a650",
+      "steps": 2407
+    },
+    "deterministic_cost": {
+      "sha256": "5d9dd2aa2ec271a6d5396cc93ee5b4fc35e06c092dfe2b876abe7a2217f9a695",
+      "steps": 54
+    },
+    "scale_cost": {
+      "sha256": "dccd93adccba82c8d58bba8152903d3c3816ca39be58abcd5d957c8edca6a5ea",
+      "steps": 46463
+    },
+    "subset_cost": {
+      "sha256": "d51598d86f8844bc715501f7a8fb8e7df4d02925a9d805b989eb6cb7ad53e6c9",
+      "steps": 39470
+    },
+    "compact_view_update": {
+      "sha256": "76d3c1fd6fcef074fa8c73ead46ae50cb5cd5c53e47f4f42f3e7cc6a530dbf4f",
+      "status": "expected_refusal",
+      "diagnostic": "MNE198"
+    }
+  },
+  "source_artifact_bytes": {
+    "src/models/compose.mncs": 19688,
+    "src/models/demand.mncs": 5826,
+    "src/models/guidance.mncs": 8738,
+    "src/models/micro.mncs": 7767,
+    "src/models/residual.mncs": 9617,
+    "src/models/trial.mncs": 3277,
+    "src/models/views.mncs": 1862
+  }
+}

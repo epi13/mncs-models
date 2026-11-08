@@ -1,0 +1,13 @@
+{
+  "schema": "mncs.models.dependency-baseline/1",
+  "basis": "Retrospective source-only reproduction, not a frozen held-out comparison. Among the four preserved suites, only residual directly imports the changed trial module. New replay tests are additional mandatory validation, outside that preserved four-suite matrix. This relevance rule does not prove failure utility.",
+  "source_references": {
+    "src/models/trial.mncs": "f4ab15422ee0b021c80cc66f2819c2bae96a86b70fa4afe6fd5c32099cd53660",
+    "tests/native/residual.mncs": "e3c55cef372e71f5df15f3ce0bed04881eda872a48eadefeaafed37927e7df7d"
+  },
+  "permitted_reference_6031": "direct-consumer projection containing preserved operation 3 only; other mandatory suites are not suppressed",
+  "arguments_sha256": "871543414e5fb5f45eee38057d564d0e1a2719f860b3f1562d4d8e38dd313118",
+  "result_sha256": "f54358b9796bd10e4540835fa8e4d6d01d0b1057f31765ce379767728d7b9ad6",
+  "vm_steps": 321,
+  "cli_wall_seconds": 4.730012475978583
+}

@@ -1,0 +1,16 @@
+{
+  "command": "/workspace/mncs-environment/scripts/mncs-env authority ses_8145f11148894a55 --action execute --target /workspace/mncs-models/.worktrees/residual-decision-20261108",
+  "cwd": "/workspace/mncs-models/.worktrees/residual-decision-20261108",
+  "scope": "project",
+  "project": "mncs-models",
+  "started_at": "2026-11-08T00:53:18.779133Z",
+  "completed_at": "2026-11-08T00:53:18.943896Z",
+  "exit_code": 3,
+  "stdout": "{\"error\": \"Environment operation is not exposed by Control\", \"diagnostics\": {\"code\": \"operation-unavailable\", \"transport\": \"mncs-control-environment-rpc\", \"publication_completed\": false, \"next\": \"use an exposed Environment operation or extend the Control operation contract\", \"cause_code\": \"ENVIRONMENT_OPERATION_UNAVAILABLE\", \"domain_details\": {\"cause_code\": \"ENVIRONMENT_OPERATION_UNAVAILABLE\", \"operation\": \"authority\", \"status\": \"unknown\"}}}\n",
+  "stderr": "",
+  "timed_out": false,
+  "output_truncated": false,
+  "duration_seconds": 0.165,
+  "sandbox_backend": "bwrap",
+  "network": false
+}

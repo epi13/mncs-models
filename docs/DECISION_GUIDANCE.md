@@ -139,3 +139,9 @@ costs 360 and incomplete-history refusal 152. See the
 [measurement table and representation accounting](../outputs/guidance/README.md).
 These measurements include construction and admission, and establish no agent-time
 savings or advantage over a model performing a different task.
+
+For a complete source-frozen native test matrix, `trial::evaluate_initial_test`
+can now evaluate an initial choice or abstention against actually observed
+alternatives. Its [eligibility study](TEST_PRIORITY_EVIDENCE.md) preserves the
+absence of a defensible learned trial. The original deterministic selection and
+actual-operation outcome contracts remain unchanged.

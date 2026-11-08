@@ -1,0 +1,58 @@
+{
+  "context": {
+    "claim_fences": [],
+    "claim_holders": {
+      "mncs-models": [
+        {
+          "basis": "explicit-adoption",
+          "claim_id": "claim:mncs-models:worktree:29b82ef7d051",
+          "consumer_id": "local-agent",
+          "scope": {
+            "branch": "models-residual-decision-20261108",
+            "checkout": "/home/epi13/Documents/Projects/mncs-models/.worktrees/residual-decision-20261108",
+            "checkout_identity": "checkout:ac73d979fd8931c1",
+            "exclusive": false,
+            "git_common_directory_identity": "git-common:ac7d45333c2a035a",
+            "kind": "worktree",
+            "manifest_identity": "e76f388a6d455a58",
+            "paths": null,
+            "repository": "mncs-models"
+          },
+          "session_id": "ses_8145f11148894a55"
+        }
+      ]
+    },
+    "claim_required_actions": [
+      "delegate"
+    ],
+    "denied": [],
+    "escalation_required": [
+      "delete"
+    ],
+    "grants": [],
+    "invocable": [
+      "*"
+    ],
+    "protected_repositories": [],
+    "readable": [
+      "workspace"
+    ],
+    "revision": "400228c186a847df279d9ce77cb98cc9325d768c1651835193516a90cbe7211b",
+    "schema_version": "mncs.environment.authority-context/1",
+    "scope_grant_repositories": [],
+    "scope_grants": [],
+    "subject": "local-agent",
+    "writable": [
+      "mncs-models"
+    ]
+  },
+  "evaluation": {
+    "event_reference": {
+      "identity": "evt_c21caa85ec6cd9bb",
+      "sequence": 9,
+      "type": "authority.denied"
+    },
+    "reason": "absolute target is outside every observed repository checkout",
+    "verdict": "deny"
+  }
+}

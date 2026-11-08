@@ -295,3 +295,12 @@ Then inspect the current heads and relevant RFCs/docs of the MNCS repositories t
 ## License
 
 Apache-2.0.
+
+## Current test-prioritization investigation
+
+[Source-bound eligibility and complete native outcome replay](docs/TEST_PRIORITY_EVIDENCE.md)
+examines the repaired deterministic baseline. The available replay does not supply
+an eligible changed-source learning cohort; no learned utility or controlled
+direct-weight trial is claimed. Existing negative results remain preserved.
+Run `python3 scripts/verify.py --output-root outputs/my-check` to retain prior
+receipts; `--suite replay` checks the complete-alternative evaluation boundary.

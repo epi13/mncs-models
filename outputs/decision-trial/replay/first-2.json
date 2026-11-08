@@ -1,0 +1,221 @@
+{
+  "call": {
+    "artifact_identity": "mncs:compiler:backend-artifact:da3f62d408896459a6a1c3053a78e887c6d5f6165518ffe6ab29737da1fef777",
+    "artifact_sha256": "a71bb36aa2907fa71a444bf622f9720a33baeef50d03c787a786e706ff13d2d9",
+    "backend": "mncs-research-bytecode",
+    "returned": [
+      {
+        "record": {
+          "fields": [
+            [
+              "accepted",
+              {
+                "boolean": {
+                  "value": true
+                }
+              }
+            ],
+            [
+              "baseline_operation",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 4
+                }
+              }
+            ],
+            [
+              "baseline_path",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1
+                }
+              }
+            ],
+            [
+              "candidates",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 4
+                }
+              }
+            ],
+            [
+              "event",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1001
+                }
+              }
+            ],
+            [
+              "failing_candidates",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ],
+            [
+              "mandatory_executions",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 4
+                }
+              }
+            ],
+            [
+              "operation",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 2
+                }
+              }
+            ],
+            [
+              "oracle_cost_known",
+              {
+                "boolean": {
+                  "value": false
+                }
+              }
+            ],
+            [
+              "oracle_failure_cost",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ],
+            [
+              "reason",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 0
+                }
+              }
+            ],
+            [
+              "selected",
+              {
+                "boolean": {
+                  "value": true
+                }
+              }
+            ],
+            [
+              "selected_cost",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1633084
+                }
+              }
+            ],
+            [
+              "selected_cost_known",
+              {
+                "boolean": {
+                  "value": true
+                }
+              }
+            ],
+            [
+              "selected_failure",
+              {
+                "boolean": {
+                  "value": false
+                }
+              }
+            ],
+            [
+              "source_reference",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 1000
+                }
+              }
+            ],
+            [
+              "supplied_rows",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 4
+                }
+              }
+            ],
+            [
+              "total_cost",
+              {
+                "integer": {
+                  "type": {
+                    "bits": 64,
+                    "signed": false
+                  },
+                  "value": 2142347
+                }
+              }
+            ]
+          ],
+          "name": "TestReplayEvaluation",
+          "type_identity": "mncs:0.2:record-type:mncs.models.trial::TestReplayEvaluation::accepted%3Abool%3Bbaseline_operation%3Au64%3Bbaseline_path%3Au64%3Bcandidates%3Au64%3Bevent%3Au64%3Bfailing_candidates%3Au64%3Bmandatory_executions%3Au64%3Boperation%3Au64%3Boracle_cost_known%3Abool%3Boracle_failure_cost%3Au64%3Breason%3Au64%3Bselected%3Abool%3Bselected_cost%3Au64%3Bselected_cost_known%3Abool%3Bselected_failure%3Abool%3Bsource_reference%3Au64%3Bsupplied_rows%3Au64%3Btotal_cost%3Au64%3B"
+        }
+      }
+    ],
+    "reused_session": true,
+    "status": "returned",
+    "steps": 2719
+  },
+  "canonical_arguments_sha256": "624fb7155d596214bff65c76ac71f7f1dce9adc73231b4e4a501dea9c4edef0d",
+  "function": "evaluate_initial_test",
+  "module": "mncs.models.trial",
+  "schema_version": "mncs.application-call/1",
+  "status": "returned"
+}

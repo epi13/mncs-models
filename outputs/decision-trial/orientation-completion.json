@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-08T00:55:50+00:00",
+  "checkpoint_id": "chk_d6b9ac7819f6a94a",
+  "claims_release_error": null,
+  "claims_released": [],
+  "outcome": "orientation-complete",
+  "request_digest": "30a8b342378cac50",
+  "request_id": null,
+  "requested_by": {
+    "consumer_id": "local-agent",
+    "principal_id": null
+  },
+  "summary": "Read-only Models orientation superseded by exact writable Models session; no claims or scratch allocations."
+}

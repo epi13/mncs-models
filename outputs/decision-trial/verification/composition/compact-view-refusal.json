@@ -1,0 +1,36 @@
+{
+  "classification": "compile_failure",
+  "execution": {
+    "fallback": false,
+    "host_subprocesses": 0,
+    "mode": "native-toolchain-embed"
+  },
+  "failure": {
+    "diagnostics": [
+      {
+        "code": "MNE198",
+        "expected": [],
+        "found": null,
+        "message": "functional update requires an exact-bound sequence this tranche; views refuse",
+        "severity": "error",
+        "span": {
+          "column": 53,
+          "end": 200,
+          "line": 6,
+          "start": 177
+        },
+        "stage": "elaboration"
+      }
+    ],
+    "message": "native test source did not pass compiler admission"
+  },
+  "failure_class": "compile",
+  "schema_version": "mncs.test-result/1",
+  "selection": {
+    "available_test_count": 0,
+    "level": "invalid_invocation",
+    "selected_test_count": 0
+  },
+  "tests": [],
+  "verdict": "UNKNOWN"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "models-residual-decision-experiment",
+  "working_checkout": "current",
+  "workspace_scope": {
+    "kind": "workspace",
+    "repositories": [
+      "mncs-models"
+    ]
+  },
+  "intent": {
+    "goal": "Investigate one source-bound residual test-prioritization decision; publish bounded native experiment evidence",
+    "repositories": [
+      "mncs-models"
+    ],
+    "constraints": [
+      "Other repositories read-only; no live learned control; preserve prior negative findings"
+    ]
+  },
+  "verification": {
+    "enabled": false
+  },
+  "actions": {
+    "enabled": false
+  },
+  "diagnostics": {
+    "enabled": false
+  },
+  "family": {
+    "enabled": false
+  }
+}

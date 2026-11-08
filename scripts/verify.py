@@ -26,7 +26,8 @@ def revision(path):
     return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=path, text=True).strip()
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--suite", choices=["all", "foundation", "composition", "residual", "guidance"], default="all")
+parser.add_argument("--output-root", default="outputs", help="Separate evidence directory; preserve previous receipts")
+parser.add_argument("--suite", choices=["all", "foundation", "composition", "residual", "guidance", "replay"], default="all")
 args = parser.parse_args()
 libraries = ["--library", "src", "--library", "tests/fixtures", "--library", str(TEST / "native"), "--library", str(LANG / "library")]
 # Match the native Test tool's shared, toolchain-scoped cache convention.
@@ -34,10 +35,11 @@ cache_scope = hashlib.sha256(str(BIN.resolve()).encode()).hexdigest()[:16]
 os.environ.setdefault("MNCS_NATIVE_APPLICATION_CACHE_DIR", str(COMMON / "mncs-native-application-cache" / cache_scope))
 source_hashes = sources()
 binary_hash = digest(BIN)
-for suite, minimum in [("foundation", 14), ("composition", 16), ("residual", 15), ("guidance", 26)]:
+verification_started_at_unix_ms = time.time_ns() // 1000000
+for suite, minimum in [("foundation", 14), ("composition", 16), ("residual", 15), ("guidance", 26), ("replay", 15)]:
     if args.suite not in ("all", suite):
         continue
-    out = ROOT / "outputs" / suite
+    out = ROOT / args.output_root / suite
     out.mkdir(parents=True, exist_ok=True)
     result = out / "native-result.json"
     receipt_path = out / "receipt.json"
@@ -46,9 +48,11 @@ for suite, minimum in [("foundation", 14), ("composition", 16), ("residual", 15)
     result.unlink(missing_ok=True)
     command = [str(BIN), "test", f"tests/native/{suite}.mncs", *libraries,
                "--step-budget", "3000000", "--format", "text", "--result", str(result)]
+    suite_started_at_unix_ms = time.time_ns() // 1000000
     start = time.monotonic()
     run = subprocess.run(command, cwd=ROOT, timeout=180)
     elapsed = time.monotonic() - start
+    suite_finished_at_unix_ms = time.time_ns() // 1000000
     if run.returncode or not result.is_file():
         raise SystemExit(run.returncode or 1)
     data = json.loads(result.read_text())
@@ -97,6 +101,10 @@ for suite, minimum in [("foundation", 14), ("composition", 16), ("residual", 15)
         "result_sha256": digest(result), "native_run_id": data["run_id"],
         "summary": data["summary"], "execution": data["execution"],
         "suite_wall_seconds": elapsed, "wall_scope": "compilation and suite, not inference-only latency",
+        "verification_started_at_unix_ms": verification_started_at_unix_ms,
+        "suite_started_at_unix_ms": suite_started_at_unix_ms,
+        "suite_finished_at_unix_ms": suite_finished_at_unix_ms,
+        "chronology_scope": "Host clock observations, not authenticated custody or an independent clock attestation",
         "source_sha256": source_hashes, "compiler_binary_sha256": binary_hash,
         "observed_language_checkout": revision(LANG), "observed_test_checkout": revision(TEST),
         "checkout_revision_note": "Observed heads are not binary build attestations; the binary hash binds execution.",

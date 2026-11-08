@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/measure_test_replay.py",
+        "--prepare"
+      ],
+      "exit_code": 1,
+      "diagnostic": "Plan already exists; preserve it and use a new output campaign for another trial",
+      "purpose": "Published plan/results cannot be overwritten"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/measure_test_replay.py",
+        "--evaluate"
+      ],
+      "exit_code": 1,
+      "diagnostic": "Replay already recorded; preserve its results and use a new output campaign",
+      "purpose": "Published plan/results cannot be overwritten"
+    }
+  ],
+  "python_syntax": "passed"
+}

@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "operation": "claims",
+  "exit_code": 0,
+  "result": {
+    "acquired_at": "2026-11-08T00:44:07+00:00",
+    "basis": "explicit-adoption",
+    "claim_id": "claim:mncs-models:worktree:29b82ef7d051",
+    "consumer_id": "local-agent",
+    "expires_at": "2026-11-09T00:44:07+00:00",
+    "identity": "clm_595b7dba64bfe2a5",
+    "provenance": {
+      "acquired_by": "local-agent",
+      "adopted_dirty": true,
+      "adopted_head": "890262b8a656dacb95439d50bf37b5bd1c6d6bb4",
+      "adopted_signals": [
+        "dirty-tree"
+      ],
+      "operation_request_digest": "50bede217f633892",
+      "operation_request_id": "req_ba2ee3f4b8c7e5b3272d1224a53199e2"
+    },
+    "reason": "source-isolated native residual decision experiment",
+    "repository": "mncs-models",
+    "schema_version": "mncs.environment.workspace-claim/2",
+    "scope": {
+      "branch": "models-residual-decision-20261108",
+      "checkout": "/home/epi13/Documents/Projects/mncs-models/.worktrees/residual-decision-20261108",
+      "checkout_identity": "checkout:ac73d979fd8931c1",
+      "exclusive": false,
+      "git_common_directory_identity": "git-common:ac7d45333c2a035a",
+      "kind": "worktree",
+      "manifest_identity": "e76f388a6d455a58",
+      "paths": null,
+      "repository": "mncs-models"
+    },
+    "session_id": "ses_8145f11148894a55",
+    "status": "held",
+    "version": 1
+  },
+  "stderr": ""
+}

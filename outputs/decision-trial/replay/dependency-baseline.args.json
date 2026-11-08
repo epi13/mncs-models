@@ -1,0 +1,147 @@
+[
+  {
+    "record": {
+      "fields": {
+        "boundary": {
+          "record": {
+            "fields": {
+              "decision_at": {
+                "integer": {
+                  "value": 1794099102159
+                }
+              },
+              "established_reference": {
+                "integer": {
+                  "value": 602
+                }
+              },
+              "event": {
+                "integer": {
+                  "value": 1001
+                }
+              },
+              "operation_contract": {
+                "integer": {
+                  "value": 604
+                }
+              },
+              "permitted_reference": {
+                "integer": {
+                  "value": 6031
+                }
+              },
+              "question": {
+                "integer": {
+                  "value": 601
+                }
+              },
+              "resolved_operation": {
+                "integer": {
+                  "value": 0
+                }
+              },
+              "state": {
+                "integer": {
+                  "value": 201
+                }
+              }
+            }
+          }
+        },
+        "candidates": {
+          "sequence": {
+            "values": [
+              {
+                "record": {
+                  "fields": {
+                    "contract": {
+                      "integer": {
+                        "value": 604
+                      }
+                    },
+                    "cost": {
+                      "integer": {
+                        "value": 366291
+                      }
+                    },
+                    "cost_known": {
+                      "boolean": {
+                        "value": true
+                      }
+                    },
+                    "evidence": {
+                      "record": {
+                        "fields": {
+                          "authority": {
+                            "integer": {
+                              "value": 301
+                            }
+                          },
+                          "available_at": {
+                            "integer": {
+                              "value": 1794099102159
+                            }
+                          },
+                          "event": {
+                            "integer": {
+                              "value": 1001
+                            }
+                          },
+                          "reference": {
+                            "integer": {
+                              "value": 803
+                            }
+                          },
+                          "state": {
+                            "integer": {
+                              "value": 201
+                            }
+                          },
+                          "status": {
+                            "finite": {
+                              "variant": "Present"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "operation": {
+                      "integer": {
+                        "value": 3
+                      }
+                    },
+                    "ready": {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "cost_unit": {
+          "integer": {
+            "value": 606
+          }
+        },
+        "max_candidates": {
+          "integer": {
+            "value": 8
+          }
+        },
+        "max_operation_cost": {
+          "integer": {
+            "value": 3000000
+          }
+        },
+        "ranking_reference": {
+          "integer": {
+            "value": 605
+          }
+        }
+      }
+    }
+  }
+]

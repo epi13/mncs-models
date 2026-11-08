@@ -1,0 +1,90 @@
+mncs 0.18;
+module mncs.models.replay_tests;
+use mncs.test.assertions;
+use mncs.test.suite;
+use mncs.models.trial;
+use mncs.models.guidance;
+use mncs.models.residual;
+use mncs.models.demand;
+
+// Mechanical handles and invented outcomes, not operational training examples.
+fn candidate(op: u64, code: u64) -> (result: OperationCandidate) {
+ let e: DemandEvidence = DemandEvidence { event: 101, state: 201, reference: 300 + op, authority: 301, available_at: select(code == 2, 101, 90), status: ObservationStatus.Present };
+ return OperationCandidate { operation: op, contract: 604, evidence: e, ready: code != 1, cost_known: true, cost: select(code == 6, 11, select(op == 11 || code == 4, 4, 2)) };
+}
+fn problem(code: u64) -> (result: GuidanceProblem) {
+ let b: GuidanceBoundary = GuidanceBoundary { event: 101, question: 601, state: 201, decision_at: 100, established_reference: 602, permitted_reference: 603, operation_contract: 604, resolved_operation: select(code == 5, 11, 0) };
+ let exact: [OperationCandidate; 2] = [candidate(11, 0), candidate(select(code == 3, 11, 12), code)]; let cs: [OperationCandidate; up_to 8] = exact;
+ return GuidanceProblem { boundary: b, candidates: cs, ranking_reference: 605, cost_unit: 606, max_candidates: 8, max_operation_cost: 10 };
+}
+fn row(op: u64, code: u64) -> (result: TestReplayOutcome) {
+ return TestReplayOutcome { event: select(code == 6, 999, 101), question: select(code == 12, 999, 601), state: select(code == 14, 999, 201), operation: op, permitted_reference: select(code == 11, 999, 603), source_reference: select(code == 4, 999, 1000), reference: select(code == 10, 0, 700 + op), authority: select(code == 9, 0, 301), observed_at: select(code == 3, 99, 110), kind: select(code == 2, OutcomeKind.Prediction, OutcomeKind.Observed), verdict: select(code == 1, WorkVerification.Unknown, select(op == 12 && code != 13, WorkVerification.Failed, WorkVerification.Passed)), cost_known: code != 7, cost_unit: select(code == 5, 999, 606), cost: select(code == 8, 1000000000001, select(op == 11, 4, 2)) };
+}
+fn rows(code: u64) -> (result: [TestReplayOutcome; up_to 8]) { let exact: [TestReplayOutcome; 2] = [row(11, 0), row(12, code)]; let r: [TestReplayOutcome; up_to 8] = exact; return r; }
+fn evaluate(code: u64, op: u64) -> (result: TestReplayEvaluation) { return evaluate_initial_test(problem(0), 1000, rows(code), op); }
+
+test first_failure_and_full_coverage_are_separate() -> (result: TestResult) {
+ let a: TestReplayEvaluation = evaluate(0, 11); let b: TestReplayEvaluation = evaluate(0, 12);
+ return from_assertion(equals_bool(true, a.accepted && b.accepted && !a.selected_failure && b.selected_failure && a.failing_candidates == 1 && b.oracle_cost_known && b.oracle_failure_cost == 2 && a.selected_cost == 4 && b.selected_cost == 2 && a.mandatory_executions == 2 && b.mandatory_executions == 2 && a.total_cost == 6 && b.total_cost == 6 && b.baseline_operation == 12, 401));
+}
+test all_pass_has_no_failure_latency() -> (result: TestResult) {
+ let e: TestReplayEvaluation = evaluate(13, 12);
+ return from_assertion(equals_bool(true, e.accepted && e.failing_candidates == 0 && !e.oracle_cost_known && !e.selected_failure && e.mandatory_executions == 2 && e.total_cost == 6, 402));
+}
+test abstention_stays_in_the_evaluation_denominator() -> (result: TestResult) {
+ let e: TestReplayEvaluation = evaluate(0, 0);
+ return from_assertion(equals_bool(true, e.accepted && !e.selected && !e.selected_cost_known && !e.selected_failure && e.failing_candidates == 1 && e.oracle_cost_known && e.mandatory_executions == 2, 403));
+}
+test missing_unchosen_outcome_refuses_counterfactual_value() -> (result: TestResult) {
+ let exact: [TestReplayOutcome; 1] = [row(12, 0)]; let os: [TestReplayOutcome; up_to 8] = exact;
+ let e: TestReplayEvaluation = evaluate_initial_test(problem(0), 1000, os, 12);
+ return from_assertion(equals_bool(true, !e.accepted && e.reason == 2 && e.supplied_rows == 1 && e.candidates == 2 && !e.oracle_cost_known, 404));
+}
+test duplicate_and_foreign_outcomes_refuse() -> (result: TestResult) {
+ let a: [TestReplayOutcome; 2] = [row(11, 0), row(11, 0)]; let av: [TestReplayOutcome; up_to 8] = a;
+ let b: [TestReplayOutcome; 2] = [row(11, 0), row(13, 0)]; let bv: [TestReplayOutcome; up_to 8] = b;
+ let x: TestReplayEvaluation = evaluate_initial_test(problem(0), 1000, av, 11); let y: TestReplayEvaluation = evaluate_initial_test(problem(0), 1000, bv, 11);
+ return from_assertion(equals_bool(true, !x.accepted && x.reason == 1 && !y.accepted && y.reason == 1, 405));
+}
+test unknown_verdict_and_cost_are_not_negative_examples() -> (result: TestResult) {
+ let a: TestReplayEvaluation = evaluate(1, 12); let b: TestReplayEvaluation = evaluate(7, 12);
+ return from_assertion(equals_bool(true, !a.accepted && a.reason == 2 && !b.accepted && b.reason == 2 && !a.oracle_cost_known, 406));
+}
+test predictions_and_predecision_outcomes_refuse() -> (result: TestResult) {
+ let a: TestReplayEvaluation = evaluate(2, 12); let b: TestReplayEvaluation = evaluate(3, 12);
+ return from_assertion(equals_bool(true, !a.accepted && a.reason == 4 && !b.accepted && b.reason == 3, 407));
+}
+test source_event_question_state_and_set_must_join() -> (result: TestResult) {
+ let a: TestReplayEvaluation = evaluate(4, 12); let b: TestReplayEvaluation = evaluate(6, 12); let c: TestReplayEvaluation = evaluate(11, 12); let d: TestReplayEvaluation = evaluate(12, 12); let e: TestReplayEvaluation = evaluate(14, 12);
+ return from_assertion(equals_bool(true, !a.accepted && !b.accepted && !c.accepted && !d.accepted && !e.accepted, 408));
+}
+test mixed_cost_units_and_overflow_envelopes_refuse() -> (result: TestResult) {
+ let a: TestReplayEvaluation = evaluate(5, 12); let b: TestReplayEvaluation = evaluate(8, 12);
+ return from_assertion(equals_bool(true, !a.accepted && a.reason == 5 && !b.accepted && b.reason == 5 && b.total_cost == 0, 409));
+}
+test missing_authority_or_reference_refuses() -> (result: TestResult) {
+ let a: TestReplayEvaluation = evaluate(9, 12); let b: TestReplayEvaluation = evaluate(10, 12);
+ return from_assertion(equals_bool(true, !a.accepted && !b.accepted && a.reason == 1 && b.reason == 1, 410));
+}
+test outcome_row_order_does_not_choose_the_operation() -> (result: TestResult) {
+ let exact: [TestReplayOutcome; 2] = [row(12, 0), row(11, 0)]; let os: [TestReplayOutcome; up_to 8] = exact;
+ let a: TestReplayEvaluation = evaluate_initial_test(problem(0), 1000, os, 11); let b: TestReplayEvaluation = evaluate(0, 11);
+ return from_assertion(equals_bool(true, a.accepted && b.accepted && a.total_cost == b.total_cost && a.oracle_failure_cost == b.oracle_failure_cost && a.selected_failure == b.selected_failure && a.operation == 11, 411));
+}
+test unavailable_future_and_duplicate_candidates_refuse() -> (result: TestResult) {
+ let a: TestReplayEvaluation = evaluate_initial_test(problem(1), 1000, rows(0), 11); let b: TestReplayEvaluation = evaluate_initial_test(problem(2), 1000, rows(0), 11); let c: TestReplayEvaluation = evaluate_initial_test(problem(3), 1000, rows(0), 11);
+ return from_assertion(equals_bool(true, !a.accepted && !b.accepted && !c.accepted, 412));
+}
+test baseline_tie_and_established_bypass_remain_visible() -> (result: TestResult) {
+ let a: TestReplayEvaluation = evaluate_initial_test(problem(4), 1000, rows(0), 12); let b: TestReplayEvaluation = evaluate_initial_test(problem(5), 1000, rows(0), 11);
+ return from_assertion(equals_bool(true, a.accepted && a.baseline_path == 2 && a.baseline_operation == 0 && b.accepted && b.baseline_path == 0 && b.baseline_operation == 11, 413));
+}
+test source_identity_and_permitted_selection_are_required() -> (result: TestResult) {
+ let a: TestReplayEvaluation = evaluate_initial_test(problem(0), 0, rows(0), 12); let b: TestReplayEvaluation = evaluate(0, 99);
+ return from_assertion(equals_bool(true, !a.accepted && !b.accepted && a.reason == 1 && b.reason == 1, 414));
+}
+
+test over_budget_alternative_is_not_a_permitted_first_choice() -> (result: TestResult) {
+ let e: TestReplayEvaluation = evaluate_initial_test(problem(6), 1000, rows(0), 12);
+ return from_assertion(equals_bool(true, !e.accepted && e.reason == 1, 415));
+}

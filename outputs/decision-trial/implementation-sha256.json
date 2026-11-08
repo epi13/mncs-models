@@ -1,0 +1,10 @@
+{
+  ".mncs/environment.json": "6adb4607562c85dd7e4e00245a3e4837dc8566fbcf8076b4384ef805d6ca156b",
+  "scripts/verify.py": "f28b425f205f1cccbbde3f8c86cb25ed582f40288bc4f4e5142afb6f4984daad",
+  "scripts/measure_test_replay.py": "e77d2c059a544495b788e0fe946154c9539d81a61ff4a6fe713655e6b129e6fe",
+  "src/models/trial.mncs": "f4ab15422ee0b021c80cc66f2819c2bae96a86b70fa4afe6fd5c32099cd53660",
+  "tests/native/replay.mncs": "6c7e6745d85a93753e221c2aba0f07e7b2334b67970fb1ab49ee47db52cba58e",
+  "docs/TEST_PRIORITY_EVIDENCE.md": "eb1bbd1142ae6e01fac7cadaa9cd6872cdb1d7b702792ba04b268917d6eccdce",
+  "rfcs/0004-residual-and-proportional-execution.md": "ec5dd30ac49bae2cecf536d99cf0f28ea0fea26936ac7767a084a9028d036926",
+  "rfcs/0005-demand-and-operation-guidance.md": "f23f7f3072f905934af171d2396b341559d533c6e93c92116e4070263683b641"
+}

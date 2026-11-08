@@ -1,0 +1,668 @@
+[
+  {
+    "record": {
+      "fields": {
+        "boundary": {
+          "record": {
+            "fields": {
+              "decision_at": {
+                "integer": {
+                  "value": 1794099102159
+                }
+              },
+              "established_reference": {
+                "integer": {
+                  "value": 602
+                }
+              },
+              "event": {
+                "integer": {
+                  "value": 1001
+                }
+              },
+              "operation_contract": {
+                "integer": {
+                  "value": 604
+                }
+              },
+              "permitted_reference": {
+                "integer": {
+                  "value": 603
+                }
+              },
+              "question": {
+                "integer": {
+                  "value": 601
+                }
+              },
+              "resolved_operation": {
+                "integer": {
+                  "value": 0
+                }
+              },
+              "state": {
+                "integer": {
+                  "value": 201
+                }
+              }
+            }
+          }
+        },
+        "candidates": {
+          "sequence": {
+            "values": [
+              {
+                "record": {
+                  "fields": {
+                    "contract": {
+                      "integer": {
+                        "value": 604
+                      }
+                    },
+                    "cost": {
+                      "integer": {
+                        "value": 115484
+                      }
+                    },
+                    "cost_known": {
+                      "boolean": {
+                        "value": true
+                      }
+                    },
+                    "evidence": {
+                      "record": {
+                        "fields": {
+                          "authority": {
+                            "integer": {
+                              "value": 301
+                            }
+                          },
+                          "available_at": {
+                            "integer": {
+                              "value": 1794099102159
+                            }
+                          },
+                          "event": {
+                            "integer": {
+                              "value": 1001
+                            }
+                          },
+                          "reference": {
+                            "integer": {
+                              "value": 801
+                            }
+                          },
+                          "state": {
+                            "integer": {
+                              "value": 201
+                            }
+                          },
+                          "status": {
+                            "finite": {
+                              "variant": "Present"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "operation": {
+                      "integer": {
+                        "value": 1
+                      }
+                    },
+                    "ready": {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "contract": {
+                      "integer": {
+                        "value": 604
+                      }
+                    },
+                    "cost": {
+                      "integer": {
+                        "value": 1633084
+                      }
+                    },
+                    "cost_known": {
+                      "boolean": {
+                        "value": true
+                      }
+                    },
+                    "evidence": {
+                      "record": {
+                        "fields": {
+                          "authority": {
+                            "integer": {
+                              "value": 301
+                            }
+                          },
+                          "available_at": {
+                            "integer": {
+                              "value": 1794099102159
+                            }
+                          },
+                          "event": {
+                            "integer": {
+                              "value": 1001
+                            }
+                          },
+                          "reference": {
+                            "integer": {
+                              "value": 802
+                            }
+                          },
+                          "state": {
+                            "integer": {
+                              "value": 201
+                            }
+                          },
+                          "status": {
+                            "finite": {
+                              "variant": "Present"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "operation": {
+                      "integer": {
+                        "value": 2
+                      }
+                    },
+                    "ready": {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "contract": {
+                      "integer": {
+                        "value": 604
+                      }
+                    },
+                    "cost": {
+                      "integer": {
+                        "value": 366291
+                      }
+                    },
+                    "cost_known": {
+                      "boolean": {
+                        "value": true
+                      }
+                    },
+                    "evidence": {
+                      "record": {
+                        "fields": {
+                          "authority": {
+                            "integer": {
+                              "value": 301
+                            }
+                          },
+                          "available_at": {
+                            "integer": {
+                              "value": 1794099102159
+                            }
+                          },
+                          "event": {
+                            "integer": {
+                              "value": 1001
+                            }
+                          },
+                          "reference": {
+                            "integer": {
+                              "value": 803
+                            }
+                          },
+                          "state": {
+                            "integer": {
+                              "value": 201
+                            }
+                          },
+                          "status": {
+                            "finite": {
+                              "variant": "Present"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "operation": {
+                      "integer": {
+                        "value": 3
+                      }
+                    },
+                    "ready": {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "record": {
+                  "fields": {
+                    "contract": {
+                      "integer": {
+                        "value": 604
+                      }
+                    },
+                    "cost": {
+                      "integer": {
+                        "value": 27488
+                      }
+                    },
+                    "cost_known": {
+                      "boolean": {
+                        "value": true
+                      }
+                    },
+                    "evidence": {
+                      "record": {
+                        "fields": {
+                          "authority": {
+                            "integer": {
+                              "value": 301
+                            }
+                          },
+                          "available_at": {
+                            "integer": {
+                              "value": 1794099102159
+                            }
+                          },
+                          "event": {
+                            "integer": {
+                              "value": 1001
+                            }
+                          },
+                          "reference": {
+                            "integer": {
+                              "value": 804
+                            }
+                          },
+                          "state": {
+                            "integer": {
+                              "value": 201
+                            }
+                          },
+                          "status": {
+                            "finite": {
+                              "variant": "Present"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "operation": {
+                      "integer": {
+                        "value": 4
+                      }
+                    },
+                    "ready": {
+                      "boolean": {
+                        "value": true
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "cost_unit": {
+          "integer": {
+            "value": 606
+          }
+        },
+        "max_candidates": {
+          "integer": {
+            "value": 8
+          }
+        },
+        "max_operation_cost": {
+          "integer": {
+            "value": 3000000
+          }
+        },
+        "ranking_reference": {
+          "integer": {
+            "value": 605
+          }
+        }
+      }
+    }
+  },
+  {
+    "integer": {
+      "value": 1000
+    }
+  },
+  {
+    "sequence": {
+      "values": [
+        {
+          "record": {
+            "fields": {
+              "authority": {
+                "integer": {
+                  "value": 301
+                }
+              },
+              "cost": {
+                "integer": {
+                  "value": 115484
+                }
+              },
+              "cost_known": {
+                "boolean": {
+                  "value": true
+                }
+              },
+              "cost_unit": {
+                "integer": {
+                  "value": 606
+                }
+              },
+              "event": {
+                "integer": {
+                  "value": 1001
+                }
+              },
+              "kind": {
+                "finite": {
+                  "variant": "Observed"
+                }
+              },
+              "observed_at": {
+                "integer": {
+                  "value": 1794099191609
+                }
+              },
+              "operation": {
+                "integer": {
+                  "value": 1
+                }
+              },
+              "permitted_reference": {
+                "integer": {
+                  "value": 603
+                }
+              },
+              "question": {
+                "integer": {
+                  "value": 601
+                }
+              },
+              "reference": {
+                "integer": {
+                  "value": 901
+                }
+              },
+              "source_reference": {
+                "integer": {
+                  "value": 1000
+                }
+              },
+              "state": {
+                "integer": {
+                  "value": 201
+                }
+              },
+              "verdict": {
+                "finite": {
+                  "variant": "Passed"
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": {
+            "fields": {
+              "authority": {
+                "integer": {
+                  "value": 301
+                }
+              },
+              "cost": {
+                "integer": {
+                  "value": 1633084
+                }
+              },
+              "cost_known": {
+                "boolean": {
+                  "value": true
+                }
+              },
+              "cost_unit": {
+                "integer": {
+                  "value": 606
+                }
+              },
+              "event": {
+                "integer": {
+                  "value": 1001
+                }
+              },
+              "kind": {
+                "finite": {
+                  "variant": "Observed"
+                }
+              },
+              "observed_at": {
+                "integer": {
+                  "value": 1794099244432
+                }
+              },
+              "operation": {
+                "integer": {
+                  "value": 2
+                }
+              },
+              "permitted_reference": {
+                "integer": {
+                  "value": 603
+                }
+              },
+              "question": {
+                "integer": {
+                  "value": 601
+                }
+              },
+              "reference": {
+                "integer": {
+                  "value": 902
+                }
+              },
+              "source_reference": {
+                "integer": {
+                  "value": 1000
+                }
+              },
+              "state": {
+                "integer": {
+                  "value": 201
+                }
+              },
+              "verdict": {
+                "finite": {
+                  "variant": "Passed"
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": {
+            "fields": {
+              "authority": {
+                "integer": {
+                  "value": 301
+                }
+              },
+              "cost": {
+                "integer": {
+                  "value": 366291
+                }
+              },
+              "cost_known": {
+                "boolean": {
+                  "value": true
+                }
+              },
+              "cost_unit": {
+                "integer": {
+                  "value": 606
+                }
+              },
+              "event": {
+                "integer": {
+                  "value": 1001
+                }
+              },
+              "kind": {
+                "finite": {
+                  "variant": "Observed"
+                }
+              },
+              "observed_at": {
+                "integer": {
+                  "value": 1794099425760
+                }
+              },
+              "operation": {
+                "integer": {
+                  "value": 3
+                }
+              },
+              "permitted_reference": {
+                "integer": {
+                  "value": 603
+                }
+              },
+              "question": {
+                "integer": {
+                  "value": 601
+                }
+              },
+              "reference": {
+                "integer": {
+                  "value": 903
+                }
+              },
+              "source_reference": {
+                "integer": {
+                  "value": 1000
+                }
+              },
+              "state": {
+                "integer": {
+                  "value": 201
+                }
+              },
+              "verdict": {
+                "finite": {
+                  "variant": "Passed"
+                }
+              }
+            }
+          }
+        },
+        {
+          "record": {
+            "fields": {
+              "authority": {
+                "integer": {
+                  "value": 301
+                }
+              },
+              "cost": {
+                "integer": {
+                  "value": 27488
+                }
+              },
+              "cost_known": {
+                "boolean": {
+                  "value": true
+                }
+              },
+              "cost_unit": {
+                "integer": {
+                  "value": 606
+                }
+              },
+              "event": {
+                "integer": {
+                  "value": 1001
+                }
+              },
+              "kind": {
+                "finite": {
+                  "variant": "Observed"
+                }
+              },
+              "observed_at": {
+                "integer": {
+                  "value": 1794099468555
+                }
+              },
+              "operation": {
+                "integer": {
+                  "value": 4
+                }
+              },
+              "permitted_reference": {
+                "integer": {
+                  "value": 603
+                }
+              },
+              "question": {
+                "integer": {
+                  "value": 601
+                }
+              },
+              "reference": {
+                "integer": {
+                  "value": 904
+                }
+              },
+              "source_reference": {
+                "integer": {
+                  "value": 1000
+                }
+              },
+              "state": {
+                "integer": {
+                  "value": 201
+                }
+              },
+              "verdict": {
+                "finite": {
+                  "variant": "Passed"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "integer": {
+      "value": 0
+    }
+  }
+]
